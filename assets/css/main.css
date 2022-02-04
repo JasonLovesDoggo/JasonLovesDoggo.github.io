@@ -1,7 +1,31 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
-
+.u-section-2 .u-sheet-1 {min-height: 280px}
+.u-section-2 .u-layout-wrap-1 {margin: 40px 0}
+.u-section-2 .u-layout-cell-1 {min-height: 200px}
+.u-section-2 .u-container-layout-1 {padding: 30px 60px}
+.u-section-2 .u-text-1 {position: relative; margin: 0}
+.u-section-2 .u-text-2 {margin: 20px 0 0}
+.u-section-2 .u-layout-cell-2 {min-height: 200px}
+.u-section-2 .u-container-layout-2 {padding: 30px 60px}
+.u-section-2 .u-social-icons-1 {height: 33px; min-height: 16px; width: 301px; min-width: 216px; white-space: nowrap; margin: 0 0 0 auto}
+.u-section-2 .u-icon-1 {height: 100%}
+.u-section-2 .u-icon-2 {height: 100%}
+.u-section-2 .u-icon-3 {height: 100%}
+.u-section-2 .u-icon-4 {height: 100%}
+.u-section-2 .u-icon-5 {height: 100%}
+@media (max-width: 1199px){ .u-section-2 .u-sheet-1 {min-height: 231px}
+.u-section-2 .u-layout-wrap-1 {margin-right: initial; margin-left: initial}
+.u-section-2 .u-layout-cell-1 {min-height: 100px}
+.u-section-2 .u-layout-cell-2 {min-height: 100px} }
+@media (max-width: 991px){ .u-section-2 .u-sheet-1 {min-height: 177px}
+.u-section-2 .u-container-layout-1 {padding-left: 30px; padding-right: 30px}
+.u-section-2 .u-container-layout-2 {padding-left: 30px; padding-right: 30px} }
+@media (max-width: 767px){ .u-section-2 .u-sheet-1 {min-height: 100px}
+.u-section-2 .u-container-layout-1 {padding-left: 10px; padding-right: 10px}
+.u-section-2 .u-container-layout-2 {padding-left: 10px; padding-right: 10px}
+.u-section-2 .u-social-icons-1 {margin-right: auto} }
 .bella-icon { 
-	background-image: 'https://photos.app.goo.gl/2xTHd5X48mpcCGPh8';
+	background-image: url('https://i.imgur.com/EKYi9Nu.jpeg');
 	text-decoration: none;
 	border-bottom: none;
 	position: relative;
@@ -74,7 +98,7 @@ input, select, textarea {
 /* Basic */
 
 	@-ms-viewport {
-		width: device-width;
+		width: auto;
 	}
 
 	@media screen and (max-width: 480px) {
@@ -190,8 +214,6 @@ input, select, textarea {
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
 			border-bottom: solid 1px #ffffff;
 			width: -moz-max-content;
-			width: -webkit-max-content;
-			width: -ms-max-content;
 			width: max-content;
 			padding-bottom: 0.5rem;
 			margin: 0 0 2rem 0;
@@ -1139,7 +1161,7 @@ input, select, textarea {
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5));
 			background-size: auto,
  256px 256px;
 			background-position: center,
