@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+
+.bella-icon { 
+	background-image: 'https://photos.app.goo.gl/2xTHd5X48mpcCGPh8';
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+}
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
