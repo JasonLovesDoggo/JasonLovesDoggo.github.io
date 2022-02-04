@@ -1,0 +1,7 @@
+{
+  "name": "complete website",
+  "version": "1.0.0",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.1"
+  }
+}
