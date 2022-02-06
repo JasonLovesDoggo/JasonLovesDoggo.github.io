@@ -24,6 +24,36 @@
 .u-section-2 .u-container-layout-1 {padding-left: 10px; padding-right: 10px}
 .u-section-2 .u-container-layout-2 {padding-left: 10px; padding-right: 10px}
 .u-section-2 .u-social-icons-1 {margin-right: auto} }
+
+.slide-right {
+  width: 100%;
+  overflow: hidden;
+  max-width: 500px
+}
+
+.slide-right h2 {
+  animation: 2s slide-right 0.5s forwards;
+    transform:translateX(-100%);
+}
+
+@keyframes slide-right {
+  to {
+    transform:translateX(0);
+  }
+}
+
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+.no-text-decor {
+	text-decoration: none
+}
+.flex-container > div {
+  margin: 10px;
+  text-align: center;
+}
 .bella-icon { 
 	background-image: url('https://i.imgur.com/EKYi9Nu.jpeg');
 	text-decoration: none;
