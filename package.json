@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "dependencies": {
     "@tailwindcss/typography": "^0.5.1"
+  },
+  "devDependencies": {
+    "clean-css": "^5.2.4"
   }
 }
