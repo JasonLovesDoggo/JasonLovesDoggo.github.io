@@ -7,7 +7,7 @@ setTimeout(function() {
           document.getElementById("loading").style.display = "none";
         }, 800);
       }, 1500);
-      $.getJSON("blog.json", function(blog) {
+      $.getJSON("projects/blog.json", function(blog) {
         blog = blog || [];
         if (blog.length == 0) {
           return (document.getElementById("blog_section").style.display =

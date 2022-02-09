@@ -152,6 +152,8 @@
         <a href="https://github.com/JakeWasChosen" target="_blank">Jason</a>
         with
         <a href="https://github.com/imfunniee/gitfolio" target="_blank">Gitfolio</a>
+         &nbsp;
+          <div id="randomizered"></div>
       </div>
     </div>
     <script type="text/javascript">
@@ -164,7 +166,7 @@
           document.getElementById("loading").style.display = "none";
         }, 800);
       }, 1500);
-      $.getJSON("blog.json", function(blog) {
+      $.getJSON("projects/blog.json", function(blog) {
         blog = blog || [];
         if (blog.length == 0) {
           return (document.getElementById("blog_section").style.display =

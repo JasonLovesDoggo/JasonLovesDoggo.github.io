@@ -2,7 +2,9 @@
   "name": "complete website",
   "version": "1.0.0",
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.1"
+    "@tailwindcss/typography": "^0.5.1",
+    "firebase-tools": "^10.1.5",
+    "g": "^2.0.1"
   },
   "devDependencies": {
     "clean-css": "^5.2.4"
