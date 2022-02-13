@@ -1,5 +1,5 @@
 /node_modules/
-/public/build/
+/src/build
 
 source.js
 package-lock.json
