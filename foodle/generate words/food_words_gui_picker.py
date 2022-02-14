@@ -12,8 +12,9 @@ class App:
         self.food_words = []
         self.non_food_words = []
         self.list = json.load(
-            open('./5_letter_words.json', 'r')
+            open('./known_5_letter_words.json', 'r')            # change to ./5_letter_words.json to get all 5 letter words not just known ones
         )
+        self.numon = Label(self.root, text=f'1/{len(self.list)}', padx=10, pady=10)
         self.text = Label(self.root, text=self.list[0])
         self.yes = Button(self.root, text="Yes", command=self.yes_func)
         self.no = Button(self.root, text="No", command=self.no_func)
@@ -24,6 +25,7 @@ class App:
         self.no.pack()
         self.save.pack()
         self.back.pack()
+        self.numon.pack()
 
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Do you want to quit?"):
@@ -33,6 +35,7 @@ class App:
 
     def back_func(self):
         self.backs += 1
+        self.numon.configure(text=f'{len(self.prev)}/{len(self.list)}')
         print(f'{self.backs=}')
         print(f'{self.prev=}')
         if self.prev[abs(self.backs)]:
@@ -53,10 +56,15 @@ class App:
         with open('./non_food_words.json', 'w+') as non_food_words_file:
             json.dump(self.non_food_words, non_food_words_file)
 
+        #order to recreate
+        with open('./order_of_picking.json', 'w+') as order_of_picking:
+            json.dump(self.prev, order_of_picking)
+
     def yes_func(self):
         self.backs = 0
         self.prev.append(True)
         text = self.text.cget("text")
+        self.numon.configure(text=f'{len(self.prev)}/{len(self.list)}')
         self.food_words.append(text)
         try:
             self.text.configure(text=self.list[self.list.index(self.text.cget("text")) + 1])
@@ -69,6 +77,7 @@ class App:
         self.backs = 0
         self.prev.append(False)
         text = self.text.cget("text")
+        self.numon.configure(text=f'{len(self.prev)}/{len(self.list)}')
         self.non_food_words.append(text)
         try:
             self.text.configure(text=self.list[self.list.index(self.text.cget("text")) + 1])

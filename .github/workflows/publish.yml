@@ -1,0 +1,26 @@
+name: Publish
+
+on:
+  push:
+    branches: [master]
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: install node v16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: cd into dir
+        run: cd foodle
+      - name: install dependancies
+        run: npm i
+      - name: compile
+        run: npm run build
+      - name: deploy to pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_dir: ./foodle

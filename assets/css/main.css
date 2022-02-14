@@ -648,7 +648,7 @@ input[type="submit"] {
     -webkit-filter 325ms ease-in-out;
   -ms-transition: -ms-transform 325ms ease-in-out, -ms-filter 325ms ease-in-out;
   transition: transform 325ms ease-in-out, filter 325ms ease-in-out;
-  background-image: url(https://images.unsplash.com/photo-1475070929565-c985b496cb9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+  background-image: url(https://images.unsplash.com/photo-1475070929565-c985b496cb9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
