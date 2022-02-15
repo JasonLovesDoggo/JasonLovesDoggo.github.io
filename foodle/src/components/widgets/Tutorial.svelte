@@ -44,10 +44,16 @@
 		href="https://www.powerlanguage.co.uk/wordle/"
 		target="_blank">Wordle</a
 	>
-	by Josh Wardle with additional modes and features. Written with Svelte, in Typescript by
+	by Josh Wardle with additional modes and features.
+		<br />
+	Please contact the developer
 	<a href="https://github.com/JakeWasChosen" target="_blank">Jason</a>.
+	if you have any problems.
 	<br />
 	Open the settings menu to see some of the additional features.
+	Or click
+		<a href="." target="_blank">Here</a>
+	to go home.
 </div>
 
 <style lang="scss">

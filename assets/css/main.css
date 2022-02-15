@@ -1,6 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600);
 
 
+#bella {
+  float: left;
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  border-radius: 24px;
+  position: relative;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.headercontainer {
+	width:100%;
+	height:auto;
+	padding:1%;
+}
+
+.headercontainer h1 {
+  float: right;
+}
 
 .slide-right {
   width: 100%;
@@ -58,8 +78,6 @@ ul {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 article,
@@ -774,10 +792,6 @@ body.is-preload #bg:before {
   font-size: 2rem;
 }
 #header .content {
-  border-style: solid;
-  border-color: #fff;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
   max-width: 100%;
 }
 #header .content .inner {
