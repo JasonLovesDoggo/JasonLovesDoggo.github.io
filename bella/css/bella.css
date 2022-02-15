@@ -31,7 +31,7 @@ right: 0;
 border-radius: 3px 0 0 3px;
 }
 .left:hover, .right:hover {
-background-color: rgba(115, 115, 115, 0.8);
+background-color: rgb(64,123,164)a(115, 115, 115, 0.8);
 }
 .contentBook {
 color: #eff5d4;
