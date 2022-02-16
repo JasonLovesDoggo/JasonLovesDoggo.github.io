@@ -17,8 +17,8 @@ jobs:
         run: npm i
       - name: compile
         run: |
-        cd foodle
-        npm run build
+          cd foodle
+          npm run build
       - name: Commit to the repo
         run: |
           git config --global user.name "Jason | Build updater"
