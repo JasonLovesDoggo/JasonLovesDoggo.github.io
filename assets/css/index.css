@@ -119,6 +119,25 @@ body {
     transition:0.4s ease-in-out;
     border-radius:0px 0px 100px 100px;
 }
+
+#bella {
+    width:10vw;
+    height:10vw;
+    text-align:center;
+    font-size:25px;
+    background:transparent;
+    color:#fff;
+    position:fixed;
+    left:45vw;
+    top: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    z-index:4;
+    transition:0.4s ease-in-out;
+    border-radius:0px 0px 100px 100px;
+}
+
 #contact {
     width:10vw;
     height:10vw;
@@ -148,6 +167,10 @@ body {
     background:rgba(25,100,200,0.9);
     cursor:pointer;
 }
+#bella:hover {
+    background:rgba(25,100,200,0.9);
+    cursor:pointer;
+}
 #middle table {
     width:30%;
     margin:6vh auto;
@@ -156,6 +179,7 @@ body {
     text-align:center;
 }
 .social {
+    z-index: 99;
     color:#fff;
     font-size:22px;
     border-radius:50%;
@@ -287,7 +311,7 @@ body {
     color:#fff;
     width:92vw;
     padding:5vh 4vw;
-    text-align:right;
+    text-align:left;
     position:fixed;
     z-index:1;
     bottom:0;
@@ -330,6 +354,9 @@ body {
     #work {
         display:none;
     }
+    #bella {
+        display:none;
+    }
     #footer {
         text-align:center;
     }
@@ -358,4 +385,45 @@ body {
     #box div {
         width:100%;
     }
+}
+
+/* From cssbuttons.io by @alexroumi */
+.actionbutton {
+    text-decoration: none;
+ padding: 15px 25px;
+ border: unset;
+ border-radius: 15px;
+ color: #fff;
+ z-index: 1;
+ background: rgb(64,123,164);
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.actionbutton::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 15px;
+ background-color: #212121;
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms
+}
+
+.actionbutton:hover {
+ color: #e8e8e8;
+}
+
+.actionbutton:hover::before {
+ width: 100%;
 }
