@@ -1,6 +1,17 @@
-name: Publish
+name: Build
 
 on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Bing bong'
+        required: false
+        default: 'Bing'
+        type: choice
+        options:
+          - Bing
+          - Bong
+          - Ding
   push:
     branches: [master]
   
