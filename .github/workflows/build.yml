@@ -24,10 +24,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16
-      - name: install dependancies
-        run: npm i --include=dev
       - name: compile
         run: |
+          npm i --include=dev
           cd foodle
           npm run build
       - name: Commit to the repo
