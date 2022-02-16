@@ -16,7 +16,8 @@ jobs:
       - name: install dependancies
         run: npm i
       - name: compile
-        run: cd foodle
+        run: |
+        cd foodle
         npm run build
       - name: Commit to the repo
         run: |
