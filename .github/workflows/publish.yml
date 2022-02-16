@@ -13,12 +13,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16
-      - name: cd into dir
-        run: cd foodle
       - name: install dependancies
         run: npm i
       - name: compile
-        run: npm run build
+        run: cd foodle
+        npm run build
       - name: Commit to the repo
         run: |
           git config --global user.name "Jason | Build updater"
