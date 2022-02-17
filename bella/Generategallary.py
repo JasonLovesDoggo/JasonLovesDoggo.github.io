@@ -11,7 +11,7 @@ root = Tk()
 QSYM = '&quot;'
 dir_list = '../../assets/Img/Bella/'
 catagory = f'{QSYM}{catagorytype}{QSYM}'
-template = f"""
+template = f"""      
 <div class="card" data-groups="[{catagory}]"><figure class="expand-effect"><img class="img-fluid" src="{fileloc}" alt="{catagorytype}"/></figure></div>
 """
 photos = listdir('../assets/Img/Bella')
