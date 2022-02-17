@@ -17,7 +17,6 @@ template = f"""
 photos = listdir('../assets/Img/Bella')
 
 
-
 def gen_photo_list(subdir: str = ''):
     list_of_photos = []
     for img in listdir(f'../assets/Img/Bella{subdir}'):
