@@ -2,14 +2,16 @@ from PIL import Image
 from PIL.ExifTags import TAGS
 
 path = 'assets/Img/Bella'
-
-template = """
-            div>
-                <img data-u="image" src="{image}"  alt="{alt}"/>
-            </div>
+catagorytype = None
+fileloc = None
+QSYM = '&quot;'
+catagory = f'{QSYM}{catagorytype}{QSYM}'
+template = f"""
+<div class="card" data-groups="[{catagory}]"><figure class="expand-effect"><img class="img-fluid" src="{fileloc}" alt="{catagorytype}"/></figure></div>
 
 """
-
+#TODO add a tkiner window that has a simple catagory selector and the img (select all that apply)
+#TODO but first check metadata to see if it was allready done
 
 def add_metadata(img, alt: str):
     # read the image data using PIL
