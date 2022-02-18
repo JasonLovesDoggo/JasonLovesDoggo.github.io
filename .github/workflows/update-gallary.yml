@@ -1,0 +1,38 @@
+name: update-bella-gallary
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8' # install the python version needed
+
+
+      - name: update Gallary
+        run: python bella/tempdir/scripts/Generategallary.py
+
+      - name: commit files
+        run: |
+          git config --global user.name "Jason | Gallary updater"
+          git config --global user.email "JasonCameron.all@gmail.com"
+          git add .
+          # "echo" returns true so the build succeeds, even if no changed files
+          git commit -m 'Update gallary file' || echo
+          git push
+      
+
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
