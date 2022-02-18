@@ -187,10 +187,27 @@ body {
     margin:0px 8px;
     text-align:center;
 }
-.social:hover { 
+
+.github:hover{
     cursor: pointer;
-    color:rgb(64,123,164);
-}
+    color: #171515 ; }
+
+.twitter:hover{
+    cursor: pointer;
+    color: #1DA1F2; }
+
+.reddit:hover{
+        cursor: pointer;
+    color: #FF4500; }
+
+.instagram:hover{
+        cursor: pointer;
+    color: #833AB4; }
+
+.email:hover {
+        cursor: pointer;
+    background: -webkit-linear-gradient(left, #4285F4, #BB001B, #EA4335, #FBBC05, #34A853);}
+
 .container {
     width:90vw;
     height:90vh;
