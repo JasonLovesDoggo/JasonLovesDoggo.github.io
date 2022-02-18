@@ -11,13 +11,14 @@ QSYM = '&quot;'
 dir_list = '.../../assets/Img/Bella/'
 catagory = f'{QSYM}{catagorytype}{QSYM}'
 img_cata_dict = {}
-photos = listdir(f'{str(os.path.abspath(__file__))[:-41]}/assets/Img/Bella/')
+photos = listdir(f'{str(os.path.abspath(__file__))[:-41]}\\assets\\Img\\Bella\\')
 img_template_list = []
+dir = str(os.path.abspath(__file__))[:-41]
 
 
 def gen_photo_list(subdir: str = ''):
     list_of_photos = []
-    for img in listdir(f'../assets/Img/Bella{subdir}'):
+    for img in listdir(f'{dir}\\assets\\Img\\Bella{subdir}'):
         list_of_photos.append(f'{dir_list}{img}')
     return list_of_photos
 
@@ -75,14 +76,14 @@ def gen_img_gallery():
 # -------- under part is to modify the file ------- #
 def modify_file():
     gen_img_gallery()
-    file = codecs.open('.../../../bella/tempdir/template/template.html', "r", "utf-8")
+    file = codecs.open(f'{dir}/bella/tempdir/template/template.html', "r", "utf-8")
     file = str(file.read())
     templiststr = ''
     for temp in img_template_list:
         templiststr += f'{temp}\n'
 
     new_file = file.replace('{IMAGES}', templiststr)
-    with open('.../../../bella/tempdir/index.html', 'w+') as newfile:
+    with open(f'{dir}/bella/tempdir/index.html', 'w+') as newfile:
         newfile.write(new_file)
 
 if __name__ == '__main__':
