@@ -19,7 +19,6 @@ dir = str(os.path.abspath(__file__))[:-41]
 def gen_photo_list(subdir: str = ''):
     list_of_photos = []
     for img in listdir(f'{dir}/assets/Img/Bella{subdir}'):
-        print(subdir)
         list_of_photos.append(f'{dir_list}{subdir[1:]}{"/" if subdir != "" else ""}{img}')
     return list_of_photos
 
