@@ -1,4 +1,4 @@
-name: update-bella-gallary
+name: UpdateGallary
 
 on:
   push:
