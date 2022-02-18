@@ -11,7 +11,7 @@ QSYM = '&quot;'
 dir_list = '.../../assets/Img/Bella/'
 catagory = f'{QSYM}{catagorytype}{QSYM}'
 img_cata_dict = {}
-photos = listdir(f'{str(os.path.abspath(__file__))[:-41]}\\assets\\Img/Bella\\')
+photos = listdir(f'{str(os.path.abspath(__file__))[:-41]}/assets/Img/Bella/')
 img_template_list = []
 
 
