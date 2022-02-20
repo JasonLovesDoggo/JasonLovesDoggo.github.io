@@ -1,17 +1,6 @@
 name: Build
 
 on:
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Bing bong'
-        required: false
-        default: 'Bing'
-        type: choice
-        options:
-          - Bing
-          - Bong
-          - Ding
   push:
     branches: [master]
   
@@ -32,7 +21,7 @@ jobs:
       - name: Commit to the repo
         run: |
           git config --global user.name "Jason | Build updater"
-          git config --global user.email "JasonCameron.all@gmail.com"
+          git config --global user.email "thebosssg19@gmail.com"
           git add .
           # "echo" returns true so the build succeeds, even if no changed files
           git commit -m 'Update build files' || echo

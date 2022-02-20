@@ -24,7 +24,7 @@ jobs:
       - name: commit files
         run: |
           git config --global user.name "Jason | Gallary updater"
-          git config --global user.email "JasonCameron.all@gmail.com"
+          git config --global user.email "thebosssg19@gmail.com"
           git add .
           # "echo" returns true so the build succeeds, even if no changed files
           git commit -m 'Update gallary file' || echo
