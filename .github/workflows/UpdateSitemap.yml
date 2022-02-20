@@ -1,4 +1,4 @@
-name: gh_pages-sitemap-ping
+name: UpdateSitemap
 
 
 on:
@@ -11,17 +11,17 @@ jobs:
     name: Generate a sitemap
 
     steps:
-    - name: Checkout the repo
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-    - name: Generate the sitemap
-      id: sitemap
-      uses: cicirello/generate-sitemap@v1
-      with:
-          drop-html-extension: true
-          base-url-path: https://nasoj.me
+      - name: Generate the sitemap
+        id: sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+            drop-html-extension: true
+            base-url-path: https://nasoj.me
 
       - name: notify google/bing that there is a new sitemap
         env:
