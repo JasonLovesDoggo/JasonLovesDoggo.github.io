@@ -1,0 +1,45 @@
+name: gh_pages-sitemap-ping
+
+
+on:
+  page_build:
+  workflow_dispatch:
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Generate a sitemap
+
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Generate the sitemap
+      id: sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+          drop-html-extension: true
+          base-url-path: https://nasoj.me
+
+      - name: notify google/bing that there is a new sitemap
+        env:
+          CUSTOM_URL: "${{ secrets.SITEMAP_URL }}" # set custom URL if you use it
+          SITEMAP_FILE: "sitemap.xml"
+        run: |
+          if [ -z "${CUSTOM_URL}" ]; then
+            if [ -s "CNAME" ]; then
+              MAP_URL="$(cat CNAME)"
+            else
+              MAP_URL="$(echo ${{ github.repository }} | sed -e "s/^.*${{ github.github.repository_owner }}\///")"
+            fi
+              MAP_URL="https://${MAP_URL}/${SITEMAP_FILE}"
+          else
+            MAP_URL="${CUSTOM_URL}"
+          fi
+          
+          curl -v "https://www.google.com/ping?sitemap=${MAP_URL}" &> /dev/null &
+          curl -v "https://www.bing.com/ping?sitemap=${MAP_URL}" &> /dev/null  &
+          wait
+          printf "\n\nDone\n"

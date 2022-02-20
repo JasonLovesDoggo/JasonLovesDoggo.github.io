@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{all, animate.css, bootstrap, jquery-3.3.1, jquery-3.4.1}" />
+    <file url="PROJECT" libraries="{all, animate.css, bootstrap, jquery-3.3.1, jquery-3.4.1, magic-grid}" />
   </component>
 </project>
