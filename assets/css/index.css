@@ -54,7 +54,7 @@ body {
 #menu {
     width:100%;
     text-align:center;
-    margin:6vh 0px;
+    margin:6vh 0;
     display:none;
 }
 #menu a {
@@ -78,10 +78,10 @@ body {
 }
 #middle h1 {
     color:rgb(64,123,164);
-    font-size:70px;
+    font-size: 70px;
     text-decoration:underline;
 }
-#about {
+#foodle {
     width:10vw;
     height:10vw;
     text-align:center;
@@ -97,9 +97,9 @@ body {
     justify-content:center;
     z-index:4;
     transition:0.4s ease-in-out;
-    border-radius:0px 0px 100px 100px;
+    border-radius:0 0 100px 100px;
 }
-#work {
+#projects {
     width:10vw;
     height:10vw;
     text-align:center;
@@ -115,7 +115,7 @@ body {
     justify-content:center;
     z-index:4;
     transition:0.4s ease-in-out;
-    border-radius:0px 0px 100px 100px;
+    border-radius:0 0 100px 100px;
 }
 
 #bella {
@@ -133,7 +133,7 @@ body {
     justify-content:center;
     z-index:4;
     transition:0.4s ease-in-out;
-    border-radius:0px 0px 100px 100px;
+    border-radius:0 0 100px 100px;
 }
 
 #contact {
@@ -151,13 +151,13 @@ body {
     justify-content:center;
     z-index:4;
     transition:0.4s ease-in-out;
-    border-radius:100px 100px 0px 0px;
+    border-radius:100px 100px 0 0;
 }
-#about:hover {
+#foodle:hover {
     background:rgba(25,100,200,0.9);
     cursor:pointer;
 }
-#work:hover {
+#projects:hover {
     background:rgba(25,100,200,0.9);
     cursor:pointer;
 }
@@ -182,7 +182,7 @@ body {
     font-size:22px;
     border-radius:50%;
     transition:0.4s ease-in-out;
-    margin:0px 8px;
+    margin:0 8px;
     text-align:center;
 }
 
@@ -221,21 +221,21 @@ body {
 }
 .container div {
     font-size:25px;
-    margin:20px 0px;
+    margin:20px 0;
     transition:0.4s ease-in-out;
 }
 .container div:hover {
     cursor:pointer;
 }
 .container section {
-    margin:8vh 0px;
+    margin:8vh 0;
 }
 #used div{
     font-size:14px !important;
     display:inline-block;
     padding:8px 10px;
     border:2px solid #fff;
-    margin:0px 10px;
+    margin:0 10px;
     border-radius:50px;
 }
 #used:hover {
@@ -288,7 +288,7 @@ body {
     width:46%;
     margin:20px 1%;
     background:transparent;
-    border:0px;
+    border:0;
     border-bottom:3px solid rgba(255,255,255,0.5);
     padding:8px 10px;
     font-family: 'Poppins', sans-serif;
@@ -301,9 +301,8 @@ body {
     width:96%;
     margin:20px 1%;
     padding:8px 10px;
-    border:0px;
+    border:0;
     border-bottom:3px solid rgba(255,255,255,0.5);
-    padding:8px 10px;
     font-family: 'Poppins', sans-serif;
     font-size:18px;
     background:transparent;
@@ -361,13 +360,13 @@ body {
 }
 
 @media (max-width: 800px){ 
-    #about {
+    #foodle {
         display:none;
     }
     #contact {
         display:none;
     }
-    #work {
+    #projects {
         display:none;
     }
     #bella {
@@ -378,7 +377,7 @@ body {
     }
     #middle {
         width:90vw;
-        padding:0px 5vw;
+        padding:0 5vw;
     }
     #middle table {
         width:80%;
@@ -396,7 +395,7 @@ body {
         display:none !important;
     }
     .box2 {
-        margin-left:0px !important;
+        margin-left:0 !important;
     }
     #box div {
         width:100%;

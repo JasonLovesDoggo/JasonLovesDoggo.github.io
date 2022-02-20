@@ -14,5 +14,8 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery-3.4.1" level="application" />
     <orderEntry type="library" name="jquery-3.4.1" level="application" />
+    <orderEntry type="library" name="magic-grid" level="application" />
+    <orderEntry type="library" name="all" level="application" />
+    <orderEntry type="library" name="animate.css" level="application" />
   </component>
 </module>
