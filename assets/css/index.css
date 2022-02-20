@@ -201,12 +201,16 @@ body {
     color: #FF4500; }
 
 .instagram:hover{
-        cursor: pointer;
+    cursor: pointer;
     color: #833AB4; }
 
-.email:hover {
+.fa-envelope:hover {
+    color: transparent;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
         cursor: pointer;
-    background: -webkit-linear-gradient(left, #4285F4, #BB001B, #EA4335, #FBBC05, #34A853);}
+}
 
 .container {
     width:90vw;
