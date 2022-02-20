@@ -1,1 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /bella/tempdir/template
+Disallow: /assets/templates
+
 Sitemap: https://nasoj.me/sitemap.xml
