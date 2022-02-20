@@ -1,4 +1,4 @@
-name: UpdateSitemap
+name: UpdateSitemap/Gallary
 
 
 on:
@@ -8,7 +8,7 @@ on:
 jobs:
   sitemap_job:
     runs-on: ubuntu-latest
-    name: Generate a sitemap
+    name: Generate a sitemap and update the gallary
 
     steps:
       - name: Checkout the repo
@@ -23,23 +23,24 @@ jobs:
             drop-html-extension: true
             base-url-path: https://nasoj.me
 
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8' # install the python version needed
+
+
+      - name: Update Gallary
+        run: python bella/tempdir/scripts/Generategallary.py
+
       - name: commit files
         run: |
-          git config --global user.name "Jason | Sitemap updater"
-          git config --global user.email "thebosssg19@gmail.com"
+          git config --global user.name "Jason | Sitemap And Gallary Updater"
+          git config --global user.email "JasonCameron.all@gmail.com"
           git add .
           # "echo" returns true so the build succeeds, even if no changed files
           git commit -m 'Update gallary file' || echo
           git push
       
-
-      - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
-
-
       - name: notify google/bing that there is a new sitemap
         env:
           CUSTOM_URL: "${{ secrets.SITEMAP_URL }}" # set custom URL if you use it
@@ -61,3 +62,12 @@ jobs:
           wait
           printf "\n\nDone\n"
           
+
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+
+
+
