@@ -58,7 +58,7 @@ body {
     display:none;
 }
 #menu a {
-    margin:0px 6%;
+    margin:10px;
     font-size:19px;
     color:#fff;
     text-decoration:underline;
