@@ -2,11 +2,11 @@
 [![pages-build-deployment](https://github.com/JakeWasChosen/JakeWasChosen.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/JakeWasChosen/JakeWasChosen.github.io/actions/workflows/pages/pages-build-deployment)
 [![UpdateGallary](https://github.com/JakeWasChosen/JakeWasChosen.github.io/actions/workflows/UpdateGallary.yml/badge.svg)](https://github.com/JakeWasChosen/JakeWasChosen.github.io/actions/workflows/UpdateGallary.yml)
 
-#My personal website / portfolio
+# My personal website / portfolio
 
-####hosted via GitHub pages and uses cloudflare dns and a namecheap domain                                                                                                                       (thank you github student pack)
+#### hosted via GitHub pages and uses cloudflare dns and a namecheap domain                                                                                                                       (thank you github student pack)
 
-###[URL](https://nasoj.me)
+### [URL](https://nasoj.me)
 
 
 
