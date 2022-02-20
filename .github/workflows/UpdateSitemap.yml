@@ -22,6 +22,24 @@ jobs:
         with:
             drop-html-extension: true
             base-url-path: https://nasoj.me
+            include-html: false
+
+       - name: commit files
+        run: |
+          git config --global user.name "Jason | Sitemap updater"
+          git config --global user.email "thebosssg19@gmail.com"
+          git add .
+          # "echo" returns true so the build succeeds, even if no changed files
+          git commit -m 'Update gallary file' || echo
+          git push
+      
+
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+
 
       - name: notify google/bing that there is a new sitemap
         env:
@@ -43,3 +61,4 @@ jobs:
           curl -v "https://www.bing.com/ping?sitemap=${MAP_URL}" &> /dev/null  &
           wait
           printf "\n\nDone\n"
+          
