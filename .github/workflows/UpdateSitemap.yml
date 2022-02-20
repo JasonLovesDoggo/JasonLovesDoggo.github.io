@@ -24,7 +24,7 @@ jobs:
             base-url-path: https://nasoj.me
             include-html: false
 
-       - name: commit files
+      - name: commit files
         run: |
           git config --global user.name "Jason | Sitemap updater"
           git config --global user.email "thebosssg19@gmail.com"
