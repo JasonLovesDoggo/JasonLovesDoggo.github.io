@@ -7,7 +7,6 @@ on:
   push:
     paths:
       - 'assets/Img/Bella/**'
-      #TODO allways add the new page dir's
   workflow_dispatch:
 
 jobs:
