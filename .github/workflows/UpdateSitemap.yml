@@ -2,7 +2,7 @@ name: UpdateSitemap/Gallary
 
 
 on:
-  page_build:
+  push:
   workflow_dispatch:
 
 jobs:
