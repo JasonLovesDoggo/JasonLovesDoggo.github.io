@@ -22,7 +22,6 @@ jobs:
         with:
             drop-html-extension: true
             base-url-path: https://nasoj.me
-            include-html: false
 
       - name: commit files
         run: |
