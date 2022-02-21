@@ -76,8 +76,12 @@
 			}
 			const state = getState(word, game.board.words[game.guesses]);
 			game.board.state[game.guesses] = state;
-			state.forEach((e, i) => ($letterStates[game.board.words[game.guesses][i]] = e));
-			++game.guesses;
+			state.forEach((e, i) => {
+				const ls = $letterStates[game.board.words[game.guesses][i]];
+				if (ls === "🔳" || e === "🟩") {
+					$letterStates[game.board.words[game.guesses][i]] = e;
+				}
+			});			++game.guesses;
 			if (game.board.words[game.guesses - 1] === word) win();
 			else if (game.guesses === ROWS) lose();
 		} else {
@@ -107,7 +111,6 @@
 	}
 
 	function lose() {
-		++game.guesses;
 		game.active = false;
 		setTimeout(() => (showStats = true), delay);
 		if (!modeData.modes[$mode].historical) {
@@ -161,8 +164,7 @@
 			if ($settings.tutorial) $settings.tutorial = 0;
 			board.hideCtx();
 		}}
-		bind:value={game.board.words[game.guesses]}
-		on:submitWord={submitWord}
+		bind:value={game.board.words[game.guesses === ROWS ? 0 : game.guesses]}		on:submitWord={submitWord}
 		on:esc={() => {
 			showTutorial = false;
 			showStats = false;
