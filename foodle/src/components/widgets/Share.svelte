@@ -1,21 +1,25 @@
 <script lang="ts">
 	import type Toaster from "./Toaster.svelte";
-
 	import { mode } from "../../stores";
 	import { COLS, modeData } from "../../utils";
 	import { getContext } from "svelte";
-
 	export let state: GameState;
 	const toaster = getContext<Toaster>("toaster");
-	console.log(state.board.state);
-	console.log(state.guesses - 1);
+	function failed() {
+		if (state.guesses === 0) {
+			return false;
+		}
+		if (state.board.state[state.guesses - 1].join() === "🟩".repeat(COLS)) {
+			return true;
+		}
+		return false;
+	}
 	$: stats = `${modeData.modes[$mode].name} Foodle #${state.wordNumber} ${
-		!state.active && state.board.state[state.guesses - 1].join() === "🟩".repeat(COLS)
-			? state.guesses
-			: "X"	}/${state.board.words.length}\n\n    ${state.board.state
+		!state.active && failed() ? state.guesses : "X"
+	}/${state.board.words.length}\n\n    ${state.board.state
 		.slice(0, state.guesses)
 		.map((r) => r.join(""))
-		.join("\n    ")}\nnasoj.me/foodle`;
+		.join("\n    ")}\nhttps://nasoj.me/foodle`;
 </script>
 
 <div
@@ -35,6 +39,7 @@
 
 <style>
 	div {
+		color: #fff;
 		font-size: var(--fs-medium);
 		text-transform: uppercase;
 		font-weight: bold;

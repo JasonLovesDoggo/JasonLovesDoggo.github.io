@@ -1,20 +1,15 @@
 <script lang="ts">
 	import { createEventDispatcher, onDestroy } from "svelte";
-
 	import { blur } from "svelte/transition";
 	import type { GameMode } from "../../enums";
 	import { mode } from "../../stores";
 	import { modeData } from "../../utils";
-
 	const dispatch = createEventDispatcher();
-
 	const HOUR = 3600000;
 	const MINUTE = 60000;
 	const SECOND = 1000;
 	let ms = 1000;
-
 	let countDown: number;
-
 	export function reset(m: GameMode) {
 		clearInterval(countDown);
 		ms = modeData.modes[m].unit - (new Date().valueOf() - modeData.modes[m].seed);
@@ -30,7 +25,7 @@
 	$: reset($mode);
 </script>
 
-<h3>Next foodle</h3>
+<h3>Next Foodle</h3>
 <div class="container">
 	{#if ms > 0}
 		<div transition:blur class="timer">
