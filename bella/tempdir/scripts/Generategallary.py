@@ -4,21 +4,21 @@ from os import listdir
 
 from utils import *
 
-path = 'assets/Img/Bella'
+path = 'Img/Img/Bella'
 catagorytype = None
 fileloc = None
 QSYM = '&quot;'
-dir_list = '.../../assets/Img/Bella/'
+dir_list = '.../../Img/Img/Bella/'
 catagory = f'{QSYM}{catagorytype}{QSYM}'
 img_cata_dict = {}
-photos = listdir(f'{str(os.path.abspath(__file__))[:-41]}/assets/Img/Bella')
+photos = listdir(f'{str(os.path.abspath(__file__))[:-41]}/Img/Img/Bella')
 img_template_list = []
 dir = str(os.path.abspath(__file__))[:-41]
 
 
 def gen_photo_list(subdir: str = ''):
     list_of_photos = []
-    for img in listdir(f'{dir}/assets/Img/Bella{subdir}'):
+    for img in listdir(f'{dir}/Img/Img/Bella{subdir}'):
         list_of_photos.append(f'{dir_list}{subdir[1:]}{"/" if subdir != "" else ""}{img}')
     return list_of_photos
 
@@ -51,7 +51,7 @@ def gen_catagories_total():
     for photo in remove_duplicates(all_photos):
         img_cata_dict[photo] = get_img_types(photo)
 
-# ---------------------------THE ABOVE PART WAS TO GENERATE THE CATEGORY LIST (e.g. '../../assets/Img/Bella/1-nature.jpg': {'bella': True, 'nature': False, 'food': False, 'other': False})--------------------------------------#
+# ---------------------------THE ABOVE PART WAS TO GENERATE THE CATEGORY LIST (e.g. '../../Img/Img/Bella/1-nature.jpg': {'bella': True, 'nature': False, 'food': False, 'other': False})--------------------------------------#
 
 def gen_cata_format(catagories: dict):
     returnstr = ''

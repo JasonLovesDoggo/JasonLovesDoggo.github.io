@@ -6,7 +6,7 @@ on:
     - cron: '0 0 * * 6'
   push:
     paths:
-      - 'assets/Img/Bella/**'
+      - 'Img/Img/Bella/**'
   workflow_dispatch:
 
 jobs:

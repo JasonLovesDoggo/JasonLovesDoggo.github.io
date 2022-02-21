@@ -8,7 +8,7 @@
 		"Double tap or right click the next row to see how many possible words can be played there, if you use all the previous information.",
 		"Because words are chosen from the list randomly it is possible to get the same word again.",
 		"When you see the refresh button in the top left corner it means a new word is ready.",
-		"Everyone has the same foodle at the same time. Your word #73 is the same as everyone else's #73.",
+		"Everyone has the same Img at the same time. Your word #73 is the same as everyone else's #73.",
 		"There are more valid guesses than possible words, ie. not all 5 letter words can be selected as an answer by the game.",
 		"Historical games don't count towards your stats. Historical games are when you follow a link to a specific game number.",
 	];

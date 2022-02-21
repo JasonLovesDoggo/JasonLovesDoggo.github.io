@@ -15,7 +15,7 @@ $(document).ready(function() {
     setTimeout(function(){
       $("#loading").removeClass("animated fadeOut").css("display","none");
       $("#box").css("display","none");
-      $("#foodle").removeClass("animated fadeIn");
+      $("#Img").removeClass("animated fadeIn");
       $("#contact").removeClass("animated fadeIn");
       $("#projects").removeClass("animated fadeIn");
     },700);
