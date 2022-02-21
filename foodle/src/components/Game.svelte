@@ -81,7 +81,8 @@
 				if (ls === "🔳" || e === "🟩") {
 					$letterStates[game.board.words[game.guesses][i]] = e;
 				}
-			});			++game.guesses;
+			});
+			++game.guesses;
 			if (game.board.words[game.guesses - 1] === word) win();
 			else if (game.guesses === ROWS) lose();
 		} else {
@@ -164,7 +165,8 @@
 			if ($settings.tutorial) $settings.tutorial = 0;
 			board.hideCtx();
 		}}
-		bind:value={game.board.words[game.guesses === ROWS ? 0 : game.guesses]}		on:submitWord={submitWord}
+		bind:value={game.board.words[game.guesses === ROWS ? 0 : game.guesses]}
+		on:submitWord={submitWord}
 		on:esc={() => {
 			showTutorial = false;
 			showStats = false;

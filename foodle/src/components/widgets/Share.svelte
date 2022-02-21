@@ -2,15 +2,17 @@
 	import type Toaster from "./Toaster.svelte";
 
 	import { mode } from "../../stores";
-	import { modeData, ROWS } from "../../utils";
+	import { COLS, modeData } from "../../utils";
 	import { getContext } from "svelte";
 
 	export let state: GameState;
 	const toaster = getContext<Toaster>("toaster");
-
+	console.log(state.board.state);
+	console.log(state.guesses - 1);
 	$: stats = `${modeData.modes[$mode].name} Foodle #${state.wordNumber} ${
-		state.guesses <= ROWS ? state.guesses : "X"
-	}/${state.board.words.length}\n\n    ${state.board.state
+		!state.active && state.board.state[state.guesses - 1].join() === "🟩".repeat(COLS)
+			? state.guesses
+			: "X"	}/${state.board.words.length}\n\n    ${state.board.state
 		.slice(0, state.guesses)
 		.map((r) => r.join(""))
 		.join("\n    ")}\nnasoj.me/foodle`;
