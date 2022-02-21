@@ -52,8 +52,7 @@
 	<br />
 	Open the settings menu to see some of the additional features.
 	Or click
-		<a href="https://nasoj.me/" target="_blank">Here</a>
-	to go home.
+		<a href="https://nasoj.me/" target="_blank">Here to go home.</a>
 </div>
 
 <style lang="scss">

@@ -1,6 +1,6 @@
 // Increase the v number when the app is updated
 const cacheName = "foodle-v1.1.2";
-
+//https://medium.com/notonlycss/turn-your-website-into-a-pwa-6aaecb95f8b9
 const assetsToCache = [
 	"./",
 	"./index.html",
