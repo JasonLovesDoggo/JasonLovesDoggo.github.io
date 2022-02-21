@@ -5,7 +5,7 @@
 	export let visible: boolean;
 </script>
 
-<h3>how to play</h3>
+<h1>how to play</h1>
 <div>Guess the <strong>FOODLE</strong> in {ROWS} tries.</div>
 <div>Each guess must be a valid {COLS} letter word. Hit the enter button to submit.</div>
 <div>
