@@ -5,5 +5,12 @@
   "sub_title": "How to implement a LRU cache in python",
   "top_image": "top_image.jpeg",
   "visible": true
+ },
+  {
+  "url_title": "How-to-make-a-Dynamic-cache-for-a-PWA",
+  "title": "How to make a Dynamic cache for a PWA",
+  "sub_title": "How to dynamically cache data in a Progressive Web App ",
+  "top_image": "top_image.jpeg",
+  "visible": true
  }
 ]

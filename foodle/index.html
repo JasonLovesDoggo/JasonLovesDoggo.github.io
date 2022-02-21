@@ -4,7 +4,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-
 	<meta name="description" content="Guess the food based word in 6 tries. Play daily, hourly and infinite modes.">
 
 	<meta name="theme-color" content="#6aaa64" />
@@ -13,11 +12,17 @@
 	<link rel="apple-touch-icon" href="Img/logo_192x192.png" />
 	<link rel="stylesheet" href="global.css">
 	<link rel="stylesheet" href="src/build/bundle.css">
-	<script src="./app.js"></script>
+	<script>
+		if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('https://nasoj.me/foodle/sw.js')
+    .then(reg => console.log('service worker registered'))
+    .catch(err => console.log('service worker not registered', err));
+}
+	</script>
 	<!-- FB Meta Tags -->
 	<meta property="og:url" content="https://nasoj.me/foodle">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="Foodle - A food word guessing game">
+	<meta property="og:title" content="Foodle - A food based word guessing game">
 	<meta property="og:description" content="Guess the food based word in 6 tries. Play daily, hourly and infinite modes.">
 	<meta property="og:image" content="https://raw.githubusercontent.com/JakeWasChosen/website/master/foodle/public/img/og_1200x630.png">
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -31,7 +36,7 @@
 </script>
 
 	<script defer src="src/build/bundle.js"></script>
-	<title>Foodle - A food based word guessing game</title>
+	<title>Foodle - A food based wordle clone</title>
 </head>
 
 <body>
