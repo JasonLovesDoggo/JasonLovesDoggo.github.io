@@ -68,7 +68,7 @@
 	<div class="footer">
 		<a href="https://www.powerlanguage.co.uk/wordle/" target="_blank">Original Wordle</a>
 		<div>
-			<div>v1.1.1</div>
+			<div>v1.1.4</div>
 			<div
 				class="word"
 				on:contextmenu|preventDefault={() => {
