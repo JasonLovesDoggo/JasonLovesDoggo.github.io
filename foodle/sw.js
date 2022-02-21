@@ -9,7 +9,7 @@ const assetsToCache = [
 self.addEventListener("install", e => {
 	log("Installing");
 	e.waitUntil((async () => {
-		const cache = await caches.open(cacheName);
+		const cache = await caches.open(dynamicCacheName);
 		await cache.addAll(assetsToCache);
 	})());
 });
@@ -31,7 +31,7 @@ self.addEventListener('fetch', evt => {
     caches.match(evt.request).then(cacheRes => {
       return cacheRes || fetch(evt.request).then(fetchRes => {
         return caches.open(dynamicCacheName).then(cache => {
-          cache.put(evt.request.url, fetchRes.clone()).then(r =>  log('Caching Url ${evt.request.url}'));
+          cache.put(evt.request.url, fetchRes.clone()).then(r =>  log(`Caching Url ${evt.request.url} | ${r}`));
           return fetchRes;
         })
       });
