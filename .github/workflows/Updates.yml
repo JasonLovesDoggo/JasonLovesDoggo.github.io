@@ -41,7 +41,7 @@ jobs:
           git config --global user.name "Jason | Sitemap And Gallary Updater"
           git config --global user.email "JasonCameron.all@gmail.com"
           git add .
-          git rm *.pyc
+          git rm *.pyc -f
           # "echo" returns true so the build succeeds, even if no changed files
           git commit -m 'Update gallary file' || echo
           git push
