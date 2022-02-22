@@ -217,7 +217,7 @@ export function seededRandomInt(min: number, max: number, seed: number) {
 	return Math.floor(min + (max - min) * rng());
 }
 
-export const DELAY_INCREMENT = 150;
+export const DELAY_INCREMENT = 200;
 
 export const PRAISE = [
 	"Genius",
@@ -247,7 +247,7 @@ export function createDefaultSettings(): Settings {
 		hard: new Array(modeData.modes.length).map(() => false),
 		dark: true,
 		colorblind: false,
-		tutorial: 2,
+		tutorial: 3,
 	};
 }
 

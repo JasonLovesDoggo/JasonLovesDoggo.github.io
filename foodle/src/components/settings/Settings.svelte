@@ -1,21 +1,11 @@
 <script lang="ts">
 	import { getContext, onMount } from "svelte";
-
 	import { mode, settings } from "../../stores";
 	import { modeData } from "../../utils";
-	import { Tips, Toaster } from "../widgets";
+	import type { Toaster } from "../widgets";
 	import Setting from "./Setting.svelte";
-
-	export let validHard: boolean;
-	export let visible: boolean;
-	export let wordNumber: number;
-	let tip = 0;
-
-	$: if (visible) tip = Math.floor(10 * Math.random());
-
-	const version = getContext<string>("version");
+	export let state: GameState;
 	const toaster = getContext<Toaster>("toaster");
-
 	let root: HTMLElement;
 	onMount(() => {
 		root = document.documentElement;
@@ -38,12 +28,12 @@
 		<h3>settings</h3>
 		<div
 			on:click={() => {
-				if (!validHard) {
+				if (!state.validHard) {
 					toaster.pop("Game has already violated hard mode");
 				}
 			}}
 		>
-			<Setting type="switch" bind:value={$settings.hard[$mode]} disabled={!validHard}>
+			<Setting type="switch" bind:value={$settings.hard[$mode]} disabled={!state.validHard}>
 				<span slot="title">Hard Mode</span>
 				<span slot="desc">Any revealed hints must be used in subsequent guesses</span>
 			</Setting>
@@ -64,28 +54,11 @@
 			<a href="https://github.com/JakeWasChosen/website/issues" target="_blank">Suggest a word</a>      <!--  TODO: add it to be a template -->
 			<a href="https://github.com/JakeWasChosen/website/issues" target="_blank">Report a Bug</a>
 		</div>
-		<Tips index={tip} />
-	</div>
-	<div class="footer">
-		<a href="https://www.powerlanguage.co.uk/wordle/" target="_blank">Original Wordle</a>
-		<div>
-			<div>v{version}</div>
-			<div
-				class="word"
-				on:dblclick={() => {
-					localStorage.clear();
-					toaster.pop("localStorage cleared");
-				}}
-			>
-				{modeData.modes[$mode].name} word #{wordNumber}
-			</div>
-		</div>
 	</div>
 </div>
 
 <style>
 	.outer {
-		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -96,13 +69,6 @@
 		color: var(--fg-secondary);
 		display: flex;
 		justify-content: space-between;
-	}
-	.footer {
-		color: var(--fg-secondary);
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		text-align: end;
 	}
 	:global(.settings-top > div) {
 		padding: 16px 0;

@@ -37,7 +37,7 @@
 	</svg>
 </div>
 
-<style>
+<style lang="scss">
 	div {
 		color: #fff;
 		font-size: var(--fs-medium);
@@ -52,8 +52,8 @@
 		gap: 8px;
 		width: 80%;
 		cursor: pointer;
-	}
-	div:hover {
-		opacity: 0.9;
+	&:hover {
+			opacity: 0.9;
+		}
 	}
 </style>

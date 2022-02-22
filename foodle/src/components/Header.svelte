@@ -5,13 +5,10 @@
 	import { modeData } from "../utils";
 	import GameIcon from "./GameIcon.svelte";
 	import type { Toaster } from "./widgets";
-
 	export let showStats: boolean;
 	export let tutorial: boolean;
 	export let showRefresh: boolean;
-
 	export let toaster = getContext<Toaster>("toaster");
-
 	const dispatch = createEventDispatcher();
 	mode.subscribe((m) => {
 		if (modeData.modes[m].unit - (new Date().valueOf() - modeData.modes[m].seed) > 0) {
@@ -60,7 +57,7 @@
 		</GameIcon>
 	</div>
 	{#if tutorial}
-		<div transition:scale class="prompt" on:click={() => dispatch("closeTutPopUp")}>
+		<div transition:scale class="tutorial" on:click={() => dispatch("closeTutPopUp")}>
 			Tap Foodle to change game mode
 			<span class="ok">OK</span>
 		</div>
@@ -80,41 +77,6 @@
 		border-bottom: 1px solid var(--border-primary);
 		width: 100%;
 		height: var(--height);
-	}
-	.prompt {
-		--arrow-size: 10px;
-		--padding: 10px;
-		font-size: var(--fs-small);
-		letter-spacing: initial;
-		position: absolute;
-		top: calc(var(--arrow-size) + var(--height));
-		left: 50%;
-		transform: translateX(-50%);
-		width: max-content;
-		display: flex;
-		align-items: center;
-		padding: var(--padding);
-		border-radius: 4px;
-		color: var(--bg-primary);
-		background: var(--fg-primary);
-		z-index: 1;
-		::before {
-			content: "";
-			position: absolute;
-			left: 50%;
-			transform: translate(-50%);
-			top: calc(-2 * var(--arrow-size));
-			border: var(--arrow-size) solid transparent;
-			border-bottom: var(--arrow-size) solid var(--fg-primary);
-		}
-	}
-	.ok {
-		padding: 10px;
-		margin-left: var(--padding);
-		border-radius: 4px;
-		color: white;
-		background: var(--color-correct);
-		cursor: pointer;
 	}
 	.icons {
 		height: 100%;

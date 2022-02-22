@@ -22,8 +22,10 @@
 					d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
 			</GameIcon>
 		</div>
-		<slot />
-	</div>
+		<div>
+			<slot />
+		</div>
+		<slot name="footer" />	</div>
 {:else}
 	<div class:visible class="overlay" on:click|self={close}>
 		<div class="modal">
@@ -94,9 +96,21 @@
 		max-width: var(--game-width);
 		margin: auto;
 		padding: 10px 16px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		overflow-y: auto;
 		.exit {
 			top: 10px;
 			right: 10px;
 		}
+
+	}
+	:global([slot="footer"]) {
+		color: var(--fg-secondary);
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		text-align: end;
 	}
 </style>
