@@ -3,7 +3,7 @@ name: UpdateSitemap/Gallary
 
 on:
   schedule:
-    - cron: '0 0 * * 6'
+    - cron: '0 0 * * 0,3'
   push:
     paths:
       - 'Img/Img/Bella/**'
