@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookies, cookies, cookies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../index.css"></head>
+  <body>
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+    <a href="/" class="go_back"><i class="fas fa-arrow-left"></i></a>
+    <div id="background_overlay"></div>
+    <div id="background" style="background: url(top_image.jpeg) center;"></div>
+    <table id="profile_blog">
+      <tbody>
+        <tr>
+          <td style="width:8vw;"><div id="profile_img_blog"></div></td>
+          <td style="width:52vw;">
+            <div id="username_blog"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="blog-display">
+      <h1 id="blog_title">Cookies, cookies, cookies</h1>
+      <h2 id="blog_sub_title">All about cookies</h2>
+      <div id="blog"><p id="para_0_original"></p><p>Cookies are small strings of data that are stored directly in the browser. They are a part of the HTTP protocol, defined by the <a href="https://tools.ietf.org/html/rfc6265">RFC 6265</a> specification.</p>
+<p>Cookies are usually set by a web-server using the response <code>Set-Cookie</code> HTTP-header. Then, the browser automatically adds them to (almost) every request to the same domain using the <code>Cookie</code> HTTP-header.</p>
+<p>One of the most widespread use cases is authentication:</p>
+<ol>
+<li>Upon sign in, the server uses the <code>Set-Cookie</code> HTTP-header in the response to set a cookie with a unique "session identifier".</li>
+<li>Next time when the request is sent to the same domain, the browser sends the cookie over the net using the <code>Cookie</code> HTTP-header.</li>
+<li>So the server knows who made the request.</li>
+</ol>
+<p>We can also access cookies from the browser, using <code>document.cookie</code> property.</p>
+<p>There are many tricky things about cookies and their options. In this chapter we'll cover them in detail.</p>
+<h2 id="reading-from-document-cookie">Reading from document.cookie</h2>
+<pre><code class="lang-online">Does your browser store <span class="hljs-keyword">any</span> cookies <span class="hljs-keyword">from</span> <span class="hljs-keyword">this</span> site? Let<span class="hljs-string">'s see:</span>
+</code></pre>
+<pre><code class="lang-offline">Assuming yo<span class="hljs-string">u're on a website, it'</span>s possible to see the cookies <span class="hljs-keyword">from</span> it, like this:
+</code></pre>
+<p>run
+// Here on Nasoj.me, I use Google Analytics for statistics,
+// so there should be some cookies
+alert( document.cookie ); // cookie1=value1; cookie2=value2;...</p>
+<pre><code>
+
+<span class="vhdl">The value <span class="hljs-keyword">of</span> `document.cookie` consists <span class="hljs-keyword">of</span> `name=value` pairs, delimited by `; `. Each one <span class="hljs-keyword">is</span> a separate cookie.
+
+<span class="hljs-keyword">To</span> find a particular cookie, we can split `document.cookie` by `; `, <span class="hljs-keyword">and</span> <span class="hljs-keyword">then</span> find the right name. We can <span class="hljs-keyword">use</span> either a regular expression <span class="hljs-keyword">or</span> <span class="hljs-keyword">array</span> functions <span class="hljs-keyword">to</span> do that.
+
+We leave it as an exercise <span class="hljs-keyword">for</span> the reader. Also, at the <span class="hljs-keyword">end</span> <span class="hljs-keyword">of</span> the chapter you<span class="hljs-symbol">'ll</span> find helper functions <span class="hljs-keyword">to</span> manipulate cookies.
+
+## Writing <span class="hljs-keyword">to</span> document.cookie
+
+We can write <span class="hljs-keyword">to</span> `document.cookie`. But it<span class="hljs-symbol">'s</span> <span class="hljs-keyword">not</span> a data <span class="hljs-keyword">property</span>, it<span class="hljs-symbol">'s</span> an [accessor (getter/setter)](info:<span class="hljs-keyword">property</span>-accessors). An assignment <span class="hljs-keyword">to</span> it <span class="hljs-keyword">is</span> treated specially.
+
+**A write operation <span class="hljs-keyword">to</span> `document.cookie` updates only cookies mentioned <span class="hljs-keyword">in</span> it, but doesn<span class="hljs-symbol">'t</span> touch other cookies.**
+
+<span class="hljs-keyword">For</span> instance, this call sets a cookie <span class="hljs-keyword">with</span> the name `user` <span class="hljs-keyword">and</span> value `John`:
+
+run
+document.cookie = <span class="hljs-string">"user=John"</span>; // update only cookie named <span class="hljs-symbol">'user</span>'
+alert(document.cookie); // show <span class="hljs-keyword">all</span> cookies</span>
+</code></pre><p>If you run it, then probably you'll see multiple cookies. That's because the <code>document.cookie=</code> operation does not overwrite all cookies. It only sets the mentioned cookie <code>user</code>.</p>
+<p>Technically, name and value can have any characters. To keep the valid formatting, they should be escaped using a built-in <code>encodeURIComponent</code> function:</p>
+<p>run
+// special characters (spaces), need encoding
+let name = "my name";
+let value = "John Smith"</p>
+<p>// encodes the cookie as my%20name=John%20Smith
+document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);</p>
+<p>alert(document.cookie); // ...; my%20name=John%20Smith</p>
+<pre><code>
+
+<span class="applescript">```warn header=<span class="hljs-string">"Limitations"</span>
+There are few limitations:
+- The `<span class="hljs-built_in">name</span>=value` pair, <span class="hljs-keyword">after</span> `encodeURIComponent`, should <span class="hljs-keyword">not</span> exceed <span class="hljs-number">4</span>KB. So we can't store anything huge <span class="hljs-keyword">in</span> a cookie.
+- The total <span class="hljs-built_in">number</span> <span class="hljs-keyword">of</span> cookies per domain <span class="hljs-keyword">is</span> limited <span class="hljs-keyword">to</span> <span class="hljs-keyword">around</span> <span class="hljs-number">20</span>+, <span class="hljs-keyword">the</span> exact limit depends <span class="hljs-keyword">on</span> <span class="hljs-keyword">the</span> browser.</span>
+</code></pre><p>Cookies have several options, many of them are important and should be set.</p>
+<p>The options are listed after <code>key=value</code>, delimited by <code>;</code>, like this:</p>
+<p>run
+document.cookie = "user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"</p>
+<pre><code>
+## path
+
+- **`path=/mypath`**
+
+The url path prefix must be absolute. It makes the cookie accessible <span class="hljs-keyword">for</span> pages under that path. By <span class="hljs-keyword">default</span>, it<span class="hljs-symbol">'s</span> the current path.
+
+<span class="hljs-keyword">If</span> a cookie <span class="hljs-keyword">is</span> set <span class="hljs-keyword">with</span> `path=/admin`, it<span class="hljs-symbol">'s</span> visible at pages `/admin` <span class="hljs-keyword">and</span> `/admin/something`, but <span class="hljs-keyword">not</span> at `/home` <span class="hljs-keyword">or</span> `/adminpage`.
+
+Usually, we should set `path` <span class="hljs-keyword">to</span> the root: `path=/` <span class="hljs-keyword">to</span> make the cookie accessible from <span class="hljs-keyword">all</span> website pages.
+
+## domain
+
+- **`domain=site.com`**
+
+A domain defines where the cookie <span class="hljs-keyword">is</span> accessible. <span class="hljs-keyword">In</span> practice though, there are limitations. We can<span class="hljs-symbol">'t</span> set any domain.
+
+**There<span class="hljs-symbol">'s</span> no way <span class="hljs-keyword">to</span> let a cookie be accessible from another <span class="hljs-number">2</span>nd-level domain, so `other.com` will never receive a cookie set at `site.com`.**
+
+It<span class="hljs-symbol">'s</span> a safety restriction, <span class="hljs-keyword">to</span> allow us <span class="hljs-keyword">to</span> store sensitive data <span class="hljs-keyword">in</span> cookies that should be available only <span class="hljs-keyword">on</span> one site.
+
+By <span class="hljs-keyword">default</span>, a cookie <span class="hljs-keyword">is</span> accessible only at the domain that set it.
+
+Please <span class="hljs-literal">note</span>, by <span class="hljs-keyword">default</span> a cookie <span class="hljs-keyword">is</span> also <span class="hljs-keyword">not</span> <span class="hljs-keyword">shared</span> <span class="hljs-keyword">to</span> a subdomain as well, such as `forum.site.com`.
+
+// <span class="hljs-keyword">if</span> we set a cookie at site.com website...
+document.cookie = <span class="hljs-string">"user=John"</span>
+
+// ...we won<span class="hljs-symbol">'t</span> see it at forum.site.com
+alert(document.cookie); // no user
+</code></pre><p>...But this can be changed. If we'd like to allow subdomains like <code>forum.site.com</code> to get a cookie set at <code>site.com</code>, that's possible.</p>
+<p>For that to happen, when setting a cookie at <code>site.com</code>, we should explicitly set the <code>domain</code> option to the root domain: <code>domain=site.com</code>. Then all subdomains will see such cookie.</p>
+<p>For example:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// at site.com</span>
+<span class="hljs-comment">// make the cookie accessible on any subdomain *.site.com:</span>
+<span class="hljs-built_in">document</span>.cookie = <span class="hljs-string">"user=John; *!*domain=site.com*/!*"</span>
+
+<span class="hljs-comment">// later</span>
+
+<span class="hljs-comment">// at forum.site.com</span>
+alert(<span class="hljs-built_in">document</span>.cookie); <span class="hljs-comment">// has cookie user=John</span>
+</code></pre>
+<p>For historical reasons, <code>domain=.site.com</code> (with a dot before <code>site.com</code>) also works the same way, allowing access to the cookie from subdomains. That's an old notation and should be used if we need to support very old browsers.</p>
+<p>To summarize, the <code>domain</code> option allows to make a cookie accessible at subdomains.</p>
+<h2 id="expires-max-age">expires, max-age</h2>
+<p>By default, if a cookie doesn't have one of these options, it disappears when the browser is closed. Such cookies are called "session cookies"</p>
+<p>To let cookies survive a browser close, we can set either the <code>expires</code> or <code>max-age</code> option.</p>
+<ul>
+<li><strong><code>expires=Tue, 19 Jan 2038 03:14:07 GMT</code></strong></li>
+</ul>
+<p>The cookie expiration date defines the time, when the browser will automatically delete it.</p>
+<p>The date must be exactly in this format, in the GMT timezone. We can use <code>date.toUTCString</code> to get it. For instance, we can set the cookie to expire in 1 day:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// +1 day from now</span>
+<span class="hljs-keyword">let</span> <span class="hljs-built_in">date</span> = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-built_in">Date</span>.now() + <span class="hljs-number">86400e3</span>);
+<span class="hljs-built_in">date</span> = <span class="hljs-built_in">date</span>.toUTCString();
+<span class="hljs-built_in">document</span>.cookie = <span class="hljs-string">"user=John; expires="</span> + <span class="hljs-built_in">date</span>;
+</code></pre>
+<p>If we set <code>expires</code> to a date in the past, the cookie is deleted.</p>
+<ul>
+<li><strong><code>max-age=3600</code></strong></li>
+</ul>
+<p>Is an alternative to <code>expires</code> and specifies the cookie's expiration in seconds from the current moment.</p>
+<p>If set to zero or a negative value, the cookie is deleted:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// cookie will die in +1 hour from now</span>
+<span class="hljs-built_in">document</span>.cookie = <span class="hljs-string">"user=John; max-age=3600"</span>;
+
+<span class="hljs-comment">// delete cookie (let it expire right now)</span>
+<span class="hljs-built_in">document</span>.cookie = <span class="hljs-string">"user=John; max-age=0"</span>;
+</code></pre>
+<h2 id="secure">secure</h2>
+<ul>
+<li><strong><code>secure</code></strong></li>
+</ul>
+<p>The cookie should be transferred only over HTTPS.</p>
+<p><strong>By default, if we set a cookie at <code>https://site.com</code>, then it also appears at <code>https://site.com</code> and vice versa.</strong></p>
+<p>That is, cookies are domain-based, they do not distinguish between the protocols.</p>
+<p>With this option, if a cookie is set by <code>https://site.com</code>, then it doesn't appear when the same site is accessed by HTTP, as <code>http://site.com</code>. So if a cookie has sensitive content that should never be sent over unencrypted HTTP, the <code>secure</code> flag is the right thing.</p>
+<pre><code class="lang-js">// assuming we're on https:// now
+// <span class="hljs-keyword">set</span> the cookie <span class="hljs-keyword">to</span> be secure (<span class="hljs-keyword">only</span> <span class="hljs-keyword">accessible</span> <span class="hljs-keyword">over</span> HTTPS)
+document.cookie = <span class="hljs-string">"user=John; secure"</span>;
+</code></pre>
+<h2 id="samesite">samesite</h2>
+<p>That's another security attribute <code>samesite</code>. It's designed to protect from so-called XSRF (cross-site request forgery) attacks.</p>
+<p>To understand how it works and when it's useful, let's take a look at XSRF attacks.</p>
+<h3 id="xsrf-attack">XSRF attack</h3>
+<p>Imagine, you are logged into the site <code>bank.com</code>. That is: you have an authentication cookie from that site. Your browser sends it to <code>bank.com</code> with every request, so that it recognizes you and performs all sensitive financial operations.</p>
+<p>Now, while browsing the web in another window, you accidentally come to another site <code>evil.com</code>. That site has JavaScript code that submits a form <code>&lt;form action="https://bank.com/pay"&gt;</code> to <code>bank.com</code> with fields that initiate a transaction to the hacker's account.</p>
+<p>The browser sends cookies every time you visit the site <code>bank.com</code>, even if the form was submitted from <code>evil.com</code>. So the bank recognizes you and actually performs the payment.</p>
+<p>That's a so-called "Cross-Site Request Forgery" (in short, XSRF) attack.</p>
+<p>Real banks are protected from it of course. All forms generated by <code>bank.com</code> have a special field, a so-called "XSRF protection token", that an evil page can't generate or extract from a remote page. It can submit a form there, but can't get the data back. The site <code>bank.com</code> checks for such token in every form it receives.</p>
+<p>Such a protection takes time to implement though. We need to ensure that every form has the required token field, and we must also check all requests.</p>
+<h3 id="enter-cookie-samesite-option">Enter cookie samesite option</h3>
+<p>The cookie <code>samesite</code> option provides another way to protect from such attacks, that (in theory) should not require "xsrf protection tokens".</p>
+<p>It has two possible values:</p>
+<ul>
+<li><strong><code>samesite=strict</code> (same as <code>samesite</code> without value)</strong></li>
+</ul>
+<p>A cookie with <code>samesite=strict</code> is never sent if the user comes from outside the same site.</p>
+<p>In other words, whether a user follows a link from their mail or submits a form from <code>evil.com</code>, or does any operation that originates from another domain, the cookie is not sent.</p>
+<p>If authentication cookies have the <code>samesite</code> option, then a XSRF attack has no chances to succeed, because a submission from <code>evil.com</code> comes without cookies. So <code>bank.com</code> will not recognize the user and will not proceed with the payment.</p>
+<p>The protection is quite reliable. Only operations that come from <code>bank.com</code> will send the <code>samesite</code> cookie, e.g. a form submission from another page at <code>bank.com</code>.</p>
+<p>Although, there's a small inconvenience.</p>
+<p>When a user follows a legitimate link to <code>bank.com</code>, like from their own notes, they'll be surprised that <code>bank.com</code> does not recognize them. Indeed, <code>samesite=strict</code> cookies are not sent in that case.</p>
+<p>We could work around that by using two cookies: one for "general recognition", only for the purposes of saying: "Hello, John", and the other one for data-changing operations with <code>samesite=strict</code>. Then, a person coming from outside of the site will see a welcome, but payments must be initiated from the bank's website, for the second cookie to be sent.</p>
+<ul>
+<li><strong><code>samesite=lax</code></strong></li>
+</ul>
+<p>A more relaxed approach that also protects from XSRF and doesn't break the user experience.</p>
+<p>Lax mode, just like <code>strict</code>, forbids the browser to send cookies when coming from outside the site, but adds an exception.</p>
+<p>A <code>samesite=lax</code> cookie is sent if both of these conditions are true:</p>
+<ol>
+<li><p>The HTTP method is "safe" (e.g. GET, but not POST).</p>
+<p> The full list of safe HTTP methods is in the <a href="https://tools.ietf.org/html/rfc7231">RFC7231 specification</a>. Basically, these are the methods that should be used for reading, but not writing the data. They must not perform any data-changing operations. Following a link is always GET, the safe method.</p>
+</li>
+<li><p>The operation performs a top-level navigation (changes URL in the browser address bar).</p>
+<p> That's usually true, but if the navigation is performed in an <code>&lt;iframe&gt;</code>, then it's not top-level. Also, JavaScript methods for network requests do not perform any navigation, hence they don't fit.</p>
+</li>
+</ol>
+<p>So, what <code>samesite=lax</code> does, is to basically allow the most common "go to URL" operation to have cookies. E.g. opening a website link from notes that satisfy these conditions.</p>
+<p>But anything more complicated, like a network request from another site or a form submission, loses cookies.</p>
+<p>If that's fine for you, then adding <code>samesite=lax</code> will probably not break the user experience and add protection.</p>
+<p>Overall, <code>samesite</code> is a great option.</p>
+<p>There's a drawback:</p>
+<ul>
+<li><code>samesite</code> is ignored (not supported) by very old browsers, year 2017 or so.</li>
+</ul>
+<p><strong>So if we solely rely on <code>samesite</code> to provide protection, then old browsers will be vulnerable.</strong></p>
+<p>But we surely can use <code>samesite</code> together with other protection measures, like xsrf tokens, to add an additional layer of defence and then, in the future, when old browsers die out, we'll probably be able to drop xsrf tokens.</p>
+<h2 id="httponly">httpOnly</h2>
+<p>This option has nothing to do with JavaScript, but we have to mention it for completeness.</p>
+<p>The web-server uses the <code>Set-Cookie</code> header to set a cookie. Also, it may set the <code>httpOnly</code> option.</p>
+<p>This option forbids any JavaScript access to the cookie. We can't see such a cookie or manipulate it using <code>document.cookie</code>.</p>
+<p>That's used as a precaution measure, to protect from certain attacks when a hacker injects his own JavaScript code into a page and waits for a user to visit that page. That shouldn't be possible at all, hackers should not be able to inject their code into our site, but there may be bugs that let them do it.</p>
+<p>Normally, if such a thing happens, and a user visits a web-page with hacker's JavaScript code, then that code executes and gains access to <code>document.cookie</code> with user cookies containing authentication information. That's bad.</p>
+<p>But if a cookie is <code>httpOnly</code>, then <code>document.cookie</code> doesn't see it, so it is protected.</p>
+<h2 id="appendix-cookie-functions">Appendix: Cookie functions</h2>
+<p>Here's a small set of functions to work with cookies, more convenient than a manual modification of <code>document.cookie</code>.</p>
+<p>There exist many cookie libraries for that, so these are for demo purposes. Fully working though.</p>
+<h3 id="getcookie-name-">getCookie(name)</h3>
+<p>The shortest way to access a cookie is to use a <a>regular expression</a>.</p>
+<p>The function <code>getCookie(name)</code> returns the cookie with the given <code>name</code>:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// returns the cookie with the given name,</span>
+<span class="hljs-comment">// or undefined if not found</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCookie</span>(<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-keyword">let</span> matches = <span class="hljs-built_in">document</span>.cookie.match(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(
+    <span class="hljs-string">"(?:^|; )"</span> + name.replace(<span class="hljs-regexp">/([\.$?*|{}\(\)\[\]\\\/\+^])/g</span>, <span class="hljs-string">'\\$1'</span>) + <span class="hljs-string">"=([^;]*)"</span>
+  ));
+  <span class="hljs-keyword">return</span> matches ? <span class="hljs-built_in">decodeURIComponent</span>(matches[<span class="hljs-number">1</span>]) : <span class="hljs-literal">undefined</span>;
+}
+</code></pre>
+<p>Here <code>new RegExp</code> is generated dynamically, to match <code>; name=&lt;value&gt;</code>.</p>
+<p>Please note that a cookie value is encoded, so <code>getCookie</code> uses a built-in <code>decodeURIComponent</code> function to decode it.</p>
+<h3 id="setcookie-name-value-options-">setCookie(name, value, options)</h3>
+<p>Sets the cookie's <code>name</code> to the given <code>value</code> with <code>path=/</code> by default (can be modified to add other defaults):</p>
+<p>```js run
+function setCookie(name, value, options = {}) {</p>
+<p>  options = {
+    path: '/',
+    // add other defaults here if necessary
+    ...options
+  };</p>
+<p>  if (options.expires instanceof Date) {
+    options.expires = options.expires.toUTCString();
+  }</p>
+<p>  let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);</p>
+<p>  for (let optionKey in options) {
+    updatedCookie += "; " + optionKey;
+    let optionValue = options[optionKey];
+    if (optionValue !== true) {
+      updatedCookie += "=" + optionValue;
+    }
+  }</p>
+<p>  document.cookie = updatedCookie;
+}</p>
+<p>// Example of use:
+setCookie('user', 'John', {secure: true, 'max-age': 3600});</p>
+<pre><code>
+### deleteCookie(name)
+
+To delete a cookie, we can call it <span class="hljs-keyword">with</span> a negative expiration date:
+
+```js
+function deleteCookie(name) {
+  setCookie(name, <span class="hljs-string">""</span>, {
+    <span class="hljs-string">'max-age'</span>: <span class="hljs-number">-1</span>
+  })
+}
+</code></pre><p>```warn header="Updating or deleting must use same path and domain"
+Please note: when we update or delete a cookie, we should use exactly the same path and domain options as when we set it.</p>
+<pre><code>
+<span class="hljs-attribute">Together</span>: [cookie.js](cookie.js).
+
+<span class="applescript">
+<span class="hljs-comment">## Appendix: Third-party cookies</span>
+
+A cookie <span class="hljs-keyword">is</span> called <span class="hljs-string">"third-party"</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">it</span>'s placed <span class="hljs-keyword">by</span> a domain other than <span class="hljs-keyword">the</span> page <span class="hljs-keyword">the</span> user <span class="hljs-keyword">is</span> visiting.
+        
+For instance:
+<span class="hljs-number">1.</span> A page <span class="hljs-keyword">at</span> `site.com` loads a banner <span class="hljs-keyword">from</span> another site: `&lt;img src=<span class="hljs-string">"https://ads.com/banner.png"</span>&gt;`.
+<span class="hljs-number">2.</span> Along <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> banner, <span class="hljs-keyword">the</span> remote server <span class="hljs-keyword">at</span> `ads.com` may <span class="hljs-keyword">set</span> <span class="hljs-keyword">the</span> `Set-Cookie` header <span class="hljs-keyword">with</span> a cookie like `<span class="hljs-built_in">id</span>=<span class="hljs-number">1234</span>`. Such a cookie originates <span class="hljs-keyword">from</span> <span class="hljs-keyword">the</span> `ads.com` domain, <span class="hljs-keyword">and</span> will only be visible <span class="hljs-keyword">at</span> `ads.com`:
+                              
+    ![](cookie-<span class="hljs-keyword">third</span>-party.svg)
+    
+<span class="hljs-number">3.</span> Next <span class="hljs-built_in">time</span> when `ads.com` <span class="hljs-keyword">is</span> accessed, <span class="hljs-keyword">the</span> remote server gets <span class="hljs-keyword">the</span> `<span class="hljs-built_in">id</span>` cookie <span class="hljs-keyword">and</span> recognizes <span class="hljs-keyword">the</span> user:
+    
+    ![](cookie-<span class="hljs-keyword">third</span>-party<span class="hljs-number">-2.</span>svg)
+    
+<span class="hljs-number">4.</span> What's even more important <span class="hljs-keyword">is</span>, when <span class="hljs-keyword">the</span> user moves <span class="hljs-keyword">from</span> `site.com` <span class="hljs-keyword">to</span> another site `other.com`, which also has a banner, <span class="hljs-keyword">then</span> `ads.com` gets <span class="hljs-keyword">the</span> cookie, <span class="hljs-keyword">as</span> <span class="hljs-keyword">it</span> belongs <span class="hljs-keyword">to</span> `ads.com`, thus recognizing <span class="hljs-keyword">the</span> visitor <span class="hljs-keyword">and</span> tracking him <span class="hljs-keyword">as</span> he moves <span class="hljs-keyword">between</span> sites:
+       
+    ![](cookie-<span class="hljs-keyword">third</span>-party<span class="hljs-number">-3.</span>svg)
+
+     
+Third-party cookies are traditionally used <span class="hljs-keyword">for</span> tracking <span class="hljs-keyword">and</span> ads services, due <span class="hljs-keyword">to</span> their nature. They are bound <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> originating domain, so `ads.com` can track <span class="hljs-keyword">the</span> same user <span class="hljs-keyword">between</span> different sites, <span class="hljs-keyword">if</span> they all access <span class="hljs-keyword">it</span>.
+       
+Naturally, <span class="hljs-keyword">some</span> people don't like being tracked, so browsers allow <span class="hljs-keyword">to</span> disable such cookies.
+       
+Also, <span class="hljs-keyword">some</span> modern browsers employ special policies <span class="hljs-keyword">for</span> such cookies:
+- Safari <span class="hljs-keyword">does</span> <span class="hljs-keyword">not</span> allow <span class="hljs-keyword">third</span>-party cookies <span class="hljs-keyword">at</span> all.
+- Firefox comes <span class="hljs-keyword">with</span> a <span class="hljs-string">"black list"</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">third</span>-party domains <span class="hljs-keyword">where</span> <span class="hljs-keyword">it</span> blocks <span class="hljs-keyword">third</span>-party cookies.
+
+      
+```smart
+If we load a <span class="hljs-keyword">script</span> <span class="hljs-keyword">from</span> a <span class="hljs-keyword">third</span>-party domain, like `&lt;<span class="hljs-keyword">script</span> src=<span class="hljs-string">"https://google-analytics.com/analytics.js"</span>&gt;`, <span class="hljs-keyword">and</span> <span class="hljs-keyword">that</span> <span class="hljs-keyword">script</span> uses `document.cookie` <span class="hljs-keyword">to</span> <span class="hljs-keyword">set</span> a cookie, <span class="hljs-keyword">then</span> such cookie <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">third</span>-party.
+     
+If a <span class="hljs-keyword">script</span> sets a cookie, <span class="hljs-keyword">then</span> no matter <span class="hljs-keyword">where</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">script</span> came <span class="hljs-keyword">from</span> <span class="hljs-comment">-- the cookie belongs to the domain of the current webpage.</span></span>
+</code></pre><h2 id="appendix-gdpr">Appendix: GDPR</h2>
+<p>This topic is not related to JavaScript at all, just something to keep in mind when setting cookies.</p>
+<p>There's a legislation in Europe called GDPR, that enforces a set of rules for websites to respect the users' privacy. One of these rules is to require an explicit permission for tracking cookies from the user.</p>
+<p>Please note, that's only about tracking/identifying/authorizing cookies.</p>
+<p>So, if we set a cookie that just saves some information, but neither tracks nor identifies the user, then we are free to do it.</p>
+<p>But if we are going to set a cookie with an authentication session or a tracking id, then a user must allow that.</p>
+<p>Websites generally have two variants of following GDPR. You must have seen them both already in the web:</p>
+<ol>
+<li><p>If a website wants to set tracking cookies only for authenticated users.</p>
+<p> To do so, the registration form should have a checkbox like "accept the privacy policy" (that describes how cookies are used), the user must check it, and then the website is free to set auth cookies.</p>
+</li>
+<li><p>If a website wants to set tracking cookies for everyone.</p>
+<p> To do so legally, a website shows a modal "splash screen" for newcomers, and requires them to agree to the cookies. Then the website can set them and let people see the content. That can be disturbing for new visitors though. No one likes to see such "must-click" modal splash screens instead of the content. But GDPR requires an explicit agreement.</p>
+</li>
+</ol>
+<p>GDPR is not only about cookies, it's about other privacy-related issues too, but that's too much beyond our scope.</p>
+<h2 id="summary">Summary</h2>
+<p><code>document.cookie</code> provides access to cookies.</p>
+<ul>
+<li>Write operations modify only cookies mentioned in it.</li>
+<li>Name/value must be encoded.</li>
+<li>One cookie may not exceed 4KB in size. The number of cookies allowed on a domain is around 20+ (varies by browser).</li>
+</ul>
+<p>Cookie options:</p>
+<ul>
+<li><code>path=/</code>, by default current path, makes the cookie visible only under that path.</li>
+<li><code>domain=site.com</code>, by default a cookie is visible on the current domain only. If the domain is set explicitly, the cookie becomes visible on subdomains.</li>
+<li><code>expires</code> or <code>max-age</code> sets the cookie expiration time. Without them the cookie dies when the browser is closed.</li>
+<li><code>secure</code> makes the cookie HTTPS-only.</li>
+<li><code>samesite</code> forbids the browser to send the cookie with requests coming from outside the site. This helps to prevent XSRF attacks.</li>
+</ul>
+<p>Additionally:</p>
+<ul>
+<li>Third-party cookies may be forbidden by the browser, e.g. Safari does that by default.</li>
+<li>When setting a tracking cookie for EU citizens, GDPR requires to ask for permission.</li>
+</ul> <p></p></div>
+    </div>
+    <div id="footer_blog">
+        Made by
+        <a href="https://github.com/JakeWasChosen" target="_blank">Jason</a>
+        with
+        <a href="https://github.com/imfunniee/gitfolio" target="_blank">Gitfolio</a>
+    </div>
+    <script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("../../config.json", function(user) {
+        var icon = document.createElement("link");
+        icon.setAttribute("rel", "icon");
+        icon.setAttribute("href", user[0].userimg);
+        icon.setAttribute("type", "image/png");
+        document.getElementsByTagName("head")[0].appendChild(icon);
+        document.getElementById(
+          "profile_img_blog"
+        ).style.background = `url('${user[0].userimg}') center center`;
+        document.getElementById(
+          "username_blog"
+        ).innerHTML = `<span style="display:${
+          user[0].name == null || !user[0].name ? "none" : "block"
+        };">${user[0].name}</span>@${user[0].username}<b id="blog_time"></b>`;
+
+        if ((user[0].theme = "dark.css")) {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
+        } else {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))";
+        }
+      });
+    </script>
+  
+
+</body></html>

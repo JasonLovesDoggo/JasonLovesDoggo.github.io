@@ -8,8 +8,10 @@
 
 ### [URL](https://nasoj.me)
 
-
-
+The /projects page was generated with 
+ 
+                                  
+                                  
 ````
  cd foodle
 npm run build
