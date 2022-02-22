@@ -13,6 +13,7 @@
 
 	$: if (visible) tip = Math.floor(10 * Math.random());
 
+	const version = getContext<string>("version");
 	const toaster = getContext<Toaster>("toaster");
 
 	let root: HTMLElement;
@@ -68,7 +69,7 @@
 	<div class="footer">
 		<a href="https://www.powerlanguage.co.uk/wordle/" target="_blank">Original Wordle</a>
 		<div>
-			<div>v1.1.4</div>
+			<div>v{version}</div>
 			<div
 				class="word"
 				on:dblclick={() => {

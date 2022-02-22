@@ -1,12 +1,12 @@
 {
   "name": "foodle",
   "description": "A remake of the popular game Wordle with additional modes and features. ",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "private": "true",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear",
+    "start": "sirv public --no-clear --host 0.0.0.0",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "repository": {
