@@ -90,7 +90,7 @@
 		margin-bottom: 2px;
 	}
 	.row {
-		touch-action: none;
+		touch-action: manipulation;
 		width: 100%;
 		display: flex;
 		margin: 0 auto 8px;
