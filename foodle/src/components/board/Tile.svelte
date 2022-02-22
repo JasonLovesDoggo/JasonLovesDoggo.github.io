@@ -10,11 +10,14 @@
 	export let position = 0;
 	export function bounce() {
 		setTimeout(() => (animation = "bounce"), (ROWS + position) * DELAY_INCREMENT);
+
 	}
 	let s: string;
 	let pop = false;
 	let animation = "";
 
+	// reset animation when value changes, because for some reason changing anination to "" when the game is over causes the tiles to flash
+	$: !value && (animation = "");
 	// ensure all animations play
 	const unsub = mode.subscribe(() => {
 		animation = "";
