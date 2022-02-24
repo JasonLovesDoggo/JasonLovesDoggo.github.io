@@ -53,7 +53,7 @@ jobs:
         run: |
           if [ -z "${CUSTOM_URL}" ]; then
             if [ -s "CNAME" ]; then
-              MAP_URL="$(cat CNAME)"
+              MAP_URL="$(cat CNAME)"                   
             else
               MAP_URL="$(echo ${{ github.repository }} | sed -e "s/^.*${{ github.github.repository_owner }}\///")"
             fi
@@ -67,12 +67,6 @@ jobs:
           wait
           printf "\n\nDone\n"
           
-
-      - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
 
 
 
