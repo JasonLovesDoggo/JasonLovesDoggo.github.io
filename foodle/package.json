@@ -1,7 +1,7 @@
 {
   "name": "foodle",
   "description": "A remake of the popular game Wordle with additional modes and features. ",
-  "version": "1.23",
+  "version": "1.24",
   "private": "true",
   "scripts": {
     "build": "rollup -c",
