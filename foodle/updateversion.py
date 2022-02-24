@@ -5,7 +5,7 @@ old_version = 1.2
 
 dir = str(abspath(__file__))[:-16]
 
-fps = [f'{dir}index.html', f'{dir}sw.js', f'{dir}package.json', f'{dir}src\main.ts', f'{dir}updateversion.py']
+fps = [f'{dir}index.html', f'{dir}sw.js', f'{dir}package.json', f'{dir}src/main.ts', f'{dir}updateversion.py']
 #  "version": "1.22",
 
 for file in fps:
