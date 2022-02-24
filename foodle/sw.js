@@ -1,5 +1,5 @@
 //https://medium.com/notonlycss/turn-your-website-into-a-pwa-6aaecb95f8b9
-const dynamicCacheName = 'Img-v1.22';
+const dynamicCacheName = 'Img-v1.212';
 const assetsToCache = [
 	"./",
 	"./index.html",
