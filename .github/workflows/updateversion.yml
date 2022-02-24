@@ -1,0 +1,44 @@
+name: UpdateSitemap/Gallary
+
+
+on:
+  push:
+    paths:
+      - 'Foodle/**'
+  workflow_dispatch:
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Update the foodle version num
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8' # install the python version needed
+
+
+      - name: Update version
+        run: python foodle/updateversion.py
+
+      - name: commit files
+        run: |
+          git config --global user.name "Jason | Version Updater"
+          git config --global user.email "JasonCameron.all@gmail.com"
+          git add .
+          git rm *.pyc -f
+          # "echo" returns true so the build succeeds, even if no changed files
+          git commit -m 'Update gallary file' || echo
+          git push
+
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
