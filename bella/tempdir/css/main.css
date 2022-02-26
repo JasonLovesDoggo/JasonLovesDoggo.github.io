@@ -287,19 +287,19 @@ body {
     margin-bottom: 60px; }
     .pp-blog-details .pp-tags a {
       margin-right: 10px; }
-  .pp-blog-details .pp-comments .media {
+  .pp-blog-details .media {
     margin-top: 3rem; }
-    .pp-blog-details .pp-comments .media .fa {
+    .pp-blog-details .media .fa {
       padding-right: 5px; }
     @media (max-width: 576px) {
-      .pp-blog-details .pp-comments .media {
+      .pp-blog-details .media {
         display: block; } }
-  .pp-blog-details .pp-comments img {
+  .pp-blog-details img {
     height: 60px;
     width: 60px; }
-  .pp-blog-details .pp-comments a {
+  .pp-blog-details a {
     text-decoration: none; }
-  .pp-blog-details .pp-comments span {
+  .pp-blog-details span {
     padding-left: 6px; }
 
 /* Common Style */

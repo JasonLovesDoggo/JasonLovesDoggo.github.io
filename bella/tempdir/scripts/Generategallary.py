@@ -1,24 +1,28 @@
 import codecs
 import os
 from os import listdir
+from os.path import isfile
 
 from utils import *
 
 path = 'assets/Img/Bella'
+# e.g. ../../assets/Img/Bella/IMG_0021.jfif
 photo_dir = f'{str(os.path.abspath(__file__))[:-41]}/{path}'
 catagorytype = None
 fileloc = None
 QSYM = '&quot;'
-dir_list = f'.../../{path}/'
+dir_list = 'https://imgs.nasoj.me/'
 catagory = f'{QSYM}{catagorytype}{QSYM}'
 img_cata_dict = {}
 img_template_list = []
 dir = str(os.path.abspath(__file__))[:-41]
 
+def listfiles(dir: str):
+    return [item for item in os.listdir(dir) if isfile(f'{dir}/{item}')]
 
 def gen_photo_list(subdir: str = ''):
     list_of_photos = []
-    for img in listdir(f'{photo_dir}{subdir}'):
+    for img in listfiles(f'{photo_dir}{subdir}'):
         list_of_photos.append(f'{dir_list}{subdir[1:]}{"/" if subdir != "" else ""}{img}')
     return list_of_photos
 
@@ -68,8 +72,8 @@ def gen_cata_format(catagories: dict):
 
 def gen_img_gallery():
     gen_catagories_total()
-    for entry, catas in img_cata_dict.items():
-        template = f"""      <div class="card" data-groups="[{gen_cata_format(catas)}]"><figure class="expand-effect"><img class="img-fluid" src="{entry[1:]}" alt="{str(gen_cata_format(catas)).replace("&quot;", '').replace(',', '')}"/></figure></div>"""
+    for source_uri, catas in img_cata_dict.items():
+        template = f"""      <div class="card" data-groups="[{gen_cata_format(catas)}]"><figure class="expand-effect"><img class="img-fluid" src="{source_uri}" alt="{str(gen_cata_format(catas)).replace("&quot;", '').replace(',', '')}"/></figure></div>"""
         img_template_list.append(template)
 
 

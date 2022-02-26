@@ -8,7 +8,9 @@
 
 ### [URL](https://nasoj.me)
 
-The /projects page was generated with 
+The /projects page was generated with GitFolio
+
+The /Bella page's photos are stored backblaze bucket (did a bit of cloudflare reworking to make it look better)
  
                                   
                                   
@@ -21,3 +23,12 @@ npm run build
 cd ./projects
 gitfolio update
 ``` 
+
+
+<details>
+<summary>TODO</summary>
+<br>
+1. Make the /Bella page (currently /bella/tempdir) a smooth/long scrolling page (start with a static looking page then prompt the user to scroll) 
+https://www.smashingmagazine.com/2017/05/long-scrolling/  info
+https://alexflipnote.dev/ nice Scroll SVG
+</details>
