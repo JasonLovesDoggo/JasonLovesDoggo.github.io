@@ -33,6 +33,18 @@ class imgs():
     foodphotos = gen_photo_list('/food')
     otherphotos = gen_photo_list('/other')
 
+def setbgfile():
+    urls = ''
+    #notes removew last , from the list
+    for url in imgs.bellaphotos:
+        urls += f"\"url('{url}')\","
+    urls = urls[:-1]
+    full_template = f"""var bigSize = [{urls}];"""
+    print(full_template)
+
+setbgfile()
+
+    
 
 def get_img_types(img):
     type_dir = {'bella': False,
