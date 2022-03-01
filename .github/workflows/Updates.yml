@@ -5,6 +5,7 @@ on:
   schedule:
     - cron: '0 0 * * 0,3'
   push:
+    branches: [ master ]
     paths:
       - 'assets/Img/Bella/**'
   workflow_dispatch:

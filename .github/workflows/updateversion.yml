@@ -3,6 +3,7 @@ name: UpdateVersion num
 
 on:
   push:
+    branches: [master]
     paths:
       - 'foodle/**'
   workflow_dispatch:
