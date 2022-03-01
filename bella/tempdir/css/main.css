@@ -393,13 +393,11 @@ section {
   justify-content: center;
   align-items: center;
 }
-
+#sectiontop {
+  height: 100vh;
+  width: 100vw;
+}
 section:nth-child(1) {
   background: orange;
-  color: white;
-}
-
-section:nth-child(2) {
-  background: cyan;
   color: white;
 }

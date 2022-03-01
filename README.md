@@ -29,7 +29,5 @@ gitfolio update
 <summary>TODO</summary>
 <br>
 1. Make the /Bella page (currently /bella/tempdir) a smooth/long scrolling page (start with a static looking page then prompt the user to scroll) 
-https://www.smashingmagazine.com/2017/05/long-scrolling/  info
-https://alexflipnote.dev/ nice Scroll SVG
 see https://pixieset.com/example/ for more examples
 </details>
