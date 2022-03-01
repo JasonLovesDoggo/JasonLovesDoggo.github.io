@@ -393,9 +393,14 @@ section {
   justify-content: center;
   align-items: center;
 }
-#sectiontop {
+#randomtop {
   height: 100vh;
   width: 100vw;
+   /* ENHANCEMENT */
+  background-image: url('https://imgs.nasoj.me/IMG_0256.jfif');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 section:nth-child(1) {
   background: orange;
