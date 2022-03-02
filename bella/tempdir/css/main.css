@@ -3,7 +3,9 @@ body {
   min-height: 900px;
   position: relative;
   background-size: cover;
+  overflow-x: hidden;
   font-family: 'Arimo', sans-serif; }
+
 
 .page {
   background: white;
@@ -394,15 +396,56 @@ section {
   align-items: center;
 }
 #randomtop {
+
   height: 100vh;
   width: 100vw;
    /* ENHANCEMENT */
-  background-image: url('https://imgs.nasoj.me/IMG_0256.jfif');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-section:nth-child(1) {
-  background: orange;
-  color: white;
+#randomtop::-webkit-scrollbar {
+  display: none;
+}
+#rtext {
+  /* From https://css.glass */
+    width:100vw;
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    top:0;
+    text-align:center;
+    z-index:1;
+    padding-bottom:10vh;
+}
+
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  font-size: 50px;
+  -webkit-animation: bounce 1s infinite;
+  animation: bounce 1s infinite;
+}
+@-webkit-keyframes bounce {
+  0% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+  100% {
+    top: 15%;
+  }
+}
+@keyframes bounce {
+  0% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+  100% {
+    top: 15%;
+  }
 }
