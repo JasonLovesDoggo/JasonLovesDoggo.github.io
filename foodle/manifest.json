@@ -11,23 +11,29 @@
 		{
 			"name": "Daily mode",
 			"short_nam": "Daily",
-			"url": "https://nasoj.me/foodle#daily?utm_source=homescreen&utm_medium=shortcut",
+			"url": "/#daily?utm_source=homescreen&utm_medium=shortcut",
 			"description": "Daily mode of foodle (new word every 24h)"
 		},
 		{
 			"name": "Hourly mode",
 			"short_nam": "Hourly",
-			"url": "https://nasoj.me/foodle#hourly?utm_source=homescreen&utm_medium=shortcut",
+			"url": "/#hourly?utm_source=homescreen&utm_medium=shortcut",
 			"description": "Hourly mode of foodle (new word every Hour)"
 		},
 		{
 			"name": "Infinite mode",
 			"short_nam": "Infinite",
-			"url": "https://nasoj.me/foodle#infinite?utm_source=homescreen&utm_medium=shortcut",
+			"url": "/#infinite?utm_source=homescreen&utm_medium=shortcut",
 			"description": "Infinite mode of foodle unlimited words"
 		}
 	],
 	"icons": [
+		{
+			"src": "Img/logo_32x32.png",
+			"type": "image/png",
+			"sizes": "32x32",
+			"purpose": "any"
+		},
 		{
 			"src": "Img/logo_48x48.png",
 			"type": "image/png",
