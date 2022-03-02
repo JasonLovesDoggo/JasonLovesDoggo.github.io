@@ -1,7 +1,7 @@
 from os.path import abspath
 
 # File paths
-old_version = 1.27
+old_version = 1.50
 
 dir = str(abspath(__file__))[:-16]
 

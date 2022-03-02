@@ -1,22 +1,22 @@
 import json
 
-known_five_letter_words_file = open('total.json', 'w+')
-kflv = json.load(known_five_letter_words_file)
+kflv = None
+with open('food_words.json', 'r') as foods:
+    food_words = list(json.load(foods))
+with open('5_letter_words.json', 'r') as guesses:
+    guesses_words = list(json.load(guesses))
 
-oldpossibleguesses = kflv['oldguesses']
-guesses = kflv['guesses']
-words = kflv['words']
+guesses_words.append('urmom')  # your welcome Zack
 
-total_guess_pre1 = oldpossibleguesses + guesses
-for word in total_guess_pre1:
-    if word in words:
-        total_guess_pre1.remove(word)
+for word in food_words:
+    if word in guesses_words:
+        guesses_words.remove(word)
 
-valid_guesses = list(dict.fromkeys(total_guess_pre1))
-
-
-kflv['guesses'] = valid_guesses
-print(kflv)
-known_five_letter_words_file.write('')
-json.dump(kflv, known_five_letter_words_file)
-known_five_letter_words_file.close()
+foods_words = food_words
+guesses = guesses_words
+results = {
+    'words': foods_words,
+    'valid': guesses
+}
+results_file = open('results.json', 'w+')
+json.dump(results, results_file)
