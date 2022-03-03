@@ -3,6 +3,7 @@
 	const tips = [
 		"You can change the gamemode by clicking Foodle.",
 		"Hard mode is game mode specific. Turning it on in one game mode won't change it on the others.",
+		"The Infinite word resets every time you reload the page",
 		"Double tap or right click a word on the board to learn its definition.",
 		"Hard mode can be enabled during a game if you haven't violated the hard mode rules yet.",
 		"Double tap or right click the next row to see how many possible words can be played there, if you use all the previous information.",

@@ -284,7 +284,13 @@ body {
     cursor:pointer;
     padding:8px 60px;
 }
-.container form input {
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+.container form input{
     width:46%;
     margin:20px 1%;
     background:transparent;
