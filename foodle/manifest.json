@@ -13,21 +13,21 @@
 			"short_nam": "Daily",
 			"url": "/#daily?utm_source=homescreen&utm_medium=shortcut",
 			"description": "Daily mode of foodle (new word every 24h)",
-			"icons": [{ "src": "Img/Daily.png", "sizes": "96x96" }]
+			"icons": [{ "src": "Img/Daily.png", "sizes": "192x192" }]
 		},
 		{
 			"name": "Hourly mode",
 			"short_nam": "Hourly",
 			"url": "/#hourly?utm_source=homescreen&utm_medium=shortcut",
 			"description": "Hourly mode of foodle (new word every Hour)",
-			"icons": [{ "src": "Img/Hourly.png", "sizes": "96x96" }]
+			"icons": [{ "src": "Img/Hourly.png", "sizes": "192x192" }]
 		},
 		{
 			"name": "Infinite mode",
 			"short_nam": "Infinite",
 			"url": "/#infinite?utm_source=homescreen&utm_medium=shortcut",
 			"description": "Infinite mode of foodle unlimited words",
-			"icons": [{ "src": "Img/Infinite.png", "sizes": "96x96" }]
+			"icons": [{ "src": "Img/Infinite.png", "sizes": "192x192" }]             
 		}
 	],
 	"icons": [
