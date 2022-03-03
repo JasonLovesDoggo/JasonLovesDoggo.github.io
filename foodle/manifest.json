@@ -1,9 +1,10 @@
 {
 	"short_name": "Foodle",
 	"name": "Foodle",
-	"start_url": "https://nasoj.me/foodle/?utm_source=homescreen&utm_medium=shortcut",
+	"start_url": "/foodle/?utm_source=homescreen&utm_medium=shortcut",
 	"background_color": "#121213",
 	"theme_color": "#121213",
+	"scope": "/",
 	"description": "A daily, hourly, INFINITE food based word game",
 	"display": "standalone",
 	"categories": ["foodle", "word", "wordle", "word game", "food"],
