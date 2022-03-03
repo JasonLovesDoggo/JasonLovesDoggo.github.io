@@ -1,7 +1,7 @@
 {
   "name": "foodle",
   "description": "A remake of the popular game Wordle with additional modes and features. ",
-  "version": "1.53",
+  "version": "1.54",
   "private": "true",
   "scripts": {
     "build": "rollup -c",
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/JakeWasChosen/website#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-node-resolve": "^13.1.53",
+    "@rollup/plugin-node-resolve": "^13.1.54",
     "@rollup/plugin-typescript": "^8.3.0",
     "@tsconfig/svelte": "^3.0.0",
     "rollup": "^2.64.0",
@@ -30,7 +30,7 @@
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.534.0",
+    "sass": "^1.544.0",
     "svelte": "^3.46.2",
     "svelte-check": "^2.3.0",
     "svelte-preprocess": "^4.10.2",
