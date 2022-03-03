@@ -2,6 +2,7 @@
 	"short_name": "Foodle",
 	"name": "Foodle",
 	"start_url": "/foodle/?utm_source=homescreen&utm_medium=shortcut",
+	"id": "/foodle/?utm_source=homescreen&utm_medium=shortcut",
 	"background_color": "#121213",
 	"theme_color": "#121213",
 	"scope": "/",
