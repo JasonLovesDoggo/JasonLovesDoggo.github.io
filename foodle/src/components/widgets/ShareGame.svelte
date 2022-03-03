@@ -9,8 +9,8 @@
 	export let wordNumber: number;
 
 	const toaster: Toaster = getContext("toaster");
-
 	function share() {
+
 		toaster.pop("Copied");
 		navigator.clipboard.writeText(`${window.location.href}/${wordNumber}`);
 	}

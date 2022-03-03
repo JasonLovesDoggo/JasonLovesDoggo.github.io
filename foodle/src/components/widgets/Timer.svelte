@@ -30,7 +30,7 @@
 	$: reset($mode);
 </script>
 
-<h3>Next Daily Foodle</h3>
+<h4>Next Daily Foodle Is In</h4>
 <div class="container">
 	{#if ms > 0}
 		<div class="timer">
