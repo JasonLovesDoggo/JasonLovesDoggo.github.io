@@ -1,11 +1,11 @@
 from os.path import abspath
 
 # File paths
-old_version = 1.55
+old_version = 1.56
 
 dir = str(abspath(__file__))[:-16]
 fps = [f'{dir}index.html', f'{dir}sw.js', f'{dir}package.json', f'{dir}src/main.ts', f'{dir}updateversion.py']
-#  "version": "1.55",
+#  "version": "1.56",
 
 for file in fps:
     print(file)
