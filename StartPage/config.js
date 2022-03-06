@@ -66,9 +66,9 @@ const CONFIG = {
     },
     {
       id: '3',
-      name: 'Todoist',
-      icon: 'trello',
-      link: 'https://todoist.com',
+      name: 'WakaTime',
+      icon: 'activity',
+      link: 'https://wakatime.com/dashboard',
     },
     {
       id: '4',
@@ -78,27 +78,27 @@ const CONFIG = {
     },
     {
       id: '5',
-      name: 'Todoist',
+      name: 'Keep',
       icon: 'trello',
-      link: 'https://todoist.com',
+      link: 'https://keep.google.com/u/0/',
     },
     {
       id: '6',
-      name: 'Calendar',
-      icon: 'calendar',
-      link: 'https://calendar.google.com/calendar/r',
+      name: 'columns',
+      icon: 's',
+      link: 'https://columns.app/',
     },
     {
       id: '7',
-      name: 'Todoist',
-      icon: 'trello',
-      link: 'https://todoist.com',
+      name: 'Google Analytics',
+      icon: 'trending-up',
+      link: 'https://analytics.google.com/analytics/web/#/',
     },
     {
       id: '8',
-      name: 'Calendar',
+      name: 'Calendar4',
       icon: 'calendar',
-      link: 'https://calendar.google.com/calendar/r',
+      link: 'https://calendar.google.com/calendar/r3',
     },
   ],
 
@@ -152,16 +152,16 @@ const CONFIG = {
       id: '1',
       links: [
         {
-          name: 'Pycharm',
-          link: 'jetbrains://pycharm/',
+          name: 'Website',
+          link: 'https://nasoj.me/',
         },
         {
-          name: 'WebStorm',
-          link: '',
+          name: 'Web Design Shortcuts',
+          link: 'chrome://bookmarks/?id=119',
         },
         {
-          name: 'Oldies',
-          link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+          name: 'Google Analytics',
+          link: 'https://analytics.google.com/analytics/web/#/',
         },
         {
           name: 'Rock',
@@ -174,12 +174,12 @@ const CONFIG = {
       id: '2',
       links: [
         {
-          name: 'Linkedin',
-          link: 'https://www.linkedin.com',
+          name: 'Instagram',
+          link: 'https://www.instagram.com/',
         },
         {
-          name: 'Dribbble',
-          link: 'https://www.dribbble.com',
+          name: 'Discord',
+          link: 'discord://discordapp.com/channels/@me',
         },
         {
           name: 'Trello',
@@ -187,7 +187,7 @@ const CONFIG = {
         },
         {
           name: 'Spotify',
-          link: 'spotify:',
+          link: 'spotify://',
         },
       ],
     },
