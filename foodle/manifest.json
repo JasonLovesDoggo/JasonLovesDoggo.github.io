@@ -3,7 +3,7 @@
 	"name": "Foodle",
 	"start_url": "/foodle/?utm_source=homescreen&utm_medium=shortcut",
 	"id": "/foodle/?utm_source=homescreen&utm_medium=shortcut",
-    "scope": "/foodle",
+	"scope": "/foodle",
 	"background_color": "#121213",
 	"theme_color": "#121213",
 	"description": "A daily, hourly, INFINITE food based word game",

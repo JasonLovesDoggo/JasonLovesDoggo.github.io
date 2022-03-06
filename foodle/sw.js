@@ -32,7 +32,7 @@ self.addEventListener('fetch', evt => {
     caches.match(evt.request).then(cacheRes => {
       return cacheRes || fetch(evt.request).then(fetchRes => {
         return caches.open(dynamicCacheName).then(cache => {
-          cache.put(evt.request.url, fetchRes.clone()).then(r =>  log(`Caching Url ${evt.request.url} | ${r}`));
+          cache.put(evt.request.url, fetchRes.clone()).then(r =>  log(`Caching Url ${evt.request.url}`));
           return fetchRes;
         })
       });
