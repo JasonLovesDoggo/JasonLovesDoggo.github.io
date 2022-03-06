@@ -230,7 +230,7 @@
 					toaster.pop("localStorage cleared");
 				}}
 			>
-				{modeData.modes[$mode].name} word #{game.wordNumber}
+				{modeData.modes[$mode].name} Foodle #{game.wordNumber}
 			</div>
 		</div>
 	</div>
