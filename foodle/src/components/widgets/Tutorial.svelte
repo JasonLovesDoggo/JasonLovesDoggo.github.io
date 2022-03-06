@@ -2,6 +2,8 @@
 	import { COLS, ROWS } from "../../utils";
 
 	import { Tile } from "../board";
+	import {createEventDispatcher} from "svelte";
+	const dispatch = createEventDispatcher();
 	export let visible: boolean;
 </script>
 
@@ -46,7 +48,8 @@
 	>
 	by Josh Wardle with additional modes and features.
 		<br />
-	Please contact the developer
+	Please
+	<div onClick={() => dispatch("contact")}>contact</div> the developer
 	<a href="https://github.com/JakeWasChosen" target="_blank">Jason</a>.
 	if you have any problems.
 	<br />

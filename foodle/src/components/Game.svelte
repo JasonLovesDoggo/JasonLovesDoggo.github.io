@@ -9,6 +9,7 @@
 		Share,
 		Seperator,
 		Definition,
+		Contact,
 		Tutorial,
 		Statistics,
 		Distribution,
@@ -42,6 +43,7 @@
 	// implement transition delay on keys
 	const delay = DELAY_INCREMENT * ROWS + 800;
 	let showTutorial = $settings.tutorial === 3;
+	let showContact = false;
 	let showSettings = false;
 	let showStats = false;
 	let showRefresh = false;
@@ -153,6 +155,7 @@
 		showStats={stats.played > 0 || (modeData.modes[$mode].historical && !game.active)}
 		on:stats={() => (showStats = true)}
 		on:tutorial={() => (showTutorial = true)}
+		on:contact={() => (showContact = true)}
 		on:settings={() => (showSettings = true)}
 		on:reload={reload}
 	/>
@@ -176,6 +179,7 @@
 			showTutorial = false;
 			showStats = false;
 			showSettings = false;
+			showContact = false;
 		}}
 		disabled={!game.active || $settings.tutorial === 3}
 	/>
@@ -184,9 +188,15 @@
 <Modal
 	bind:visible={showTutorial}
 	on:close|once={() => $settings.tutorial === 3 && --$settings.tutorial}
-	fullscreen={$settings.tutorial === 0}
->
+	fullscreen={$settings.tutorial === 0}>
 	<Tutorial visible={showTutorial} />
+</Modal>
+
+
+<Modal
+	bind:visible={showContact}
+	fullscreen={true}>
+	<Contact visible={showContact} />
 </Modal>
 
 <Modal bind:visible={showStats}>
