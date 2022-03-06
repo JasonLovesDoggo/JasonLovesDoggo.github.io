@@ -3,7 +3,7 @@ import json
 
 all_words = []
 five_letter_words = []
-with open('./all_words.json', "r") as words:
+with open('./all_words.json', "r") as words:         # Removed the file for the sake of repo size it was just a dict with a struct like   "Word": 1,
     jsonwords = json.load(words)
     for word in jsonwords.keys():
         all_words.append(word)

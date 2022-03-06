@@ -6,6 +6,24 @@ with open('food_words.json', 'r') as foods:
 with open('5_letter_words.json', 'r') as guesses:
     guesses_words = list(json.load(guesses))
 
+# Fix food list
+
+not_really_food_words = ['heath', 'stink', 'grade', 'unfed', 'pound', 'belly', 'swirl', 'chill', 'retch', 'grime',
+                         'pluck', 'crimp', 'whack', 'light', 'moist', 'choke', 'nasty', 'stove', 'snout', 'chunk',
+                         'cheek', 'plant', 'hasty', 'trash', 'larva', 'hairy', 'tipsy', 'delve', 'glass', 'fluff',
+                         'stalk', 'liver', 'cinch', 'waste', 'stein', 'vomit', 'baker', 'crave', 'opium', 'derby',
+                         'stank', 'acorn', 'snail', 'poppy', 'moldy', 'molar', 'musky', 'fluid', 'hazel', 'leafy',
+                         'fatty', 'conch', 'savoy']
+
+actually_food_words_that_dont_appear_in_the_dictionary_i_used = ['pesto']
+
+for word in not_really_food_words:
+    food_words.remove(word)
+
+for word in actually_food_words_that_dont_appear_in_the_dictionary_i_used:
+    food_words.append(word)
+
+# Fix guess list
 guesses_words.append('urmom')  # your welcome Zack
 
 for word in food_words:
@@ -15,99 +33,18 @@ for word in food_words:
 foods_words = food_words
 guesses = guesses_words
 results = {
-    'words': foods_words,
-    'valid': guesses
+    "words": foods_words,
+    "valid": guesses
 }
-results_file = open('results.json', 'w+')
-json.dump(results, results_file)
 
-x = [
-  "fresh",
-  "crust",
-  "serve",
-  "flesh",
-  "seedy",
-  "corny",
-  "salad",
-  "spicy",
-  "kebab",
-  "pulpy",
-  "vodka",
-  "peach",
-  "drink",
-  "tangy",
-  "sugar",
-  "aroma",
-  "shake",
-  "spill",
-  "brine",
-  "sweet",
-  "mince",
-  "olive",
-  "zesty",
-  "butch",
-  "scrap",
-  "apron",
-  "cacao",
-  "bland",
-  "quart",
-  "smear",
-  "patty",
-  "hunky",
-  "treat",
-  "fungi",
-  "booze",
-  "thyme",
-  "grate",
-  "soggy",
-  "enjoy",
-  "mocha",
-  "smoke",
-  "lunch",
-  "paste",
-  "carve",
-  "apple",
-  "honey",
-  "cream",
-  "diner",
-  "onion",
-  "eater",
-  "juicy",
-  "icing",
-  "eaten",
-  "whisk",
-  "sushi",
-  "candy",
-  "grape",
-  "burnt",
-  "dough",
-  "trout",
-  "filet",
-  "donut",
-  "bread",
-  "dairy",
-  "tasty",
-  "puree",
-  "diary",
-  "penne",
-  "ramen",
-  "fishy",
-  "steak",
-  "caper",
-  "pizza",
-  "plate",
-  "broil",
-  "cumin",
-  "gravy",
-  "yeast",
-  "cider",
-  "creme",
-  "grill",
-  "flour",
-  "beefy",
-  "scone",
-  "toast",
-  "saucy",
-  "spice",
-  "feast"
-]
+
+print(results)
+
+
+# dump data into actual file
+
+x = f"""const words =
+{results};
+export default words;"""""
+with open('../src/words_5.ts', 'w') as word_ts_file:
+    word_ts_file.write(x)
