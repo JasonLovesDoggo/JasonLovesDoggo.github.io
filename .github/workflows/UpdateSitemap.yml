@@ -1,19 +1,15 @@
-name: UpdateSitemap/Gallary
+name: Update Sitemap
 
 
 on:
   schedule:
     - cron: '0 0 * * 0,3'
-  push:
-    branches: [ master ]
-    paths:
-      - 'assets/Img/Bella/**'
   workflow_dispatch:
 
 jobs:
   sitemap_job:
     runs-on: ubuntu-latest
-    name: Generate a sitemap and update the gallary
+    name: Generate a sitemap
 
     steps:
       - name: Checkout the repo
@@ -28,23 +24,14 @@ jobs:
             drop-html-extension: true
             base-url-path: https://nasoj.me
 
-      - name: setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.8' # install the python version needed
-
-
-      - name: Update Gallary
-        run: python bella/tempdir/scripts/Generategallary.py
-
       - name: commit files
         run: |
-          git config --global user.name "Jason | Sitemap And Gallary Updater"
+          git config --global user.name "Jason | Sitemap Updater"
           git config --global user.email "thebosssg19@gmail.com"
           git add .
           git rm *.pyc -f || echo
           # "echo" returns true so the build succeeds, even if no changed files
-          git commit -m 'Update gallary file' || echo
+          git commit -m 'Update Sitemap file' || echo
           git push
       
       - name: notify google/bing that there is a new sitemap

@@ -1,39 +1,37 @@
-name: UpdateVersion num
+name: Update Gallery
 
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
     paths:
-      - 'foodle/**'
+      - 'assets/Img/Bella/**'
   workflow_dispatch:
 
 jobs:
-  sitemap_job:
+  gallary_job:
     runs-on: ubuntu-latest
-    name: Update the foodle version num
+    name: updates the gallery
 
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-
       - name: setup python
         uses: actions/setup-python@v2
         with:
           python-version: '3.8' # install the python version needed
 
-      - name: Update version
-        run: python foodle/updateversion.py
+      - name: Update Gallary
+        run: python bella/tempdir/scripts/Generategallary.py
 
-      - name: commit and push files
+      - name: commit files
         run: |
-          git config --global user.name "Jason | Version Updater"
+          git config --global user.name "Jason | Gallery Updater"
           git config --global user.email "thebosssg19@gmail.com"
           git add .
           git rm *.pyc -f || echo
           # "echo" returns true so the build succeeds, even if no changed files
-          git commit -m 'Update Foodle Version' || echo
+          git commit -m 'Update gallary file' || echo
           git push
