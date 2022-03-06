@@ -32,5 +32,7 @@ gitfolio update
 see https://pixieset.com/example/ for more examples
 
 2. Add a contact form on the foodle page using formspree
+   1. Fix css
+   2. Fix logo and calling locations
 
 </details>
