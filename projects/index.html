@@ -21,9 +21,10 @@
       <div id="about">
                 <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
                 <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
-                <span style="display:block;"><i class="fas fa-link"></i> &nbsp; <a style="color:#fff; text-decoration: none;" href="https://nasoj.me">HomePage</a></span>
+                <span style="display:block;"><i class="fas fa-link"></i> &nbsp; <a style="color:#fff; text-decoration: none;" href="https://nasoj.me">Home Page
+          </a></span>
                 <span style="display:block;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; Toronto</span>
-                <span style="display:block;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
+                <span style="display:none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
                 <div class="socials">
                 <span style="display:block;"><a href="https://www.twitter.com/BellaTheDogeee" target="_blank" class="socials"><i class="fab fa-twitter"></i></a></span>
                 <span style="display:none !important;"><a href="https://www.dribbble.com/null" target="_blank" class="socials"><i class="fab fa-dribbble"></i></a></span>
@@ -46,6 +47,19 @@
                                 <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
                                 <span><i class="fas fa-star"></i>&nbsp; 1</span>
                                 <span><i class="fas fa-code-branch"></i>&nbsp; 2</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/JakeWasChosen/JakeWasChosen.github.io" target="_blank">
+                        <section>
+                            <div class="section_title">JakeWasChosen.github.io</div>
+                            <div class="about_section">
+                            <span style="display:block;">My Personal website</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; TypeScript</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
                             </div>
                         </section>
                         </a>
@@ -75,14 +89,14 @@
                             </div>
                         </section>
                         </a>
-                        <a href="https://github.com/JakeWasChosen/JakeWasChosen.github.io" target="_blank">
+                        <a href="https://github.com/JakeWasChosen/modified-gitfolio" target="_blank">
                         <section>
-                            <div class="section_title">JakeWasChosen.github.io</div>
+                            <div class="section_title">modified-gitfolio</div>
                             <div class="about_section">
-                            <span style="display:block;">My Personal website</span>
+                            <span style="display:none;">undefined</span>
                             </div>
                             <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; TypeScript</span>
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
                                 <span><i class="fas fa-star"></i>&nbsp; 0</span>
                                 <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
                             </div>
@@ -141,9 +155,22 @@
                         </section>
                         </a></div>
       </div>
-      <div id="forks" style="display:none;">
+      <div id="forks" style="display: block;">
         <h1>Forks.</h1>
-        <div class="projects" id="forks_section"></div>
+        <div class="projects" id="forks_section">
+                        <a href="https://github.com/JakeWasChosen/dotfiles" target="_blank">
+                        <section>
+                            <div class="section_title">dotfiles</div>
+                            <div class="about_section">
+                            <span style="display:block;">@holman does dotfiles</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a></div>
       </div>
       <div id="blog_section">
         <h1>Blog.</h1>
@@ -176,7 +203,7 @@
           $("#blogs").append(`
             <a href="./blog/${blog[i].url_title}/" target="_blank">
                 <section>
-                    <img src="./blog/${blog[i].url_title}/${blog[i].top_image}" alt="Top Image">
+                    <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
                     <div class="blog_container">
                         <div class="section_title">${blog[i].title}</div>
                         <div class="about_section">
