@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createEventDispatcher, onDestroy } from "svelte";
+	import { createEventDispatcher} from "svelte";
 	import type { GameMode } from "../../enums";
 	import { mode } from "../../stores";
 	import { modeData } from "../../utils";
@@ -50,7 +50,7 @@
 </div>
 
 <style>
-	h3 {
+	h4 {
 		margin-bottom: 10px;
 	}
 	.container {
