@@ -1,9 +1,9 @@
 <script lang="ts">
 	export let value: boolean;
-	export let disabled = false;
+	export let disabled = false
 </script>
 
-<div on:click={(e) => !disabled && (value = !value)} class:checked={value} {disabled}></div>
+<div on:click={() => !disabled && (value = !value)} class:checked={value} {disabled}></div>
 
 <style lang="scss">
 	div[disabled="true"] {
