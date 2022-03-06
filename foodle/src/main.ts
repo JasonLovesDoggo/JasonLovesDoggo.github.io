@@ -3,6 +3,6 @@ import App from "./App.svelte";
 export default new App({
 	target: document.body,
 	props: {
-		version: "1.61",
+		version: "1.62",
 	}
 });
