@@ -21,7 +21,7 @@
   --icon: 3vh; /* Icon Size */
 
   /* Fonts Color */
-  --fg: #3a3a3a; /* Foreground color */
+  --fg: #3c3c3c; /* Foreground color */
   --sfg: #494949; /* Sceondary Foreground color */
 
   /* Light Colors  */
@@ -30,14 +30,15 @@
   --cards: #e4e6e6; /* Cards color */
 
   /* Image background  */
-  --imgbg: url(../assets/Img/bg.jpg); /* Image URL */
+  --imgbg: url(../assets/Img/lbg.jpg); /* Image URL */
   --imgcol: linear-gradient(
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.7)
+    rgba(255, 255, 255, 0.32),
+    rgba(255, 255, 255, 0.32)
   ); /* Filter color */
 }
 
 .darktheme {
+  --imgbg: url(../assets/Img/bg.jpg); /* Image URL */
   /* Dark Colors  */
   --accent: #57a0d9; /* Hover color */
   --background: #19171a; /* Background color */
@@ -49,8 +50,8 @@
 
   /* Image background  */
   --imgcol: linear-gradient(
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.85)
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.35)
   ); /* Filter color */
 }
 
@@ -236,7 +237,7 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 30px;
   padding: 20px;

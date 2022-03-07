@@ -85,20 +85,8 @@ const CONFIG = {
     {
       id: '6',
       name: 'columns',
-      icon: 's',
+      icon: 'columns',
       link: 'https://columns.app/',
-    },
-    {
-      id: '7',
-      name: 'Google Analytics',
-      icon: 'trending-up',
-      link: 'https://analytics.google.com/analytics/web/#/',
-    },
-    {
-      id: '8',
-      name: 'Calendar4',
-      icon: 'calendar',
-      link: 'https://calendar.google.com/calendar/r3',
     },
   ],
 
@@ -164,8 +152,8 @@ const CONFIG = {
           link: 'https://analytics.google.com/analytics/web/#/',
         },
         {
-          name: 'Rock',
-          link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+          name: 'Google ReCaptcha Analytics',
+          link: 'https://www.google.com/recaptcha/admin/site/515481777',
         },
       ],
     },
@@ -182,8 +170,8 @@ const CONFIG = {
           link: 'discord://discordapp.com/channels/@me',
         },
         {
-          name: 'Trello',
-          link: 'https://www.trello.com',
+          name: 'Twitter',
+          link: 'https://twitter.com/home?lang=en',
         },
         {
           name: 'Spotify',
