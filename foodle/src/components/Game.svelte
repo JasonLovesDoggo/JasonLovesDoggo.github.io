@@ -93,7 +93,7 @@
 		}
 	}
 	function win() {
-		//ga('send', 'event', 'game', 'foodle_win', $mode);
+		ga('send', 'event', 'game', 'foodle_win', $mode);
 		board.bounce(game.guesses - 1);
 		game.active = false;
 		setTimeout(
@@ -116,7 +116,7 @@
 		}
 	}
 	function lose() {
-		//	ga('send', 'event', 'game', 'foodle_lose', $mode);
+		ga('send', 'event', 'game', 'foodle_lose', $mode);
 		game.active = false;
 		setTimeout(() => (showStats = true), delay);
 		if (!modeData.modes[$mode].historical) {
@@ -128,7 +128,7 @@
 		}
 	}
 	function concede() {
-		//ga('send', 'event', 'game', 'foodle_give_up', $mode);
+		ga('send', 'event', 'game', 'foodle_give_up', $mode);
 		showSettings = false;
 		setTimeout(() => (showStats = true), DELAY_INCREMENT);
 		lose();
