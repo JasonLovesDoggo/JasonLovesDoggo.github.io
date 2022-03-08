@@ -7,7 +7,7 @@
 	export let disabled = false;
 	const types = {
 		switch: Switch,
-		dropdown: DropDown,
+		dropdown: DropDown
 	};
 </script>
 

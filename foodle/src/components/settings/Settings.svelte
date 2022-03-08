@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { getContext, onMount } from "svelte";
-	import { mode, settings } from "../../stores";
+	import {getContext, onMount} from "svelte";
+    import {mode, settings} from "../../stores";
 	import { modeData } from "../../utils";
 	import type { Toaster } from "../widgets";
 	import Setting from "./Setting.svelte";
@@ -23,17 +23,17 @@
 
 <!-- not currently supported, see https://github.com/sveltejs/svelte/issues/3105 -->
 <!-- <svelte:body class:light={!$settings.dark} class:colorblind={$settings.colorblind} /> -->
-<div class="outer">
-	<div class="settings-top">
-		<h3>settings</h3>
-		<div
-			on:click={() => {
+<div style="z-index: 0" class="outer">
+    <div class="settings-top">
+        <h3>settings</h3>
+        <div
+                on:click={() => {
 				if (!state.validHard) {
 					toaster.pop("Game has already violated hard mode");
 				}
 			}}
-		>
-			<Setting type="switch" bind:value={$settings.hard[$mode]} disabled={!state.validHard}>
+        >
+            <Setting type="switch" bind:value={$settings.hard[$mode]} disabled={!state.validHard}>
 				<span slot="title">Hard Mode</span>
 				<span slot="desc">Any revealed hints must be used in subsequent guesses</span>
 			</Setting>

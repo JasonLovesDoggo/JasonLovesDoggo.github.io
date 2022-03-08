@@ -1,7 +1,7 @@
 {
   "name": "foodle",
   "description": "A remake of the popular game Wordle with additional modes and features. ",
-  "version": "1.62",
+  "version": "1.65",
   "private": "true",
   "scripts": {
     "build": "rollup -c",
@@ -29,7 +29,7 @@
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.49.0",
+    "sass": "^1.48.8",
     "svelte": "^3.46.2",
     "svelte-check": "^2.4.5",
     "svelte-preprocess": "^4.10.2",

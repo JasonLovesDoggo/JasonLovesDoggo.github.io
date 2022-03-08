@@ -87,7 +87,6 @@
 	}
 	let toaster: Toaster;
 </script>
-
 <Toaster bind:this={toaster} />
 {#if toaster}
 	<Game {stats} {word} {toaster} bind:game={state} />

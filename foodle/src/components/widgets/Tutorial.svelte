@@ -45,17 +45,16 @@
 	This is a recreation of the original <a
 		href="https://www.powerlanguage.co.uk/wordle/"
 		target="_blank">Wordle</a
-	>
+>
 	by Josh Wardle with additional modes and features.
-		<br />
-	Please
-	<div onClick={() => dispatch("contact")}>contact</div> the developer
+	<br/>
+	Please <span on:click={() => dispatch("contact")} style="text-decoration: underline;">contact</span> the developer
 	<a href="https://github.com/JakeWasChosen" target="_blank">Jason</a>.
 	if you have any problems.
-	<br />
+	<br/>
 	Open the settings menu to see some of the additional features.
 	Or click
-		<a href="https://nasoj.me/" target="_blank">Here to go home.</a>
+	<a href="https://nasoj.me/" target="_blank">Here to go home.</a>
 </div>
 
 <style lang="scss">
@@ -78,4 +77,5 @@
 		display: flex;
 		gap: 4px;
 	}
+
 </style>

@@ -14,7 +14,7 @@ not_really_food_words = ['heath', 'stink', 'grade', 'unfed', 'pound', 'belly', '
                          'stank', 'acorn', 'snail', 'poppy', 'moldy', 'molar', 'musky', 'fluid', 'hazel', 'leafy',
                          'fatty', 'conch', 'savoy']
 
-actually_food_words_that_dont_appear_in_the_dictionary_i_used = ['pesto', 'latte']
+actually_food_words_that_dont_appear_in_the_dictionary_i_used = ['pesto', 'latte']  # baste
 
 for word in not_really_food_words:
     food_words.remove(word)

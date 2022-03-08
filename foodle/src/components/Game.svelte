@@ -3,7 +3,7 @@
 	import { Board } from "./board";
 	import Keyboard from "./keyboard";
 	import Modal from "./Modal.svelte";
-	import { getContext, onMount, setContext } from "svelte";
+	import {createEventDispatcher, getContext, onMount, setContext} from "svelte";
 	import Settings from "./settings";
 	import {
 		Share,
@@ -51,6 +51,7 @@
 	let timer: Timer;
 	let tips: Tips;
 	let tip = 0;
+	const dispatch = createEventDispatcher();
 	$: if (showSettings && tips) tip = Math.floor(tips.length * Math.random());
 	function submitWord() {
 		if (game.board.words[game.guesses].length !== COLS) {
@@ -92,6 +93,7 @@
 		}
 	}
 	function win() {
+		ga('send', 'event', 'game', 'foodle_win', $mode);
 		board.bounce(game.guesses - 1);
 		game.active = false;
 		setTimeout(
@@ -114,6 +116,7 @@
 		}
 	}
 	function lose() {
+		ga('send', 'event', 'game', 'foodle_lose', $mode);
 		game.active = false;
 		setTimeout(() => (showStats = true), delay);
 		if (!modeData.modes[$mode].historical) {
@@ -125,6 +128,7 @@
 		}
 	}
 	function concede() {
+		ga('send', 'event', 'game', 'foodle_give_up', $mode);
 		showSettings = false;
 		setTimeout(() => (showStats = true), DELAY_INCREMENT);
 		lose();
@@ -155,7 +159,6 @@
 		showStats={stats.played > 0 || (modeData.modes[$mode].historical && !game.active)}
 		on:stats={() => (showStats = true)}
 		on:tutorial={() => (showTutorial = true)}
-		on:contact={() => (showContact = true)}
 		on:settings={() => (showSettings = true)}
 		on:reload={reload}
 	/>
@@ -186,17 +189,21 @@
 </main>
 
 <Modal
-	bind:visible={showTutorial}
-	on:close|once={() => $settings.tutorial === 3 && --$settings.tutorial}
-	fullscreen={$settings.tutorial === 0}>
-	<Tutorial visible={showTutorial} />
+		bind:visible={showTutorial}
+		on:close|once={() => $settings.tutorial === 3 && --$settings.tutorial}
+		fullscreen={$settings.tutorial === 0}>
+
+	<Tutorial visible={showTutorial}
+			  on:contact={() => {
+		showTutorial = false;
+		showContact = true;}}
+	/>
 </Modal>
 
 
 <Modal
-	bind:visible={showContact}
-	fullscreen={true}>
-	<Contact visible={showContact} />
+		bind:visible={showContact}>
+	<Contact visible={showContact}/>
 </Modal>
 
 <Modal bind:visible={showStats}>
@@ -221,21 +228,27 @@
 	{/if}
 </Modal>
 
-<Modal fullscreen={true} bind:visible={showSettings}>
-	<Settings state={game} />
+<Modal
+		fullscreen={true} bind:visible={showSettings}>
+	<Settings state={game}/>
 	{#if game.active}
 		<div class="concede" on:click={concede}>give up</div>
 	{/if}
-	<Tips bind:this={tips} index={tip} />
+	<Tips bind:this={tips} index={tip}/>
 
 	<div slot="footer">
+		<div on:click={() => {
+		showSettings = false;
+		showContact = true;
+		}} style="text-decoration: underline">Contact
+		</div>
 		<a href="https://www.powerlanguage.co.uk/wordle/" target="_blank">Original Wordle</a>
 		<div>
 			<div>v{version}</div>
 			<div
-				title="double click to reset your stats"
-				class="word"
-				on:dblclick={() => {
+					title="double click to reset your stats"
+					class="word"
+					on:dblclick={() => {
 					localStorage.clear();
 					toaster.pop("localStorage cleared");
 				}}
