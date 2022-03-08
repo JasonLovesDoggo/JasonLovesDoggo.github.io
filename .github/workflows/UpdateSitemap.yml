@@ -33,7 +33,7 @@ jobs:
           # "echo" returns true so the build succeeds, even if no changed files
           git commit -m 'Update Sitemap file' || echo
           git push
-      
+
       - name: notify google/bing that there is a new sitemap
         env:
           CUSTOM_URL: "${{ secrets.SITEMAP_URL }}" # set custom URL if you use it
@@ -51,6 +51,8 @@ jobs:
           fi
           
           curl -v "https://www.google.com/ping?sitemap=${MAP_URL}" &> /dev/null &
+          curl -v "https://web.archive.org/save/=https://nasoj.me" &> /dev/null &
+          curl -v "https://web.archive.org/save/=https://nasoj.me/foodle/" &> /dev/null &
           curl -v "https://www.bing.com/ping?sitemap=${MAP_URL}" &> /dev/null  &
           wait
           printf "\n\nDone\n"
