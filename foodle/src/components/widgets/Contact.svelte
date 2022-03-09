@@ -1,6 +1,5 @@
 <script lang="ts">
     export let visible: boolean;
-
 </script>
 
 <div class:complete={visible} class="container contact-form">

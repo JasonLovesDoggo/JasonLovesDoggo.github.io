@@ -51,8 +51,23 @@
 	let timer: Timer;
 	let tips: Tips;
 	let tip = 0;
+
+	const urlParams = new URLSearchParams(window.location.search);
+	const ShowContact = urlParams.has('contact');
+	if (window.location.hash) {
+		let hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+		if (hash == 'contact') {
+			console.log(hash);
+		}
+
+		alert(hash);
+		// hash found
+	} else {
+		// No hash found
+	}
 	const dispatch = createEventDispatcher();
 	$: if (showSettings && tips) tip = Math.floor(tips.length * Math.random());
+
 	function submitWord() {
 		if (game.board.words[game.guesses].length !== COLS) {
 			toaster.pop("Not enough letters");
