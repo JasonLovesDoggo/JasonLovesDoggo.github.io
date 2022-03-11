@@ -35,6 +35,7 @@
 	} from "../utils";
 	import { letterStates, settings, mode } from "../stores";
 	export let word: string;
+	export let showStats: boolean = false;
 	export let stats: Stats;
 	export let game: GameState;
 	export let toaster: Toaster;
@@ -43,28 +44,23 @@
 	// implement transition delay on keys
 	const delay = DELAY_INCREMENT * ROWS + 800;
 	let showTutorial = $settings.tutorial === 3;
-	let showContact = false;
+	export let showContact = false;
 	let showSettings = false;
-	let showStats = false;
 	let showRefresh = false;
 	let board: Board;
 	let timer: Timer;
 	let tips: Tips;
 	let tip = 0;
 
-	const urlParams = new URLSearchParams(window.location.search);
-	const ShowContact = urlParams.has('contact');
-	if (window.location.hash) {
-		let hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
-		if (hash == 'contact') {
-			console.log(hash);
-		}
-
-		alert(hash);
-		// hash found
-	} else {
-		// No hash found
+	function setContact(option: boolean) {
+		showContact = option
 	}
+
+	window.addEventListener('hashchange', function () {
+		if (window.location.hash.substring(1) === 'contact') {
+			showContact = true
+		}
+	});
 	const dispatch = createEventDispatcher();
 	$: if (showSettings && tips) tip = Math.floor(tips.length * Math.random());
 
@@ -307,3 +303,4 @@
 		}
 	}
 </style>
+

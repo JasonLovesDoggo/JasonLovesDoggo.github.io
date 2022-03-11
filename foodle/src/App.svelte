@@ -21,21 +21,26 @@
 	let stats: Stats;
 	let word: string;
 	let state: GameState;
+	let showContact: boolean = false;
 
 	settings.set(
-		(JSON.parse(localStorage.getItem("settings")) as Settings) || createDefaultSettings()
+			(JSON.parse(localStorage.getItem("settings")) as Settings) || createDefaultSettings()
 	);
 	settings.subscribe((s) => localStorage.setItem("settings", JSON.stringify(s)));
 
 	const hash = window.location.hash.slice(1).split("/");
+	if (window.location.hash.substring(1) === 'contact') {
+		showContact = true;
+
+	}
 	const modeVal: GameMode = !isNaN(GameMode[hash[0]])
-		? GameMode[hash[0]]
-		: parseInt(localStorage.getItem("mode")) || modeData.default;
+			? GameMode[hash[0]]
+			: parseInt(localStorage.getItem("mode")) || modeData.default;
 	mode.set(modeVal);
 	// If this is a link to a specific word make sure that that is the word
 	if (!isNaN(parseInt(hash[1])) && parseInt(hash[1]) < getWordNumber(modeVal)) {
 		modeData.modes[modeVal].seed =
-			(parseInt(hash[1]) - 1) * modeData.modes[modeVal].unit + modeData.modes[modeVal].start;
+				(parseInt(hash[1]) - 1) * modeData.modes[modeVal].unit + modeData.modes[modeVal].start;
 		modeData.modes[modeVal].historical = true;
 	}
 	mode.subscribe((m) => {
@@ -78,6 +83,7 @@
 	});
 
 	$: saveState(state);
+
 	function saveState(state: GameState) {
 		if (modeData.modes[$mode].historical) {
 			localStorage.setItem(`state-${$mode}-h`, JSON.stringify(state));
@@ -85,9 +91,12 @@
 			localStorage.setItem(`state-${$mode}`, JSON.stringify(state));
 		}
 	}
+
 	let toaster: Toaster;
+
+	console.log(showContact)
 </script>
 <Toaster bind:this={toaster} />
 {#if toaster}
-	<Game {stats} {word} {toaster} bind:game={state} />
+	<Game {stats} {word} {showContact} {toaster} bind:game={state}/>
 {/if}

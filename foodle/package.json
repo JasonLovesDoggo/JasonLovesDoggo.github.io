@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "npm": "^8.5.1",
+    "sander": "^0.5.1",
     "seedrandom": "^3.0.5",
     "sirv-cli": "^2.0.2"
   }

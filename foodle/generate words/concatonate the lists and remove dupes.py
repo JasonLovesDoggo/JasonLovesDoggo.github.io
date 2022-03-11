@@ -12,7 +12,7 @@ not_really_food_words = ['heath', 'stink', 'grade', 'unfed', 'pound', 'belly', '
                          'cheek', 'plant', 'hasty', 'trash', 'larva', 'hairy', 'tipsy', 'delve', 'glass', 'fluff',
                          'stalk', 'liver', 'cinch', 'waste', 'stein', 'vomit', 'baker', 'crave', 'opium', 'derby',
                          'stank', 'acorn', 'snail', 'poppy', 'moldy', 'molar', 'musky', 'fluid', 'hazel', 'leafy',
-                         'fatty', 'conch', 'savoy']
+                         'fatty', 'conch', 'savoy', 'eater']
 
 actually_food_words_that_dont_appear_in_the_dictionary_i_used = []  #empty rn
 
