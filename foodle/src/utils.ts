@@ -1,9 +1,20 @@
 import seedrandom from "seedrandom";
-import { GameMode } from "./enums";
+import {GameMode} from "./enums";
 import wordList from "./words_5";
 
 export const ROWS = 6;
 export const COLS = 5;
+
+export function validate(choice, cookieChoices) {
+	const choices = Object.keys(choice)
+	const chosen = Object.keys(cookieChoices)
+
+	if (chosen.length !== choices.length) {
+		return false
+	}
+
+	return chosen.every(c => choices.includes(c))
+}
 
 export const words = {
 	...wordList,
@@ -15,12 +26,12 @@ export const words = {
 export function checkHardMode(board: GameBoard, row: number): HardModeData {
 	for (let i = 0; i < COLS; ++i) {
 		if (board.state[row - 1][i] === "🟩" && board.words[row - 1][i] !== board.words[row][i]) {
-			return { pos: i, char: board.words[row - 1][i], type: "🟩" };
+			return {pos: i, char: board.words[row - 1][i], type: "🟩"};
 		}
 	}
 	for (let i = 0; i < COLS; ++i) {
 		if (board.state[row - 1][i] === "🟨" && !board.words[row].includes(board.words[row - 1][i])) {
-			return { pos: i, char: board.words[row - 1][i], type: "🟨" };
+			return {pos: i, char: board.words[row - 1][i], type: "🟨"};
 		}
 	}
 	return { pos: -1, char: "", type: "⬛" };

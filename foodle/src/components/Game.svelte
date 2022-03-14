@@ -3,7 +3,7 @@
 	import { Board } from "./board";
 	import Keyboard from "./keyboard";
 	import Modal from "./Modal.svelte";
-	import {createEventDispatcher, getContext, onMount, setContext} from "svelte";
+	import {getContext, onMount, setContext} from "svelte";
 	import Settings from "./settings";
 	import {
 		Share,
@@ -33,8 +33,11 @@
 		createLetterStates,
 		words,
 	} from "../utils";
-	import { letterStates, settings, mode } from "../stores";
+	import {letterStates, settings, mode} from "../stores";
+	import GdprBanner from './widgets/gdprCookies.svelte'
+
 	export let word: string;
+	export let showStats: boolean = false;
 	export let stats: Stats;
 	export let game: GameState;
 	export let toaster: Toaster;
@@ -43,16 +46,27 @@
 	// implement transition delay on keys
 	const delay = DELAY_INCREMENT * ROWS + 800;
 	let showTutorial = $settings.tutorial === 3;
-	let showContact = false;
+	export let showContact = false;
 	let showSettings = false;
-	let showStats = false;
 	let showRefresh = false;
+	let showCookieBanner = true;
 	let board: Board;
 	let timer: Timer;
 	let tips: Tips;
 	let tip = 0;
-	const dispatch = createEventDispatcher();
+
+	function setContact(option: boolean) {
+		showContact = option
+	}
+
+	window.addEventListener('hashchange', function () {
+		if (window.location.hash.substring(1) === 'contact') {
+			showContact = true
+		}
+	});
+
 	$: if (showSettings && tips) tip = Math.floor(tips.length * Math.random());
+
 	function submitWord() {
 		if (game.board.words[game.guesses].length !== COLS) {
 			toaster.pop("Not enough letters");
@@ -152,6 +166,7 @@
 <svelte:body on:click={board.hideCtx} on:contextmenu={board.hideCtx} />
 
 <main class:guesses={game.guesses !== 0} style="--rows: {ROWS}; --cols: {COLS}">
+
 	<Header
 		bind:showRefresh
 		tutorial={$settings.tutorial === 2}
@@ -199,8 +214,7 @@
 		showContact = true;}}
 	/>
 </Modal>
-
-
+<GdprBanner/>
 <Modal
 		bind:visible={showContact}>
 	<Contact visible={showContact}/>
@@ -229,6 +243,7 @@
 </Modal>
 
 <Modal
+
 		fullscreen={true} bind:visible={showSettings}>
 	<Settings state={game}/>
 	{#if game.active}
@@ -237,6 +252,7 @@
 	<Tips bind:this={tips} index={tip}/>
 
 	<div slot="footer">
+
 		<div on:click={() => {
 		showSettings = false;
 		showContact = true;
@@ -270,6 +286,7 @@
 		margin: auto;
 		position: relative;
 	}
+
 	.historical {
 		text-align: center;
 		margin-top: 10px;
@@ -292,3 +309,4 @@
 		}
 	}
 </style>
+

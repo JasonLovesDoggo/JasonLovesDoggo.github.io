@@ -27,7 +27,12 @@
         <div class="g-recaptcha" data-sitekey="6LexoLkeAAAAAAeeRiBX2wFK7nQ1eaW68mRS2J1m"></div>
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
-
+        <br>
+        <div data-ux="Block"><p style="font-size: 10px;">
+            This site is protected by reCAPTCHA and the Google <a rel="noopener" aria-haspopup="true" target="_blank"
+                                                                  href="https://policies.google.com/privacy">Privacy
+            Policy</a> and <a rel="noopener" aria-haspopup="true" target="_blank"
+                              href="https://policies.google.com/terms">Terms of Service</a> apply.</p></div>
     </form>
 </div>
 

@@ -58,20 +58,28 @@
 </div>
 
 <style lang="scss">
+	* {
+		align-content: center;
+	}
+
 	div {
 		margin: 14px 0;
 	}
+
 	.examples {
 		border-top: 1px solid var(--border-primary);
 		border-bottom: 1px solid var(--border-primary);
+
 		:global(.row > *) {
 			height: 100%;
 			aspect-ratio: 1;
 		}
+
 		&:not(.complete) :global(.row .back) {
 			transition-delay: 0.3s;
 		}
 	}
+
 	.row {
 		height: 40px;
 		display: flex;
