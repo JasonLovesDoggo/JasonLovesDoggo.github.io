@@ -1,4 +1,4 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/JasonLovesDoggo/website.svg)
+![GitHub repo size](https://img.shields.io/github/repo-size/JasonLovesDoggo/JasonLovesDoggo.github.io.svg)
 [![pages-build-deployment](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment)
 [![Update Sitemap](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml/badge.svg)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml)
 [![UpdateVersion](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml/badge.svg?branch=master)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml)
