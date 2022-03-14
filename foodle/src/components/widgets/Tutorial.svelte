@@ -33,11 +33,11 @@
 	</div>
 	<div>The letter <strong>I</strong> is in the word but in the wrong spot.</div>
 	<div class="row">
-		<Tile value="b" state="🔳" />
-		<Tile value="r" state="🔳" />
-		<Tile value="e" state="🔳" />
-		<Tile value="a" state="🔳" />
-		<Tile value="d" state="⬛" />
+		<Tile value="b" state="🔳"/>
+		<Tile value="r" state="🔳"/>
+		<Tile value="e" state="🔳"/>
+		<Tile value="a" state="🔳"/>
+		<Tile value="d" state="⬛"/>
 	</div>
 	<div>The letter <strong>D</strong> is not in the word in any spot.</div>
 </div>
@@ -49,7 +49,7 @@
 	by Josh Wardle with additional modes and features.
 	<br/>
 	Please <span on:click={() => dispatch("contact")} style="text-decoration: underline;">contact</span> the developer
-	<a href="https://github.com/JakeWasChosen" target="_blank">Jason</a>.
+	<a href="https://github.com/JasonLovesDoggo" target="_blank">Jason</a>.
 	if you have any problems.
 	<br/>
 	Open the settings menu to see some of the additional features.

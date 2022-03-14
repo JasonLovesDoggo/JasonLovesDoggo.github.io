@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JakeWasChosen/website.git"
+    "url": "git+https://github.com/JasonLovesDoggo/website.git"
   },
   "keywords": [],
-  "author": "JakeWasChosen",
+  "author": "JasonLovesDoggo",
   "bugs": {
-    "url": "https://github.com/JakeWasChosen/website/issues"
+    "url": "https://github.com/JasonLovesDoggo/website/issues"
   },
-  "homepage": "https://github.com/JakeWasChosen/website#readme",
+  "homepage": "https://github.com/JasonLovesDoggo/website#readme",
   "devDependencies": {
     "@beyonk/gdpr-cookie-consent-banner": "^9.0.3",
     "@rollup/plugin-commonjs": "^21.0.1",

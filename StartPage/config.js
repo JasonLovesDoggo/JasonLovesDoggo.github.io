@@ -56,7 +56,7 @@ const CONFIG = {
       id: '1',
       name: 'Github',
       icon: 'github',
-      link: 'https://github.com/JakeWasChosen',
+      link: 'https://github.com/JasonLovesDoggo',
     },
     {
       id: '2',
@@ -223,7 +223,7 @@ const CONFIG = {
         },
         {
           name: 'Repos',
-          link: 'https://github.com/JakeWasChosen',
+          link: 'https://github.com/JasonLovesDoggo',
         },
       ],
     },

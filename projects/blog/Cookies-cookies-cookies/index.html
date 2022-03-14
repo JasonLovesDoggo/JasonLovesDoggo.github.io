@@ -280,34 +280,34 @@ Please note: when we update or delete a cookie, we should use exactly the same p
 <span class="hljs-comment">## Appendix: Third-party cookies</span>
 
 A cookie <span class="hljs-keyword">is</span> called <span class="hljs-string">"third-party"</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">it</span>'s placed <span class="hljs-keyword">by</span> a domain other than <span class="hljs-keyword">the</span> page <span class="hljs-keyword">the</span> user <span class="hljs-keyword">is</span> visiting.
-        
+
 For instance:
 <span class="hljs-number">1.</span> A page <span class="hljs-keyword">at</span> `site.com` loads a banner <span class="hljs-keyword">from</span> another site: `&lt;img src=<span class="hljs-string">"https://ads.com/banner.png"</span>&gt;`.
 <span class="hljs-number">2.</span> Along <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> banner, <span class="hljs-keyword">the</span> remote server <span class="hljs-keyword">at</span> `ads.com` may <span class="hljs-keyword">set</span> <span class="hljs-keyword">the</span> `Set-Cookie` header <span class="hljs-keyword">with</span> a cookie like `<span class="hljs-built_in">id</span>=<span class="hljs-number">1234</span>`. Such a cookie originates <span class="hljs-keyword">from</span> <span class="hljs-keyword">the</span> `ads.com` domain, <span class="hljs-keyword">and</span> will only be visible <span class="hljs-keyword">at</span> `ads.com`:
-                              
+
     ![](cookie-<span class="hljs-keyword">third</span>-party.svg)
-    
+
 <span class="hljs-number">3.</span> Next <span class="hljs-built_in">time</span> when `ads.com` <span class="hljs-keyword">is</span> accessed, <span class="hljs-keyword">the</span> remote server gets <span class="hljs-keyword">the</span> `<span class="hljs-built_in">id</span>` cookie <span class="hljs-keyword">and</span> recognizes <span class="hljs-keyword">the</span> user:
-    
+
     ![](cookie-<span class="hljs-keyword">third</span>-party<span class="hljs-number">-2.</span>svg)
-    
+
 <span class="hljs-number">4.</span> What's even more important <span class="hljs-keyword">is</span>, when <span class="hljs-keyword">the</span> user moves <span class="hljs-keyword">from</span> `site.com` <span class="hljs-keyword">to</span> another site `other.com`, which also has a banner, <span class="hljs-keyword">then</span> `ads.com` gets <span class="hljs-keyword">the</span> cookie, <span class="hljs-keyword">as</span> <span class="hljs-keyword">it</span> belongs <span class="hljs-keyword">to</span> `ads.com`, thus recognizing <span class="hljs-keyword">the</span> visitor <span class="hljs-keyword">and</span> tracking him <span class="hljs-keyword">as</span> he moves <span class="hljs-keyword">between</span> sites:
-       
+
     ![](cookie-<span class="hljs-keyword">third</span>-party<span class="hljs-number">-3.</span>svg)
 
-     
+
 Third-party cookies are traditionally used <span class="hljs-keyword">for</span> tracking <span class="hljs-keyword">and</span> ads services, due <span class="hljs-keyword">to</span> their nature. They are bound <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> originating domain, so `ads.com` can track <span class="hljs-keyword">the</span> same user <span class="hljs-keyword">between</span> different sites, <span class="hljs-keyword">if</span> they all access <span class="hljs-keyword">it</span>.
-       
+
 Naturally, <span class="hljs-keyword">some</span> people don't like being tracked, so browsers allow <span class="hljs-keyword">to</span> disable such cookies.
-       
+
 Also, <span class="hljs-keyword">some</span> modern browsers employ special policies <span class="hljs-keyword">for</span> such cookies:
 - Safari <span class="hljs-keyword">does</span> <span class="hljs-keyword">not</span> allow <span class="hljs-keyword">third</span>-party cookies <span class="hljs-keyword">at</span> all.
 - Firefox comes <span class="hljs-keyword">with</span> a <span class="hljs-string">"black list"</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">third</span>-party domains <span class="hljs-keyword">where</span> <span class="hljs-keyword">it</span> blocks <span class="hljs-keyword">third</span>-party cookies.
 
-      
+
 ```smart
 If we load a <span class="hljs-keyword">script</span> <span class="hljs-keyword">from</span> a <span class="hljs-keyword">third</span>-party domain, like `&lt;<span class="hljs-keyword">script</span> src=<span class="hljs-string">"https://google-analytics.com/analytics.js"</span>&gt;`, <span class="hljs-keyword">and</span> <span class="hljs-keyword">that</span> <span class="hljs-keyword">script</span> uses `document.cookie` <span class="hljs-keyword">to</span> <span class="hljs-keyword">set</span> a cookie, <span class="hljs-keyword">then</span> such cookie <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">third</span>-party.
-     
+
 If a <span class="hljs-keyword">script</span> sets a cookie, <span class="hljs-keyword">then</span> no matter <span class="hljs-keyword">where</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">script</span> came <span class="hljs-keyword">from</span> <span class="hljs-comment">-- the cookie belongs to the domain of the current webpage.</span></span>
 </code></pre><h2 id="appendix-gdpr">Appendix: GDPR</h2>
 <p>This topic is not related to JavaScript at all, just something to keep in mind when setting cookies.</p>
@@ -348,7 +348,7 @@ If a <span class="hljs-keyword">script</span> sets a cookie, <span class="hljs-k
     </div>
     <div id="footer_blog">
         Made by
-        <a href="https://github.com/JakeWasChosen" target="_blank">Jason</a>
+        <a href="https://github.com/JasonLovesDoggo" target="_blank">Jason</a>
         with
         <a href="https://github.com/imfunniee/gitfolio" target="_blank">Gitfolio</a>
     </div>
@@ -378,14 +378,15 @@ If a <span class="hljs-keyword">script</span> sets a cookie, <span class="hljs-k
         };">${user[0].name}</span>@${user[0].username}<b id="blog_time"></b>`;
 
         if ((user[0].theme = "dark.css")) {
-          document.querySelector("#background_overlay").style.background =
-            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
+          document.querySelector('#background_overlay').style.background =
+            'linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))';
         } else {
-          document.querySelector("#background_overlay").style.background =
-            "linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))";
+          document.querySelector('#background_overlay').style.background =
+            'linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))';
         }
       });
     </script>
-  
 
-</body></html>
+
+  </body>
+</html>

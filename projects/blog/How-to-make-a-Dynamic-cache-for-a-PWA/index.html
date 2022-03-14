@@ -28,42 +28,42 @@
       <h1 id="blog_title">How to make a Dynamic cache for a PWA</h1>
       <h2 id="blog_sub_title">How to dynamically cache data in a Progressive Web App </h2>
       <div id="blog"><p id="para_0_original"><code>
-const dynamicCacheName = 'Img-v1.1.3';
-const assetsToCache =   [
-	"./",
-	"./index.html",
-    "./global.css",    
-	"./src/build/bundle.css",
-	"./src/build/bundle.js"
-];
-self.addEventListener("install", e =&gt; {
-	log("Installing");     
-	e.waitUntil((async () =&gt; {
-		const cache = await caches.open(dynamicCacheName);
-		await cache.addAll(assetsToCache);
-	})());
-});     
-// activate event
-self.addEventListener('activate', evt =&gt; {
-  evt.waitUntil(
-    caches.keys().then(keys =&gt; {
-      return Promise.all(keys
-        .filter(key =&gt;  key !== dynamicCacheName)
-        .map(key =&gt; caches.delete(key))
-      );
-    })
-  );        
-});
+          const dynamicCacheName = 'Img-v1.1.3';
+          const assetsToCache = [
+          "./",
+          "./index.html",
+          "./global.css",
+          "./src/build/bundle.css",
+          "./src/build/bundle.js"
+          ];
+          self.addEventListener("install", e =&gt; {
+          log("Installing");
+          e.waitUntil((async () =&gt; {
+          const cache = await caches.open(dynamicCacheName);
+          await cache.addAll(assetsToCache);
+          })());
+          });
+          // activate event
+          self.addEventListener('activate', evt =&gt; {
+          evt.waitUntil(
+          caches.keys().then(keys =&gt; {
+          return Promise.all(keys
+          .filter(key =&gt; key !== dynamicCacheName)
+          .map(key =&gt; caches.delete(key))
+          );
+          })
+          );
+          });
 
-// fetch event
-self.addEventListener('fetch', evt =&gt; {
-  evt.respondWith(
-    caches.match(evt.request).then(cacheRes =&gt; {
-      return cacheRes || fetch(evt.request).then(fetchRes =&gt; {
-        return caches.open(dynamicCacheName).then(cache =&gt; {
-          cache.put(evt.request.url, fetchRes.clone()).then(r =&gt;  log(`Caching Url ${evt.request.url} | ${r}`));
+          // fetch event
+          self.addEventListener('fetch', evt =&gt; {
+          evt.respondWith(
+          caches.match(evt.request).then(cacheRes =&gt; {
+          return cacheRes || fetch(evt.request).then(fetchRes =&gt; {
+          return caches.open(dynamicCacheName).then(cache =&gt; {
+          cache.put(evt.request.url, fetchRes.clone()).then(r =&gt; log(`Caching Url ${evt.request.url} | ${r}`));
           return fetchRes;
-        })
+          })
       });
     })
   );
@@ -80,7 +80,7 @@ function log(text) {
     </div>
     <div id="footer_blog">
         Made by
-        <a href="https://github.com/JakeWasChosen" target="_blank">Jason</a>
+        <a href="https://github.com/JasonLovesDoggo" target="_blank">Jason</a>
         with
         <a href="https://github.com/imfunniee/gitfolio" target="_blank">Gitfolio</a>
     </div>
@@ -110,14 +110,15 @@ function log(text) {
         };">${user[0].name}</span>@${user[0].username}<b id="blog_time"></b>`;
 
         if ((user[0].theme = "dark.css")) {
-          document.querySelector("#background_overlay").style.background =
-            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
+          document.querySelector('#background_overlay').style.background =
+            'linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))';
         } else {
-          document.querySelector("#background_overlay").style.background =
-            "linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))";
+          document.querySelector('#background_overlay').style.background =
+            'linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))';
         }
       });
     </script>
-  
 
-</body></html>
+
+  </body>
+</html>

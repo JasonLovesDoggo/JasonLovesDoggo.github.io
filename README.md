@@ -1,7 +1,7 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/JakeWasChosen/website.svg)
-[![pages-build-deployment](https://github.com/JakeWasChosen/JakeWasChosen.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/JakeWasChosen/JakeWasChosen.github.io/actions/workflows/pages/pages-build-deployment)
-[![Update Sitemap](https://github.com/JakeWasChosen/JakeWasChosen.github.io/actions/workflows/UpdateSitemap.yml/badge.svg)](https://github.com/JakeWasChosen/JakeWasChosen.github.io/actions/workflows/UpdateSitemap.yml)
-[![UpdateVersion](https://github.com/JakeWasChosen/JakeWasChosen.github.io/actions/workflows/updateversion.yml/badge.svg?branch=master)](https://github.com/JakeWasChosen/JakeWasChosen.github.io/actions/workflows/updateversion.yml)
+![GitHub repo size](https://img.shields.io/github/repo-size/JasonLovesDoggo/website.svg)
+[![pages-build-deployment](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment)
+[![Update Sitemap](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml/badge.svg)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml)
+[![UpdateVersion](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml/badge.svg?branch=master)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml)
 # My personal website / portfolio
 
 #### hosted via GitHub pages and uses cloudflare dns and a namecheap domain                                                                                                                       (thank you github student pack)

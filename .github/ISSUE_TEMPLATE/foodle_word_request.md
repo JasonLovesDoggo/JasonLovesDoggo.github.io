@@ -1,9 +1,6 @@
 ---
-name: Word Suggest
-about: Suggest a word for this project
-title: "[foodle]"
-labels: foodle
-assignees: JakeWasChosen
+name: Word Suggest about: Suggest a word for this project title: "[foodle]"
+labels: foodle assignees: JasonLovesDoggo
 
 
 ---
