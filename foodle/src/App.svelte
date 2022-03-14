@@ -93,8 +93,6 @@
 	}
 
 	let toaster: Toaster;
-
-	console.log(showContact)
 </script>
 <Toaster bind:this={toaster} />
 {#if toaster}

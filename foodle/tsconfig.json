@@ -1,5 +1,6 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
+  "skipLibCheck": false,
   "compilerOptions": {
     "types": [
       "svelte"
