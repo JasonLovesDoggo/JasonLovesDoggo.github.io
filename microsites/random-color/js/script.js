@@ -1,4 +1,5 @@
 generateRandomHexColor = () => {
+
   const hexInts = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
   let hexColor = '#';
   while (hexColor.length < 7) {
@@ -19,9 +20,9 @@ function hexToRgb(hex) {
 
 function rgbToHsl(r, g, b) {
   r /= 255, g /= 255, b /= 255;
-  var max = Math.max(r, g, b),
+  let max = Math.max(r, g, b),
     min = Math.min(r, g, b);
-  var h,
+  let h,
     s,
     l = (max + min) / 2;
 
@@ -45,7 +46,6 @@ function rgbToHsl(r, g, b) {
 
     h /= 6;
   }
-  console.log((h * 100 + 0.5) | 0 + ' x ');
   return [((h * 100 + 0.5) | 0), ' ' + ((s * 100 + 0.5) | 0) + '%', ' ' + ((l * 100 + 0.5) | 0) + '%'];
 }
 
@@ -53,8 +53,12 @@ function rgbToHsl(r, g, b) {
 
 document.addEventListener('DOMContentLoaded', (event) => {
   let currentColor = generateRandomHexColor();
-  if (window.location.hash) {
-    currentColor = window.location.hash;
+  if (window.location.hash !== 'changeThisToAHexCode') {
+    if (window.location.hash) {
+      currentColor = window.location.hash;
+    } else {
+      window.location.hash = 'changeThisToAHexCode';
+    }
   }
   document.getElementById('rgb').innerText = `rgb(${hexToRgb(currentColor).r}, ${hexToRgb(currentColor).g}, ${hexToRgb(currentColor).b})`;
   document.getElementById('hsl').innerText = `hsl(${rgbToHsl(hexToRgb(currentColor).r, hexToRgb(currentColor).g, hexToRgb(currentColor).b)})`;
