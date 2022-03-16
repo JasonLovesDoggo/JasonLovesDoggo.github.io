@@ -53,6 +53,9 @@ function rgbToHsl(r, g, b) {
 
 document.addEventListener('DOMContentLoaded', (event) => {
   let currentColor = generateRandomHexColor();
+  if (window.location.hash) {
+    currentColor = window.location.hash;
+  }
   document.getElementById('rgb').innerText = `rgb(${hexToRgb(currentColor).r}, ${hexToRgb(currentColor).g}, ${hexToRgb(currentColor).b})`;
   document.getElementById('hsl').innerText = `hsl(${rgbToHsl(hexToRgb(currentColor).r, hexToRgb(currentColor).g, hexToRgb(currentColor).b)})`;
   document.getElementById('hex').innerText = currentColor;
