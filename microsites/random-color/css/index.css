@@ -1,0 +1,65 @@
+body {
+  text-align: center;
+  margin: 30vh 0;
+  font-family: 'Work Sans', sans-serif;
+  color: #00000095
+}
+
+main, footer {
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+a, a:visited {
+  border-bottom: 3px solid #00000095;
+  color: #00000095;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#uses {
+  top: 1vh;
+  position: absolute;
+  left: 95vw;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100vw;
+}
+
+h1, h2, h4 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h2 {
+  font-size: 3em;
+
+}
+
+h4 {
+  font-size: 1.2em;
+
+}
+
+p {
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+@media screen and (max-width: 900px) {
+  main, footer {
+    width: 90%;
+  }
+}
