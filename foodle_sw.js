@@ -1,11 +1,11 @@
 //https://medium.com/notonlycss/turn-your-website-into-a-pwa-6aaecb95f8b9
-const dynamicCacheName = 'Img-v1.74';
+const dynamicCacheName = 'Img-v1.75';
 const assetsToCache = [
-  '/foodle',
-  '/foodle/index.html',
-  '/foodle/global.css',
-  '/foodle/src/build/bundle.css',
-  '/foodle/src/build/bundle.js'
+  'https://nasoj.me/foodle/',
+  'https://nasoj.me/foodle/index.html',
+  'https://nasoj.me/foodle/global.css',
+  'https://nasoj.me/foodle/src/build/bundle.css',
+  'https://nasoj.me/foodle/src/build/bundle.js'
 ];
 self.addEventListener("install", e => {
 	log("Installing");

@@ -13,23 +13,38 @@
 		{
 			"name": "Daily mode",
 			"short_nam": "Daily",
-			"url": "/foodle#daily?utm_source=homescreen&utm_medium=shortcut",
+			"url": "/foodle/#daily?utm_source=homescreen&utm_medium=shortcut",
 			"description": "Daily mode of foodle (new word every 24h)",
-			"icons": [{ "src": "Img/Daily.png", "sizes": "192x192" }]
+			"icons": [
+				{
+					"src": "Img/Daily.png",
+					"sizes": "192x192"
+				}
+			]
 		},
 		{
 			"name": "Hourly mode",
 			"short_nam": "Hourly",
-			"url": "/foodle#hourly?utm_source=homescreen&utm_medium=shortcut",
+			"url": "/foodle/#hourly?utm_source=homescreen&utm_medium=shortcut",
 			"description": "Hourly mode of foodle (new word every Hour)",
-			"icons": [{ "src": "Img/Hourly.png", "sizes": "192x192" }]
+			"icons": [
+				{
+					"src": "Img/Hourly.png",
+					"sizes": "192x192"
+				}
+			]
 		},
 		{
 			"name": "Infinite mode",
 			"short_nam": "Infinite",
-			"url": "/foodle#infinite?utm_source=homescreen&utm_medium=shortcut",
+			"url": "/foodle/#infinite?utm_source=homescreen&utm_medium=shortcut",
 			"description": "Infinite mode of foodle unlimited words",
-			"icons": [{ "src": "Img/Infinite.png", "sizes": "192x192" }]             
+			"icons": [
+				{
+					"src": "Img/Infinite.png",
+					"sizes": "192x192"
+				}
+			]
 		}
 	],
 	"icons": [
@@ -37,49 +52,49 @@
 			"src": "Img/logo_32x32.png",
 			"type": "image/png",
 			"sizes": "32x32",
-			"purpose": "any"
+			"purpose": "any maskable"
 		},
 		{
 			"src": "Img/logo_48x48.png",
 			"type": "image/png",
 			"sizes": "48x48",
-			"purpose": "any"
+			"purpose": "any maskable"
 		},
 		{
 			"src": "Img/logo_72x72.png",
 			"type": "image/png",
 			"sizes": "72x72",
-			"purpose": "any"
+			"purpose": "any maskable"
 		},
 		{
 			"src": "Img/logo_96x96.png",
 			"type": "image/png",
 			"sizes": "96x96",
-			"purpose": "any"
+			"purpose": "any maskable"
 		},
 		{
 			"src": "Img/logo_144x144.png",
 			"type": "image/png",
 			"sizes": "144x144",
-			"purpose": "any"
+			"purpose": "any maskable"
 		},
 		{
 			"src": "Img/logo_168x168.png",
 			"type": "image/png",
 			"sizes": "168x168",
-			"purpose": "any"
+			"purpose": "any maskable"
 		},
 		{
 			"src": "Img/logo_192x192.png",
 			"type": "image/png",
 			"sizes": "192x192",
-			"purpose": "any"
+			"purpose": "any maskable"
 		},
 		{
 			"src": "Img/logo_512x512.png",
 			"type": "image/png",
 			"sizes": "512x512",
-			"purpose": "any"
+			"purpose": "any maskable"
 		}
 	],
 	"launch_handler": {
