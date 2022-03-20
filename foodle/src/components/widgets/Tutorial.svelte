@@ -50,7 +50,7 @@
 	<br/>
 	Please <span on:click={() => dispatch("contact")} style="text-decoration: underline;">contact</span> the developer
 	<a href="https://github.com/JasonLovesDoggo" target="_blank">Jason</a>.
-	if you have any problems.
+	if you have any problems. Or find us on <a class="twitter" href="https://twitter.com/FoodleTheGame">Twitter</a>
 	<br/>
 	Open the settings menu to see some of the additional features.
 	Or click
@@ -84,6 +84,18 @@
 		height: 40px;
 		display: flex;
 		gap: 4px;
+	}
+
+	.twitter {
+		-webkit-transition: color 0.4s ease-out;
+		-moz-transition: color 0.4s ease-out;
+		-o-transition: color 0.4s ease-out;
+		-ms-transition: color 0.4s ease-out;
+		transition: color 0.4s ease-out;
+	}
+
+	.twitter:hover {
+		color: #00acee
 	}
 
 </style>

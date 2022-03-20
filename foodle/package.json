@@ -1,7 +1,7 @@
 {
   "name": "foodle",
   "description": "A remake of the popular game Wordle with additional modes and features. ",
-  "version": "1.75",
+  "version": "1.76",
   "private": "true",
   "scripts": {
     "build": "rollup -c",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JasonLovesDoggo/website.git"
+    "url": "git+https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io.git"
   },
   "keywords": [],
   "author": "JasonLovesDoggo",
   "bugs": {
-    "url": "https://github.com/JasonLovesDoggo/website/issues"
+    "url": "https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/issues"
   },
-  "homepage": "https://github.com/JasonLovesDoggo/website#readme",
+  "homepage": "https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io#readme",
   "devDependencies": {
     "@beyonk/gdpr-cookie-consent-banner": "^9.0.3",
     "@rollup/plugin-commonjs": "^21.0.1",

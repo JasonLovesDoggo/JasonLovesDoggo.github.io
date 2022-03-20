@@ -245,7 +245,10 @@
 <Modal
 
 		fullscreen={true} bind:visible={showSettings}>
-	<Settings state={game}/>
+	<Settings on:contact={() => {
+		showSettings = false;
+		showContact = true;}}
+			  state={game}/>
 	{#if game.active}
 		<div class="concede" on:click={concede}>give up</div>
 	{/if}

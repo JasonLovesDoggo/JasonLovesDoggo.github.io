@@ -1,12 +1,14 @@
 <script lang="ts">
-	import {getContext, onMount} from "svelte";
-    import {mode, settings} from "../../stores";
-	import { modeData } from "../../utils";
-	import type { Toaster } from "../widgets";
+	import {createEventDispatcher, getContext, onMount} from "svelte";
+	import {mode, settings} from "../../stores";
+	import {modeData} from "../../utils";
+	import type {Toaster} from "../widgets";
 	import Setting from "./Setting.svelte";
+
 	export let state: GameState;
 	const toaster = getContext<Toaster>("toaster");
 	let root: HTMLElement;
+	const dispatch = createEventDispatcher();
 	onMount(() => {
 		root = document.documentElement;
 	});
@@ -51,8 +53,9 @@
 		</Setting>
 		<div class="links">
 			<a href="https://www.buymeacoffee.com/JasonLovesDoggo" target="_blank">Support me</a>
-			<a href="https://github.com/JasonLovesDoggo/website/issues" target="_blank">Suggest a word</a>
-			<a href="https://github.com/JasonLovesDoggo/website/issues" target="_blank">Report a Bug</a>
+			<span on:click={() => dispatch("contact")} style="text-decoration: underline;">Suggest a word</span>
+			<a href="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/issues/new" target="_blank">Report a
+				Bug</a>
 		</div>
 	</div>
 </div>

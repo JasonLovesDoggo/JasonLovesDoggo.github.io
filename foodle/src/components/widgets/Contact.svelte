@@ -5,6 +5,12 @@
 
 <div class:complete={visible} class="container contact-form">
     <h1>Contact Me</h1>
+    <div id="link_container">
+        <a class="twitter" href="https://twitter.com/FoodleTheGame" style="font-size: 20px">Twitter</a>
+        <a href="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/issues/new"
+           style="font-size: 20px">Github</a>
+    </div>
+    <br/>
     <form name="Foodle-form" accept-charset="utf-8" action="https://formspree.io/f/xqknbywk" method="post">
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="First name" placeholder="Jason" required>
@@ -22,13 +28,13 @@
             <option value="Other">Other</option>
         </select>
 
-        <label for="message">Subject</label>
+        <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Write something.." rows="2" style="height:200px"></textarea>
         <div class="g-recaptcha" data-sitekey="6LexoLkeAAAAAAeeRiBX2wFK7nQ1eaW68mRS2J1m"></div>
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
-        <br>
-        <div data-ux="Block"><p style="font-size: 10px;">
+        <br/>
+        <div><p class="captcha">
             This site is protected by reCAPTCHA and the Google <a rel="noopener" aria-haspopup="true" target="_blank"
                                                                   href="https://policies.google.com/privacy">Privacy
             Policy</a> and <a rel="noopener" aria-haspopup="true" target="_blank"
@@ -107,6 +113,41 @@
 
     .container h1 {
         color: var(--fg-primary);
+    }
+
+    .captcha {
+        font-size: 10px;
+        margin: revert;
+    }
+
+    .twitter {
+        -webkit-transition: color 0.4s ease-out;
+        -moz-transition: color 0.4s ease-out;
+        -o-transition: color 0.4s ease-out;
+        -ms-transition: color 0.4s ease-out;
+        transition: color 0.4s ease-out;
+    }
+
+    .twitter:hover {
+        color: #00acee
+    }
+
+    #link_container {
+        margin: 3% 25% 0 25%;
+        padding: 2%;
+        text-align: justify;
+
+    }
+
+    #link_container:after {
+        content: ' ';
+        display: inline-block;
+        width: 100%;
+        height: 0
+    }
+
+    #link_container > a {
+        display: inline-block
     }
 </style>
 
