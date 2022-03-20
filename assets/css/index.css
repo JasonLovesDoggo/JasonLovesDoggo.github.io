@@ -208,16 +208,15 @@ body {
 }
 
 .container {
-    width:90vw;
-    height:90vh;
-    padding:5vh 5vw;
-    background:rgb(64,123,164);
-    color:#fff;
-    z-index:9;
-    position:fixed;
-    max-height:100vh;
-    overflow-y:auto;
-    display:none;
+    width: 100vw;
+    height: 100vh;
+    padding: 5vh 5vw;
+    background: rgb(64, 123, 164);
+    color: #fff;
+    z-index: 9;
+    position: fixed;
+    overflow-y: auto;
+    display: none;
 }
 .container div {
     font-size:25px;
