@@ -16,7 +16,7 @@
         <input type="text" id="fname" name="First name" placeholder="Jason" required>
 
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="Fast name" placeholder="Cameron " required>
+        <input id="lname" name="Last name" placeholder="Cameron " required type="text">
 
         <label for="email">Email</label>
         <input type="email" id="email" name="Email" placeholder="foodlethegame@gmail.com" required>
