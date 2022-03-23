@@ -55,10 +55,10 @@
 		/>
 	{/each}
 	{#if icon}
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
-			<path d={icon} stroke-width="14" />
-		</svg>
-	{/if}
+        <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+            <path d={icon} stroke-width="14"/>
+        </svg>
+    {/if}
 	{#if tutorial}
 		<div transition:scale class="tutorial" on:click={() => dispatch("closeTutPopUp")}>
 			double tap (right click) a row to see a word's definition, or how many words could be

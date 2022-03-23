@@ -71,13 +71,18 @@
 		if (game.board.words[game.guesses].length !== COLS) {
 			toaster.pop("Not enough letters");
 			board.shake(game.guesses);
-		} else if (words.contains(game.board.words[game.guesses])) {
+			//Checks if the word is missing letters
+			console.log(game.board.words[game.guesses])  //DEBUG
+			console.log(game.guesses)
+			console.log('wordslmao')
+			console.log(game.board.words)
+		} else if (words.contains(game.board.words[game.guesses])) {       //wordlist contains the word
 			if (game.guesses > 0) {
 				const hm = checkHardMode(game.board, game.guesses);
 				if ($settings.hard[$mode]) {
 					if (hm.type === "🟩") {
 						toaster.pop(
-							`${contractNum(hm.pos + 1)} letter must be ${hm.char.toUpperCase()}`
+								`${contractNum(hm.pos + 1)} letter must be ${hm.char.toUpperCase()}`
 						);
 						board.shake(game.guesses);
 						return;

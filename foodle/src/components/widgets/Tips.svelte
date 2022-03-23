@@ -18,24 +18,24 @@
 </script>
 
 <div class="outer">
-	<div class="number">Tip {index + 1}/{tips.length}</div>
-	<div class="tip">{tips[index]}</div>
-	<svg
-		class="left"
-		on:click={() => (index = (index - 1 + tips.length) % tips.length)}
-		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 100 100"
-	>
-		<path d="M75,0L25,50L75,100z" />
-	</svg>
-	<svg
-		on:click={() => (index = (index + 1) % tips.length)}
-		class="right"
-		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 100 100"
-	>
-		<path d="M25,0L75,50L25,100z" />
-	</svg>
+    <div class="number">Tip {index + 1}/{tips.length}</div>
+    <div class="tip">{tips[index]}</div>
+    <svg
+            class="left"
+            on:click={() => (index = (index - 1 + tips.length) % tips.length)}
+            viewBox="0 0 100 100"
+            xmlns="https://www.w3.org/2000/svg"
+    >
+        <path d="M75,0L25,50L75,100z"/>
+    </svg>
+    <svg
+            class="right"
+            on:click={() => (index = (index + 1) % tips.length)}
+            viewBox="0 0 100 100"
+            xmlns="https://www.w3.org/2000/svg"
+    >
+        <path d="M25,0L75,50L25,100z"/>
+    </svg>
 </div>
 
 <style lang="scss">
