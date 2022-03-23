@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://nasoj.me/</loc>
-        <lastmod>2022-03-16T19:15:59-04:00</lastmod>
-    </url>
-    <url>
-        <loc>https://nasoj.me/404</loc>
-        <lastmod>2022-03-14T13:44:12-04:00</lastmod>
-    </url>
-    <url>
-        <loc>https://nasoj.me/StartPage/</loc>
-        <lastmod>2022-03-06T16:48:00-05:00</lastmod>
-    </url>
-    <url>
-        <loc>https://nasoj.me/bella/</loc>
-        <lastmod>2022-03-01T20:20:36-05:00</lastmod>
-    </url>
-    <url>
-        <loc>https://nasoj.me/foodle/</loc>
-        <lastmod>2022-03-14T18:29:57+00:00</lastmod>
-    </url>
-    <url>
-        <loc>https://nasoj.me/foodle/privacy</loc>
-        <lastmod>2022-03-13T21:35:57-04:00</lastmod>
-    </url>
-    <url>
-        <loc>https://nasoj.me/projects/</loc>
-        <lastmod>2022-03-14T13:44:12-04:00</lastmod>
-    </url>
-    <url>
-        <loc>https://nasoj.me/bella/tempdir/</loc>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://nasoj.me/</loc>
+<lastmod>2022-03-20T13:35:17-04:00</lastmod>
+</url>
+<url>
+<loc>https://nasoj.me/404</loc>
+<lastmod>2022-03-14T13:44:12-04:00</lastmod>
+</url>
+<url>
+<loc>https://nasoj.me/StartPage/</loc>
+<lastmod>2022-03-06T16:48:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://nasoj.me/bella/</loc>
+<lastmod>2022-03-01T20:20:36-05:00</lastmod>
+</url>
+<url>
+<loc>https://nasoj.me/foodle/</loc>
+<lastmod>2022-03-20T14:26:46-04:00</lastmod>
+</url>
+<url>
+<loc>https://nasoj.me/foodle/privacy</loc>
+<lastmod>2022-03-13T21:35:57-04:00</lastmod>
+</url>
+<url>
+<loc>https://nasoj.me/projects/</loc>
+<lastmod>2022-03-20T17:54:59-04:00</lastmod>
+</url>
+<url>
+<loc>https://nasoj.me/bella/tempdir/</loc>
 <lastmod>2022-03-16T17:59:02-04:00</lastmod>
 </url>
 <url>
