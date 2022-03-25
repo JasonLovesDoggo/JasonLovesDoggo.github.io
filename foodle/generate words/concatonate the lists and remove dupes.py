@@ -12,10 +12,62 @@ not_really_food_words = ['heath', 'stink', 'grade', 'unfed', 'pound', 'belly', '
                          'cheek', 'plant', 'hasty', 'trash', 'larva', 'hairy', 'tipsy', 'delve', 'glass', 'fluff',
                          'stalk', 'liver', 'cinch', 'waste', 'stein', 'vomit', 'baker', 'crave', 'opium', 'derby',
                          'stank', 'acorn', 'snail', 'poppy', 'moldy', 'molar', 'musky', 'fluid', 'hazel', 'leafy',
-                         'fatty', 'conch', 'savoy', 'eater', 'butch']
+                         'fatty', 'conch', 'savoy', 'eater', 'butch', 'eaten']
 
-actually_food_words_that_dont_appear_in_the_dictionary_i_used = []  #empty rn
-
+actually_food_words_that_dont_appear_in_the_dictionary_i_used = [
+    'saute',
+    'flans',
+    'oreos',
+    'heinz',
+    'bhaji',
+    'torte',
+    'crisp',
+    'chips',
+    'anise',
+    'punch',
+    'tuber',
+    'ugali',
+    'ladle',
+    'beans',
+    'spuds',
+    'stove',
+    'spork',
+    'herbs',
+    'lager',
+    'seeds',
+    'liver',
+    'namul',
+    'lassi',
+    'ranch',
+    'cater',
+    'manti',
+    'straw',
+    'grain',
+    'crabs',
+    'jelly',
+    'adobo',
+    'taste',
+    'pilaf',
+    'mochi',
+    'vegan',
+    'latke',
+    'munch',
+    'queso',
+    'curds',
+    'roast',
+    'fries',
+    'chard',
+    'mints',
+    'minty',
+    'dates',
+    'clams',
+    'prune',
+    'aspic',
+    'rujak',
+    'gummy',
+    'cakes',
+    'baozi',
+]
 for word in not_really_food_words:
     food_words.remove(word)
 
@@ -23,8 +75,8 @@ for word in actually_food_words_that_dont_appear_in_the_dictionary_i_used:
     food_words.append(word)
 
 # Fix guess list
-
 guesses_words.append('urmom')  # your welcome Zack
+guesses_words.append('jabba')  # your welcome Zack twice
 guesses_words.append('soare')  # your welcome Mason
 
 for word in food_words:

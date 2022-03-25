@@ -46,11 +46,11 @@
 		href="https://www.powerlanguage.co.uk/wordle/"
 		target="_blank">Wordle</a
 >
-	by Josh Wardle with additional modes and features.
+	by Josh Wardle with a different theme and additional modes and features.
 	<br/>
 	Please <span on:click={() => dispatch("contact")} style="text-decoration: underline;">contact</span> the developer
 	<a href="https://github.com/JasonLovesDoggo" target="_blank">Jason</a>.
-	if you have any problems. Or find us on <a class="twitter" href="https://twitter.com/FoodleTheGame">Twitter</a>
+	if you have any problems. Or find us on <a class="social_link twitter" href="https://twitter.com/FoodleTheGame">Twitter</a>
 	<br/>
 	Open the settings menu to see some of the additional features.
 	Or click
@@ -86,7 +86,12 @@
 		gap: 4px;
 	}
 
-	.twitter {
+
+	.twitter:hover {
+		color: #00acee
+	}
+
+	.social_link {
 		-webkit-transition: color 0.4s ease-out;
 		-moz-transition: color 0.4s ease-out;
 		-o-transition: color 0.4s ease-out;
@@ -94,8 +99,9 @@
 		transition: color 0.4s ease-out;
 	}
 
-	.twitter:hover {
-		color: #00acee
+	.social_link:hover {
+		font-size: 15px;
 	}
 
 </style>
+

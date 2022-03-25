@@ -32,4 +32,6 @@ gitfolio update
 see https://pixieset.com/example/ for more examples
 
 2. https://en.m.wikipedia.org/wiki/Lists_of_foods USE this
+
+3. HIGH PRIORITY add a Changelog widget when you click on the version number 
 </details>

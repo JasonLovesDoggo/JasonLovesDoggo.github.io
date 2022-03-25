@@ -33,6 +33,7 @@
 		{/if}
 	</div>
 	<h1
+		id="FoodleColor"
 		on:click|self={() => {
 			$mode = ($mode + 1) % modeData.modes.length;
 			toaster.pop(modeData.modes[$mode].name);
@@ -40,8 +41,7 @@
 		on:contextmenu|preventDefault|self={() => {
 			$mode = ($mode - 1 + modeData.modes.length) % modeData.modes.length;
 			toaster.pop(modeData.modes[$mode].name);
-		}}
-	>
+		}}>
 		Foodle
 	</h1>
 	<div class="icons">
@@ -71,7 +71,7 @@
 		position: relative;
 		font-weight: 700;
 		text-transform: uppercase;
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.27rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -84,11 +84,29 @@
 		z-index: 1;
 		display: flex;
 	}
+
+	//position: absolute
 	h1 {
-		position: absolute;
-		width: 100%;
+		text-transform: uppercase;
+		font-family: "Exo", sans-serif;
+		font-weight: 900;
+		//position: absolute;   goddammit code TODO: fix this
 		font-size: var(--fs-large);
 		cursor: pointer;
 		text-align: center;
+	}
+
+	#FoodleColor { //Color crap
+		width: min-content;                    //Im stumped for now
+		width: -moz-min-content;
+		background: linear-gradient(135deg,
+				var(--color-4) 1%, var(--color-4) 30%,
+				transparent 30%, transparent 32%,
+				var(--color-3) 32%, var(--color-3) 70%,
+				transparent 70%, transparent 72.3%,
+				var(--color-2) 72.3%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
 	}
 </style>

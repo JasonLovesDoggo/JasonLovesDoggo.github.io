@@ -37,6 +37,9 @@
     --color-absent: var(--border-primary);
     --evaluated-key-color: var(--fg-primary);
     --key-bg: var(--fg-secondary);
+    --color-2: #DB4437;
+    --color-3: #F4B400;
+    --color-4: #0F9D58;
 }
 
 body { height: 100% }
@@ -61,7 +64,6 @@ body { height: 100% }
 	--color-correct: #f5793a;
 	--color-present: #85c0f9;
 }
-
 h3 {
 	text-align: center;
 	text-transform: uppercase;
