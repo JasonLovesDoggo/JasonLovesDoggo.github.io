@@ -12,8 +12,7 @@
 	<link href="global.css?v=1.76" rel="stylesheet">
 	<link href="src/build/bundle.css?v=1.76" rel="stylesheet">
 	<script>
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/foodle_sw.js?v=1.76')
+		if ('serviceWorker' in navigator) {                    			navigator.serviceWorker.register('/foodle_sw.js?v=1.76')
 					.then(() => console.log('service worker registered'))
 					.catch(err => console.log('service worker not registered', err));
 

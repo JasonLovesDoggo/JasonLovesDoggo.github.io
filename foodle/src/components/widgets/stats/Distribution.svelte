@@ -43,7 +43,7 @@
 		gap: 4px;
 	}
 	.bar {
-		min-width: 7%;
+		min-width: 8.5%;
 		transition: width 0.3s ease-out;
 		background: var(--color-absent);
 		color: white;

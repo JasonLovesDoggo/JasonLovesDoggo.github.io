@@ -15,7 +15,8 @@ not_really_food_words = ['heath', 'stink', 'grade', 'unfed', 'pound', 'belly', '
                          'fatty', 'conch', 'savoy', 'eater', 'butch', 'eaten']
 
 actually_food_words_that_dont_appear_in_the_dictionary_i_used = [
-    'flans'
+    'saute',
+    'flans',
     'oreos',
     'heinz',
     'bhaji',
