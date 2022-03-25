@@ -1,0 +1,34 @@
+name: Deploy from two branches
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    stepsz
+      # Checkout the `app-challenge` branch
+      - uses: actions/checkout@v2
+        with:
+          ref: updates
+          # Put the checked out files inside the `big-island-buses/heleon` folder
+          path: ./foodle
+       # Install Node.js
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+      # Install npm dependencies
+      - run: npm ci
+      # (similar to npm install)
+      # Run code to build the site files inside the `foodle` folder
+      - run: npm run build
+      
+      # Deploy the `foodle` folder to GitHub Pages
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: './'
+          user_name: 'Jason[bot]'
+          user_email: 'thebosssg19@gmail.com'
