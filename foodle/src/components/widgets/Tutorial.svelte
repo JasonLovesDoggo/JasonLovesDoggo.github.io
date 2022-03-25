@@ -55,15 +55,6 @@
 	Open the settings menu to see some of the additional features.
 	Or click
 	<a href="https://nasoj.me/" target="_blank">Here to go home.</a>
-	<h1 style="margin: 6vh 5vw 2vh">FAQ</h1>
-	<h2>Who is the developer of Foodle</h2>
-	<p>
-		Jason Cameron
-		<a class="social_link fs10" href="https://github.com/JasonLovesDoggo">Github</a>
-		<a class="social_link fs10 twitter" href="https://twitter.com/JasonLovesDoggo">Twitter</a>
-		<a class="googleText social_link fs10" href="https://g.dev/JasonLovesDoggo">Google Developer Profile</a>
-	</p>
-
 </div>
 
 <style lang="scss">
