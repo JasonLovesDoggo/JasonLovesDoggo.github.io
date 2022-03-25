@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    stepsz
+    steps
       # Checkout the `app-challenge` branch
       - uses: actions/checkout@v2
         with:
