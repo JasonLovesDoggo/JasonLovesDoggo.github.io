@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: '14'
       # Install npm dependencies
+      - run: cd foodle
       - run: npm ci
       # (similar to npm install)
       # Run code to build the site files inside the `foodle` folder
