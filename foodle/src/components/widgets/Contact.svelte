@@ -29,7 +29,7 @@
         </select>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Write something.." rows="2" style="height:200px"></textarea>
+        <textarea id="message" name="message" placeholder="Please write a descriptive message" rows="2" style="height:200px"></textarea>
         <div class="g-recaptcha" data-sitekey="6LexoLkeAAAAAAeeRiBX2wFK7nQ1eaW68mRS2J1m"></div>
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">

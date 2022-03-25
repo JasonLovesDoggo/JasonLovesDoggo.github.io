@@ -46,7 +46,7 @@
 		href="https://www.powerlanguage.co.uk/wordle/"
 		target="_blank">Wordle</a
 >
-	by Josh Wardle with additional modes and features.
+	by Josh Wardle with a different theme and additional modes and features.
 	<br/>
 	Please <span on:click={() => dispatch("contact")} style="text-decoration: underline;">contact</span> the developer
 	<a href="https://github.com/JasonLovesDoggo" target="_blank">Jason</a>.
@@ -91,10 +91,6 @@
 		color: #00acee
 	}
 
-	.fs10 {
-		font-size: 10px;
-	}
-
 	.social_link {
 		-webkit-transition: color 0.4s ease-out;
 		-moz-transition: color 0.4s ease-out;
@@ -108,3 +104,4 @@
 	}
 
 </style>
+

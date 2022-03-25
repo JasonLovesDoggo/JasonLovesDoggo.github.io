@@ -1,0 +1,34 @@
+name: Deploy dev page
+
+on:
+  push:
+    branches: [updates, development]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the `app-challenge` branch
+      - uses: actions/checkout@v2
+        with:
+          ref: updates
+          # Put the checked out files inside the `foodle` folder
+       # Install Node.js
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+      # Install npm dependencies
+      - run: cd foodle
+      - run: npm ci
+      # (similar to npm install)
+      # Run code to build the site files inside the `foodle` folder
+      - run: npm run build
+
+      # Deploy the `foodle` folder to GitHub Pages
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: './'
+          user_name: 'Jason[bot]'
+          user_email: 'thebosssg19@gmail.com'

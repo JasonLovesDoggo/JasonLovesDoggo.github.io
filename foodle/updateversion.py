@@ -2,7 +2,7 @@ from os.path import abspath
 
 # File paths
 
-old_version_decimal = 79
+old_version_decimal = 80
 VERSION_NUMBER = 1
 new_version = f'{VERSION_NUMBER}.{old_version_decimal + 1}'
 old_version = f'{VERSION_NUMBER}.{old_version_decimal}'

@@ -33,7 +33,7 @@
 		{/if}
 	</div>
 	<h1
-		id="FoodleTitle"
+		id="FoodleColor"
 		on:click|self={() => {
 			$mode = ($mode + 1) % modeData.modes.length;
 			toaster.pop(modeData.modes[$mode].name);
@@ -71,7 +71,7 @@
 		position: relative;
 		font-weight: 700;
 		text-transform: uppercase;
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.27rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -87,19 +87,19 @@
 
 	//position: absolute
 	h1 {
+		text-transform: uppercase;
+		font-family: "Exo", sans-serif;
+		font-weight: 900;
+		//position: absolute;   goddammit code TODO: fix this
 		font-size: var(--fs-large);
 		cursor: pointer;
 		text-align: center;
 	}
 
-	h1 { //Color crap
-		font-family: "Exo", sans-serif;
-		font-weight: 900;
-		//margin: auto;
-		width: min-content;
+	#FoodleColor { //Color crap
+		width: min-content;                    //Im stumped for now
 		width: -moz-min-content;
-		text-transform: uppercase;
-		background: linear-gradient(136deg,
+		background: linear-gradient(135deg,
 				var(--color-4) 1%, var(--color-4) 30%,
 				transparent 30%, transparent 32%,
 				var(--color-3) 32%, var(--color-3) 70%,
@@ -108,9 +108,5 @@
 		background-clip: text;
 		-webkit-background-clip: text;
 		color: transparent;
-	}
-	h1:after {
-		border-color: white;
-		border-radius: 5px;
 	}
 </style>
