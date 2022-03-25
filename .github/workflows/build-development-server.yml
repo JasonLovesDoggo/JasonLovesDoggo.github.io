@@ -1,8 +1,8 @@
-name: Deploy from two branches
+name: Deploy dev page
 
 on:
   push:
-    branches: [main]
+    branches: [updates, development]
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: updates
-          # Put the checked out files inside the `big-island-buses/heleon` folder
+          # Put the checked out files inside the `foodle` folder
           path: ./foodle
        # Install Node.js
       - uses: actions/setup-node@v2-beta
@@ -24,7 +24,7 @@ jobs:
       # (similar to npm install)
       # Run code to build the site files inside the `foodle` folder
       - run: npm run build
-      
+
       # Deploy the `foodle` folder to GitHub Pages
       - uses: peaceiris/actions-gh-pages@v3
         with:
