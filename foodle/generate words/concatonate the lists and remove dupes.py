@@ -75,6 +75,7 @@ for word in actually_food_words_that_dont_appear_in_the_dictionary_i_used:
 
 # Fix guess list
 guesses_words.append('urmom')  # your welcome Zack
+guesses_words.append('jabba')  # your welcome Zack twice
 guesses_words.append('soare')  # your welcome Mason
 
 for word in food_words:
