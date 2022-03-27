@@ -9,10 +9,8 @@
 		if (state.guesses === 0) {
 			return false;
 		}
-		if (state.board.state[state.guesses - 1].join("") === "🟩".repeat(COLS)) {
-			return true;
-		}
-		return false;
+		return state.board.state[state.guesses - 1].join("") === "🟩".repeat(COLS);
+
 	}
 	$: stats = `${modeData.modes[$mode].name} Foodle #${state.wordNumber} ${
 		!state.active && failed() ? state.guesses : "X"
