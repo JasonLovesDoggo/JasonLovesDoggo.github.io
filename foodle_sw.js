@@ -32,9 +32,10 @@ self.addEventListener('activate', evt => {
 
 // fetch event
 self.addEventListener('fetch', evt => {
+  log((evt.request.url in assetsToNOTCache).toString())
   if (evt.request.url in assetsToNOTCache) {
-    return evt.respondWith(fetch(evt.request))
-  }
+       return fetch(evt.request)}
+
   evt.respondWith(
     caches.match(evt.request).then(cacheRes => {
       return cacheRes || fetch(evt.request).then(fetchRes => {
@@ -44,7 +45,7 @@ self.addEventListener('fetch', evt => {
         })
       });
     })
-  );
+  )
 });
 
 /**
