@@ -11,9 +11,10 @@ print('Old Version:', old_version)
 print('New Version:', new_version)
 
 direct = str(abspath(__file__))[:-16]
+print(direct)
 fps = [f'{direct}index.html', f'{direct[:-7]}foodle_sw.js', f'{direct}package.json', f'{direct}src/main.ts',
-       f'{direct}updateversion.py']
-#  "version": "1.79",
+       f'{direct}updateversion.py', f'{direct[:-7]}api/version.json]
+#  "version": "1.80",
 
 
 for file in fps:
