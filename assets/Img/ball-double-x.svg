@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 100 100" xmlns="https//www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <g transform="translate(0,-15)">
         <circle cx="50" r="22.3379" cy="32" fill="#fff" transform="rotate(234 50 50)">
             <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50"

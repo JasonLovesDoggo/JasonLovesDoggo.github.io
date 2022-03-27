@@ -24,7 +24,7 @@
             class="left"
             on:click={() => (index = (index - 1 + tips.length) % tips.length)}
             viewBox="0 0 100 100"
-            xmlns="https//www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"
     >
         <path d="M75,0L25,50L75,100z"/>
     </svg>
@@ -32,7 +32,7 @@
             class="right"
             on:click={() => (index = (index + 1) % tips.length)}
             viewBox="0 0 100 100"
-            xmlns="https//www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"
     >
         <path d="M25,0L75,50L25,100z"/>
     </svg>
