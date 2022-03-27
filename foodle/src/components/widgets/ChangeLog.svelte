@@ -2,43 +2,46 @@
     import SvelteMarkdown from 'svelte-markdown'
 
     export let visible: boolean;
+    let source: Response | string = ` # Fetching ChangeLog...`
+    let filename: string
+    import { onMount } from 'svelte';
 
-
- const source = `
-  # This is a header
-
-This is a paragraph.
-
-* This is a list
-* With two items
-  1. And a sublist
-  2. That is ordered
-    * With another
-    * Sublist inside
-
-| And this is | A table |
-|-------------|---------|
-| With two    | columns |`
-
+	onMount(() => {
+        console.log('ChangeLog Loaded')
+		GetLatestVersion()
+	});
     /** The maximum number of alternate definitions to provide*/
 
-    async function GetVersion() {
+    async function GetLatestVersion() {    // TODO: change this to the foodle api when ready
         const data = await fetch(`https://api.github.com/repos/JasonLovesDoggo/JasonLovesDoggo.github.io/releases/latest`, {
             mode: "cors",
         });
         let json = (await data.json())
         if (data.ok) {
-            return json['body'];
+            return source = await GetChangeLog(json['tag_name']);
         } else {
-            throw new Error(`Failed to fetch Changelog`);
+            return source = ` # Failed to fetch Changelog`
+
+        }
+    }
+    async function GetChangeLog(tag_name) {    // TODO: change this to the foodle api when ready
+        const data = await fetch(`https://nasoj.me/foodle/changelogs/${tag_name}.md`, {
+            mode: "cors",
+            cache: 'no-cache'
+        });
+        if (data.ok) {
+            return data;
+        } else {
+            return source = ` # Failed to fetch Changelog`
+
         }
     }
 
 </script>
 
 <div class:complete={visible} id="ChangeLogContainer">
-<SvelteMarkdown {source} />
-    <h5>Test</h5>
+    <h5>Not Yet Implemented</h5>
+    <!--     <SvelteMarkdown {source} /> -->
 </div>
 
 
