@@ -1,15 +1,16 @@
 <script lang="ts">
 	import Header from "./Header.svelte";
 	import { Board } from "./board";
-	import Keyboard from "./keyboard";
+	import { Keyboard } from "./keyboard";
 	import Modal from "./Modal.svelte";
 	import {getContext, onMount, setContext} from "svelte";
-	import Settings from "./settings";
+	import { Settings } from "./settings";
 	import {
 		Share,
 		Seperator,
 		Definition,
 		Contact,
+		ChangeLog,
 		Tutorial,
 		Statistics,
 		Distribution,
@@ -47,6 +48,7 @@
 	const delay = DELAY_INCREMENT * ROWS + 800;
 	let showTutorial = $settings.tutorial === 3;
 	export let showContact = false;
+	export let showChangeLog = false;
 	let showSettings = false;
 	let showRefresh = false;
 	let showCookieBanner = true;
@@ -57,6 +59,9 @@
 
 	function setContact(option: boolean) {
 		showContact = option
+	}
+    function setChangeLogVisibility(option: boolean) {
+		showChangeLog = option
 	}
 
 	window.addEventListener('hashchange', function () {
@@ -203,6 +208,7 @@
 			showStats = false;
 			showSettings = false;
 			showContact = false;
+            showChangeLog = false;
 		}}
 		disabled={!game.active || $settings.tutorial === 3}
 	/>
@@ -217,12 +223,20 @@
 			  on:contact={() => {
 		showTutorial = false;
 		showContact = true;}}
+			  on:changelog={() => {
+		showTutorial = false;
+		showChangeLog = true;}}
 	/>
 </Modal>
 <GdprBanner/>
 <Modal
 		bind:visible={showContact}>
 	<Contact visible={showContact}/>
+</Modal>
+
+<Modal
+		bind:visible={showChangeLog}>
+	<ChangeLog visible={showChangeLog}/>
 </Modal>
 
 <Modal bind:visible={showStats}>
@@ -253,6 +267,9 @@
 	<Settings on:contact={() => {
 		showSettings = false;
 		showContact = true;}}
+              on:showChangeLog={() => {
+		showSettings = false;
+		showChangeLog = true;}}
 			  state={game}/>
 	{#if game.active}
 		<div class="concede" on:click={concede}>give up</div>
@@ -265,6 +282,11 @@
 		showSettings = false;
 		showContact = true;
 		}} style="text-decoration: underline">Contact
+		</div>
+		<div on:click={() => {
+		showSettings = false;
+		showChangeLog = true;
+		}} style="text-decoration: underline">ChangeLog
 		</div>
 		<a href="https://www.powerlanguage.co.uk/wordle/" target="_blank">Original Wordle</a>
 		<div>

@@ -55,6 +55,7 @@
 	Open the settings menu to see some of the additional features.
 	Or click
 	<a href="https://nasoj.me/" target="_blank">Here to go home.</a>
+	Or view the <span on:click={() => dispatch("changelog")} style="text-decoration: underline;">ChangeLog.</span>
 </div>
 
 <style lang="scss">
