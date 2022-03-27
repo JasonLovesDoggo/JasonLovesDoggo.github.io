@@ -6,6 +6,7 @@
     "Added 25+ food words totaling 171 total possible answers",
     "Changed Header's Color",
     "More clear wording in some forms and other bits and bytes including the tips",
+    "Bug fixes: internal fixes, a bug where the word would reset early",
     "re-built the game"
   ]
 }
