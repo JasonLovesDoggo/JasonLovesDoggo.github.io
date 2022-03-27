@@ -4,11 +4,12 @@
     export let visible: boolean;
     let source: Response | string = ` # Fetching ChangeLog...`
     let filename: string
+    let githuburl: string
     import { onMount } from 'svelte';
 
 	onMount(() => {
-        console.log('ChangeLog Loaded')
-		GetLatestVersion()
+        GetLatestVersion()
+		//setInterval(GetLatestVersion, 86400000) //Check the latest version once a day
 	});
     /** The maximum number of alternate definitions to provide*/
 
@@ -18,6 +19,8 @@
         });
         let json = (await data.json())
         if (data.ok) {
+            githuburl = json['html_url']
+             console.log(`Version: ${json['tag_name']}`)
             return source = await GetChangeLog(json['tag_name']);
         } else {
             return source = ` # Failed to fetch Changelog`
@@ -26,11 +29,10 @@
     }
     async function GetChangeLog(tag_name) {    // TODO: change this to the foodle api when ready
         const data = await fetch(`https://nasoj.me/foodle/changelogs/${tag_name}.md`, {
-            mode: "cors",
             cache: 'no-cache'
         });
         if (data.ok) {
-            return data;
+            return data.text();
         } else {
             return source = ` # Failed to fetch Changelog`
 
@@ -40,31 +42,11 @@
 </script>
 
 <div class:complete={visible} id="ChangeLogContainer">
-    <h5>Not Yet Implemented</h5>
-    <!--     <SvelteMarkdown {source} /> -->
+    <SvelteMarkdown {source} />
+    <h2><a target="_blank" href={githuburl}>View on GitHub</a></h2>
 </div>
 
 
 <style>
-    h1 {
-        padding-left: 1.5rem;
-    }
-
-    #ChangeLogContainer {
-        margin: 5%;
-    }
-
-    h2 {
-        display: inline-block;
-        margin-right: 1rem;
-        margin-bottom: 0.8rem;
-    }
-
-    h2 {
-        margin-bottom: 0.5rem;
-    }
-
-    h1::first-letter {
-        text-transform: uppercase;
-    }
+    #ChangeLogContainer {margin: 5%;}
 </style>
