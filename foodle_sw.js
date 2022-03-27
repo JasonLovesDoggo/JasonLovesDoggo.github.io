@@ -7,6 +7,10 @@ const assetsToCache = [
   'https://nasoj.me/foodle/src/build/bundle.css',
   'https://nasoj.me/foodle/src/build/bundle.js'
 ];
+const assetsToNOTCache = [
+  'https://api.github.com/repos/JasonLovesDoggo/JasonLovesDoggo.github.io/releases/latest',
+  'https://foodle-website-api.herokuapp.com/v1/foodle/version'
+]
 self.addEventListener("install", e => {
 	log("Installing");
 	e.waitUntil((async () => {
@@ -28,6 +32,9 @@ self.addEventListener('activate', evt => {
 
 // fetch event
 self.addEventListener('fetch', evt => {
+  if (evt.request.url in assetsToNOTCache) {
+    return evt.respondWith(fetch(evt.request))
+  }
   evt.respondWith(
     caches.match(evt.request).then(cacheRes => {
       return cacheRes || fetch(evt.request).then(fetchRes => {

@@ -7,6 +7,7 @@ export { default as ChangeLog } from "./ChangeLog.svelte";
 export { default as Timer } from "./Timer.svelte";
 export { default as Toaster } from "./Toaster.svelte";
 export { default as Tips } from "./Tips.svelte";
+export { default as Updater } from "./Updater.svelte";
 export { default as ContextMenu } from "./ContextMenu.svelte";
 export { default as ShareGame } from "./ShareGame.svelte";
 export * from "./stats";
