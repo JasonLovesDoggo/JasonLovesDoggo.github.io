@@ -1,0 +1,11 @@
+{
+  "version": "v.1.8",
+  "title": "Foodle v.1.8 the mass update.",
+  "changes": [
+    "self-updating changelog",
+    "Added 25+ food words totaling 171 total possible answers",
+    "Changed Header's Color",
+    "More clear wording in some forms and other bits and bytes including the tips",
+    "re-built the game"
+  ]
+}
