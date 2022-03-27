@@ -1,0 +1,11 @@
+{
+  "version": "v.1.7",
+  "title": "Foodle v.1.69 + 0.01 aka v.1.70 2a18m\ntoo many changes to list but here are some of them",
+  "changes": [
+    "Added a GDPR-compliant cookie banner",
+    "made the contact page accessible via the uri hash (e.g. https://nasoj.me/foodle/#contact #contact being the uri hash)",
+    "added a privacy policy",
+    "re-built the game",
+    "I added too much in 1 commit this should have been at least 3 commits so i don't remember everything"
+  ]
+}
