@@ -46,6 +46,7 @@
 
             <h1 style="padding-bottom: 7%;" class="center">Foodle {json['version']}</h1>
             <h2>{json['title']}</h2>
+            <h3 class="margind" style="text-align: revert">Updates</h3>
             <ul class="margind">
                 {#each json['changes'] as change}
                     <li class="margind">{change}</li>
@@ -69,8 +70,7 @@
     }
 
     .center {
-        margin: auto;
-        width: 50%;
+        text-align: center;
     }
 
     .margind {
