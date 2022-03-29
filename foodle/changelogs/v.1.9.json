@@ -1,0 +1,10 @@
+{
+  "version": "v.1.9",
+  "title": "Foodle v.1.9 the convenience update.",
+  "changes": [
+    "A way to auto-update the game upon an update",
+    "Internal Changes",
+    "Bug fixes",
+    "re-built the game"
+  ]
+}

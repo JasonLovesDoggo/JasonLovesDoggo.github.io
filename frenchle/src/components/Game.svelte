@@ -17,7 +17,6 @@
         Timer,
         Toaster,
         ShareGame,
-        Updater,
         Tips,
     } from "./widgets";
     import {
@@ -237,10 +236,6 @@
 </Modal>
 <GdprBanner/>
 
-<Modal>
-	<Updater/>
-</Modal>
-
 <Modal
         bind:visible={showContact}>
     <Contact visible={showContact}/>
@@ -311,7 +306,7 @@
 				}}
                     title="double click to reset your stats"
             >
-                {modeData.modes[$mode].name} Foodle #{game.wordNumber}
+                {modeData.modes[$mode].name} Frenchle #{game.wordNumber}
             </div>
         </div>
     </div>
