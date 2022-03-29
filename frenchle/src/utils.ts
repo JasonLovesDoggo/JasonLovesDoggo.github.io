@@ -13,12 +13,14 @@ export function validate(choice, cookieChoices) {
 		return false
 	}
 
+	// @ts-ignore
 	return chosen.every(c => choices.includes(c))
 }
 
 export const words = {
 	...wordList,
 	contains: (word: string) => {
+		// @ts-ignore
 		return wordList.words.includes(word) || wordList.valid.includes(word);
 	},
 };
@@ -30,6 +32,7 @@ export function checkHardMode(board: GameBoard, row: number): HardModeData {
 		}
 	}
 	for (let i = 0; i < COLS; ++i) {
+		// @ts-ignore
 		if (board.state[row - 1][i] === "🟨" && !board.words[row].includes(board.words[row - 1][i])) {
 			return {pos: i, char: board.words[row - 1][i], type: "🟨"};
 		}
@@ -39,8 +42,10 @@ export function checkHardMode(board: GameBoard, row: number): HardModeData {
 
 class Tile {
 	public value: string;
+	// @ts-ignore
 	public notSet: Set<string>;
 	constructor() {
+		// @ts-ignore
 		this.notSet = new Set<string>();
 	}
 	not(char: string) {
@@ -49,11 +54,15 @@ class Tile {
 }
 
 class WordData {
+	// @ts-ignore
 	public letterCounts: Map<string, [number, boolean]>;
+	// @ts-ignore
 	private notSet: Set<string>;
 	public word: Tile[];
 	constructor() {
+		// @ts-ignore
 		this.notSet = new Set<string>();
+		// @ts-ignore
 		this.letterCounts = new Map<string, [number, boolean]>();
 		this.word = [];
 		for (let col = 0; col < COLS; ++col) {
@@ -90,6 +99,7 @@ class WordData {
 		return this.notSet.has(char);
 	}
 	lettersNotAt(pos: number) {
+		// @ts-ignore
 		return new Set([...this.notSet, ...this.word[pos].notSet]);
 	}
 }
@@ -97,6 +107,7 @@ class WordData {
 export function getRowData(n: number, board: GameBoard) {
 	const wd = new WordData();
 	for (let row = 0; row < n; ++row) {
+		// @ts-ignore
 		const occured = new Set<string>();
 		for (let col = 0; col < COLS; ++col) {
 			const state = board.state[row][col];
@@ -148,6 +159,7 @@ function countOccurences<T>(arr: T[], val: T) {
 
 export function getState(word: string, guess: string): LetterState[] {
 	const charArr = word.split("");
+	// @ts-ignore
 	const result = Array<LetterState>(5).fill("⬛");
 	for (let i = 0; i < word.length; ++i) {
 		if (charArr[i] === guess.charAt(i)) {
@@ -247,7 +259,9 @@ export function createNewGame(mode: GameMode): GameState {
 		wordNumber: getWordNumber(mode),
 		validHard: true,
 		board: {
+				// @ts-ignore
 			words: Array(ROWS).fill(""),
+				// @ts-ignore
 			state: Array.from({ length: ROWS }, () => (Array(COLS).fill("🔳")))
 		},
 	};
@@ -314,5 +328,6 @@ export function createLetterStates(): { [key: string]: LetterState; } {
 		z: "🔳",
 	};
 }
+                       	// @ts-ignore
 
 export const definitions = new Map<string, Promise<DictionaryEntry>>();

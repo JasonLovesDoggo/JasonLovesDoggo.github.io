@@ -17,7 +17,6 @@
         Timer,
         Toaster,
         ShareGame,
-        Updater,
         Tips,
     } from "./widgets";
     import {
@@ -236,10 +235,6 @@
     />
 </Modal>
 <GdprBanner/>
-
-<Modal>
-	<Updater/>
-</Modal>
 
 <Modal
         bind:visible={showContact}>
