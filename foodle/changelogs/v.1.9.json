@@ -4,7 +4,8 @@
   "changes": [
     "A way to auto-update the game upon an update",
     "Internal Changes",
-    "Bug fixes",
-    "re-built the game"
+    "Bug fixes: Fixed bug in the version updater",
+    "re-built the game",
+    "removed the Google Ads script"
   ]
 }
