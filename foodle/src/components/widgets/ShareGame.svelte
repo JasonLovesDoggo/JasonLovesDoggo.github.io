@@ -4,7 +4,7 @@
     import {COLS, modeData} from "../../utils";
     import {getContext} from "svelte";
     import GameIcon from '../GameIcon.svelte';
-
+    let stats;
     export let state: GameState;
     export let wordNumber: number;
     const toaster = getContext<Toaster>("toaster");
@@ -22,7 +22,7 @@
         return state.board.state[state.guesses - 1].join("") === "🟩".repeat(COLS);
 
     }
-    let stats = `${modeData.modes[$mode].name} Foodle #${state.wordNumber} ${
+    $: stats = `${modeData.modes[$mode].name} Foodle #${state.wordNumber} ${
         !state.active && failed() ? state.guesses : "X"
     }/${state.board.words.length}\n\n    ${state.board.state
         .slice(0, state.guesses)
@@ -39,6 +39,7 @@
     </GameIcon>
     Copy link to this game ({modeData.modes[$mode].name} #{wordNumber})
 </div>
+    |
 <div>
     <a
        href="https://twitter.com/intent/tweet?text={encodeURIComponent(stats)}&url=https%3A%2F%2Fnasoj.me%2Ffoodle&related=JasonLovesDoggo">Tweet
