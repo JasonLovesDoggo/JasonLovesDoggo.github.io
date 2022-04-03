@@ -1,5 +1,5 @@
 //https://medium.com/notonlycss/turn-your-website-into-a-pwa-6aaecb95f8b9
-const dynamicCacheName = 'Img-v1.80';
+const dynamicCacheName = 'Img-v1.81';
 const assetsToCache = [
   'https://nasoj.me/foodle/',
   'https://nasoj.me/foodle/index.html',
@@ -9,7 +9,7 @@ const assetsToCache = [
 ];
 const assetsToNOTCache = [
   'https://api.github.com/repos/JasonLovesDoggo/JasonLovesDoggo.github.io/releases/latest',
-  'https://foodle-website-api.herokuapp.com/v1/foodle/version'
+  'https://foodle-website-api.herokuapp.com/v1/foodle/version'                    //TODO: actually make this work
 ]
 self.addEventListener("install", e => {
 	log("Installing");
