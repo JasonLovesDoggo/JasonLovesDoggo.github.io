@@ -1,4 +1,6 @@
 /** A list of words of the same length */
+import {GameMode} from "./enums";
+
 type Words = WordData & {
 	contains: (word: string) => boolean;
 };
