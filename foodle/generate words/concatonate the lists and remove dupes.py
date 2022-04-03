@@ -68,6 +68,7 @@ actually_food_words_that_dont_appear_in_the_dictionary_i_used = [
     'gummy',
     'cakes',
     'baozi',
+    'melty',
 ]
 for word in not_really_food_words:
     food_words.remove(word)
