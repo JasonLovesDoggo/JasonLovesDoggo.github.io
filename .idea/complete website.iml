@@ -21,5 +21,6 @@
     <orderEntry type="library" name="api" level="application" />
     <orderEntry type="library" name="lucide" level="application" />
     <orderEntry type="library" name="button.prod" level="application" />
+    <orderEntry type="library" name="widgets" level="application" />
   </component>
 </module>

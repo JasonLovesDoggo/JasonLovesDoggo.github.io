@@ -32,7 +32,6 @@ self.addEventListener('activate', evt => {
 
 // fetch event
 self.addEventListener('fetch', evt => {
-  log((evt.request.url in assetsToNOTCache).toString())
   if (evt.request.url in assetsToNOTCache) {
        return fetch(evt.request)}
 
