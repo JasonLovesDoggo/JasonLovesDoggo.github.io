@@ -12,7 +12,7 @@ jobs:
       # Checkout the `app-challenge` branch
       - uses: actions/checkout@v2
         with:
-          ref: updates
+          ref: development
           # Put the checked out files inside the `foodle` folder
        # Install Node.js
       - uses: actions/setup-node@v2-beta
