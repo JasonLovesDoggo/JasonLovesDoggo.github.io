@@ -33,5 +33,5 @@ see https://pixieset.com/example/ for more examples
 
 2. https://en.m.wikipedia.org/wiki/Lists_of_foods USE this
 
-3. HIGH PRIORITY add a Changelog widget when you click on the version number 
+3. Check if there is a wakatime api and if there is use it to display weekly statistics via projects or main page
 </details>
