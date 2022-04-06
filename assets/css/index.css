@@ -328,18 +328,18 @@ input:-webkit-autofill:active {
 ::placeholder {
     color:#fff;
 }
-#footer {
+.footer {
     color:#fff;
-    width:92vw;
+    width:100vw;
     padding:5vh 4vw;
-    text-align:left;
+    text-align:inherit;
     position:fixed;
     z-index:1;
     bottom:0;
     font-size:16px;
     font-weight:bold;
 }
-#footer a {
+.footer a {
     color:rgb(64,123,164) ;
 }
 #particles-js {
@@ -381,7 +381,7 @@ input:-webkit-autofill:active {
     #bella {
         display:none;
     }
-    #footer {
+    .footer {
         text-align:center;
     }
     #middle {
