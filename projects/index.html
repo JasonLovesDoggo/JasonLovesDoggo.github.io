@@ -30,6 +30,7 @@
           </a></span>
             <span style="display:block;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; Toronto</span>
             <span style="display:none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
+            <span id="codeTime" ></span>
             <div class="socials">
                     <span style="display:block;"><a class="socials" href="https://www.twitter.com/JasonLovesDoggo"
                                                     target="_blank"><i class="fab fa-twitter"></i></a></span>
@@ -265,6 +266,20 @@
       }).fail(function() {
         return (document.getElementById("blog_section").style.display = "none");
       });
+      let seccount = 0
+
+
+      const data = fetch('https://wakatime.com/share/@JasonLovesDoggo/927641ac-2ef0-4c85-9097-34d98375d9d6.json', {
+            mode: 'no-cors'
+        });
+        if (data.ok) {
+          json = data.json();
+          for (let entry in json) {
+        seccount += entry['total_seconds']}
+        console.log(seccount)
+        }
+
+      //document.getElementById("codeTime").innerText = `Time Spent Coding this week: ${totaltime}`
     </script>
 
     <script>
