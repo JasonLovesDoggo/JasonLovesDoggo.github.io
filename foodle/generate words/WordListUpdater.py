@@ -111,6 +111,10 @@ guesses_words.append('soare')  # your welcome Mason
 for word in food_words:
     if word in guesses_words:
         guesses_words.remove(word)
+
+with open('../../api/json-data/wordlist.json', 'w+') as wlj:
+    json.dump(food_words, wlj)
+
 results = {
     "words": food_words,
     "valid": guesses_words
