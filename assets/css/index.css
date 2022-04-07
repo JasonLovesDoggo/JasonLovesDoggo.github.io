@@ -329,10 +329,15 @@ input:-webkit-autofill:active {
     color:#fff;
 }
 .footer {
+    border-bottom: whitesmoke;
+    border-radius: 5px;
+    display: flex;
+        justify-content: space-between;
+    white-space: nowrap;
     color:#fff;
     width:100vw;
+    text-align: inherit;
     padding:5vh 4vw;
-    text-align:inherit;
     position:fixed;
     z-index:1;
     bottom:0;
@@ -550,4 +555,23 @@ input:-webkit-autofill:active {
 
 #bar_box {
     will-change: transform, opacity;
+}
+
+.numbers_container #codeTime {
+    display: none;
+    transition-duration: .3s;
+}
+.numbers_container:hover #countdown {
+    display: none;
+    transition-duration: .3s;
+}
+
+.numbers_container:hover #codeTime {
+    display: inline;
+    transition-duration: .3s;
+}
+#codeTime,
+#countdown {
+    bottom: 0;
+
 }
