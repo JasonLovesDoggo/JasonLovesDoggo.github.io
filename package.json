@@ -4,9 +4,12 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.1",
     "firebase-tools": "^10.1.5",
-    "g": "^2.0.1"
+    "g": "^2.0.1",
+    "seedrandom": "^3.0.5"
   },
   "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@types/seedrandom": "^3.0.2",
     "clean-css": "^5.2.4"
   }
 }
