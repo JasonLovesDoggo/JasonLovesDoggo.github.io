@@ -120,7 +120,7 @@
     }
 
     function win() {
-        // ga('send', 'event', 'game', 'foodle_win', $mode);
+        // foodle api stuff
         board.bounce(game.guesses - 1);
         game.active = false;
         setTimeout(
