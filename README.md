@@ -1,7 +1,14 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/JasonLovesDoggo/JasonLovesDoggo.github.io.svg)
-[![pages-build-deployment](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment)
-[![Update Sitemap](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml/badge.svg)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml)
-[![UpdateVersion](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml/badge.svg?branch=master)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml)
+![Foodle Header](https://raw.githubusercontent.com/JasonLovesDoggo/JasonLovesDoggo.github.io/master/foodle/Img/og_1200x630.png)
+<br/>
+<div align="center">
+ <p>
+  <a href="https://nasoj.me/foodle/" ><img src="https://img.shields.io/github/repo-size/JasonLovesDoggo/JasonLovesDoggo.github.io.svg" alt="GitHub repo size"/></a>
+ <a href="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment"><img src="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment"></a>
+<a href="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml"><img src="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml/badge.svg" alt="Update Sitemap"></a>
+<a href="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml"><img src="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml/badge.svg?branch=master" alt="UpdateVersion"></a></p>
+
+</div>
+
 # My personal website / portfolio
 
 #### hosted via GitHub pages and uses cloudflare dns and a namecheap domain                                                                                                                       (thank you github student pack)
