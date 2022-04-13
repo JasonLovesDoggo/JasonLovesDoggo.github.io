@@ -7,9 +7,8 @@
     "Added 33 food words and removed 1 totaling 204 total possible answers",
     "Added a Tweet Your Score Button",
     "Internal Changes",
-    "Updated the word list added: Melty",
-    "Bug fixes: Fixed bug in the version updater",
-    "re-built the game",
-    "removed the Google Ads script"
+    "Improved caching and speed overall",
+    "Bug fixes: Fixed bug in the version updater and timezone syncing",
+    "re-built the game"
   ]
 }
