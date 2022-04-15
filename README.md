@@ -1,7 +1,8 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/JasonLovesDoggo/JasonLovesDoggo.github.io.svg)
-[![pages-build-deployment](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment)
-[![Update Sitemap](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml/badge.svg)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml)
-[![UpdateVersion](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml/badge.svg?branch=master)](https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml)
+<div align="center">
+  <a href="https://nasoj.me/foodle/" ><img src="https://github.com/MikhaD/wordle/workflows/Publish/badge.svg?branch=main" alt="Publish workflow"/></a>
+  <img src="https://img.shields.io/github/package-json/v/MikhaD/wordle" alt="GitHub package.json version" />
+</div>
 # My personal website / portfolio
 
 #### hosted via GitHub pages and uses cloudflare dns and a namecheap domain                                                                                                                       (thank you github student pack)

@@ -2,8 +2,7 @@
   "version": "v.1.9",
   "title": "Foodle v.1.9 the convenience update.",
   "changes": [
-    "A way to auto-update the game upon an update",
-    "Added a hints feature (click on a row then click hint)",
+    "Added a food word only mode, check out the settings for more info!!",
     "Added 33 food words and removed 1 totaling 204 total possible answers",
     "Added a Tweet Your Score Button",
     "Internal Changes",
