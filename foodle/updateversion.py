@@ -24,8 +24,7 @@ for file in fps:
     # Replace the target string
     if old_version_decimal == 99:
         filedata = filedata.replace(f'VERSION_NUMBER = {VERSION_NUMBER}', f'VERSION_NUMBER = {VERSION_NUMBER + 1}')
-        filedata = filedata.replace(f'old_version_decimal = {old_version_decimal}',
-                                    f'old_version_decimal = {"0"}')
+        filedata = filedata.replace(f'old_version_decimal = {old_version_decimal}', f'old_version_decimal = {"0"}')
         filedata = filedata.replace(old_version, new_version)
 
     else:

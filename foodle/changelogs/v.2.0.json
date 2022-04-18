@@ -2,8 +2,8 @@
   "version": "v.1.9",
   "title": "Foodle v.1.9 the convenience update.",
   "changes": [
-    "Added a food word only mode, check out the settings for more info!!",
-    "Added 33 food words and removed 1 totaling 204 total possible answers",
+    "Added a food word only mode with 80 words, check out the settings for more info!!",
+    "Added 33 food words and removed 2 totaling 203 total possible answers",
     "Added a Tweet Your Score Button",
     "Internal Changes",
     "Improved caching and speed overall",

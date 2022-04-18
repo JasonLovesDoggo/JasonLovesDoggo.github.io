@@ -23,6 +23,7 @@ type GameState = {
 	time: number,
 	wordNumber: number,
 	validHard: boolean,
+	foodOnly: boolean,    //todo: might be able to remove this
 	board: GameBoard,
 };
 
@@ -33,12 +34,15 @@ type GameBoard = {
 
 type Settings = {
 	hard: boolean[],
+	foods: boolean[],
 	dark: boolean,
 	colorblind: boolean,
 	tutorial: 0 | 1 | 2 | 3,
 };
 
 type SettingType = "switch" | "dropdown";
+
+type words = "daily" | "hourly" | "infinite"; //| "minutely";
 
 type Word = {
 	daily: string,
@@ -102,6 +106,7 @@ type Mode = {
 	historical: boolean,
 	icon?: string,
 	streak?: boolean,
+	useTimeZone?: boolean,
 };
 
 type HardModeData = {
