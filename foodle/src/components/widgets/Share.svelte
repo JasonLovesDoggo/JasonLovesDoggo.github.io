@@ -1,19 +1,13 @@
 <script lang="ts">
 	import type Toaster from "./Toaster.svelte";
 	import { mode } from "../../stores";
-	import { COLS, modeData } from "../../utils";
+	import { failed, modeData } from "../../utils";
 	import { getContext } from "svelte";
 	export let state: GameState;
 	const toaster = getContext<Toaster>("toaster");
-	function failed() {
-		if (state.guesses === 0) {
-			return false;
-		}
-		return state.board.state[state.guesses - 1].join("") === "🟩".repeat(COLS);
 
-	}
 	$: stats = `${modeData.modes[$mode].name} Foodle #${state.wordNumber} ${
-		!state.active && failed() ? state.guesses : "X"
+				failed(state) ? "X" : state.guesses
 	}/${state.board.words.length}\n\n    ${state.board.state
 		.slice(0, state.guesses)
 		.map((r) => r.join(""))
