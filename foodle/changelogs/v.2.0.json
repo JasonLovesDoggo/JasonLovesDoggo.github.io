@@ -2,9 +2,9 @@
   "version": "v.2.0",
   "title": "Foodle v.2.0 the convenience update.",
   "changes": [
-    "Added a food word only mode with 80 words, check out the settings for more info!!",
+    "Added a food-word only mode with 80 words, check out the settings for more info!!",
     "Added 33 food words and removed 2 totaling 203 total possible answers",
-    "Added a Tweet Your Score Button",
+    "Added a Tweet Your Score Button that only shows up after the game is over",
     "Internal Changes",
     "Improved caching and speed overall",
     "Bug fixes: Fixed bug in the version updater and timezone syncing",
