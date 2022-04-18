@@ -27,10 +27,12 @@ export let words = {
 export function CheckFoodMode(state: GameState) {
         if (state.foodOnly) {
                   words.active_words = words.food
+                return words.food
 
         }
         else {
             words.active_words = words.words
+            return words.words
         }
 }
 
