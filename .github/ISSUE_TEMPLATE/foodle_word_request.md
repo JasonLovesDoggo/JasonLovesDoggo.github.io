@@ -1,9 +1,12 @@
 ---
-name: Word Suggest about: Suggest a word for this project title: "[foodle]"
-labels: foodle assignees: JasonLovesDoggo
-
+name: word suggstion
+about: File a missing word
+title: '[Word Request] <title>'
+labels: foodle
+assignees: 'JasonLovesDoggo'
 
 ---
+
 **The word that you would like added**
 word
 
