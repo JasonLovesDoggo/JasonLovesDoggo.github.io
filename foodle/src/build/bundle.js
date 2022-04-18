@@ -8814,7 +8814,7 @@ var app = (function () {
     			t43 = text("This is a recreation of the original ");
     			a0 = element("a");
     			a0.textContent = "Wordle";
-    			t45 = text("\r\n\tby Josh Wardle with a different theme and additional modes and features.\r\n\t");
+    			t45 = text("\r\n\r\n\r\n\tby Josh Wardle with a different theme and additional modes and features.\r\n\t");
     			br0 = element("br");
     			t46 = text("\r\n\tPlease ");
     			span0 = element("span");
@@ -8873,26 +8873,26 @@ var app = (function () {
     			attr_dev(a0, "class", "svelte-9t2w55");
     			add_location(a0, file$b, 42, 38, 1471);
     			attr_dev(br0, "class", "svelte-9t2w55");
-    			add_location(br0, file$b, 47, 1, 1631);
+    			add_location(br0, file$b, 49, 1, 1635);
     			set_style(span0, "text-decoration", "underline");
     			attr_dev(span0, "class", "svelte-9t2w55");
-    			add_location(span0, file$b, 48, 8, 1646);
+    			add_location(span0, file$b, 50, 8, 1650);
     			attr_dev(a1, "href", "https://github.com/JasonLovesDoggo");
     			attr_dev(a1, "target", "_blank");
     			attr_dev(a1, "class", "svelte-9t2w55");
-    			add_location(a1, file$b, 49, 1, 1756);
+    			add_location(a1, file$b, 51, 1, 1760);
     			attr_dev(a2, "class", "social_link twitter svelte-9t2w55");
     			attr_dev(a2, "href", "https://twitter.com/FoodleTheGame");
-    			add_location(a2, file$b, 50, 41, 1870);
+    			add_location(a2, file$b, 52, 41, 1874);
     			attr_dev(br1, "class", "svelte-9t2w55");
-    			add_location(br1, file$b, 51, 1, 1956);
+    			add_location(br1, file$b, 53, 1, 1960);
     			attr_dev(a3, "href", "https://nasoj.me/");
     			attr_dev(a3, "target", "_blank");
     			attr_dev(a3, "class", "svelte-9t2w55");
-    			add_location(a3, file$b, 54, 1, 2040);
+    			add_location(a3, file$b, 56, 1, 2044);
     			set_style(span1, "text-decoration", "underline");
     			attr_dev(span1, "class", "svelte-9t2w55");
-    			add_location(span1, file$b, 55, 13, 2119);
+    			add_location(span1, file$b, 57, 13, 2123);
     			attr_dev(div11, "class", "svelte-9t2w55");
     			add_location(div11, file$b, 41, 0, 1426);
     		},
@@ -11436,12 +11436,12 @@ var app = (function () {
     	const child_ctx = ctx.slice();
     	child_ctx[3] = list[i];
     	child_ctx[6] = i;
-    	const constants_0 = parseInt(/*guess*/ child_ctx[3][0]);
+    	const constants_0 = Number(/*guess*/ child_ctx[3][0]);
     	child_ctx[4] = constants_0;
     	return child_ctx;
     }
 
-    // (11:2) {#if !isNaN(g)}
+    // (15:2) {#if !isNaN(g)}
     function create_if_block$3(ctx) {
     	let div1;
     	let span;
@@ -11462,14 +11462,14 @@ var app = (function () {
     			div0 = element("div");
     			t2 = text(t2_value);
     			t3 = space();
-    			attr_dev(span, "class", "guess svelte-11cuch8");
-    			add_location(span, file$2, 12, 4, 367);
-    			attr_dev(div0, "class", "bar svelte-11cuch8");
+    			attr_dev(span, "class", "guess svelte-8n4mf8");
+    			add_location(span, file$2, 16, 16, 484);
+    			attr_dev(div0, "class", "bar svelte-8n4mf8");
     			set_style(div0, "width", /*guess*/ ctx[3][1] / /*max*/ ctx[2] * 100 + "%");
     			toggle_class(div0, "this", /*g*/ ctx[4] === /*game*/ ctx[0].guesses && !/*game*/ ctx[0].active && !failed(/*game*/ ctx[0]));
-    			add_location(div0, file$2, 13, 4, 410);
-    			attr_dev(div1, "class", "graph svelte-11cuch8");
-    			add_location(div1, file$2, 11, 3, 342);
+    			add_location(div0, file$2, 17, 16, 539);
+    			attr_dev(div1, "class", "graph svelte-8n4mf8");
+    			add_location(div1, file$2, 15, 12, 447);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -11488,7 +11488,7 @@ var app = (function () {
     				set_style(div0, "width", /*guess*/ ctx[3][1] / /*max*/ ctx[2] * 100 + "%");
     			}
 
-    			if (dirty & /*parseInt, Object, distribution, game, failed*/ 3) {
+    			if (dirty & /*Number, Object, distribution, game, failed*/ 3) {
     				toggle_class(div0, "this", /*g*/ ctx[4] === /*game*/ ctx[0].guesses && !/*game*/ ctx[0].active && !failed(/*game*/ ctx[0]));
     			}
     		},
@@ -11501,14 +11501,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(11:2) {#if !isNaN(g)}",
+    		source: "(15:2) {#if !isNaN(g)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (9:1) {#each Object.entries(distribution) as guess, i (guess[0])}
+    // (13:4) {#each Object.entries(distribution) as guess, i (guess[0])}
     function create_each_block$1(key_1, ctx) {
     	let first;
     	let show_if = !isNaN(/*g*/ ctx[4]);
@@ -11557,7 +11557,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(9:1) {#each Object.entries(distribution) as guess, i (guess[0])}",
+    		source: "(13:4) {#each Object.entries(distribution) as guess, i (guess[0])}",
     		ctx
     	});
 
@@ -11592,9 +11592,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(h3, file$2, 6, 0, 169);
-    			attr_dev(div, "class", "container svelte-11cuch8");
-    			add_location(div, file$2, 7, 0, 198);
+    			add_location(h3, file$2, 10, 0, 264);
+    			attr_dev(div, "class", "container svelte-8n4mf8");
+    			add_location(div, file$2, 11, 0, 293);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11609,7 +11609,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*Object, distribution, max, parseInt, game, failed, isNaN*/ 7) {
+    			if (dirty & /*Object, distribution, max, Number, game, failed, isNaN*/ 7) {
     				each_value = Object.entries(/*distribution*/ ctx[1]);
     				validate_each_argument(each_value);
     				validate_each_keys(ctx, each_value, get_each_context$1, get_key);
@@ -11671,7 +11671,13 @@ var app = (function () {
 
     	$$self.$$.update = () => {
     		if ($$self.$$.dirty & /*distribution*/ 2) {
-    			$$invalidate(2, max = Math.max(...Object.values(distribution)));
+    			$$invalidate(2, max = Object.entries(distribution).reduce(
+    				(p, c) => {
+    					if (!isNaN(Number(c[0]))) return Math.max(c[1], p);
+    					return p;
+    				},
+    				1
+    			));
     		}
     	};
 
