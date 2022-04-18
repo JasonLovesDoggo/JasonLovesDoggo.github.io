@@ -1,4 +1,5 @@
 <script lang="ts">
+    	import { fade } from "svelte/transition";
     import Header from "./Header.svelte";
     import {Board} from "./board";
     import {Keyboard} from "./keyboard";
@@ -43,6 +44,7 @@
     export let stats: Stats;
     export let game: GameState;
     export let toaster: Toaster;
+    words.active_words = words.food
     setContext("toaster", toaster);
     const version = getContext<string>("version");
     // implement transition delay on keys
@@ -57,6 +59,17 @@
     let timer: Timer;
     let tips: Tips;
     let tip = 0;
+
+    function CheckFoodMode(state: GameState) {
+        if (state.foodOnly) {
+                  words.active_words = words.food
+
+        }
+        else {
+            words.active_words = words.words
+        }
+    }
+
 
     function setContact(option: boolean) {
         showContact = option
@@ -77,11 +90,10 @@
     function submitWord() {
         if (game.board.words[game.guesses].length !== COLS) {
             toaster.pop("Not enough letters");
-            board.shake(game.guesses);
+            board.shake(game.guesses);                         //TODO: change stuff here
             //Checks if the word is missing letters
             //console.log(game.board.words[game.guesses])  //DEBUG
             //console.log(game.guesses)
-            //console.log('wordslmao')
             //console.log(game.board.words)
         } else if (words.contains(game.board.words[game.guesses])) {       //wordlist contains the word
             if (game.guesses > 0) {
@@ -127,7 +139,7 @@
             () => toaster.pop(PRAISE[game.guesses - 1]),
             DELAY_INCREMENT * COLS + DELAY_INCREMENT
         );
-        setTimeout(() => (showStats = true), delay * 1.4);
+		setTimeout(setShowStatsTrue, delay * 1.4);
         if (!modeData.modes[$mode].historical) {
             ++stats.guesses[game.guesses];
             ++stats.played;
@@ -146,7 +158,7 @@
     function lose() {
         // 	ga('send', 'event', 'game', 'foodle_lose', $mode);
         game.active = false;
-        setTimeout(() => (showStats = true), delay);
+        setTimeout(setShowStatsTrue, delay);
         if (!modeData.modes[$mode].historical) {
             ++stats.guesses.fail;
             ++stats.played;
@@ -159,25 +171,31 @@
     function concede() {
         //	ga('send', 'event', 'game', 'foodle_give_up', $mode);
         showSettings = false;
-        setTimeout(() => (showStats = true), DELAY_INCREMENT);
+        setTimeout(setShowStatsTrue, DELAY_INCREMENT);
         lose();
-    }
 
+    }
+    function setShowStatsTrue() {
+		if (!game.active) showStats = true;
+	}
     function reload() {
         modeData.modes[$mode].historical = false;
         modeData.modes[$mode].seed = newSeed($mode);
         game = createNewGame($mode);
-        word = words.words[seededRandomInt(0, words.words.length, modeData.modes[$mode].seed)];
+        word = words.active_words[seededRandomInt(0, words.active_words.length, modeData.modes[$mode].seed)];
         $letterStates = createLetterStates();
         showStats = false;
         showRefresh = false;
         timer.reset($mode);
+        function setShowStatsTrue() {
+		if (!game.active) showStats = true;
+	}
     }
 
     onMount(() => {
-        if (!game.active) setTimeout(() => (showStats = true), delay);
+        if (!game.active) setTimeout(setShowStatsTrue, delay);
     });
-    // $: toaster.pop(word);
+    $: toaster.pop(word);
 </script>
 
 <svelte:body on:click={board.hideCtx} on:contextmenu={board.hideCtx}/>
@@ -256,7 +274,7 @@
         <h2 class="historical">Statistics not available for historical games</h2>
     {:else}
         <Statistics data={stats}/>
-        <Distribution distribution={stats.guesses} guesses={game.guesses} active={game.active}/>
+        <Distribution distribution={stats.guesses} {game} />
     {/if}
     <Seperator visible={!game.active}>
         <Timer
@@ -270,6 +288,9 @@
     <ShareGame state={game} wordNumber={game.wordNumber}/>
     {#if !game.active}
         <Definition {word} alternates={2}/>
+        {:else}
+		<!-- Fade with delay is to prevent a bright red button from appearing as soon as refresh is pressed -->
+		<div in:fade={{ delay: 300 }} class="concede" on:click={concede}>give up</div>
     {/if}
 </Modal>
 
@@ -300,7 +321,7 @@
 		showChangeLog = true;
 		}} style="text-decoration: underline">ChangeLog
         </div>
-        <a href="https://www.powerlanguage.co.uk/wordle/" target="_blank">Original Wordle</a>
+        <a href="https://www.nytimes.com/games/wordle/" target="_blank">Original Wordle</a>
         <div>
             <div>v{version}</div>
             <div
