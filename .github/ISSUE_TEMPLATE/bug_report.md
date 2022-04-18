@@ -1,9 +1,10 @@
 ---
-name: Bug report about: Create a report to help us improve title: "[BUG]"
-labels: bug assignees: JasonLovesDoggo
-about: Suggest an idea for this project
-title: 'Bug Report'
+name: 🐞 Bug
+about: File a bug/issue
+title: '[BUG] <title>'
+labels: Bug
 assignees: 'JasonLovesDoggo'
+ 
 ---
 
 **Describe the bug**
