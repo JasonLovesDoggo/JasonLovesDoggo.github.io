@@ -195,7 +195,7 @@
     onMount(() => {
         if (!game.active) setTimeout(setShowStatsTrue, delay);
     });
-    $: toaster.pop(word);
+    //$: toaster.pop(word); # see the current word :D
 </script>
 
 <svelte:body on:click={board.hideCtx} on:contextmenu={board.hideCtx}/>
