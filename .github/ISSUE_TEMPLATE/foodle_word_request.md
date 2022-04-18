@@ -1,8 +1,9 @@
 ---
-name: Word Suggest about: Suggest a word for this project title: "[foodle]"
-labels: foodle 
+name: word suggstion
+about: File a missing word
+title: '[Word Request] <title>'
+labels: foodle
 assignees: 'JasonLovesDoggo'
-title: 'Foodle word request <word>' 
 
 ---
 
