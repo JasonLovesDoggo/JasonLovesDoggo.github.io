@@ -23,7 +23,7 @@ type GameState = {
 	time: number,
 	wordNumber: number,
 	validHard: boolean,
-	foodOnly: boolean,    //todo: might be able to remove this
+	foodOnly: boolean,
 	board: GameBoard,
 };
 
@@ -34,7 +34,7 @@ type GameBoard = {
 
 type Settings = {
 	hard: boolean[],
-	foods: boolean[],
+	foods: boolean[],         //todo: might be able to remove this
 	dark: boolean,
 	colorblind: boolean,
 	tutorial: 0 | 1 | 2 | 3,

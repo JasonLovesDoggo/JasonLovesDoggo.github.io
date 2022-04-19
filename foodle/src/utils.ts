@@ -25,15 +25,21 @@ export let words = {
 };
 
 export function CheckFoodMode(state: GameState) {
+    // console.log(state)       // DEBUG
+    //console.log(state.foodOnly)
+    try {
         if (state.foodOnly) {
-                  words.active_words = words.food
-                return words.food
+            words.active_words = words.food
+            return words.food
 
-        }
-        else {
+        } else {
             words.active_words = words.words
             return words.words
         }
+    }
+    catch (e: unknown) {
+           //pass   it's a TypeError catch btw
+    }
 }
 
 export function checkHardMode(board: GameBoard, row: number): HardModeData {
@@ -277,16 +283,16 @@ export const PRAISE = [
 
 export function createNewGame(mode: GameMode): GameState {
     return {
+        foodOnly: false,
         active: true,
         guesses: 0,
         time: modeData.modes[mode].seed,
         wordNumber: getWordNumber(mode),
         validHard: true,
-        foodOnly: false,
         board: {
             words: Array(ROWS).fill(""),
             state: Array.from({length: ROWS}, () => (Array(COLS).fill("🔳")))
-        },
+        }
     };
 }
 

@@ -1,16 +1,17 @@
 <script lang="ts">
-    import {getRowData, words} from "../../utils";
+    import {CheckFoodMode, getRowData, words} from "../../utils";
     import Row from "./Row.svelte";
     import ContextMenu from "../widgets/ContextMenu.svelte";
     import {createEventDispatcher} from "svelte";
     import {scale} from "svelte/transition";
-
+    export let game: GameState;
     export let value: string[];
     export let board: GameBoard;
     export let guesses: number;
     export let icon: string;
     export let tutorial: boolean;
-    words.active_words = words.food
+    words.active_words =  CheckFoodMode(game)
+
     export function shake(row: number) {
         rows[row].shake();
     }
