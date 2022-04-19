@@ -31,7 +31,7 @@
         <div
 
                 on:click={() => {
-                CheckFoodMode(state)
+                CheckFoodMode()
                 if (state.guesses) {
                   if (state.foodOnly) {
                   		return toaster.pop("You cannot turn off food mode after you already started playing");
@@ -41,7 +41,7 @@
                 }
 			}}
         >
-            <Setting type="switch" bind:value={state.foodOnly} disabled={state.guesses !== 0} >
+            <Setting type="switch" bind:value={state.foodOnly} disabled={state.guesses !== 0}>
                 <span slot="title">Food Words</span>
                 <span slot="desc">Only exact food words i.e. ramen or pizza, and not spoon</span>
             </Setting>
@@ -63,6 +63,7 @@
 
         <Setting type="switch" bind:value={$settings.dark}>
             <span slot="title">Dark Theme</span>
+            <span slot="desc">Toggles between light and dark color scheme</span>
         </Setting>
         <Setting type="switch" bind:value={$settings.colorblind}>
             <span slot="title">Color Blind Mode</span>

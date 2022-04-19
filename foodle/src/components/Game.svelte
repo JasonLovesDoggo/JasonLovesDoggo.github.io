@@ -34,6 +34,7 @@
         createNewGame,
         seededRandomInt,
         createLetterStates,
+        CheckFoodMode,
         words,
     } from "../utils";
     import {letterStates, settings, mode} from "../stores";
@@ -44,7 +45,7 @@
     export let stats: Stats;
     export let game: GameState;
     export let toaster: Toaster;
-    words.active_words = words.food
+    $: words.active_words =  CheckFoodMode(game)
     setContext("toaster", toaster);
     const version = getContext<string>("version");
     // implement transition delay on keys
@@ -59,18 +60,6 @@
     let timer: Timer;
     let tips: Tips;
     let tip = 0;
-
-    function CheckFoodMode(state: GameState) {
-        if (state.foodOnly) {
-                  words.active_words = words.food
-
-        }
-        else {
-            words.active_words = words.words
-        }
-    }
-
-
     function setContact(option: boolean) {
         showContact = option
     }
@@ -96,6 +85,8 @@
             //console.log(game.guesses)
             //console.log(game.board.words)
         } else if (words.contains(game.board.words[game.guesses])) {       //wordlist contains the word
+            CheckFoodMode(game)
+            // console.log(words)
             if (game.guesses > 0) {
                 const hm = checkHardMode(game.board, game.guesses);
                 if ($settings.hard[$mode]) {
@@ -187,9 +178,6 @@
         showStats = false;
         showRefresh = false;
         timer.reset($mode);
-        function setShowStatsTrue() {
-		if (!game.active) showStats = true;
-	}
     }
 
     onMount(() => {
@@ -215,6 +203,7 @@
     <Board
             bind:this={board}
             bind:value={game.board.words}
+            game={game}
             board={game.board}
             guesses={game.guesses}
             icon={modeData.modes[$mode].icon}
