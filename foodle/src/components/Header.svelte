@@ -2,7 +2,7 @@
 	import { createEventDispatcher, getContext } from "svelte";
 	import { scale, fade } from "svelte/transition";
 	import { mode } from "../stores";
-	import { modeData } from "../utils";
+	import { modeData, timeRemaining } from "../utils";
 	import GameIcon from "./GameIcon.svelte";
 	import type { Toaster } from "./widgets";
 	export let showStats: boolean;
@@ -11,7 +11,7 @@
 	export let toaster = getContext<Toaster>("toaster");
 	const dispatch = createEventDispatcher();
 	mode.subscribe((m) => {
-		if (modeData.modes[m].unit - (new Date().valueOf() - modeData.modes[m].seed) > 0) {
+		if (timeRemaining(modeData.modes[m]) > 0) {
 			showRefresh = false;
 		}
 	});
@@ -87,6 +87,9 @@
 
 	//position: absolute
 	h1 {
+		width: max-content;
+		//left: 50%;
+		//transform: translateX(-50%);
 		text-transform: uppercase;
 		font-family: "Exo", sans-serif;
 		font-weight: 900;

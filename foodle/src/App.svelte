@@ -22,7 +22,7 @@
 	let word: string;
 	let state: GameState;
 	let showContact: boolean = false;
-
+	words.active_words = words.words
 	settings.set(
 			(JSON.parse(localStorage.getItem("settings")) as Settings) || createDefaultSettings()
 	);
@@ -47,7 +47,7 @@
 		localStorage.setItem("mode", `${m}`);
 		window.location.hash = GameMode[m];
 		stats = (JSON.parse(localStorage.getItem(`stats-${m}`)) as Stats) || createDefaultStats(m);
-		word = words.words[seededRandomInt(0, words.words.length, modeData.modes[m].seed)];
+		word = words.active_words[seededRandomInt(0, words.active_words.length, modeData.modes[m].seed)];
 		let temp: GameState;
 		if (modeData.modes[m].historical === true) {
 			temp = JSON.parse(localStorage.getItem(`state-${m}-h`));
@@ -93,6 +93,7 @@
 	}
 
 	let toaster: Toaster;
+	document.title = "Foodle | An infinite word guessing game";
 </script>
 <Toaster bind:this={toaster} />
 {#if toaster}

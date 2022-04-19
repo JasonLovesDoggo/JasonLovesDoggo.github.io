@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-    <title>Foodle</title>
-    <meta charset="utf-8">
+<!-- changed to something more suited to being the title of a tab in App.svelte. This title is for SEO -->
+	<title>Infinite Foodle - Play unlimited foodles | Foodle</title>    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Guess the food based word in 6 tries. Play daily, hourly and infinite modes.">
     <meta name="theme-color" content="#6aaa64"/>
-    <link href="manifest.json?v=1.88" rel="manifest">
+    <link href="manifest.json?v=2.0" rel="manifest">
     <link rel="shortcut icon" href="Img/logo_32x32.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="Img/logo_192x192.png"/>
-    <link href="global.css?v=1.88" rel="stylesheet">
-    <link href="src/build/bundle.css?v=1.88" rel="stylesheet">
+    <link href="global.css?v=2.0" rel="stylesheet">
+    <link href="src/build/bundle.css?v=2.0" rel="stylesheet">
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/foodle_sw.js?v=1.88')
+        navigator.serviceWorker.register('/foodle_sw.js?v=2.0')
           .then(() => console.log('service worker registered'))
           .catch(err => console.log('service worker not registered', err));
 
@@ -25,17 +25,19 @@
     <meta property="og:title" content="Foodle - The Wordle for food.">
     <meta property="og:site_name" content="Foodle">
     <meta property="og:description"
-          content="Foodle the Wordle for food.
-		  Guess the food based word in 6 tries. Play daily, hourly and infinite modes.">
-    <meta property="og:image" content="https://nasoj.me/foodle/Img/og_1200x630.png?v=1.88">
+          content="Foodle - The Wordle for food with infinite, hourly and daily modes. Double tap on a word to learn it's definition.">
+    <meta property="og:image" content="https://nasoj.me/foodle/Img/og_1200x630.png?v=2.0">
     <meta name="theme-color" content="#121213" data-react-helmet="true"/>
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@JasonLovesDoggo">
     <!-- SEO stuff -->
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="wordle, foodle, puzzle">
+    <meta name="keywords"
+		content="foodle, infinite wordle, foodle game, foodle wordle, infinite wordle, foodle word game, daily wordle, wordle, word game, puzzle, foodle wordle game, game">
     <meta name="author" content="JasonLovesDoggo">
-    <script defer src="src/build/bundle.js?v=1.88"></script>
+    <meta name="description"
+		content="Foodle - The Wordle for food with infinite, hourly and daily modes. Double tap on a word to learn it's definition.">
+    <script defer src="src/build/bundle.js?v=2.0"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDYX6FCR3E"></script>

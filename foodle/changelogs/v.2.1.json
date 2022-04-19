@@ -1,0 +1,10 @@
+{
+  "version": "v.2.0",
+  "title": "Foodle v.2.0 the Hints Update.",
+  "changes": [
+    "A way to auto-update the game upon an update",
+    "Added a hints feature (click on a row then click hint)",
+    "Internal Changes",
+    "re-built the game"
+  ]
+}

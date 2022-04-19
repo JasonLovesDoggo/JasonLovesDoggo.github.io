@@ -39,13 +39,15 @@
     </GameIcon>
     Copy link to this game ({modeData.modes[$mode].name} #{wordNumber})
 </div>
-    |
+        {#if !state.active}
+|
 <div>
     <a
        href="https://twitter.com/intent/tweet?text={encodeURIComponent(stats)}&url=https%3A%2F%2Fnasoj.me%2Ffoodle&related=JasonLovesDoggo">Tweet
         Your Score</a>
 
 </div>
+    {/if}
 </div>
 
 <style>
@@ -54,7 +56,7 @@
     }
     div {
         color: var(--fg-secondary);
-        font-size: var(--fs-regular);
+        font-size: var(--fs-small);
         display: flex;
         justify-content: center;
         align-items: center;
