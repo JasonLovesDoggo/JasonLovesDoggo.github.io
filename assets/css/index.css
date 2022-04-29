@@ -581,10 +581,8 @@ input:-webkit-autofill:active {
     display: inline;
     transition-duration: .3s;
 }
-#countdown {
-    bottom: -5px;
-}
-#codeTime {
+
+#codeTime, #countdown {
     bottom: 0;
 
 }
