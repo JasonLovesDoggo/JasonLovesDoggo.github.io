@@ -567,23 +567,24 @@ input:-webkit-autofill:active {
     will-change: transform, opacity;
 }
 
-.numbers_container #codeTime {
-    display: none;
-    transition-duration: .3s;
-}
-
-.numbers_container:hover #countdown {
+.numbers_container #countdown {
     display: none;
     transition-duration: .3s;
 }
 
 .numbers_container:hover #codeTime {
-    display: inline;
+    display: none;
     transition-duration: .3s;
 }
 
-#codeTime,
+.numbers_container:hover #countdown {
+    display: inline;
+    transition-duration: .3s;
+}
 #countdown {
+    bottom: -5px;
+}
+#codeTime {
     bottom: 0;
 
 }
