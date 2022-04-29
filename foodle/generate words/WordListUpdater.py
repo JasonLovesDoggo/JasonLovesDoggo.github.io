@@ -53,6 +53,9 @@ for word in food_words:
     if word in guesses_words:
         guesses_words.remove(word)
 
+
+food_words = sorted(food_words)
+
 with open('../../api/data/wordlist.json', 'w+') as wlj:
     json.dump(food_words, wlj)
 
