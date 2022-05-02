@@ -54,7 +54,7 @@ for word in food_words:
         guesses_words.remove(word)
 
 
-food_words = sorted(food_words)
+food_words = sorted(food_words)  # sort the list alphabetically
 
 with open('../../api/data/wordlist.json', 'w+') as wlj:
     json.dump(food_words, wlj)
@@ -68,3 +68,5 @@ x = f"""const words =
 export default words;"""""
 with open('../src/words_5.ts', 'w') as word_ts_file:
     word_ts_file.write(x)
+
+print('done', end='')
