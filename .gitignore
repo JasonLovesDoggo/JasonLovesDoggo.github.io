@@ -235,3 +235,5 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 !/microsites/uri-shortener-api/.env
 !/microsites/uri-shortener-api/.env
+!/microsites/uri-shortener-api/.env
+/microsites/uri-shortener-api/.env
