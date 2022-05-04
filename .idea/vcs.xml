@@ -4,5 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/api" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/microsites/polls" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/microsites/uri-shortener-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/microsites/uri-shortener-api - Copy" vcs="Git" />
   </component>
 </project>
