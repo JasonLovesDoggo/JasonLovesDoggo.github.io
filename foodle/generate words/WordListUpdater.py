@@ -27,8 +27,12 @@ actually_food_words_that_dont_appear_in_the_dictionary_i_used = ['umami', 'rolls
                                                                  'pilaf', 'mochi', 'vegan', 'latke', 'queso', 'curds',
                                                                  'roast', 'fries', 'chard', 'mints', 'minty', 'dates',
                                                                  'clams', 'prune', 'aspic', 'rujak', 'gummy', 'cakes',
-                                                                 'baozi', 'melty', ]
-# if I add a ton more words I might turn to a dict with values if its a food or not
+                                                                 'baozi', 'melty', 'cepes', 'gnudi' 'unagi', 'kofta',
+                                                                 'leeks', 'mixer', 'bundt', 'agave', 'melba', 'smore',
+                                                                 'babka', 'mezze', 'rosti', 'kugel', 'dolma', 'baker',
+                                                                 'enoki', 'glaze', 'limes', 'crema', 'cajun', 'mache',
+                                                                 'aioli']
+# if I add a ton more words I might turn to a dict with values if it's a food or not
 pure_food_words = ['sushi', 'salad', 'kebab', 'vodka', 'peach', 'sugar', 'brine', 'olive', 'cacao', 'fungi', 'thyme',
                    'mocha', 'apple', 'honey', 'onion', 'icing', 'candy', 'grape', 'trout', 'filet', 'donut', 'bread',
                    'ramen', 'steak', 'caper', 'pizza', 'conch', 'cumin', 'gravy', 'creme', 'flour', 'toast', 'scone',
@@ -36,7 +40,8 @@ pure_food_words = ['sushi', 'salad', 'kebab', 'vodka', 'peach', 'sugar', 'brine'
                    'pasta', 'basil', 'taffy', 'wafer', 'bacon', 'wheat', 'berry', 'sauce', 'fruit', 'curry', 'pecan',
                    'latte', 'lemon', 'fudge', 'guava', 'beets', 'nacho', 'satay', 'tacos', 'jello', 'chive', 'oreos',
                    'bhaji', 'torte', 'ugali', 'beans', 'ranch', 'mochi', 'latke', 'queso', 'fries', 'mints', 'dates',
-                   'prune', 'rujak', 'baozi']  # used for the food only mode
+                   'prune', 'rujak', 'baozi', 'gnudi', 'unagi', 'kofta', 'leeks', 'smore', 'dolma', 'limes', 'aioli'
+                                                                                                             'babka']  # used for the food only mode
 for word in not_really_food_words:
     food_words.remove(word)
 
@@ -52,7 +57,6 @@ guesses_words.append('kinda')
 for word in food_words:
     if word in guesses_words:
         guesses_words.remove(word)
-
 
 food_words = sorted(food_words)  # sort the list alphabetically
 
