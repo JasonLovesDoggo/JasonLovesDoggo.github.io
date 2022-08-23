@@ -25,7 +25,7 @@
     }
 
     async function GetChangeLog(tag_name) {    // TODO: change this to the foodle api when ready
-        const data = await fetch(`https://nasoj.me/foodle/changelogs/${tag_name}.json`, {
+        const data = await fetch(`https://jasoncodes.ca/foodle/changelogs/${tag_name}.json`, {
             cache: 'no-cache'
         });
         if (data.ok) {

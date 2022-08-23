@@ -11,7 +11,7 @@ photo_dir = f'{str(os.path.abspath(__file__))[:-41]}/{path}'
 catagorytype = None
 fileloc = None
 QSYM = '&quot;'
-dir_list = 'https://imgs.nasoj.me/'
+dir_list = 'https://imgs.jasoncodes.ca/'
 catagory = f'{QSYM}{catagorytype}{QSYM}'
 img_cata_dict = {}
 img_template_list = []
@@ -44,7 +44,7 @@ def setbgfile():
 
 setbgfile()
 
-    
+
 
 def get_img_types(img):
     type_dir = {'bella': False,

@@ -141,7 +141,7 @@ const CONFIG = {
       links: [
         {
           name: 'Website',
-          link: 'https://nasoj.me/',
+          link: 'https://jasoncodes.ca/',
         },
         {
           name: 'Web Design Shortcuts',

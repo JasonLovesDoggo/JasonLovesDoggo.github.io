@@ -3,4 +3,4 @@ Allow: /
 Disallow: /bella/tempdir/template
 Disallow: /assets/templates
 
-Sitemap: https://nasoj.me/sitemap.xml
+Sitemap: https://jasoncodes.ca/sitemap.xml

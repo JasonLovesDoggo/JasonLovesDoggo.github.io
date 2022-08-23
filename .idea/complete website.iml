@@ -4,13 +4,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="all" level="application" />
-    <orderEntry type="library" name="animate.css" level="application" />
-    <orderEntry type="library" name="api" level="application" />
-    <orderEntry type="library" name="bootstrap" level="application" />
-    <orderEntry type="library" name="jquery-3.3.1" level="application" />
-    <orderEntry type="library" name="jquery-3.4.1" level="application" />
-    <orderEntry type="library" name="magic-grid" level="application" />
     <orderEntry type="module" module-name="polls" />
     <orderEntry type="module" module-name="api" />
   </component>

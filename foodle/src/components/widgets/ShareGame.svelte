@@ -43,7 +43,7 @@
 |
 <div>
     <a
-       href="https://twitter.com/intent/tweet?text={encodeURIComponent(stats)}&url=https%3A%2F%2Fnasoj.me%2Ffoodle&related=JasonLovesDoggo">Tweet
+       href="https://twitter.com/intent/tweet?text={encodeURIComponent(stats)}&url=https%3A%2F%2Fjasoncodes.ca%2Ffoodle&related=JasonLovesDoggo">Tweet
         Your Score</a>
 
 </div>

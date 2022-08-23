@@ -22,7 +22,7 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
             drop-html-extension: true
-            base-url-path: https://nasoj.me
+            base-url-path: https://jasoncodes.ca
 
       - name: commit files
         run: |
@@ -51,8 +51,8 @@ jobs:
           fi
           
           curl -v "https://www.google.com/ping?sitemap=${MAP_URL}" &> /dev/null &
-          curl -v "https://web.archive.org/save/nasoj.me" &> /dev/null &
-          curl -v "https://web.archive.org/save/nasoj.me/foodle/" &> /dev/null &
+          curl -v "https://web.archive.org/save/jasoncodes.ca" &> /dev/null &
+          curl -v "https://web.archive.org/save/jasoncodes.ca/foodle/" &> /dev/null &
           curl -v "https://www.bing.com/ping?sitemap=${MAP_URL}" &> /dev/null  &
           wait
           printf "\n\nDone\n"

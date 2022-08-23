@@ -2,7 +2,7 @@
 <br/>
 <div align="center">
  <p>
-  <a href="https://nasoj.me/foodle/" ><img src="https://img.shields.io/github/repo-size/JasonLovesDoggo/JasonLovesDoggo.github.io.svg" alt="GitHub repo size"/></a>
+  <a href="https://jasoncodes.ca/foodle/" ><img src="https://img.shields.io/github/repo-size/JasonLovesDoggo/JasonLovesDoggo.github.io.svg" alt="GitHub repo size"/></a>
  <a href="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment"><img src="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment"></a>
 <a href="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml"><img src="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml/badge.svg" alt="Update Sitemap"></a>
 <a href="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml"><img src="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/updateversion.yml/badge.svg?branch=master" alt="UpdateVersion"></a></p>
@@ -13,7 +13,7 @@
 
 #### hosted via GitHub pages and uses cloudflare dns and a namecheap domain                                                                                                                       (thank you github student pack)
 
-### [URL](https://nasoj.me)
+### [URL](https://jasoncodes.ca)
 
 The /projects page was generated with GitFolio
 
