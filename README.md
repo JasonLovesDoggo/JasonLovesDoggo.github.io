@@ -1,8 +1,8 @@
-<h2 align="center">
+<h2>
   Portfolio Website - v2.0<br/>
-  <a href="https://jasoncameron.dev/" target="_blank">jasoncameron.dev</a>
+  <a href="https://jasoncameron.dev/" target="_blank">  jasoncameron.dev</a>
 </h2>
-<div align="center">
+<div>
   <img alt="Demo" src="./Images/readme-img1.png" />
 </div>
 
@@ -10,7 +10,7 @@
 
 ## Built With
 
-My personal portfolio <a href="http://soumya-jit.tech/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+My personal portfolio <a href="https://jasoncameron.dev/" target="_blank">jasoncameron.dev</a> which features some of my github projects as well as my resume and technical skills.<br/>
 
 This project was built using these technologies.
 
@@ -18,8 +18,7 @@ This project was built using these technologies.
 - Node.js
 - Express.js
 - CSS3
-- VsCode
-- Vercel
+- WebStorm
 
 ## Features
 
@@ -52,7 +51,7 @@ You will find all the components used, and you can edit your information accordi
 
 Give a ⭐ if you like this website!
 
-<a href="https://www.buymeacoffee.com/JasonLovesDoggo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+<a href="https://www.buymeacoffee.com/JasonLovesDoggo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
 
 
 note this is a modified version of [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!

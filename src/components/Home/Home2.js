@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/avatar.png";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -18,8 +18,7 @@ function Home2() {
               LET ME <span className="blue"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              I'm Jason i'm currently a high school student at <a style={{textDecoration: "none"}} className="blue" href="https://wlmac.ca/">wlmci</a> & a passionate self-taught Backend Developer. I'm from Canada, and living in Toronto. I'm currently learning Golang and attempting to get better at Django
               <br />
               <br />I am fluent in
               <i>
@@ -50,6 +49,9 @@ function Home2() {
               <i>
                 <b className="blue"> Django, Flask & Playwright</b>
               </i>
+              <br />
+              I also enjoy working with the discord API and have built a few
+                discord bots that have a combined user-base of <b className="blue">200,000+</b> users.
             </p>
           </Col>
           <Col md={4} className="myAvtar">

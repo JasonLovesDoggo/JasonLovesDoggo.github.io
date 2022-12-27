@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
+import {FaCamera, FaDog, FaUserFriends} from "react-icons/fa";
 
 function AboutCard() {
   return (
@@ -17,20 +17,21 @@ function AboutCard() {
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Photography
+              <FaCamera />  Photography
             </li>
             <li className="about-activity">
-              <ImPointRight /> Playing with my dog
+              <FaDog />  Playing with my dog
             </li>
             <li className="about-activity">
-              <ImPointRight /> Being with friends
+              <FaUserFriends />  Hanging out with friends
             </li>
           </ul>
-
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+          <div style={{float: "left"}}>
+          <p style={{ color: "rgb(62,122,164)"}}>
+            "I like when my projects have a purpose."
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer">Jason Cameron</footer>
+            </div>
         </blockquote>
       </Card.Body>
     </Card>
