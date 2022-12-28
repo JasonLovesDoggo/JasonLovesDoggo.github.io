@@ -5,16 +5,16 @@ import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 const TextChanger = () => {
-  const [text, setText] = useState('JASON');
+  const [text, setText] = useState('Jason');
 
   const handleMouseEnter = () => {
-    setText('JASON \'JSON\'');
+    setText('Jason \'JSON\'');
   }
 
   const handleMouseLeave = () => {
-    setText('JASON');
+    setText('Jason');
   }
-  const animationPlayState = text === 'JASON \'JSON\'' ? 'paused' : 'initial';
+  const animationPlayState = text === 'Jason \'JSON\'' ? 'paused' : 'initial';
 
   return (
     <span style={{animationPlayState: animationPlayState}} className="json" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -40,8 +40,8 @@ function Home()
               </h1>
 
               <h1 className="heading-name">
-                I am&nbsp;
-                <strong className="main-name"><span className="brackets">&#123;</span><TextChanger/> CAMERON< span className="brackets">&#125;</span></strong>
+                I'm&nbsp;
+                <strong className="main-name"><span className="brackets">&#123;</span><TextChanger/> Cameron< span className="brackets">&#125;</span></strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
