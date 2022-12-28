@@ -6,7 +6,7 @@ import {
     DiGit, DiJavascript, DiRedis, DiDjango,
 } from "react-icons/di";
 import {
-    SiCloudflare, SiDiscord, SiSpotify,
+    SiCloudflare, SiDiscord, SiSpotify, SiSvelte,
 } from "react-icons/si";
 
 function Techstack() {
@@ -20,6 +20,9 @@ function Techstack() {
             </Col>
             <Col xs={4} md={2} className="tech-icons">
                 <DiJavascript/>
+            </Col>
+            <Col xs={4} md={2} className="tech-icons">
+                <SiSvelte/>
             </Col>
             <Col xs={4} md={2} className="tech-icons">
                 <DiRedis/>
