@@ -10,7 +10,7 @@ function Wakatime() {
                 setCount(data.data.grand_total.human_readable_total_including_other_language)
             });
     }, []);
-    return <b>Tracked time coding: <b className="blue">{count}</b></b>
+    return <div>Tracked time coding: <b className="blue">{count}</b></div>
 }
 
 export default Wakatime;

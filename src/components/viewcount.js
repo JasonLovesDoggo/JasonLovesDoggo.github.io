@@ -9,7 +9,7 @@ function ViewCount() {
                 setCount(data.value);
             });
     }, []);
-    return <div id="viewcount">Views: <b
+    return <div>Views: <b
         className="blue"> {(count + 1).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </b></div>;
 }
 
