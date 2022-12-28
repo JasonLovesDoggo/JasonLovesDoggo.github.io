@@ -21,8 +21,8 @@ function About() {
               paddingBottom: "50px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="blue">I'M</strong>
+            <h1 style={{ textAlign: "center", fontSize: "2.1em", paddingBottom: "20px" }}>
+              Know Who <strong className="blue">I am</strong>
             </h1>
             <Aboutcard />
           </Col>
