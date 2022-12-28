@@ -5,6 +5,7 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import ViewCount from "./viewcount";
 
 function Footer() {
   let date = new Date();
@@ -50,6 +51,10 @@ function Footer() {
                 <FaLinkedinIn />
               </a>
             </li>
+            <li style={{color: "white"}} className="social-icons">
+                <ViewCount />
+            </li>
+
           </ul>
         </Col>
       </Row>

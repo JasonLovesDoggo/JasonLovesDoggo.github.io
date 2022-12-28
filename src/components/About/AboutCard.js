@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import {FaCamera, FaDog, FaUserFriends} from "react-icons/fa";
+import {IoFastFoodSharp} from "react-icons/io5";
 
 function AboutCard() {
   return (
@@ -18,6 +19,9 @@ function AboutCard() {
           <ul>
             <li className="about-activity">
               <FaCamera />  Photography
+            </li>
+            <li className="about-activity">
+                <IoFastFoodSharp />  Cooking/Baking
             </li>
             <li className="about-activity">
               <FaDog />  Playing with my dog
