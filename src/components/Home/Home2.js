@@ -18,7 +18,7 @@ function Home2() {
               LET ME <span className="blue"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I'm Jason i'm currently a high school student at <a style={{textDecoration: "none"}} className="blue" href="https://wlmac.ca/">wlmci</a> & a passionate self-taught Backend Developer. I'm from Canada, and living in Toronto. I'm currently learning Golang and attempting to get better at Django
+              I'm Jason i'm currently a high school student at <a style={{textDecoration: "none"}} className="blue" href="https://wlmac.ca/">WLMCI</a> & a passionate self-taught Backend Developer. I'm from Canada, and living in Toronto. I'm currently learning Golang and attempting to get better at Django
               <br />
               <br />I am fluent in
               <i>
