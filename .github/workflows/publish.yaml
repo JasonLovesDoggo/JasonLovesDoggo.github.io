@@ -1,7 +1,10 @@
 name: "Deployment"
 # the event that will trigger the action
 on:
-  [push, workflow_dispatch]
+  push:
+    branches:
+      - master
+  workflow_dispatch:
 
 # what the action will do
 jobs:
