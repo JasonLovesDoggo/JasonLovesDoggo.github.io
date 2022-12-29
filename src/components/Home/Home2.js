@@ -27,13 +27,12 @@ function Home2() {
               as well as HTML5, CSS3 and SCSS.
               <br />
               <br />
-              My field of Interest's are &nbsp;
+              My field of Interest's are
               <i>
-                <b className="blue">Web Automation </b> and
+                <b className="blue"> Web Automation </b> and
                 also in areas related to{" "}
                 <b className="blue">
-                  Natural Language Processing.
-                </b>
+                 Automation</b> and making life simpler.
               </i>
               <br />
               <br />
