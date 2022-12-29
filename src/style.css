@@ -75,6 +75,28 @@ button:focus {
 /* --------- */
 /* Navbar Section  */
 /* --------- */
+
+
+.dropdown-menu {
+    /* From https://css.glass */
+    background: rgba(32, 57, 100, 0.84) !important;
+    border-radius: 5px !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(0px) !important;
+    -webkit-backdrop-filter: blur(0px) !important;
+    border: 1px solid rgba(32, 57, 100, 0.57) !important;
+
+}
+
+.dropdown-item {
+    text-align: center !important;
+    color: #fff !important;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(42, 76, 134, 0.84) !important;
+}
+
 .sticky {
     background-color: rgba(25, 34, 54, 0.66) !important;
     transition: all 0.3s ease-out 0s !important;
@@ -332,7 +354,7 @@ button:focus {
         display: none !important;
     }
 
-     .heading-name {
+    .heading-name {
         font-size: 1.6em !important;
     }
 

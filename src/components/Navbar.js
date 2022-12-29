@@ -15,6 +15,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import Dropdown from "./dropdown";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -93,15 +94,6 @@ function NavBar() {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/foodle"
-                onClick={() => updateExpanded(false)}
-              >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Foodle
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link
                 href="https://blog.jasoncameron.dev/"
                 target="_blank"
                 rel="noreferrer"
@@ -109,6 +101,7 @@ function NavBar() {
                 <ImBlog style={{ marginBottom: "2px" }} /> Blogs
               </Nav.Link>
             </Nav.Item>
+              <Dropdown />
 
             <Nav.Item className="fork-btn">
               <Button
