@@ -278,7 +278,7 @@ button:focus {
 
 @media (max-width: 1200px) {
     .heading-name {
-        font-size: 2.1em !important;
+        font-size: 2em !important;
     }
 
 }
@@ -331,6 +331,12 @@ button:focus {
     .Typewriter__cursor {
         display: none !important;
     }
+
+     .heading-name {
+        font-size: 1.6em !important;
+    }
+
+
 }
 
 .myAvtar {
