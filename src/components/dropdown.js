@@ -16,7 +16,7 @@ function NavDropdown() {
                              onMouseLeave={() => setShow(false)} show={show}>
             <Dropdown.Item className="dropdown-item" href="/foodle">Foodle</Dropdown.Item>
             <Dropdown.Divider/>
-            <Dropdown.Item className="dropdown-item" href="/small/random-color">Random Color</Dropdown.Item>
+            <Dropdown.Item className="dropdown-item" href="/random-color">Random Color</Dropdown.Item>
                 </Dropdown.Menu>
         </Dropdown>
     );
