@@ -2,14 +2,17 @@ name: Publish
 on:
   workflow_dispatch:
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 jobs:
-  name: Deploy with gh-pages
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  steps:
-    name: run script
-    run: |
-      git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-      npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+  deploy:
+    name: Deploy with gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: run script
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
 
