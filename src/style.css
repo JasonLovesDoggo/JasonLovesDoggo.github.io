@@ -276,6 +276,13 @@ button:focus {
     position: relative;
 }
 
+@media (max-width: 1200px) {
+    .heading-name {
+        font-size: 2.1em !important;
+    }
+
+}
+
 .blue,
 .main-name {
     color: #58abff;
