@@ -24,7 +24,7 @@ function Projects() {
               imgPath={metropolis}
               isBlog={false}
               title="Metropolis"
-              description="Metropolis is my schools student run website for info about clubs, events and everything else a student would need to know, It was built in django and there is a team of 45 developers, artists, and creators who worked in tandem to build the site. I personally worked on backend development"
+              description="Metropolis is my schools student run data centralization platform for info about clubs, events and everything else a student would need to know, It was built in django and there is a team of 45 developers, artists, and creators who worked in tandem to build the site. I personally worked on backend development"
               ghLink="https://github.com/wlmac/metropolis"
               demoLink="https://maclyonsden.com"
             />
