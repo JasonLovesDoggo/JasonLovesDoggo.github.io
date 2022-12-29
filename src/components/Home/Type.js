@@ -2,21 +2,21 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 
 function Type() {
-  return (
-    <Typewriter
-      options={{
-        strings: [
-          "Developer",
-          "Photographer",
-          "Python enthusiast",
-          "Open Source Contributor",
-        ],
-        autoStart: true,
-        loop: true,
-        deleteSpeed: 45,
-      }}
-    />
-  );
+    return (
+        <Typewriter
+            options={{
+                strings: [
+                    "Developer",
+                    "Open Source Contributor",
+                    "   Amateur Photographer",
+                    "Human"
+                ],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 45,
+            }}
+        />
+    );
 }
 
 export default Type;
