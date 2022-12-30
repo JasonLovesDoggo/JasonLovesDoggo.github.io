@@ -88,17 +88,6 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
-                title="My Resume"
-              >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
                 to="/photos"
                 onClick={() => updateExpanded(false)}
                 title="A page to display my photos mostly of my dog."
@@ -117,8 +106,17 @@ function NavBar() {
                 <ImBlog style={{ marginBottom: "2px" }} /> Blog
               </Nav.Link>
             </Nav.Item>
+             <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/resume"
+                onClick={() => updateExpanded(false)}
+                title="My Resume"
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </Nav.Link>
+            </Nav.Item>
               <Dropdown />
-
             <Nav.Item className="fork-btn">
               <Button
                 href="https://github.com/JasonLovesDoggo/jasoncameron.dev"

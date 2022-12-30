@@ -4,36 +4,7 @@ import photos from "./photos.json";
 import CustomPhoto from "./utils.js";
 
 function PhotoGallery() {
-/*    const [images, setImages] = useState(photos.slice(0, 6));
-    const [pageNum, setPageNum] = useState(1);
-    const [loadedAll, setLoadedAll] = useState(false);*/
     const [categoryFilter, setCategoryFilter] = useState('all');
-    // const TOTAL_PAGES = 0;
-
-  /*  const loadMorePhotos = debounce(() => {
-        if (pageNum > TOTAL_PAGES) {
-            setLoadedAll(true);
-            return;
-        }
-
-        setImages(images.concat(photos.slice(images.length, images.length + 6)));
-        setPageNum(pageNum + 1);
-    }, 200);
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-
-    });*/
-    /*const handleScroll = () => {
-        let scrollY =
-            window.scrollY ||
-            window.pageYOffset ||
-            document.documentElement.scrollTop;
-        if (window.innerHeight + scrollY >= document.body.offsetHeight - 50) {
-            loadMorePhotos();
-        }
-
-    };*/
     const handleCategoryChange = event => {
         setCategoryFilter(event.target.value);
     };
@@ -43,28 +14,28 @@ function PhotoGallery() {
         if (categoryFilter === "all") {
             return true;
         }
-        return photo.category === categoryFilter;
+        return photo.category.includes(categoryFilter)
     });
 
     return (
         <div className="gallery-container">
             <div className="gallery-filter">
-            <label>
-                Category:
-                <select onChange={handleCategoryChange}>
-                    <option value="all">All</option>
-                    <option value="dog">Bella</option>
-                    <option value="assorted">assorted</option>
-                    <option value="nature">Nature</option>
-                </select>
-            </label>
+                <h3>My Gallery</h3>
+                <span>Some of the photos that i've taken since <b className="blue">2021</b> </span>
+                <div className="filter-categories">
+                <input onChange={handleCategoryChange} type="radio" id="radioAll" name="radioPhoto" value="all" />
+                <label htmlFor="radioAll">All</label>
+                <input onChange={handleCategoryChange} type="radio" id="radioDog" name="radioPhoto" value="dog"/>
+                <label htmlFor="radioDog">Dogs</label>
+                <input onChange={handleCategoryChange} type="radio" id="radioAssorted" name="radioPhoto"
+                       value="assorted"/>
+                <
+                    label htmlFor="radioAssorted">Assorted</label>
+                <input onChange={handleCategoryChange} type="radio" id="radioNature" name="radioPhoto" value="nature"/>
+                <label htmlFor="radioNature">Nature</label>
+                </div>
             </div>
             <Gallery renderImage={CustomPhoto} photos={filteredPhotos}/>
-            {/*{!loadedAll && (
-                <div className="loading-msg" id="msg-loading-more">
-                    Loading
-                </div>
-            )}*/}
         </div>
     );
 }
