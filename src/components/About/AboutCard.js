@@ -24,7 +24,7 @@ function AboutCard() {
                 <IoFastFoodSharp />  Cooking/Baking
             </li>
             <li className="about-activity">
-              <FaDog />  Playing with my dog
+              <FaDog />  Playing with <a style={{color: "white"}} href="/photos#dog">my dog</a>
             </li>
             <li className="about-activity">
               <FaUserFriends />  Hanging out with friends

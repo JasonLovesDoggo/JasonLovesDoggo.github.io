@@ -1,10 +1,13 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import photos from "./photos.json";
 import PhotoAlbum from "react-photo-album";
 
 function PhotoGallery() {
     const [categoryFilter, setCategoryFilter] = useState('all');
-
+    useEffect(() => {
+        if (document.location.hash === "#dog") {
+            setCategoryFilter("dog");
+        }} , []);
     const handleCategoryChange = event => {
         setCategoryFilter(event.target.value);
     };
