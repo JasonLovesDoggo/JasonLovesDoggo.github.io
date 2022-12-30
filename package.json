@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://JasonLovesDoggo.github.io/jasoncameron.dev",
   "private": true,
   "dependencies": {
@@ -17,15 +17,15 @@
     "react-dom": "^17.0.2",
     "react-github-calendar": "^3.2.2",
     "react-icons": "^4.3.1",
-    "react-images": "^0.6.7",
     "react-parallax-tilt": "^1.7.42",
     "react-pdf": "^5.7.1",
-    "react-photo-gallery": "^8.0.0",
+    "react-photo-album": "^2.0.0",
     "react-router-dom": "^6.2.2",
     "react-scripts": "^5.0.1",
     "react-tsparticles": "^1.42.2",
     "typewriter-effect": "^2.18.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yet-another-react-lightbox": "^2.2.5"
   },
   "scripts": {
     "start": "react-scripts start",
