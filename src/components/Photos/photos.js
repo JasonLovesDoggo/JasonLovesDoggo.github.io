@@ -1,23 +1,10 @@
-import React, {useCallback, useState} from "react";
-import Gallery from "react-photo-gallery";
+import React, {useState} from "react";
 import photos from "./photos.json";
-import CustomPhoto from "./utils.js";
-import Carousel, {Modal, ModalGateway} from 'react-images';
+import PhotoAlbum from "react-photo-album";
 
 function PhotoGallery() {
     const [categoryFilter, setCategoryFilter] = useState('all');
-    const [currentImage, setCurrentImage] = useState(0);
-    const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-    const openLightbox = useCallback((event, {photo, index}) => {
-        setCurrentImage(index);
-        setViewerIsOpen(true);
-    }, []);
-
-    const closeLightbox = () => {
-        setCurrentImage(0);
-        setViewerIsOpen(false);
-    };
     const handleCategoryChange = event => {
         setCategoryFilter(event.target.value);
     };
@@ -28,6 +15,7 @@ function PhotoGallery() {
         }
         return photo.category.includes(categoryFilter)
     });
+
 
     return (
         <div className="gallery-container">
@@ -41,28 +29,14 @@ function PhotoGallery() {
                     <label htmlFor="radioDog">Dogs</label>
                     <input onChange={handleCategoryChange} type="radio" id="radioAssorted" name="radioPhoto"
                            value="assorted"/>
-                    <
-                        label htmlFor="radioAssorted">Assorted</label>
+                    <label htmlFor="radioAssorted">Assorted</label>
                     <input onChange={handleCategoryChange} type="radio" id="radioNature" name="radioPhoto"
                            value="nature"/>
                     <label htmlFor="radioNature">Nature</label>
                 </div>
             </div>
-            <Gallery renderImage={CustomPhoto} onClick={openLightbox} photos={filteredPhotos}/>
-            <ModalGateway>
-                {viewerIsOpen ? (
-                    <Modal onClose={closeLightbox}>
-                        <Carousel
-                            currentIndex={currentImage}
-                            views={photos.map(x => ({
-                                ...x,
-                                srcset: x.srcSet,
-                                caption: x.title,
-                            }))}
-                        />
-                    </Modal>
-                ) : null}
-            </ModalGateway>
+            <PhotoAlbum layout="masonry" photos={filteredPhotos}/>
+
         </div>
     );
 }

@@ -867,8 +867,9 @@ button:focus {
     transition: transform .5s;
 }
 
-.gallery-image:hover {
+.react-photo-album--photo:hover {
     transform: scale(1.03);
     border: 4px solid #86afe1;
     border-radius: 5px;
 }
+
