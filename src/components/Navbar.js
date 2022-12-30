@@ -14,6 +14,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import {BsCameraFill} from "react-icons/bs";
 import Dropdown from "./dropdown";
 
 function NavBar() {
@@ -54,7 +55,7 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link title="Go back home" as={Link} to="/" onClick={() => updateExpanded(false)}>
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
@@ -64,6 +65,7 @@ function NavBar() {
                 as={Link}
                 to="/about"
                 onClick={() => updateExpanded(false)}
+                title="About me"
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
@@ -74,6 +76,7 @@ function NavBar() {
                 as={Link}
                 to="/project"
                 onClick={() => updateExpanded(false)}
+                title="My Projects"
               >
                 <CgCodeSlash
                   style={{ marginBottom: "2px" }}
@@ -85,28 +88,41 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/resume"
+                to="/photos"
                 onClick={() => updateExpanded(false)}
+                title="A page to display my photos mostly of my dog."
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <BsCameraFill style={{ marginBottom: "2px" }} /> Photos
               </Nav.Link>
             </Nav.Item>
+
             <Nav.Item>
               <Nav.Link
                 href="https://blog.jasoncameron.dev/"
                 target="_blank"
                 rel="noreferrer"
+                title="My Blog site."
               >
                 <ImBlog style={{ marginBottom: "2px" }} /> Blog
               </Nav.Link>
             </Nav.Item>
+             <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/resume"
+                onClick={() => updateExpanded(false)}
+                title="My Resume"
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </Nav.Link>
+            </Nav.Item>
               <Dropdown />
-
             <Nav.Item className="fork-btn">
               <Button
                 href="https://github.com/JasonLovesDoggo/jasoncameron.dev"
                 target="_blank"
                 className="fork-btn-inner"
+                title="Fork me on Github"
               >
                 <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
                 <AiFillStar style={{ fontSize: "1.1em" }} />
