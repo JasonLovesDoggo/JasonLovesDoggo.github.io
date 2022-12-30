@@ -19,11 +19,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import PhotoGallery from "./components/Photos/photos";
 
 function App() {
-  const [load, upadateLoad] = useState(true);
+  const [load, updateLoad] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      upadateLoad(false);
+      updateLoad(false);
     }, 1200);
 
     return () => clearTimeout(timer);
