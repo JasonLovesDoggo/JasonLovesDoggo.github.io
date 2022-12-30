@@ -6,7 +6,6 @@ import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import {CgCodeSlash, CgGitFork} from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -16,6 +15,7 @@ import {
 import { CgFileDocument } from "react-icons/cg";
 import {BsCameraFill} from "react-icons/bs";
 import Dropdown from "./dropdown";
+// import { ImBlog } from "react-icons/im";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
