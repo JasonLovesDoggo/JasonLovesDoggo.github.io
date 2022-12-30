@@ -13,10 +13,10 @@ function NavDropdown() {
     const [show, setShow] = useState(false);
 
     return (
-        <Dropdown as={NavItem}>
+        <Dropdown title="Other sites/smaller projects"  as={NavItem}>
             <Dropdown.Toggle as={NavLink}
                              onMouseEnter={() => setShow(true)}
-                             onMouseLeave={() => setShow(false)} bsPrefix ><CgMenu style={{ marginBottom: "2px" }} /> Other</Dropdown.Toggle>
+                             onMouseLeave={() => setShow(false)} bsPrefix ><CgMenu style={{ marginBottom: "2px" }}/> Other</Dropdown.Toggle>
             <Dropdown.Menu className="dropdown-container" onMouseEnter={() => setShow(true)}
                              onMouseLeave={() => setShow(false)} show={show}>
             <Dropdown.Item title="A wordle clone that I made that has received 5m+ page views" className="dropdown-item" href="/foodle"><IoGameController style={{ marginBottom: "2px" }}/> Foodle</Dropdown.Item>

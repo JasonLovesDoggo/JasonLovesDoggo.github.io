@@ -90,11 +90,15 @@ button:focus {
 
 .dropdown-item {
     text-align: center !important;
+
     color: #fff !important;
 }
 
 .dropdown-item:hover {
     background-color: rgba(42, 76, 134, 0.84) !important;
+    border-radius: 7px !important;
+    padding: 5%;
+
 }
 
 .sticky {
