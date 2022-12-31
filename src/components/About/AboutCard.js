@@ -31,7 +31,7 @@ function AboutCard() {
                         </li>
                     </ul>
                     <div style={{float: "left"}}>
-                        <p style={{color: "rgb(62,122,164)"}}>
+                        <p style={{color: "rgb(137,191,239)"}}>
                             "I like when my projects have a purpose."
                         </p>
                         <footer className="blockquote-footer">Jason Cameron</footer>
