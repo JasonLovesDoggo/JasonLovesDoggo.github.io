@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import photos from "./photos.json";
 import PhotoAlbum from "react-photo-album";
+import Modal from 'react-modal';
 
 function PhotoGallery() {
     const [categoryFilter, setCategoryFilter] = useState('all');
@@ -19,13 +20,36 @@ function PhotoGallery() {
         }
         return photo.category.includes(categoryFilter)
     });
+    const [modalIsOpen, setIsOpen] = React.useState(false);
 
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
 
     return (
         <div className="gallery-container">
             <div className="gallery-filter">
-                <h3>My Gallery</h3>
-                <span>Some of the photos that i've taken since <b className="blue">2021</b> </span>
+                <div>
+                    <h3>My Gallery</h3>
+                    <span className="photo-description">Some of the photos that i've taken since <b
+                        className="blue">2021</b> </span>
+
+                    <button className="modal-controller" onMouseEnter={openModal} onMouseLeave={closeModal}>
+                        <span className="modal-controller-text">Click here to see the photos</span>
+                    </button>
+
+                    <Modal
+                        isOpen={modalIsOpen}
+                        onRequestClose={closeModal}
+                        contentLabel="Example Modal"
+                        ariaHideApp={false}
+                    >
+                    </Modal>
+                </div>
                 <div className="filter-categories">
                     <input onChange={handleCategoryChange} type="radio" id="radioAll" name="radioPhoto" value="all"/>
                     <label htmlFor="radioAll">All</label>

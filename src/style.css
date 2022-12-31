@@ -883,3 +883,15 @@ button:focus {
     border-radius: 5px;
 }
 
+
+
+.modal-controller {
+    position: fixed;
+    right: 5rem;
+}
+
+.photo-description {
+    font-size: 1.1em;
+    font-family: sans-serif;
+    padding-top: 10px;
+}
