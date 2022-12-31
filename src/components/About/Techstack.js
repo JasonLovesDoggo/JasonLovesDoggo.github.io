@@ -1,13 +1,7 @@
 import React from "react";
 import {Col, Row} from "react-bootstrap";
-import {
-    DiMongodb,
-    DiPython,
-    DiGit, DiJavascript, DiRedis, DiDjango,
-} from "react-icons/di";
-import {
-    SiCloudflare, SiDiscord, SiSpotify, SiSvelte,
-} from "react-icons/si";
+import {DiDjango, DiGit, DiJavascript, DiMongodb, DiPython, DiRedis,} from "react-icons/di";
+import {SiCloudflare, SiDiscord, SiSpotify, SiSvelte,} from "react-icons/si";
 
 function Techstack() {
     return (

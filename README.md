@@ -9,7 +9,8 @@
 
 ## Built With
 
-The second generation of my personal portfolio <a href="https://jasoncameron.dev/" target="_blank">jasoncameron.dev</a> which features some of my GitHub projects as well as my resume and technical skills.<br/>
+The second generation of my personal portfolio <a href="https://jasoncameron.dev/" target="_blank">jasoncameron.dev</a>
+which features some of my GitHub projects as well as my resume and technical skills.<br/>
 
 This project was built using these technologies.
 
@@ -48,4 +49,6 @@ Give a ⭐ if you like this website!
 
 <a href="https://www.buymeacoffee.com/JasonLovesDoggo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
 
-note: I did take inspiration from [Soumyajit4419](https://github.com/soumyajit4419/Portfolio) for the creation of this website and so such he deserves credit for the design of the website. I have made some changes to the design and added some features to the website.
+note: I did take inspiration from [Soumyajit4419](https://github.com/soumyajit4419/Portfolio) for the creation of this
+website and so such he deserves credit for the design of the website. I have made some changes to the design and added
+some features to the website.

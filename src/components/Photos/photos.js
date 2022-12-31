@@ -7,7 +7,8 @@ function PhotoGallery() {
     useEffect(() => {
         if (document.location.hash === "#dog") {
             setCategoryFilter("dog");
-        }} , []);
+        }
+    }, []);
     const handleCategoryChange = event => {
         setCategoryFilter(event.target.value);
     };
@@ -38,9 +39,8 @@ function PhotoGallery() {
                     <label htmlFor="radioNature">Nature</label>
                 </div>
             </div>
-            <PhotoAlbum layout="masonry" photos={filteredPhotos}/>
+            <PhotoAlbum layout="masonry" photos={filteredPhotos}/></div>
 
-        </div>
     );
 }
 
