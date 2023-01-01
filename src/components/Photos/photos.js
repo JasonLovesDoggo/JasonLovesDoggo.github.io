@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from "react";
 import photos from "./photos.json";
 import PhotoAlbum from "react-photo-album";
-import Modal from 'react-modal';
+import BellaInfo from "./bella";
 
 function PhotoGallery() {
     const [categoryFilter, setCategoryFilter] = useState('all');
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+
     useEffect(() => {
         if (document.location.hash === "#dog") {
             setCategoryFilter("dog");
@@ -20,7 +22,6 @@ function PhotoGallery() {
         }
         return photo.category.includes(categoryFilter)
     });
-    const [modalIsOpen, setIsOpen] = React.useState(false);
 
     function openModal() {
         setIsOpen(true);
@@ -37,19 +38,8 @@ function PhotoGallery() {
                     <h3>My Gallery</h3>
                     <span className="photo-description">Some of the photos that i've taken since <b
                         className="blue">2021</b> </span>
-
-                    <button className="modal-controller" onMouseEnter={openModal} onMouseLeave={closeModal}>
-                        <span className="modal-controller-text">Click here to see the photos</span>
-                    </button>
-
-                    <Modal
-                        isOpen={modalIsOpen}
-                        onRequestClose={closeModal}
-                        contentLabel="Example Modal"
-                        ariaHideApp={false}
-                    >
-                    </Modal>
                 </div>
+
                 <div className="filter-categories">
                     <input onChange={handleCategoryChange} type="radio" id="radioAll" name="radioPhoto" value="all"/>
                     <label htmlFor="radioAll">All</label>
@@ -61,6 +51,15 @@ function PhotoGallery() {
                     <input onChange={handleCategoryChange} type="radio" id="radioNature" name="radioPhoto"
                            value="nature"/>
                     <label htmlFor="radioNature">Nature</label>
+
+                    <button className="modal-controller" onMouseEnter={openModal}>
+                        <span className="modal-controller-text">Info About My Dog</span>
+                        <BellaInfo
+                            show={modalIsOpen}
+                            onHide={closeModal}
+
+                            />
+                    </button>
                 </div>
             </div>
             <PhotoAlbum layout="masonry" photos={filteredPhotos}/></div>

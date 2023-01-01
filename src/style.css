@@ -839,9 +839,9 @@ button:focus {
     display: inline-block;
     padding: 10px 20px;
     margin: 0 5px;
+    border-radius: 3px;
     /* From https://css.glass */
     background: rgba(26, 85, 158, 0.65);
-    border-radius: 2px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.9px);
     -webkit-backdrop-filter: blur(8.9px);
@@ -884,14 +884,54 @@ button:focus {
 }
 
 
+/* --------- */
+/* Photo -> Modal */
+/* --------- */
 
 .modal-controller {
-    position: fixed;
+    position: absolute;
     right: 5rem;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    /* From https://css.glass */
+    background: rgba(222, 155, 15, 0.51);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.3px);
+    -webkit-backdrop-filter: blur(12.3px);
+    border: 1px solid rgba(222, 155, 15, 0.27);
 }
-
 .photo-description {
     font-size: 1.1em;
     font-family: sans-serif;
     padding-top: 10px;
+}
+
+.insta-text {
+    text-decoration: none;
+    background: linear-gradient(to right, #d62976, #962fbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.modal {
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    background-color: rgba(14, 28, 43, 0.7);
+}
+
+.modal-body {
+    /* From https://css.glass */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(39, 71, 126, 0.51);
+}
+
+.modal-content {
+    background-color: unset !important; /*revert boostrap background */
+
 }
