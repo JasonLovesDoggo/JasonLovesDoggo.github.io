@@ -815,10 +815,9 @@ button:focus {
 /* Photos */
 /* --------- */
 
-
 .gallery-container {
     padding-top: 3rem;
-    margin: 2rem 3rem;
+    margin: 2em 2em;
     color: white !important;
 }
 
@@ -827,13 +826,11 @@ button:focus {
     margin-bottom: 2rem;
 }
 
-
 .filter-categories input[type="radio"] {
     opacity: 0;
     position: fixed;
     width: 0;
 }
-
 
 .filter-categories label {
     display: inline-block;
@@ -861,13 +858,6 @@ button:focus {
     margin-top: 2rem;
 }
 
-.gallery-image {
-    background-color: #fff !important;
-    margin: 2px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform .5s;
-}
 
 .react-photo-album {
     border-radius: 5px !important;
@@ -883,11 +873,6 @@ button:focus {
     border-radius: 5px;
 }
 
-
-/* --------- */
-/* Photo -> Modal */
-/* --------- */
-
 .modal-controller {
     position: absolute;
     right: 5rem;
@@ -901,11 +886,45 @@ button:focus {
     -webkit-backdrop-filter: blur(12.3px);
     border: 1px solid rgba(222, 155, 15, 0.27);
 }
+
 .photo-description {
     font-size: 1.1em;
     font-family: sans-serif;
-    padding-top: 10px;
+    padding-top: 1rem;
 }
+
+@media (max-width: 767px) {
+    .gallery-container {
+        padding-top: 1rem;
+        margin: 0.5em 0.5em;
+    }
+
+    .react-photo-album {
+        padding: 1.5rem 1rem 1rem;}
+
+    .react-photo-album--photo:hover {
+        transform: scale(1.25);
+    }
+
+    /*todo fix dog about me*/
+    .modal-controller {
+        margin-top: 1rem;
+        position: relative !important;
+        right: unset !important;
+    }
+
+    .photo-description {
+            margin-top: 2rem;
+
+    }
+}
+
+
+/* --------- */
+/* Photo -> Modal */
+/* --------- */
+
+
 
 .insta-text {
     text-decoration: none;
