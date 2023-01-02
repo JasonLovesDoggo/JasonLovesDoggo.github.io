@@ -925,7 +925,6 @@ button:focus {
 /* --------- */
 
 
-
 .insta-text {
     text-decoration: none;
     background: linear-gradient(to right, #d62976, #962fbf);
@@ -935,7 +934,7 @@ button:focus {
 }
 
 .modal {
-    backdrop-filter: blur(2px);
+    will-change: transform;
     -webkit-backdrop-filter: blur(2px);
     background-color: rgba(14, 28, 43, 0.7);
 }
@@ -953,4 +952,11 @@ button:focus {
 .modal-content {
     background-color: unset !important; /*revert boostrap background */
 
+}
+body.modal-open {/* keeps scroll bar from disappearing when modal is open to prevent page shifting same as the below*/
+    overflow: auto !important;
+}
+
+body.modal-open[style] {
+    padding-right: 0 !important;
 }

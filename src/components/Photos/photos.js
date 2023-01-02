@@ -12,6 +12,11 @@ function PhotoGallery() {
             setCategoryFilter("dog");
         }
     }, []);
+
+    const setDog = () => {
+        setCategoryFilter("dog");
+        closeModal();
+    }
     const handleCategoryChange = event => {
         setCategoryFilter(event.target.value);
     };
@@ -30,6 +35,7 @@ function PhotoGallery() {
     function closeModal() {
         setIsOpen(false);
     }
+
 
     return (
         <div className="gallery-container">
@@ -57,6 +63,7 @@ function PhotoGallery() {
                         <BellaInfo
                             show={modalIsOpen}
                             onHide={closeModal}
+                            set_dog={setDog}
 
                             />
                     </button>
