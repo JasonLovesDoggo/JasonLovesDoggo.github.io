@@ -17,7 +17,7 @@ function BellaInfo(props) {
         >
             <Modal.Body>
                 <h3>Info about my dog</h3>
-                <p>If you only want to view pictures of her, click <a onClick={props.set_dog} href="./photos#dog" style={{textDecoration: "none"}}>this</a></p>
+                <p>Click <a onClick={props.set_dog} href="./photos#dog" style={{textDecoration: "none"}}>here</a> to filter the photos to just Bella.</p>
                 <ul>
                     <li>Her name is Bella</li>
                     <li>She is <b className="blue"> {bellaAge()}</b> years old</li>
