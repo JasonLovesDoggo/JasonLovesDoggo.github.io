@@ -16,6 +16,12 @@ function PhotoGallery() {
 
     for (let i = 0; i < columns.length; i++) {
         columns[i].style.zIndex = i + 1;
+        if (i > 0 && columns[i].offsetHeight > columns[i - 1].offsetHeight) {
+            columns[i].classList.add('border-left');
+        }
+        if (i < columns.length - 1 && columns[i].offsetHeight > columns[i + 1].offsetHeight) {
+            columns[i].classList.add('border-right');
+        }
     }
     const setDog = () => {
         setCategoryFilter("dog");

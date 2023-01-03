@@ -861,8 +861,6 @@ button:focus {
 
 .react-photo-album {
     border-radius: 5px !important;
-    border: 4px solid #86afe1; /*todo figure out how to have the border-bottom wrap around the photos */
-    border-bottom: 0 !important;
     padding: 3rem 2rem 2rem;
 
 }
@@ -879,25 +877,31 @@ button:focus {
 .react-photo-album--column {
     position: relative;
     padding: 2rem;
-    background-color: #0f1d2d;
-    vertical-align:top !important;
-}
 
-.react-photo-album--column:not(:first-child) {
+    background-color: #162134;
+    height: fit-content;
     margin-left: -2rem !important;
+        border-bottom: 4px solid #86afe1;
 }
 
-.react-photo-album--column:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    border: 4px solid #86afe1;
+.react-photo-album .border-right {
+    border-right: 4px solid #86afe1;
 }
-/*todo attempt to remove bottom whitespaces on the columns*/
+
+.react-photo-album .border-left {
+    border-left: 4px solid #86afe1;
+}
+
+.react-photo-album--column:last-child {
+    border-right: 4px solid #86afe1;
+}
+
+.react-photo-album--column:first-child {
+    border-left: 4px solid #86afe1;
+    margin-left: unset;
+
+}
+
 
 /* --------- */
 
