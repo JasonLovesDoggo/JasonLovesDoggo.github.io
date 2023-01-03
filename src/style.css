@@ -873,6 +873,34 @@ button:focus {
     border-radius: 5px;
 }
 
+
+/*newcode*/
+
+.react-photo-album--column {
+    position: relative;
+    padding: 2rem;
+    background-color: #0f1d2d;
+    vertical-align:top !important;
+}
+
+.react-photo-album--column:not(:first-child) {
+    margin-left: -2rem !important;
+}
+
+.react-photo-album--column:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border: 4px solid #86afe1;
+}
+/*todo attempt to remove bottom whitespaces on the columns*/
+
+/* --------- */
+
 .modal-controller {
     position: absolute;
     right: 5rem;
@@ -953,10 +981,24 @@ button:focus {
     background-color: unset !important; /*revert boostrap background */
 
 }
-body.modal-open {/* keeps scroll bar from disappearing when modal is open to prevent page shifting same as the below*/
+
+body.modal-open { /* keeps scroll bar from disappearing when modal is open to prevent page shifting same as the below*/
     overflow: auto !important;
 }
 
 body.modal-open[style] {
     padding-right: 0 !important;
+}
+
+
+/* --------- */
+/* 404 page */
+/* --------- */
+
+
+.NotFoundPage {
+    position: relative !important;
+    padding-top: 150px !important;
+    padding-bottom: 67.1vh !important;
+    color: white !important;
 }

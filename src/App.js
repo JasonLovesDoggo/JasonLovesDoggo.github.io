@@ -6,12 +6,13 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
-import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PhotoGallery from "./components/Photos/photos";
+import PageNotFound from "./components/404s/404";
 
 function App() {
     const [load, updateLoad] = useState(true);
@@ -36,7 +37,7 @@ function App() {
                     <Route path="/about" element={<About/>}/>
                     <Route path="/resume" element={<Resume/>}/>
                     <Route path="/photos" element={<PhotoGallery/>}/>
-                    <Route path="*" element={<Navigate to="/"/>}/>
+                    <Route path="*" element={<PageNotFound/>}/>
                 </Routes>
                 <Footer/>
             </div>

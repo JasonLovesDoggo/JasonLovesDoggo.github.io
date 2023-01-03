@@ -12,7 +12,11 @@ function PhotoGallery() {
             setCategoryFilter("dog");
         }
     }, []);
+    const columns = document.querySelectorAll('.react-photo-album--column');
 
+    for (let i = 0; i < columns.length; i++) {
+        columns[i].style.zIndex = i + 1;
+    }
     const setDog = () => {
         setCategoryFilter("dog");
         closeModal();

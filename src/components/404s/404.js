@@ -3,7 +3,7 @@ import {Container, Row} from "react-bootstrap";
 import Particle from "../Particle";
 
 function PageNotFound() {
-    const [GoHomeIn, setGoHomeIn] = useState(102); // seconds: set to the number of seconds you want to count down from
+    const [GoHomeIn, setGoHomeIn] = useState(102); // seconds: set to the number of seconds you want to count down from todo  change to 7s
 
     useEffect(() => {
         const interval = setInterval(() => {
