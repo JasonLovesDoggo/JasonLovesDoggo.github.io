@@ -10,7 +10,6 @@ import foodle from "../../Assets/Projects/foodle.png";
 function Projects() {
     return (
         <Container fluid className="project-section">
-            <Particle/>
             <Container>
                 <h1 className="project-heading">
                     My Recent <strong className="blue">Projects </strong>
@@ -64,6 +63,7 @@ function Projects() {
                     </Col>
                 </Row>
             </Container>
+            <Particle/>
         </Container>
     );
 }

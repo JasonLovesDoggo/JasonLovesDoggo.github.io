@@ -9,8 +9,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-const resumeLink =
-    "https://github.com/JasonLovesDoggo/jasoncameron.dev/raw/master/src/Assets/resume.pdf";
+const resumeLink = "https://github.com/JasonLovesDoggo/jasoncameron.dev/raw/master/src/Assets/resume.pdf";
 
 function ResumeNew() {
     const [width, setWidth] = useState(1200);
@@ -19,19 +18,17 @@ function ResumeNew() {
         setWidth(window.innerWidth);
     }, []);
 
-    return (
-        <div>
-            <Container fluid className="resume-section">
-                <Particle/>
-                <Row style={{justifyContent: "center", position: "relative"}}>
-                    <Button
-                        variant="primary"
-                        href={resumeLink}
-                        target="_blank"
-                        style={{maxWidth: "250px"}}
-                    >
-                        <AiOutlineDownload/>
-                        &nbsp;Download CV
+    return (<div>
+        <Container fluid className="resume-section">
+            <Row style={{justifyContent: "center", position: "relative"}}>
+                <Button
+                    variant="primary"
+                    href={resumeLink}
+                    target="_blank"
+                    style={{maxWidth: "250px"}}
+                >
+                    <AiOutlineDownload/>
+                    &nbsp;Download CV
                     </Button>
                 </Row>
 
@@ -52,9 +49,9 @@ function ResumeNew() {
                         &nbsp;Download CV
                     </Button>
                 </Row>
-            </Container>
-        </div>
-    );
+            <Particle/>
+        </Container>
+    </div>);
 }
 
 export default ResumeNew;
