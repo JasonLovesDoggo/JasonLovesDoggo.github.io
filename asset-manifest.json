@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/jasoncameron.dev/static/css/main.94d534ea.css",
+    "main.js": "/jasoncameron.dev/static/js/main.a04b8c75.js",
+    "static/media/about.png": "/jasoncameron.dev/static/media/about.4dc2a7c83496a84503fe.png",
+    "static/media/metropolis.png": "/jasoncameron.dev/static/media/metropolis.3e71879a4f51c93b9ba6.png",
+    "static/media/videobot.png": "/jasoncameron.dev/static/media/videobot.0506c57f58eca946abea.png",
+    "static/media/avatar.png": "/jasoncameron.dev/static/media/avatar.bf04b4b565d755c5920b.png",
+    "static/media/home-main.svg": "/jasoncameron.dev/static/media/home-main.6f06e7ea14e410da1f787a2bc6058fe2.svg",
+    "static/media/foodle.png": "/jasoncameron.dev/static/media/foodle.62653b97471daceb71dc.png",
+    "static/media/scavenger.png": "/jasoncameron.dev/static/media/scavenger.b1398ce2cc3061bcb800.png",
+    "static/media/logo.png": "/jasoncameron.dev/static/media/logo.c34620e2159884d37483.png",
+    "static/media/resume.pdf": "/jasoncameron.dev/static/media/resume.294b7658d69ecbaac2fa.pdf",
+    "static/media/pre.svg": "/jasoncameron.dev/static/media/pre.f060820ef2cbaa23575b.svg",
+    "index.html": "/jasoncameron.dev/index.html",
+    "main.94d534ea.css.map": "/jasoncameron.dev/static/css/main.94d534ea.css.map",
+    "main.a04b8c75.js.map": "/jasoncameron.dev/static/js/main.a04b8c75.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94d534ea.css",
+    "static/js/main.a04b8c75.js"
+  ]
+}
