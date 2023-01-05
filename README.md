@@ -4,9 +4,18 @@
 <div>
   <img alt="Demo" src="./Images/readme-img1.png" />
 </div>
+<a href="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml"><img src="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml/badge.svg" alt="Update Sitemap"></a>
 
 <br/>
 
+## History of the project
+-  v1.0 - Feb 3, 2022 - Oct 29, 2022
+-  v2.0 - Dec 25, 2022 - Current
+
+### Other incorporated projects
+- Foodle - A wordle for food and my most popular project with 5m+ page visits, now contained in its own repo [here](https://github.com/JasonLovesDoggo/foodle)
+- Random Color Generator - A random color generator that I made for fun, it's also now contained in its own repo [here](https://github.com/JasonLovesDoggo/random-color)
+- Start Page - A bento themed start page that is the new tab whenever I open up a new tab on my pc, it's in a repo [here](https://github.com/JasonLovesDoggo/StartPage)
 ## Built With
 
 The second generation of my personal portfolio <a href="https://jasoncameron.dev/" target="_blank">jasoncameron.dev</a>
