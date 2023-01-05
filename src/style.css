@@ -14,6 +14,10 @@ html {
     --imp-text-color: #619cff;
 }
 
+::selection {
+    background-color: rgba(110, 128, 255, 0.6);
+}
+
 .purple {
     color: var(--imp-text-color) !important;
 }
@@ -974,4 +978,20 @@ body.modal-open[style] {
     padding-top: 150px !important;
     padding-bottom: 67.1vh !important;
     color: white !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.moon {
+    position: absolute;
+    bottom: 0 !important;
+    margin: 0;
+    background-size: cover;
+
+}
+
+.moon-photo {
+    object-fit: fill;
 }
