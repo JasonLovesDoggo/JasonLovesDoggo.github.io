@@ -25,7 +25,7 @@ function NavDropdown() {
                     Color</Dropdown.Item>
                 <Dropdown.Divider/>
                 <Dropdown.Item title="My personal new tab page" className="dropdown-item"
-                               href="/startpage"><MdCreateNewFolder
+                               href="/StartPage"><MdCreateNewFolder
                     style={{marginBottom: "2px"}}/> StartPage</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
