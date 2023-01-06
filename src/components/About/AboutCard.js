@@ -2,6 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import {FaCamera, FaDog, FaUserFriends} from "react-icons/fa";
 import {IoFastFoodSharp} from "react-icons/io5";
+import {Link} from "react-router-dom";
 
 function AboutCard() {
     return (
@@ -24,7 +25,7 @@ function AboutCard() {
                             <IoFastFoodSharp/> Cooking/Baking
                         </li>
                         <li className="about-activity">
-                            <FaDog/> Playing with <a style={{color: "white"}} href="/photos#dog">my dog</a>
+                            <FaDog/> Playing with <Link style={{color: "white"}} to="/photos#dog">my dog</Link>
                         </li>
                         <li className="about-activity">
                             <FaUserFriends/> Hanging out with friends

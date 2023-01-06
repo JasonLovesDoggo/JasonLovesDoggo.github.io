@@ -1,4 +1,5 @@
 import Modal from 'react-bootstrap/Modal';
+import {Link} from "react-router-dom";
 
 const bellaAge = () => {
     const currentYear = new Date().getFullYear();
@@ -17,7 +18,7 @@ function BellaInfo(props) {
         >
             <Modal.Body>
                 <h3>Info about my dog</h3>
-                <p>Click <a onClick={props.set_dog} href="./photos#dog" style={{textDecoration: "none"}}>here</a> to filter the photos to just Bella.</p>
+                <p>Click <Link onClick={props.set_dog} to="./photos#dog" style={{textDecoration: "none"}}>here</Link> to filter the photos to just Bella.</p>
                 <ul>
                     <li>Her name is Bella</li>
                     <li>She is <b className="blue"> {bellaAge()}</b> years old</li>
