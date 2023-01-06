@@ -51,7 +51,7 @@ function Home2() {
                             </i>
                             <br/>
                             I also enjoy working with the discord API and have built a few
-                            discord bots that have a combined user-base of <b className="blue">200,000+</b> users.
+                            discord bots that have a combined user-base of <b className="blue">250,000+</b> active users.
                         </p>
                     </Col>
                     <Col md={4} className="myAvtar">
