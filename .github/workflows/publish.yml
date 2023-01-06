@@ -31,6 +31,6 @@ jobs:
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           yarn deploy -u "github-actions-bot <support+actions@github.com>"
-        if: ${{ github.ref == 'refs/heads/master' }} # only deploy master
+        if: ${{ github.ref == 'refs/heads/main' }} # only deploy main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

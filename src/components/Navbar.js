@@ -114,7 +114,7 @@ function NavBar() {
                         <Dropdown/>
                         <Nav.Item className="fork-btn">
                             <Button
-                                href="https://github.com/JasonLovesDoggo/jasoncameron.dev"
+                                href="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io"
                                 target="_blank"
                                 className="fork-btn-inner"
                                 title="Fork me on Github"
