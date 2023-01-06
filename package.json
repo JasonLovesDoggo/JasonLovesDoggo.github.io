@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.2.0",
-  "homepage": "https://JasonLovesDoggo.github.io/jasoncameron.dev",
+  "homepage": "https://JasonLovesDoggo.github.io",
   "private": true,
   "dependencies": {
     "@react-pdf/renderer": "^2.2.0",
