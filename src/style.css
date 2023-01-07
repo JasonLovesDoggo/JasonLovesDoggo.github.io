@@ -864,10 +864,11 @@ button:focus {
 
 
 .react-photo-album {
-    border-radius: 5px !important;
+   /* border-radius: 5px !important;
     padding: 3rem 2rem 2rem;
     border: 4px solid #86afe1;
-    border-bottom: none;
+    border-bottom: none;*/
+    padding: 0 !important;
 
 
 }
@@ -877,6 +878,41 @@ button:focus {
     border: 4px solid #86afe1;
     border-radius: 5px;
 }
+
+
+
+
+/*newcode*/
+
+.react-photo-album--column {
+    position: relative;
+    /*padding: 2rem;*/
+
+    background-color: #162134;
+    height: fit-content;
+    border-bottom: 4px solid #86afe1;
+}
+
+.border-right {
+    border-right: 4px solid #86afe1;
+}
+
+.border-left {
+    border-left: 4px solid #86afe1;
+}
+
+.react-photo-album--column:last-child {
+    border-right: 4px solid #86afe1;
+}
+
+.react-photo-album--column:first-child {
+    border-left: 4px solid #86afe1;
+}
+
+.react-photo-album--column:not(:first-child) {
+    padding-left: -2rem !important;
+}
+/**/
 
 .modal-controller {
     position: absolute;
@@ -923,6 +959,7 @@ button:focus {
 
     }
 }
+
 
 
 /* --------- */
