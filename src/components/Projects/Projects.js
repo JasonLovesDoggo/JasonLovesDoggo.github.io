@@ -6,6 +6,7 @@ import scavenger from "../../Assets/Projects/scavenger.png";
 import videobot from "../../Assets/Projects/videobot.png";
 import metropolis from "../../Assets/Projects/metropolis.png";
 import foodle from "../../Assets/Projects/foodle.png";
+import portfolio from "../../Assets/Projects/portfolio.png";
 
 function Projects() {
     return (
@@ -59,6 +60,16 @@ function Projects() {
                             description="A scavenger hunt website designed to prevent any form of cheating and RNG-based wins on a typical scavenger hunt. It was created in Django uses a Oauth 2.0 system with the main mld (metropolis) site to handle authentication. I learnt a lot about django while building this and I also gained some "
                             ghLink="https://github.com/wlmac/scavenger"
                             demoLink="https://scavenger2022.maclyonsden.com"
+                        />
+                    </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={portfolio}
+                            isBlog={false}
+                            title="Portfolio Site"
+                            description="My personal portfolio site written in react.js. The site showcases some of my programming projects, photography & has a contact form. It was built using React.js, react-bootstrap along with a couple other libraries and is hosted on github pages and managed using Cloudflare."
+                            ghLink="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io"
+                            demoLink="https://jasoncameron.dev"
                         />
                     </Col>
                 </Row>
