@@ -27,7 +27,7 @@ jobs:
       - name: commit files
         run: |
           git config --global user.name "Jason | Sitemap Updater"
-          git config --global user.email "jasoncameron.all@gmail.com
+          git config --global user.email "jasoncameron.all@gmail.com"
           git add .
           git rm *.pyc -f || echo
           # "echo" returns true so the build succeeds, even if no changed files
