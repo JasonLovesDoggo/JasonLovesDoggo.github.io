@@ -1,9 +1,33 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+
+
+function Brackets(props) {
+    const [code, setCodeOut] = useState(['<', '/>']);
+    let currentOption = 0;
+
+    useEffect(() => {
+        const options = [['<', '/>'], ['{', '}']];
+        const interval = setInterval(() => { // eslint-disable-next-line
+            currentOption = currentOption === 0 ? 1 : 0;
+            setCodeOut(options[currentOption]);
+        }, 1000 * 15); //15s
+        return () => clearInterval(interval);
+    }, []);
+
+    if (props.front === true) {
+        return code[0]
+    }
+    if (props.back === true) {
+        return code[1]
+    }
+
+}
+
 
 const TextChanger = () => {
     const [text, setText] = useState('Jason');
@@ -43,8 +67,8 @@ function Home() {
                             <h1 className="heading-name">
                                 I'm&nbsp;
                                 <strong className="main-name"><span
-                                    className="brackets">&#123;</span><TextChanger/> Cameron< span
-                                    className="brackets">&#125;</span></strong>
+                                    className="brackets"><Brackets front/></span> <TextChanger/> Cameron < span
+                                    className="brackets"><Brackets back/></span></strong>
                             </h1>
 
                             <div style={{padding: 50, textAlign: "left"}}>
