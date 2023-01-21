@@ -18,7 +18,7 @@ function BellaInfo(props) {
         >
             <Modal.Body>
                 <h3>Info about my dog</h3>
-                <p>Click <Link onClick={props.set_dog} to="./photos#dog" style={{textDecoration: "none"}}>here</Link> to filter the photos to just Bella.</p>
+                <p>Click <Link onClick={props.set_dog} to="#dog" style={{textDecoration: "none"}}>here</Link> to filter the photos to just Bella.</p>
                 <ul>
                     <li>Her name is Bella</li>
                     <li>She is <b className="blue"> {bellaAge()}</b> years old</li>

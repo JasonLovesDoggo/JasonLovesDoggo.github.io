@@ -8,7 +8,8 @@ function PhotoGallery() {
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
     useEffect(() => {
-        if (document.location.hash === "#dog") {
+        console.log(document.location.hash)
+        if (document.location.hash.includes("#dog")) {
             setCategoryFilter("dog");
         }
     }, []);
