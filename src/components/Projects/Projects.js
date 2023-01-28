@@ -62,6 +62,7 @@ function Projects() {
                             demoLink="https://scavenger2022.maclyonsden.com"
                         />
                     </Col>
+
                     <Col md={4} className="project-card">
                         <ProjectCard
                             imgPath={portfolio}
