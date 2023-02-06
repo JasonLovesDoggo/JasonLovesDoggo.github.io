@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const bellaAge = () => {
     const currentYear = new Date().getFullYear();
     const givenYear = new Date('2020-09-19').getFullYear();
-    return currentYear - givenYear;
+    return currentYear - (givenYear + 1);
 }
 
 function BellaInfo(props) {
