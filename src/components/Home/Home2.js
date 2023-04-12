@@ -15,7 +15,7 @@ function Home2() {
                             LET ME <span className="blue"> INTRODUCE </span> MYSELF
                         </h1>
                         <p className="home-about-body">
-                            I'm Jason i'm currently a high school student at <a style={{textDecoration: "none"}}
+                            Hi! I'm Jason & i'm a high school student currently at <a style={{textDecoration: "none"}}
                                                                                 className="blue"
                                                                                 href="https://wlmac.ca/">WLMCI</a> & a
                             passionate self-taught Backend Developer. I'm from Canada, and living in Toronto. I'm
