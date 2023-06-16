@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.afd18a93.css",
-    "main.js": "/static/js/main.981fb205.js",
+    "main.css": "/static/css/main.02eb3249.css",
+    "main.js": "/static/js/main.6c86a0ef.js",
     "static/media/about.png": "/static/media/about.4dc2a7c83496a84503fe.png",
     "static/media/metropolis.png": "/static/media/metropolis.3e71879a4f51c93b9ba6.png",
     "static/media/portfolio.png": "/static/media/portfolio.22e6e610cb2de4d9e103.png",
+    "static/media/physioquest.png": "/static/media/physioquest.d9d7daa0bbfe7185e48d.png",
     "static/media/videobot.png": "/static/media/videobot.0506c57f58eca946abea.png",
     "static/media/avatar.png": "/static/media/avatar.bf04b4b565d755c5920b.png",
     "static/media/home-main.svg": "/static/media/home-main.aff71f14da8768d809dbd3b7bbfb9314.svg",
@@ -14,11 +15,11 @@
     "static/media/resume.pdf": "/static/media/resume.294b7658d69ecbaac2fa.pdf",
     "static/media/pre.svg": "/static/media/pre.f060820ef2cbaa23575b.svg",
     "index.html": "/index.html",
-    "main.afd18a93.css.map": "/static/css/main.afd18a93.css.map",
-    "main.981fb205.js.map": "/static/js/main.981fb205.js.map"
+    "main.02eb3249.css.map": "/static/css/main.02eb3249.css.map",
+    "main.6c86a0ef.js.map": "/static/js/main.6c86a0ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.afd18a93.css",
-    "static/js/main.981fb205.js"
+    "static/css/main.02eb3249.css",
+    "static/js/main.6c86a0ef.js"
   ]
 }
