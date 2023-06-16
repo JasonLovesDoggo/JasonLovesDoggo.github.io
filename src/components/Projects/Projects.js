@@ -80,7 +80,7 @@ function Projects() {
                             imgPath={physioquest}
                             isBlog={false}
                             title="PhysioQuest"
-                            description="Gamifying physiotherapy with AI to encourage consistency and accuracy when completing quests/exercises. Built with Python, OpenVB, HTML, SCSS & Django)"
+                            description="Gamifying physiotherapy with AI to encourage consistency and accuracy when completing quests/exercises. Built with Python, OpenVB, HTML, SCSS & Django. Winner @ JamHacks 7."
                             ghLink="https://github.com/JasonLovesDoggo/jamhacks"
                         />
                     </Col>
