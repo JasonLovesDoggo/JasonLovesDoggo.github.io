@@ -7,6 +7,7 @@ import videobot from "../../Assets/Projects/videobot.png";
 import metropolis from "../../Assets/Projects/metropolis.png";
 import foodle from "../../Assets/Projects/foodle.png";
 import portfolio from "../../Assets/Projects/portfolio.png";
+import physioquest from "../../Assets/Projects/physioquest.png";
 
 function Projects() {
     return (
@@ -71,6 +72,16 @@ function Projects() {
                             description="My personal portfolio site written in react.js. The site showcases some of my programming projects, photography & has a contact form. It was built using React.js, react-bootstrap along with a couple other libraries and is hosted on github pages and managed using Cloudflare."
                             ghLink="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io"
                             demoLink="https://jasoncameron.dev"
+                        />
+                    </Col>
+
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={physioquest}
+                            isBlog={false}
+                            title="PhysioQuest"
+                            description="Gamifying physiotherapy with AI to encourage consistency and accuracy when completing quests/exercises. Built with Python, OpenVB, HTML, SCSS & Django)"
+                            ghLink="https://github.com/JasonLovesDoggo/jamhacks"
                         />
                     </Col>
                 </Row>
