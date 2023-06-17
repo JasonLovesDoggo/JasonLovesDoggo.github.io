@@ -64,7 +64,7 @@ function Home2() {
                     <Col md={12} className="home-about-social">
                         <h1>FIND ME ON</h1>
                         <p>
-                            Feel free to <span className="blue">connect </span>with me
+                            Feel free to <a style={{textDecoration: "none"}} rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/JasonLovesDoggo/" className="blue">connect </a>with me
                         </p>
                         <ul className="home-about-social-links">
                             <li className="social-icons">

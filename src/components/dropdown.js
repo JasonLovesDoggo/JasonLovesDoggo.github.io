@@ -5,6 +5,7 @@ import {Dropdown} from "react-bootstrap";
 import {CgMenu} from "react-icons/cg";
 import {IoColorPalette, IoGameController,} from "react-icons/io5";
 import {MdCreateNewFolder} from "react-icons/md";
+import {FaServer} from "react-icons/fa";
 
 function NavDropdown() {
     const [show, setShow] = useState(false);
@@ -27,6 +28,10 @@ function NavDropdown() {
                 <Dropdown.Item title="My personal new tab page" className="dropdown-item"
                                href="/StartPage"><MdCreateNewFolder
                     style={{marginBottom: "2px"}}/> StartPage</Dropdown.Item>
+                <Dropdown.Divider/>
+                    <Dropdown.Item title="A Status page for all sites" className="dropdown-item"
+                               href="https://status.jasoncameron.dev" target="_blank"><FaServer
+                    style={{marginBottom: "2px"}}/> Status</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
     );

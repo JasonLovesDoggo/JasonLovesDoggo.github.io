@@ -1,7 +1,7 @@
 import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import {AiFillGithub, AiOutlineTwitter,} from "react-icons/ai";
-import {FaLinkedinIn} from "react-icons/fa";
+import {FaLinkedinIn, FaServer} from "react-icons/fa";
 import ViewCount from "./viewcount";
 import Wakatime from "./wakatime";
 
@@ -54,6 +54,10 @@ function Footer() {
                         </li>
                         <li style={{color: "white"}} className="social-icons">
                             <Wakatime/>
+                        </li>
+                        <li className="social-icons">
+                            <a href="https://status.jasoncameron.dev" target="_blank" rel="noopener noreferrer"
+                               style={{color: "white", textDecoration: "none"}}><FaServer/>&nbsp;&nbsp;<span style={{textAlign: "center"}}>Status</span></a>
                         </li>
 
                     </ul>
