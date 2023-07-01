@@ -47,7 +47,7 @@ function Projects() {
                             imgPath={foodle}
                             isBlog={false}
                             title="Foodle"
-                            description="Foodle | The Wordle for food. Its my own twist on wordle, It was built using Svelte, SCSS, Typescript and managed using Cloudflare, Github Pages & Google Analytics. When I built it I never expected it to get over 5,000,000 page visits in just under a month, It was my first time using Svelte and I really enjoyed it."
+                            description="Foodle | The Wordle for food. Its my own twist on wordle, It was built using Svelte, SCSS, Typescript and managed using Cloudflare, Github Pages & Google Analytics. When I built it I never expected it to get over 500,000 page visits in just around a month, It was my first time using Svelte and I really enjoyed it."
                             ghLink="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/tree/master/foodle"
                             demoLink="https://jasoncameron.dev/foodle"
                         />
@@ -58,7 +58,7 @@ function Projects() {
                             imgPath={scavenger}
                             isBlog={false}
                             title="Scavenger"
-                            description="A scavenger hunt website designed to prevent any form of cheating and RNG-based wins on a typical scavenger hunt. It was created in Django uses a Oauth 2.0 system with the main mld (metropolis) site to handle authentication. I learnt a lot about django while building this and I also gained some "
+                            description="A scavenger hunt website designed to prevent any form of cheating and RNG-based wins on a typical scavenger hunt. It was created in Django uses a Oauth 2.0 system with the main mld (metropolis) site to handle authentication."
                             ghLink="https://github.com/wlmac/scavenger"
                             demoLink="https://scavenger2022.maclyonsden.com"
                         />
