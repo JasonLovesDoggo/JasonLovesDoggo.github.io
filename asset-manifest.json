@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.111e7a09.css",
-    "main.js": "/static/js/main.1dc96ef6.js",
+    "main.js": "/static/js/main.62796013.js",
+    "static/media/resume.pdf": "/static/media/resume.c01b2ab955d0e549e01f.pdf",
     "static/media/about.png": "/static/media/about.83a2124f48c750be3783.png",
     "static/media/metropolis.png": "/static/media/metropolis.4039d34933b4534582d8.png",
     "static/media/physioquest.png": "/static/media/physioquest.1e3071eb09aa2dc3f01a.png",
@@ -12,14 +13,13 @@
     "static/media/foodle.png": "/static/media/foodle.62653b97471daceb71dc.png",
     "static/media/logo.png": "/static/media/logo.2da4f91eec8a5353771e.png",
     "static/media/scavenger.png": "/static/media/scavenger.da40f4e614a64d03d725.png",
-    "static/media/resume.pdf": "/static/media/resume.294b7658d69ecbaac2fa.pdf",
     "index.html": "/index.html",
     "static/media/pre.svg": "/static/media/pre.cff91d380b4fdd332e18.svg",
     "main.111e7a09.css.map": "/static/css/main.111e7a09.css.map",
-    "main.1dc96ef6.js.map": "/static/js/main.1dc96ef6.js.map"
+    "main.62796013.js.map": "/static/js/main.62796013.js.map"
   },
   "entrypoints": [
     "static/css/main.111e7a09.css",
-    "static/js/main.1dc96ef6.js"
+    "static/js/main.62796013.js"
   ]
 }
