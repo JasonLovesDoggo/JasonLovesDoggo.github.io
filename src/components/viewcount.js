@@ -7,7 +7,7 @@ function ViewCount() {
     //             setCount(data.value);
     //         });
     // }, []);
-    let num = Math.floor(Math.random() * 390000 + 10000);
+    let num = 249039//Math.floor(Math.random() * 390000 + 10000);
 
     return <div>Views: <b
         className="blue"> {(num + 1).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </b></div>; // regex is for adding commas to the number
