@@ -19,7 +19,7 @@ function AboutCard() {
                     </p>
                     <ul>
                         <li className="about-activity">
-                            <FaCamera/> Photography
+                            <FaCamera/><Link target="_blank" to="https://photography.jasoncameron.dev" style={{color: "white", textDecoration: "none"}}>Photography</Link>
                         </li>
                         <li className="about-activity">
                             <IoFastFoodSharp/> Cooking/Baking
