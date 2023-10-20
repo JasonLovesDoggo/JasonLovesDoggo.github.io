@@ -8,6 +8,7 @@ import metropolis from "../../Assets/Projects/metropolis.png";
 import foodle from "../../Assets/Projects/foodle.png";
 import portfolio from "../../Assets/Projects/portfolio.png";
 import physioquest from "../../Assets/Projects/physioquest.png";
+import screentimeshowdown from "../../Assets/Projects/screentimeshowdown.png";
 
 function Projects() {
     return (
@@ -59,7 +60,7 @@ function Projects() {
                             isBlog={false}
                             title="Scavenger"
                             description="A scavenger hunt website designed to prevent any form of cheating and RNG-based wins on a typical scavenger hunt. It was created in Django uses a Oauth 2.0 system with the main mld (metropolis) site to handle authentication."
-                            ghLink="https://github.com/wlmac/scavenger"
+                            ghLink="https://github.com/wlmac/scavenger/tree/2022"
                             demoLink="https://scavenger2022.maclyonsden.com"
                         />
                     </Col>
@@ -82,6 +83,17 @@ function Projects() {
                             title="PhysioQuest"
                             description="Gamifying physiotherapy with AI to encourage consistency and accuracy when completing quests/exercises. Built with Python, OpenCV, HTML, SCSS & Django. Winner @ JamHacks 7."
                             ghLink="https://github.com/JasonLovesDoggo/jamhacks"
+                        />
+                    </Col>
+
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={screentimeshowdown}
+                            isBlog={false}
+                            title="Screentime Showdown"
+                            description="Getting rid of your social media addiction doesn't have to be a painful process. Turn it into a fun challenge with your friends and see if you can win the pot! Built with JavaScript, Material UI, React, Express.js, Cohere & Paybilt. Winner @ HackTheValley 8."
+                            ghLink="https://github.com/JasonLovesDoggo/screentimeshowdown"
+                            demoLink="https://devpost.com/software/screentime-showdown"
                         />
                     </Col>
                 </Row>
