@@ -7,8 +7,8 @@ import videobot from "../../Assets/Projects/videobot.png";
 import metropolis from "../../Assets/Projects/metropolis.png";
 import foodle from "../../Assets/Projects/foodle.png";
 import portfolio from "../../Assets/Projects/portfolio.png";
-import physioquest from "../../Assets/Projects/physioquest.png"; 
-import screentimeshowdown from "../../Assets/Projects/screentimeshowdown.png"; 
+import physioquest from "../../Assets/Projects/physioquest.png";
+import screentimeshowdown from "../../Assets/Projects/screentimeshowdown.png";
 
 function Projects() {
     return (
@@ -60,7 +60,7 @@ function Projects() {
                             isBlog={false}
                             title="Scavenger"
                             description="A scavenger hunt website designed to prevent any form of cheating and RNG-based wins on a typical scavenger hunt. It was created in Django uses a Oauth 2.0 system with the main mld (metropolis) site to handle authentication."
-                            ghLink="https://github.com/wlmac/scavenger"
+                            ghLink="https://github.com/wlmac/scavenger/tree/2022"
                             demoLink="https://scavenger2022.maclyonsden.com"
                         />
                     </Col>

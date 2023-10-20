@@ -14,4 +14,3 @@ function ViewCount() {
 }
 
 export default ViewCount;
-
