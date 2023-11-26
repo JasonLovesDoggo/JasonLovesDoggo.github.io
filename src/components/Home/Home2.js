@@ -33,7 +33,7 @@ function Home2() {
                                 <b className="blue"> Backend Development </b> and
                                 also in areas related to{" "}
                                 <b className="blue">
-                                    Automation</b> and making life simpler.
+                                    Automation</b> and making life more convenient.
                             </i>
                             <br/>
                             <br/>
