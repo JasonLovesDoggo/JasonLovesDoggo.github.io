@@ -19,7 +19,7 @@ function Home2() {
                                                                                 className="blue"
                                                                                 href="https://wlmac.ca/">WLMCI</a> & a
                             passionate self-taught Backend Developer. I'm from Canada, and living in Toronto. I'm
-                            currently learning Golang and attempting to get better at Django
+                            currently learning Golang & DevOps.
                             <br/>
                             <br/>I am fluent in
                             <i>
