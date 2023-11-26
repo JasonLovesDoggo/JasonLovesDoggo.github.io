@@ -30,7 +30,7 @@ function Home2() {
                             <br/>
                             My field of Interest's are
                             <i>
-                                <b className="blue"> Web Automation </b> and
+                                <b className="blue"> Backend Development </b> and
                                 also in areas related to{" "}
                                 <b className="blue">
                                     Automation</b> and making life simpler.

@@ -48,7 +48,7 @@ function Projects() {
                             imgPath={foodle}
                             isBlog={false}
                             title="Foodle"
-                            description="Foodle | The Wordle for food. Its my own twist on wordle, It was built using Svelte, SCSS, Typescript and managed using Cloudflare, Github Pages & Google Analytics. When I built it I never expected it to get over 500,000 page visits in just around a month, It was my first time using Svelte and I really enjoyed it."
+                            description="Foodle | The Wordle for food. Its my own twist on wordle, It was built using Svelte, SCSS, Typescript and managed using Cloudflare, Github Pages & Google Analytics. When I built it I never expected it to get well over 2,500,000 page visits. Foodle was my first time using Svelte and I thoroughly enjoyed it."
                             ghLink="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/tree/master/foodle"
                             demoLink="https://jasoncameron.dev/foodle"
                         />
