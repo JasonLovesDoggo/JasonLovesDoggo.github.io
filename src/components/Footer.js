@@ -41,7 +41,7 @@ function Footer() {
                         </li>
                         <li className="social-icons">
                             <a
-                                href="https://www.linkedin.com/in/JasonLovesDoggo/"
+                                href="https://www.linkedin.com/in/jsoncameron/"
                                 style={{color: "white"}}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -57,7 +57,7 @@ function Footer() {
                         </li>
                         <li className="social-icons">
                             <a href="https://status.jasoncameron.dev" target="_blank" rel="noopener noreferrer"
-                               style={{color: "white", textDecoration: "none"}}><FaServer/>&nbsp;&nbsp;<span style={{textAlign: "center"}}>Status</span></a>
+                               style={{color: "white", textDecoration: "none"}}><FaServer/>&nbsp;&nbsp;<span style={{textAlign: "center"}}>Statu``s</span></a>
                         </li>
 
                     </ul>
