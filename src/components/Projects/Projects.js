@@ -26,7 +26,7 @@ function Projects() {
                             imgPath={metropolis}
                             isBlog={false}
                             title="Metropolis"
-                            description="Metropolis is my schools student run data centralization platform for info about clubs, events and everything else a student would need to know, It was built in django and there is a team of 45 developers, artists, and creators who worked in tandem to build the site. I personally worked on backend development"
+                            description="Metropolis is my schools student run data centralization platform for info about clubs, events and everything else a student would need to know, It was built in django and there is a team of 45 developers, artists, and creators who worked in tandem to build the site. My contributions to the site include the maintaining and adding all new features to the backend along devops and running the site as a whole."
                             ghLink="https://github.com/wlmac/metropolis"
                             demoLink="https://maclyonsden.com"
                         />
@@ -48,7 +48,7 @@ function Projects() {
                             imgPath={foodle}
                             isBlog={false}
                             title="Foodle"
-                            description="Foodle | The Wordle for food. Its my own twist on wordle, It was built using Svelte, SCSS, Typescript and managed using Cloudflare, Github Pages & Google Analytics. When I built it I never expected it to get well over 2,500,000 page visits. Foodle was my first time using Svelte and I thoroughly enjoyed it."
+                            description="Foodle | The Wordle for food. Its my own twist on wordle, It was built using Svelte, SCSS, Typescript and managed using Cloudflare, Github Pages & Google Analytics. When I built it I never expected it to get well over 5,000,000 page visits. Foodle was really the first time I dipped my toes into web dev, let's just say I enjoyed it."
                             ghLink="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/tree/master/foodle"
                             demoLink="https://jasoncameron.dev/foodle"
                         />
@@ -59,9 +59,9 @@ function Projects() {
                             imgPath={scavenger}
                             isBlog={false}
                             title="Scavenger"
-                            description="A scavenger hunt website designed to prevent any form of cheating and RNG-based wins on a typical scavenger hunt. It was created in Django uses a Oauth 2.0 system with the main mld (metropolis) site to handle authentication."
-                            ghLink="https://github.com/wlmac/scavenger/tree/2022"
-                            demoLink="https://scavenger2022.maclyonsden.com"
+                            description="A scavenger hunt website designed to prevent any form of cheating and RNG-based wins on a typical scavenger hunt. It was created in Django uses a Oauth 2.0 system with the main mld (metropolis) site to handle authentication. Then, in 2023 I made a maassive overhaul to the site to eliminate any hardcoded data and allow multiple concurrent events."
+                            ghLink="https://github.com/wlmac/scavenger/tree/main"
+                            demoLink="https://scavenger.maclyonsden.com"
                         />
                     </Col>
 
@@ -70,7 +70,7 @@ function Projects() {
                             imgPath={portfolio}
                             isBlog={false}
                             title="Portfolio Site"
-                            description="My personal portfolio site written in react.js. The site showcases some of my programming projects, photography & has a contact form. It was built using React.js, react-bootstrap along with a couple other libraries and is hosted on github pages and managed using Cloudflare."
+                            description="My personal portfolio site to showcase some of my creations. The site showcases some of my programming projects, photography & has a contact form. It was built using React.js, react-bootstrap along with a couple other libraries and is hosted on github pages and managed using Cloudflare."
                             ghLink="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io"
                             demoLink="https://jasoncameron.dev"
                         />
