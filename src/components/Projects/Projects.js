@@ -59,7 +59,7 @@ function Projects() {
                             imgPath={scavenger}
                             isBlog={false}
                             title="Scavenger"
-                            description="A scavenger hunt website designed to prevent any form of cheating and RNG-based wins on a typical scavenger hunt. It was created in Django uses a Oauth 2.0 system with the main mld (metropolis) site to handle authentication. Then, in 2023 I made a maassive overhaul to the site to eliminate any hardcoded data and allow multiple concurrent events."
+                            description="A scavenger hunt platform engineered to prevent any form of cheating or RNG-based finds while ensuring fairness and integrity. It was created in Django uses a Oauth 2.0 system with the main mld (metropolis) site to handle authentication. Then, in 2023 I made a maassive overhaul to the site to eliminate any hardcoded data and allow multiple concurrent events."
                             ghLink="https://github.com/wlmac/scavenger/tree/main"
                             demoLink="https://scavenger.maclyonsden.com"
                         />
