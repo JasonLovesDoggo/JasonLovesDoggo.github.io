@@ -83,6 +83,14 @@
     \end{tabular*}\vspace{-7pt}%
 }
 
+\newcommand{\shortResumeSubheading}[2]{%
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+        \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}%
+}
+
+
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
@@ -185,36 +193,37 @@ Implemented REST API filters, reducing page load times by \emph{25\%} and decrea
 \section{\texorpdfstring{\href{https://jasoncameron.dev/\#/projects}{Notable Projects}}{Notable Projects}}
 \resumeSubHeadingListStart
 
-\resumeProjectHeading
-{\underline{\href{https://github.com/elebumm/RedditVideoMakerBot}{\textbf{RedditVideoMakerBot}}} $|$ \emph{Python, Reddit, FFmpeg, AWS Polly, Playwright, Web Scraping}} {May 2022 - Present}
+\resumeProjectHeadingWithDescription
+{\underline{\href{https://github.com/elebumm/RedditVideoMakerBot}{\textbf{RedditVideoMakerBot}}} $|$ \emph{Python, Reddit, FFmpeg, AWS Polly, Playwright, Web Scraping}}{May 2022 - Present}
+{Automated tool for automatically transforming Reddit posts into dynamic videos using code, eliminating traditional editing}
 \resumeItemListStart
 \resumeItem{Simplified running the bot with a GUI for configuration which helped the bot grow to
 \textbf{6000+} stars on GitHub with \textbf{100,000+} clones of the GitHub repository.}
-\resumeItem{Enhanced bot's Text-to-Speech (TTS) functionality by reverse engineering the TikTok TTS API, and further        improved it by integrating several other TTS engines, such as the AWS Polly API.}
+\resumeItem{Enhanced bot's Text-to-Speech (TTS) functionality by reverse engineering the TikTok TTS API, and further improved it by integrating several other TTS engines, such as the AWS Polly API.}
 \resumeItem{Continuously improved and maintained the bot overcoming many challenges including but not limited to API
-rate limiting, copywritten background videos, Reddit \& TikTok API changes \& challenges with the bot running
+rate limiting, copywritten background videos, Reddit and TikTok API changes and challenges with the bot running
 on \textbf{10,000+} different machines and across all major operating systems}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\underline{\href{https://jasoncameron.dev/foodle}{\textbf{Foodle}}} $|$ \emph{TypeScript, Svelte, CSS, Python, Flask, Google Analytics}} {Aug. 2022 - Dec 2023}
+{\underline{\href{https://jasoncameron.dev/foodle}{\textbf{Foodle}}} $|$ \emph{TypeScript, Svelte, CSS, Python, Flask, Cloudflare, Google Analytics}} {Aug. 2022 - Dec 2023}
+{A food-themed twist of Wordle with an additional set of modes and features, adding a delicious twist to the classic concept}
 \resumeItemListStart
-\resumeItem{Individually created, maintained, documented, tested, deployed, and hosted my own twist of the popular
-game Wordle with an additional set of twists and features.}
-\resumeItem{Listened to feedback and grew the game to \textbf{650,000+} unique visitors with \textbf{5,000,000+} total page views.}
+\resumeItem{Developed, maintained, deployed and hosted the site using \emph{\href{https://svelte.dev/}{Svelte}, \href{https://www.cloudflare.com}{Cloudflare} and \href{https://pages.github.com}{Github Pages}}}
+\resumeItem{Listened to user's feedback and grew the game to \textbf{650,000+} unique visitors with \textbf{5,000,000+} total page views.}
 \resumeItemListEnd
 
 \resumeProjectHeadingWithDescription
-{\underline{\href{https://devpost.com/software/screentime-showdown}{\textbf{Screentime Showdown - Winner at HTV 8 }}} $|$ \emph{Express.js, React, Oauth2.0, Meta, PayBilt, Cohere}}{Oct. 2023}
+{\underline{\href{https://devpost.com/software/screentime-showdown}{\textbf{Screentime Showdown - Best financial hack at HTV 8 }}} $|$ \emph{Express.js, React, Oauth2.0, Meta, PayBilt, Cohere}}{Oct. 2023}
 {Helping people quit social media with the help of a friendly competition and some monetary gain. }
 \resumeItemListStart
-\resumeItem{Leveraged Meta's OAuth 2.0 \& Webhook API to enable real-time detection and response whenever a user opened Facebook or Instagram on any of their devices.}
+\resumeItem{Leveraged Meta's OAuth 2.0 and Webhook API to enable real-time detection and response whenever a user opened Facebook or Instagram on any of their devices.}
 
 \resumeItemListEnd
 
 
 \resumeProjectHeadingWithDescription
-{\underline{\href{https://devpost.com/software/physioquest}{\textbf{PhysioQuest - Winner at JamHacks 7 }}} $|$ \emph{Python, Django, HTML, JS, CSS, OpenCV, MongoDB}}{Jun. 2023}
+{\underline{\href{https://devpost.com/software/physioquest}{\textbf{PhysioQuest - Best use of MongoDB at JamHacks 7 }}} $|$ \emph{Python, Django, HTML, JS, CSS, OpenCV, MongoDB}}{Jun. 2023}
 {Gamifying physiotherapy with AI to encourage consistency and accuracy when completing exercises. }
 \resumeItemListStart
 \resumeItem{Designed and implemented the backend API and database models using \href{https://github.com/django/django}{Django} and \href{https://github.com/encode/django-rest-framework}{Django Rest Framework}}
@@ -239,8 +248,8 @@ Conceptualized and \href{https://github.com/wlmac/scavenger/commits?author=Jason
 %-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
-\resumeSubheading
-{William Lyon Mackenzie Collegiate Institute - Toronto, Ontario}{Sep. 2022- Jun. 2026}{}{}
+\shortResumeSubheading
+{William Lyon Mackenzie Collegiate Institute - Toronto, Ontario}{Sep. 2022- Jun. 2026}
 \resumeItemListStart
 \resumeItem{\textbf{Extracurriculars: }\href{https://maclyonsden.com}{School Website Team}  \emph{(Backend Lead / Vice-President)}, \href{https://mcpt.ca}{Competitive/Computer Programming Club}{(\emph{System Administrator Executive})}, Engineering Club (\emph{Tech Lead}), School Newspaper (\emph{Photographer / Quality Manager}), A/V Team (\emph{Crew Member / Club Liaison}), \href{https://flounder.news}{School Satirical Newspaper} (\emph{Web Developer}), Robotics Club (Member)}
 \resumeItemListEnd
