@@ -14,11 +14,11 @@ jobs:
     # the list of steps that the action will go through
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Get yarn cache directory path # get yarn cache path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v2 # cache yarn
+      - uses: actions/cache@v4 # cache yarn
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}

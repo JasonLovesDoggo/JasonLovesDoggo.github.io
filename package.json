@@ -19,7 +19,8 @@
 	"react-photo-album": "^2.0.0",
 	"react-router-dom": "^6.2.2",
 	"react-scripts": "^5.0.1",
-	"@tsparticles/react": "3.0.0",
+	"@tsparticles/react": "^3.0.0",
+	"@tsparticles/engine": "^3.2.2",
 	"typewriter-effect": "^2.18.2",
 	"web-vitals": "^3.5.2",
 	"yet-another-react-lightbox": "^3.17.0"
