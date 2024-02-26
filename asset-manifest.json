@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4b5d4cbe.css",
-    "main.js": "/static/js/main.ebfbd3a7.js",
+    "main.css": "/static/css/main.365948f9.css",
+    "main.js": "/static/js/main.c32aaf07.js",
     "static/media/about.png": "/static/media/about.83a2124f48c750be3783.png",
     "static/media/screentimeshowdown.png": "/static/media/screentimeshowdown.be99e7c78449e8e71843.png",
     "static/media/metropolis.png": "/static/media/metropolis.4039d34933b4534582d8.png",
@@ -10,17 +10,18 @@
     "static/media/portfolio.png": "/static/media/portfolio.7d1f432ee7fd8a6802af.png",
     "static/media/videobot.png": "/static/media/videobot.844adb614cec2ea6d94b.png",
     "static/media/avatar.png": "/static/media/avatar.c0ae89d492809abe7c22.png",
+    "static/media/partneredu.png": "/static/media/partneredu.87d2b715f9495f3ed707.png",
     "static/media/home-main.svg": "/static/media/home-main.032e4da503e206ff7d9017a9940f8573.svg",
     "static/media/foodle.png": "/static/media/foodle.62653b97471daceb71dc.png",
     "static/media/logo.png": "/static/media/logo.2da4f91eec8a5353771e.png",
     "static/media/scavenger.png": "/static/media/scavenger.da40f4e614a64d03d725.png",
     "index.html": "/index.html",
     "static/media/pre.svg": "/static/media/pre.cff91d380b4fdd332e18.svg",
-    "main.4b5d4cbe.css.map": "/static/css/main.4b5d4cbe.css.map",
-    "main.ebfbd3a7.js.map": "/static/js/main.ebfbd3a7.js.map"
+    "main.365948f9.css.map": "/static/css/main.365948f9.css.map",
+    "main.c32aaf07.js.map": "/static/js/main.c32aaf07.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b5d4cbe.css",
-    "static/js/main.ebfbd3a7.js"
+    "static/css/main.365948f9.css",
+    "static/js/main.c32aaf07.js"
   ]
 }
