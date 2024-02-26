@@ -102,7 +102,7 @@ function Projects() {
                             imgPath={partneredu}
                             isBlog={false}
                             title="PartnerEdu"
-                            description="PartnerEdu is a platform that connects students to opertunities such as COOP placements in order to provide educational experiences for students. Highly scalable using Django, Bootstrap, Postgres, Redis & Docker. National Finalist @ CNLC 2024."
+                            description="PartnerEdu is a platform that connects students to opportunities such as COOP placements in order to provide educational experiences for students. Highly scalable using Django, Bootstrap, Postgres, Redis & Docker. National Runner Up @ CNLC 2024."
                             ghLink="https://github.com/JasonLovesDoggo/PartnerEdu"
                             demoLink="https://fbla.jasoncameron.dev"
                         />
