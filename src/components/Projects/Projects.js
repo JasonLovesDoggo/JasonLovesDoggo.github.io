@@ -9,6 +9,7 @@ import foodle from "../../Assets/Projects/foodle.png";
 import portfolio from "../../Assets/Projects/portfolio.png";
 import physioquest from "../../Assets/Projects/physioquest.png";
 import screentimeshowdown from "../../Assets/Projects/screentimeshowdown.png";
+import partneredu from "../../Assets/Projects/partneredu.png";
 
 function Projects() {
     return (
@@ -96,6 +97,17 @@ function Projects() {
                             demoLink="https://devpost.com/software/screentime-showdown"
                         />
                     </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={partneredu}
+                            isBlog={false}
+                            title="PartnerEdu"
+                            description="PartnerEdu is a platform that connects students to opertunities such as COOP placements in order to provide educational experiences for students. Highly scalable using Django, Bootstrap, Postgres, Redis & Docker. National Finalist @ CNLC 2024."
+                            ghLink="https://github.com/JasonLovesDoggo/PartnerEdu"
+                            demoLink="https://fbla.jasoncameron.dev"
+                        />
+                    </Col>
+
                 </Row>
             </Container>
             <Particle/>
