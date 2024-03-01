@@ -4,7 +4,7 @@ import {Row} from "react-bootstrap";
 
 function Github() {
     const BlueTheme = {
-dark: [ "#245399",  "#356da7", "#4385b0", "#5295b8", "#589dbb"],
+dark: ["#1e447e","#125b96","#246fb1","#3583cb","#58abff"],
         }
         return (
         <Row style={{justifyContent: "center", paddingBottom: "10px"}}>
