@@ -1,31 +1,33 @@
 import React from "react";
 import {Col, Row} from "react-bootstrap";
-import {SiDiscord, SiGithub, SiPostman, SiPycharm, SiStackoverflow, SiWebstorm, SiWindows,} from "react-icons/si";
+import {
+    SiDiscord,
+    SiGithub,
+    SiLinux,
+    SiPostman,
+    SiPycharm,
+    SiStackoverflow,
+    SiWindows,
+} from "react-icons/si";
 
+export function Icon({icon}) {
+    return (
+        <Col xs={4} md={2} className="tech-icons">
+            {icon}
+        </Col>
+    );
+
+}
 function Toolstack() {
     return (
         <Row style={{justifyContent: "center", paddingBottom: "50px"}}>
-            <Col xs={4} md={2} className="tech-icons">
-                <SiWindows/>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-                <SiPycharm/>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-                <SiWebstorm/>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-                <SiPostman/>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-                <SiGithub/>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-                <SiDiscord/>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-                <SiStackoverflow/>
-            </Col>
+           <Icon icon={<SiWindows/>}/>
+            <Icon icon={<SiLinux/>}/>
+            <Icon icon={<SiPycharm/>}/>
+            <Icon icon={<SiPostman/>}/>
+            <Icon icon={<SiGithub/>}/>
+            <Icon icon={<SiDiscord/>}/>
+            <Icon icon={<SiStackoverflow/>}/>
         </Row>
     );
 }
