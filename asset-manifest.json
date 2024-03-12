@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.e691fee6.css",
-    "main.js": "/static/js/main.60bad0a7.js",
+    "main.css": "/static/css/main.b7a6a8b2.css",
+    "main.js": "/static/js/main.bd410ced.js",
     "static/js/927.7f598de0.chunk.js": "/static/js/927.7f598de0.chunk.js",
+    "static/media/metropolis.png": "/static/media/metropolis.ccb530b4886355a0ad44.png",
     "static/media/about.png": "/static/media/about.83a2124f48c750be3783.png",
-    "static/media/screentimeshowdown.png": "/static/media/screentimeshowdown.be99e7c78449e8e71843.png",
-    "static/media/metropolis.png": "/static/media/metropolis.4039d34933b4534582d8.png",
+    "static/media/screentimeshowdown.png": "/static/media/screentimeshowdown.85b4a2a259a74dfd5c57.png",
     "static/media/resume.pdf": "/static/media/resume.9294ead02d6027d307d5.pdf",
-    "static/media/physioquest.png": "/static/media/physioquest.1e3071eb09aa2dc3f01a.png",
-    "static/media/portfolio.png": "/static/media/portfolio.7d1f432ee7fd8a6802af.png",
-    "static/media/videobot.png": "/static/media/videobot.844adb614cec2ea6d94b.png",
+    "static/media/portfolio.png": "/static/media/portfolio.d207f8f137d5a3b09779.png",
+    "static/media/physioquest.png": "/static/media/physioquest.7426e28af35d6665610d.png",
+    "static/media/videobot.png": "/static/media/videobot.b4e853f685869585aada.png",
     "static/media/avatar.png": "/static/media/avatar.c0ae89d492809abe7c22.png",
-    "static/media/partneredu.png": "/static/media/partneredu.87d2b715f9495f3ed707.png",
+    "static/media/partneredu.png": "/static/media/partneredu.6618b0ff3675fa5e9303.png",
     "static/media/home-main.svg": "/static/media/home-main.032e4da503e206ff7d9017a9940f8573.svg",
-    "static/media/foodle.png": "/static/media/foodle.62653b97471daceb71dc.png",
+    "static/media/foodle.png": "/static/media/foodle.6916b274c2108f94b347.png",
+    "static/media/scavenger.png": "/static/media/scavenger.10e9160cf6834eb46b1b.png",
     "static/media/logo.png": "/static/media/logo.2da4f91eec8a5353771e.png",
-    "static/media/scavenger.png": "/static/media/scavenger.da40f4e614a64d03d725.png",
     "index.html": "/index.html",
     "static/media/pre.svg": "/static/media/pre.cff91d380b4fdd332e18.svg",
-    "main.e691fee6.css.map": "/static/css/main.e691fee6.css.map",
-    "main.60bad0a7.js.map": "/static/js/main.60bad0a7.js.map",
+    "main.b7a6a8b2.css.map": "/static/css/main.b7a6a8b2.css.map",
+    "main.bd410ced.js.map": "/static/js/main.bd410ced.js.map",
     "927.7f598de0.chunk.js.map": "/static/js/927.7f598de0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e691fee6.css",
-    "static/js/main.60bad0a7.js"
+    "static/css/main.b7a6a8b2.css",
+    "static/js/main.bd410ced.js"
   ]
 }
