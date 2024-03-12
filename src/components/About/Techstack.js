@@ -1,24 +1,46 @@
 import React from "react";
-import {Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import {DiDjango, DiGit, DiJavascript, DiMongodb, DiPython, DiRedis,} from "react-icons/di";
 import {SiCloudflare, SiDiscord, SiSpotify, SiSvelte,} from "react-icons/si";
-import {Icon} from "./Toolstack";
 
-function Techstack() {
+function Icon({icon}) {
     return (
-        <Row style={{justifyContent: "center", paddingBottom: "50px"}}>
-            <Icon icon={<DiPython/>}/>
-            <Icon icon={<DiDjango/>}/>
-            <Icon icon={<DiJavascript/>}/>
-            <Icon icon={<SiSvelte/>}/>
-            <Icon icon={<DiRedis/>}/>
-            <Icon icon={<DiMongodb/>}/>
-            <Icon icon={<DiGit/>}/>
-            <Icon icon={<SiCloudflare/>}/>
-            <Icon icon={<SiDiscord/>}/>
-            <Icon icon={<SiSpotify/>}/>
-        </Row>
+        <Col xs={4} md={2} className="tech-icons">
+            {icon}
+        </Col>
+    );
+
+}
+export function Category({title, children}) {
+    let elements = []
+    for (let i = 0; i < children.length; i++) {
+        elements.push(
+            <Icon icon={children[i]}/>
+        )
+    }
+    return (
+        <div>
+            {/*<h1 className="project-heading">*/}
+            {/*    {title}*/}
+            {/*</h1>*/}
+            <Row style={{justifyContent: "center", paddingBottom: "50px"}}>
+                {elements}
+            </Row>
+        </div>
+
     );
 }
-
-export default Techstack;
+export default function Techstack() {
+    return <Category>
+        <DiPython/>
+        <DiDjango/>
+        <DiJavascript/>
+        <SiSvelte/>
+        <DiRedis/>
+        <DiMongodb/>
+        <DiGit/>
+        <SiCloudflare/>
+        <SiDiscord/>
+        <SiSpotify/>
+    </Category>;
+}

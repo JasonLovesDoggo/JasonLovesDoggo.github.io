@@ -1,35 +1,17 @@
 import React from "react";
-import {Col, Row} from "react-bootstrap";
-import {
-    SiDiscord,
-    SiGithub,
-    SiLinux,
-    SiPostman,
-    SiPycharm,
-    SiStackoverflow,
-    SiWindows,
-} from "react-icons/si";
+import {SiDocker, SiGithub, SiLinux, SiPostman, SiPycharm, SiWindows} from "react-icons/si";
+import {Category} from "./Techstack";
 
-export function Icon({icon}) {
-    return (
-        <Col xs={4} md={2} className="tech-icons">
-            {icon}
-        </Col>
-    );
+export default function Toolstack() {
+    return Category({
+        title: "The Tools I use", children: [
+            <SiWindows/>,
+            <SiLinux/>,
+            <SiPycharm/>,
+            <SiPostman/>,
+            <SiGithub/>,
+            <SiDocker/>
+        ]
+    });
 
 }
-function Toolstack() {
-    return (
-        <Row style={{justifyContent: "center", paddingBottom: "50px"}}>
-           <Icon icon={<SiWindows/>}/>
-            <Icon icon={<SiLinux/>}/>
-            <Icon icon={<SiPycharm/>}/>
-            <Icon icon={<SiPostman/>}/>
-            <Icon icon={<SiGithub/>}/>
-            <Icon icon={<SiDiscord/>}/>
-            <Icon icon={<SiStackoverflow/>}/>
-        </Row>
-    );
-}
-
-export default Toolstack;
