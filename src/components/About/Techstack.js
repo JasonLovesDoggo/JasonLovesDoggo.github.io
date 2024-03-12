@@ -1,7 +1,7 @@
 import React from "react";
 import {Col, Row} from "react-bootstrap";
 import {DiDjango, DiGit, DiJavascript, DiMongodb, DiPython, DiRedis,} from "react-icons/di";
-import {SiCloudflare, SiDiscord, SiSpotify, SiSvelte,} from "react-icons/si";
+import {SiCloudflare, SiDiscord, SiPostgresql, SiSpotify, SiSvelte,} from "react-icons/si";
 
 function Icon({icon}) {
     return (
@@ -36,10 +36,11 @@ export default function Techstack() {
         <DiDjango/>
         <DiJavascript/>
         <SiSvelte/>
-        <DiRedis/>
-        <DiMongodb/>
         <DiGit/>
         <SiCloudflare/>
+        <DiRedis/>
+        <SiPostgresql/>
+        <DiMongodb/>
         <SiDiscord/>
         <SiSpotify/>
     </Category>;

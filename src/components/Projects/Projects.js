@@ -10,6 +10,7 @@ import portfolio from "../../Assets/Projects/portfolio.png";
 import physioquest from "../../Assets/Projects/physioquest.png";
 import screentimeshowdown from "../../Assets/Projects/screentimeshowdown.png";
 import partneredu from "../../Assets/Projects/partneredu.png";
+import {SiDevpost} from "react-icons/si";
 
 function Projects() {
     return (
@@ -82,8 +83,11 @@ function Projects() {
                             imgPath={physioquest}
                             isBlog={false}
                             title="PhysioQuest"
-                            description="Gamifying physiotherapy with AI to encourage consistency and accuracy when completing quests/exercises. Built with Python, OpenCV, HTML, SCSS & Django. Winner @ JamHacks 7."
+                            description="PhysioQuest uses AI to gamify physiotherapy exercises, encouraging consistent and accurate completion. This approach aims to boost adherence to prescribed routines, potentially enhancing rehabilitation outcomes. Built with Python, OpenCV, HTML, SCSS & Django. Winner @ JamHacks 7."
                             ghLink="https://github.com/JasonLovesDoggo/jamhacks"
+                            demoLink="https://devpost.com/software/physioquest"
+                            demoText="Devpost"
+                            demoIcon={<SiDevpost/>}
                         />
                     </Col>
 
@@ -95,6 +99,8 @@ function Projects() {
                             description="Getting rid of your social media addiction doesn't have to be a painful process. Turn it into a fun challenge with your friends and see if you can win the pot! Built with JavaScript, Material UI, React, Express.js, Cohere & Paybilt. Winner @ HackTheValley 8."
                             ghLink="https://github.com/JasonLovesDoggo/screentimeshowdown"
                             demoLink="https://devpost.com/software/screentime-showdown"
+                            demoText="Devpost"
+                            demoIcon={<SiDevpost/>}
                         />
                     </Col>
                     <Col md={4} className="project-card">
