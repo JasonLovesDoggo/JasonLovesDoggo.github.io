@@ -5,6 +5,8 @@ import {CgWebsite} from "react-icons/cg";
 import {BsGithub} from "react-icons/bs";
 
 function ProjectCards(props) {
+    const text = props.demoText || "Demo";
+    const icon = props.demoIcon || <CgWebsite/>;
     return (
         <Card className="project-card-view">
             <Card.Img variant="top" src={props.imgPath} alt="card-img"/>
@@ -29,8 +31,8 @@ function ProjectCards(props) {
                         target="_blank"
                         style={{marginLeft: "10px"}}
                     >
-                        <CgWebsite/> &nbsp;
-                        {"Demo"}
+                        {icon} &nbsp;
+                        {text}
                     </Button>
                 )}
             </Card.Body>

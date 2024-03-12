@@ -28,7 +28,7 @@ function Projects() {
                             imgPath={metropolis}
                             isBlog={false}
                             title="Metropolis"
-                            description="Metropolis is my schools student run data centralization platform for info about clubs, events and everything else a student would need to know, It was built in django and there is a team of 45 developers, artists, and creators who worked in tandem to build the site. My contributions to the site include the maintaining and adding all new features to the backend along devops and running the site as a whole."
+                            description="Metropolis, our school's student-run data hub, offers club info, event updates, and student essentials. Built using Django, React & React Native, our team of 45 developers, artists, and creators collaborates on this platform. I handle backend maintenance, feature implementation, DevOps, and site management."
                             ghLink="https://github.com/wlmac/metropolis"
                             demoLink="https://maclyonsden.com"
                         />
@@ -61,7 +61,7 @@ function Projects() {
                             imgPath={scavenger}
                             isBlog={false}
                             title="Scavenger"
-                            description="A scavenger hunt platform engineered to prevent any form of cheating or RNG-based finds while ensuring fairness and integrity. It was created in Django uses a Oauth 2.0 system with the main mld (metropolis) site to handle authentication. Then, in 2023 I made a maassive overhaul to the site to eliminate any hardcoded data and allow multiple concurrent events."
+                            description="A scavenger hunt platform engineered to prevent any form of cheating or RNG-based finds while ensuring fairness and integrity. It was created in Django uses a Oauth 2.0 system with the main mld (metropolis) site to handle authentication. Then, in 2023 I made complete rewrite of the app to allow for dyanmic contest along with the ability to run any number of contests concurrently."
                             ghLink="https://github.com/wlmac/scavenger/tree/main"
                             demoLink="https://scavenger.maclyonsden.com"
                         />

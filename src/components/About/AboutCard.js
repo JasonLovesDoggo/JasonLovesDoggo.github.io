@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import {FaCamera, FaDog, FaUserFriends} from "react-icons/fa";
 import {IoFastFoodSharp} from "react-icons/io5";
 import {Link} from "react-router-dom";
+import CountUp from 'react-countup';
 
 function AboutCard() {
     return (
@@ -32,10 +33,12 @@ function AboutCard() {
                         </li>
                     </ul>
                     <div style={{float: "left"}}>
-                        <p style={{color: "rgb(137,191,239)"}}>
-                            "I like when my projects have a purpose."
-                        </p>
-                        <footer className="blockquote-footer">Jason Cameron</footer>
+                        <h4>Fun facts!</h4>
+                        <ul>
+                            <li>I have <CountUp className="blue" style={{fontFamily: "monospace, monospace"}} start={100000} end={300000} delay={2}/><span className="blue">+</span> photo views on google maps!</li>
+                            {/*<li>In my free time I work </li>*/}
+                        </ul>
+
                     </div>
                 </blockquote>
             </Card.Body>
