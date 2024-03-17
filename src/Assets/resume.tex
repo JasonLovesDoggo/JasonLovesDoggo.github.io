@@ -11,7 +11,7 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
+% \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
 
@@ -26,11 +26,11 @@
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+% \pagestyle{fancy}
+% \fancyhf{} % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
@@ -139,10 +139,11 @@
 
 \begin{center}
 \textbf{\Huge \scshape Jason Cameron} \\ \vspace{1pt}
-\underline{\href{https://jasoncameron.dev}{\raisebox{-0.05\height}{\faDesktop} Portfolio $|$}}
 \underline{\href{mailto:contact@jasoncameron.dev}{\raisebox{-0.05\height}{\faEnvelope} contact@jasoncameron.dev}} $|$
-\underline{\href{https://github.com/jasonlovesdoggo}{\raisebox{-0.05\height}{\faGithub} github.com/jasonlovesdoggo}} $|$
-\underline{\href{https://www.linkedin.com/in/jsoncameron/}{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/jsoncameron}}
+\underline{\href{https://jasoncameron.dev}{\raisebox{-0.05\height}{\faDesktop} Portfolio $|$}}
+\underline{\href{https://github.com/jasonlovesdoggo}{\raisebox{-0.05\height}{\faGithub} jasonlovesdoggo}} $|$
+\underline{\href{https://www.linkedin.com/in/jsoncameron/}{\raisebox{-0.05\height}{\faLinkedin} jsoncameron}}
+% If I want to add my phone num, I can always remove github.com/ and linkdin.com/in in text
 \end{center}
 
 %-----------EXPERIENCE-----------
@@ -156,14 +157,15 @@
 \resumeItem{
 Led team-wide effort to modernize API docs with \emph{\href{https://github.com/tfranzel/drf-spectacular}{django-spectacular}}, ensuring automated and up-to-date documentation}
 \resumeItem{
-Streamlined deployment processes, resulting in a \emph{20\%} reduction in average build time. Simplified deployments to one-click scripts, improving overall system agility and minimizing average downtime by \emph{12\%}
-}
+Streamlined deployment into one-click scripts, improving overall system agility and minimizing average downtime by \emph{12\%}}
+\resumeItem{Optimized \emph{Docker} build processes reducing average build time from \emph{140s} to \emph{80s} by caching reused layers}
+
 \resumeSubHeadingListEnd
 \resumeSubSubheading
 {Backend Member}{Sep. 2022 - Jun. 2023}
 \resumeItemListStart
 \resumeItem{
-Implemented REST API filters, reducing page load times by \emph{25\%} and decreasing server load by \emph{3\%} during peak usage}  % Todo: link to docs
+Implemented REST API filters, eliminating wasted API calls by \emph{~30\%} and decreasing server load by \emph{3\%} during peak usage}  % Todo: link to docs
 \resumeItem{Engineered and implemented polymorphic comments, likes, view counts, and saves, enhancing platform features and laying the groundwork for future advancements}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
@@ -205,11 +207,20 @@ on \textbf{10,000+} different machines and across all major operating systems}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\underline{\href{https://jasoncameron.dev/foodle}{\textbf{Foodle}}} $|$ \emph{TypeScript, Svelte, CSS, Python, Flask, Cloudflare, Google Analytics}} {Aug. 2022 - Dec 2023}
-{A food-themed twist of Wordle with an additional set of modes and features, adding a delicious spin on the classic concept}
+{\underline{\href{https://jasoncameron.dev/foodle}{\textbf{Foodle}}} $|$ \emph{TypeScript, Svelte, CSS, Python, Flask, Cloudflare, Google Analytics}} {Aug. 2022 - Present}
+{A food-themed twist of Wordle with an additional set of modes and features.}
 \resumeItemListStart
 \resumeItem{Developed, maintained, deployed and hosted the site using \emph{\href{https://svelte.dev/}{Svelte}, \href{https://www.cloudflare.com}{Cloudflare} and \href{https://pages.github.com}{Github Pages}}}
-\resumeItem{Listened to user's feedback and grew the game to \textbf{650,000+} unique visitors with \textbf{5,000,000+} total page views}
+\resumeItem{Listened to user's feedback and grew the game to \textbf{650,000+} unique visitors with \textbf{5,500,000+} total page views}
+\resumeItemListEnd
+
+\resumeProjectHeadingWithDescription
+{\underline{\href{https://github.com/wlmac/scavenger}{\textbf{Scavenger Hunt }}} $|$ \emph{Python, Django, CSS, JS, OAuth 2.0}}{Nov 2022-Present}{A scavenger hunt platform engineered to prevent cheating or RNG-based finds while ensuring fairness and integrity}
+\resumeItemListStart
+\resumeItem{
+Conceptualized and \href{https://github.com/wlmac/scavenger/commits?author=JasonLovesDoggo}{implemented} the backend's core functionality using \emph{Django}
+}
+\resumeItem{Reorganized the architecture of the site by removing reliance on hard-coded configurations. Additionally, introduced functionality to support the execution of multiple concurrent hunts}
 \resumeItemListEnd
 
 \resumeProjectHeadingWithDescription
@@ -227,17 +238,6 @@ on \textbf{10,000+} different machines and across all major operating systems}
 \resumeItemListStart
 \resumeItem{Designed and implemented the backend API and database models using \href{https://github.com/django/django}{Django} and \href{https://github.com/encode/django-rest-framework}{Django Rest Framework}}
 \resumeItem{Integrated our trained \href{https://www.ibm.com/topics/computer-vision}{CV} model to the end user’s webcam using \emph{\href{https://channels.readthedocs.io/en/latest/}{Django channels}, \href{https://en.wikipedia.org/wiki/User_Datagram_Protocol}{UDP sockets} and \href{https://developer.mozilla.org/en-US/docs/Web/API/MediaStream}{HTML's MediaStream}}, enabling global device compatibility}
-\resumeItemListEnd
-
-\resumeProjectHeadingWithDescription
-{\underline{\href{https://github.com/wlmac/scavenger}{\textbf{Scavenger Hunt }}} $|$ \emph{Python, Django, CSS, JS, OAuth 2.0}}{Nov 2022-Present}{A scavenger hunt platform engineered to prevent cheating or RNG-based finds while ensuring fairness and integrity}
-\resumeItemListStart
-\resumeItem{
-Conceptualized and \href{https://github.com/wlmac/scavenger/commits?author=JasonLovesDoggo}{implemented} the backend's core functionality using \emph{Django}
-}
-\resumeItem{Reorganized the architecture of the site by removing reliance on hard-coded configurations. Additionally, introduced functionality to support the execution of multiple concurrent hunts}
-
-
 \resumeItemListEnd
 
 
@@ -259,10 +259,10 @@ Conceptualized and \href{https://github.com/wlmac/scavenger/commits?author=Jason
 \section{Skills}
 \small{
 
-\textbf{Languages}{: Python, Golang, JavaScript/TypeScript Java, Lua, HTML/CSS/SCSS} \\
-\textbf{Server Tools}{: Linux, Caddy, Docker, Cloudflare, Amazon Web Services, Microsoft Azure, Google Cloud (GCP), Oracle Cloud (OCI)} \\
-\textbf{Developer Tools}{: Git, VScode, InteliJ, MongoDB, PostgreSQL, SQLite, RocksDB, LevelDB, Redis, Django, FastAPI, Flask, React, Svelte, Gin, P5.js, Github Actions, Postman, Tailscale} \\
-\textbf{Productivity and Design Tools}{: Miro, Notion, Microsoft Suite, Canva, Photoshop, \LaTeX} \\
+\textbf{Languages}{: Python, Golang, Java, Nim, JavaScript/TypeScript, Bash, Processing, HTML/CSS/SCSS} \\
+\textbf{Server Tools}{: Linux, Caddy, Nginx, træfik, Docker, Cloudflare, Microsoft Azure, Google Cloud (GCP), Oracle Cloud (OCI)} \\
+\textbf{Developer Tools}{: Git, VScode, IntelliJ, MongoDB, PostgreSQL, SQLite, RocksDB, LevelDB, Redis, Django, FastAPI, Flask, React, Svelte, Gin, P5.js, Github Actions, Postman, Tailscale} \\
+\textbf{Productivity and Design Tools}{: Miro, Notion, Microsoft Suite, Canva, Photoshop, LaTeX} \\
 }
 
 \end{document}

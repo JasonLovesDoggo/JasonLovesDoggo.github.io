@@ -36,7 +36,7 @@ function AboutCard() {
                         <h4>Fun facts!</h4>
                         <ul>
                             <li>I have <CountUp className="blue" style={{fontFamily: "monospace, monospace"}} start={100000} end={300000} delay={2}/><span className="blue">+</span> photo views on google maps!</li>
-                            {/*<li>In my free time I work </li>*/}
+
                         </ul>
 
                     </div>
