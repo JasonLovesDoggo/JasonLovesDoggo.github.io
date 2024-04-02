@@ -113,6 +113,26 @@ function Projects() {
                             demoLink="https://fbla.jasoncameron.dev"
                         />
                     </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={partneredu}
+                            isBlog={false}
+                            title="mCTF"
+                            description="mCTF, an online judge for cybersecurity challenge problems and school-wide and provincial contests, hosting over 200 problems, 1500 users & 20000 submissions. Extensively scaled using Docker, Kubernetes, K3s & Django."
+                            ghLink="https://github.com/mcpt/ctf"
+                            demoLink="https://ctf.mcpt.ca"
+                        />
+                    </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={partneredu}
+                            isBlog={false}
+                            title="Abacus"
+                            description="Abacus at it's core is a simple counter. However, it was designed from the ground up to be scalable, secure and easy to use. It was build using Golang, Gin, Docker, Redis. In fact it's currently powereing the page view counter on this site."
+                            ghLink="https://github.com/jasonlovesdoggo/abacus"
+                            demoLink="https://abacus.jasoncameron.dev"
+                        />
+                    </Col>
 
                 </Row>
             </Container>
