@@ -133,6 +133,16 @@ function Projects() {
                             demoLink="https://abacus.jasoncameron.dev"
                         />
                     </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={partneredu}
+                            isBlog={false}
+                            title="Hackathons Canada"
+                            description="Hackathons Canada is a platform that connects students to hackathons across Canada (and beyond). It was built using Django, Caddy, Flower, Postgres, ValKey & Docker. I personally handle the backend, DevOps, feature implementation, and general site management."
+                            ghLink="https://github.com/Hackathons-Canada/HackathonsCanada"
+                            demoLink="https://hackathonscanada.com"
+                        />
+                    </Col>
 
                 </Row>
             </Container>
