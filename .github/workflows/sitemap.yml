@@ -1,6 +1,5 @@
 name: Update Sitemap
 
-
 on:
   schedule:
     - cron: '0 0 * * 0'
@@ -21,8 +20,8 @@ jobs:
         id: sitemap
         uses: cicirello/generate-sitemap@v1
         with:
-            drop-html-extension: true
-            base-url-path: https://jasoncameron.dev
+          drop-html-extension: true
+          base-url-path: https://jasoncameron.dev
 
       - name: commit files
         run: |
@@ -36,8 +35,8 @@ jobs:
 
       - name: notify google/bing that there is a new sitemap
         env:
-          CUSTOM_URL: "${{ secrets.SITEMAP_URL }}" # set custom URL if you use it
-          SITEMAP_FILE: "sitemap.xml"
+          CUSTOM_URL: '${{ secrets.SITEMAP_URL }}' # set custom URL if you use it
+          SITEMAP_FILE: 'sitemap.xml'
         run: |
           if [ -z "${CUSTOM_URL}" ]; then
             if [ -s "CNAME" ]; then
@@ -49,10 +48,9 @@ jobs:
           else
             MAP_URL="${CUSTOM_URL}"
           fi
-          
+
           curl -v "https://www.google.com/ping?sitemap=${MAP_URL}" &> /dev/null &
           curl -v "https://web.archive.org/save/jasoncameron.dev" &> /dev/null &
           curl -v "https://www.bing.com/ping?sitemap=${MAP_URL}" &> /dev/null  &
           wait
           printf "\n\nDone\n"
-          

@@ -9,14 +9,17 @@
 <br/>
 
 ## History of the project
--  v1.0 - Feb 3, 2022 - Oct 29, 2022
--  v2.0 - Dec 25, 2022 - Current
+
+- v1.0 - Feb 3, 2022 - Oct 29, 2022
+- v2.0 - Dec 25, 2022 - Current
 
 ### Other incorporated projects
+
 - Foodle - A wordle for food and my most popular project with 5m+ page visits, now contained in its own repo [here](https://github.com/JasonLovesDoggo/foodle)
 - Random Color Generator - A random colour generator that I made for fun, it's also now contained in its own repo [here](https://github.com/JasonLovesDoggo/random-color)
 - Start Page - A bento-themed start page that is the new tab whenever I open up a new tab on my pc, it's in a repo [here](https://github.com/JasonLovesDoggo/StartPage)
 - Status Page - A fully GitHub-hosted status page that tracks the uptime of my projects, it's in a repo [here](https://github.com/JasonLovesDoggo/status)
+
 ## Built With
 
 The second generation of my personal portfolio <a href="https://jasoncameron.dev/" target="_blank">jasoncameron.dev</a>

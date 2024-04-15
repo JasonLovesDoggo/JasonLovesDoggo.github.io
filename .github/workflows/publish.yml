@@ -1,4 +1,4 @@
-name: "Deployment"
+name: 'Deployment'
 # the event that will trigger the action
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     # the list of steps that the action will go through
     steps:
-      - name: "Checkout"
+      - name: 'Checkout'
         uses: actions/checkout@v4
       - name: Get yarn cache directory path # get yarn cache path
         id: yarn-cache-dir-path
@@ -25,9 +25,9 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - name: "Install Dependencies"
+      - name: 'Install Dependencies'
         run: yarn
-      - name: "Github Pages Deployment"
+      - name: 'Github Pages Deployment'
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           yarn deploy -u "github-actions-bot <support+actions@github.com>"
