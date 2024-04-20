@@ -33,10 +33,12 @@
 % \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
+% \usepackage[bottom=0.5in,top=0.4in,left=0.4in,right=0.4in]{geometry}
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-0.7in}
+% \addtolength{\}{}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -83,7 +85,7 @@
     \end{tabular*}\vspace{-7pt}%
     
 }
-\newcommand{\resumeTwoJobHeading}[6]{%
+\newcommand{\resumeTwoJobHeading}[6]{
     \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
         \textbf{#1} & #2 \\
@@ -162,6 +164,9 @@
 %-----------EXPERIENCE-----------
 \section{Experiences}
 \resumeSubHeadingListStart
+
+% Metropolis
+
 \resumeSubheading
 {Lead Backend Developer}{Sep. 2022 - Present} 
 % {Backend Developer}{Sep. 2022 - Jun. 2023}
@@ -177,6 +182,23 @@ Streamlined deployment via centralized bash scripts, improving system agility an
 Implemented REST API filters, eliminating wasted API calls by \textbf{~30\%} and decreasing server load by \textbf{3\%} during peak usage} 
 \resumeItem{Engineered and implemented polymorphic comments, likes, view counts, and saves, enhancing platform features and laying the groundwork for future advancements}
 \resumeItemListEnd
+
+
+% Hackathons Canada
+% MCPT
+
+\resumeSubheading
+{Computer Science Tutor}{Dec. 2023 - Present}{}{} 
+\vspace{-14px}
+% {\textit{Mackenzie Computer Programming Team}}{Toronto, ON}
+\resumeItemListStart
+\resumeItem{Gave one-on-one and group lessons on Python \& basic web development to students aged 7 to 16\null\hfill\textit{\small \small Toronto, ON}}
+% \resumeItem{Contest detail from \textbf{8s} to \textbf{0.097s} which is over 80x faster}
+% \resumeItem{Automated API documentation generation conforming to OpenAPI 3.1 standards, saving \textbf{5} hours monthly per developer}
+% \resumeItem{Optimized database queries by over \textbf{100x} reducing avg time from \textbf{8s} to just \textbf{0.078s}}
+
+\resumeItemListEnd
+
 \resumeSubHeadingListEnd
 %----------- Projects-----------
 \section{Projects \texorpdfstring{\hfill{\normalsize\normalfont\href{https://jasoncameron.dev/\#/projects}{jasoncameron.dev/\#/projects}}}{jasoncameron.dev/\#/projects}}
@@ -205,11 +227,20 @@ Implemented REST API filters, eliminating wasted API calls by \textbf{~30\%} and
 {https://github.com/wlmac/scavenger}
 {\underline{\href{https://github.com/wlmac/scavenger}{\textbf{Scavenger Hunt }}} $|$  \emph{Python, Django, CSS, JS, OAuth 2.0}}{Nov 2022-Present}{A scavenger hunt platform engineered to prevent cheating or RNG-based finds while ensuring fairness and integrity}
 \resumeItemListStart
-    % \resumeItem{
-    % Conceptualized and implemented the backend's core functionality using \textbf{Django}
-    % }
 \resumeItem{Refactored the site's architecture by removing reliance on hard-coded configurations. Additionally, introduced functionality to support the execution of multiple concurrent hunts}
 \resumeItemListEnd
+
+
+\resumeProjectHeadingWithDescription
+{https://github.com/mcpt/ctf}
+{\underline{\textbf{\href{https://ctf.mcpt.ca}{mCTF}}} $|$ \emph{Django, K8s, K3s, Docker, Valkey, PostgreSQL, \href{https://github.com/slackhq/nebula}{Nebula}}}{Jan. 2024-Present}
+{A Reusable Jeopardy style CTF platform written using Django and Kubernetes}
+\resumeItemListStart
+\resumeItem{Identified and rewrote critical SQL query reducing time to execute by over \textbf{80x} to \textbf{0.097s} by leveraging pre-calculated DB fields, leading to a 160\% reduction in avg request time and an overall \textbf{55\%} increase in user engagement.}
+% \resumeItem{Lorem Ipsum}
+
+\resumeItemListEnd
+
 
 \resumeProjectHeadingWithDescription
 {https://github.com/JasonLovesDoggo/ScreenTimeShowdown}
@@ -227,7 +258,7 @@ Implemented REST API filters, eliminating wasted API calls by \textbf{~30\%} and
 {Gamifying physiotherapy with AI to encourage consistency and accuracy when completing exercises}
 \resumeItemListStart
 \resumeItem{Designed and implemented the backend API and database models using Django and Django Rest Framework}
-\resumeItem{Integrated our trained \href{https://www.ibm.com/topics/computer-vision}{CV} model to the end user’s webcam using Django channels, UDP sockets and HTML's MediaStream, enabling global device compatibility}
+\resumeItem{Integrated our CV model to the end user’s webcam using Django channels, enabling compatibility with devices globally}
 \resumeItemListEnd
 
 
@@ -240,7 +271,8 @@ Implemented REST API filters, eliminating wasted API calls by \textbf{~30\%} and
 \shortResumeSubheading
 {William Lyon Mackenzie Collegiate Institute - Toronto, Ontario}{Sep. 2022- Jun. 2026}
 \resumeItemListStart
-\resumeItem{\textbf{Extracurriculars: }\href{https://maclyonsden.com}{School Website}  \emph{(Backend Lead / Vice-President)}, \href{https://mcpt.ca}{Competitive/Computer Programming Club}{(\emph{System Administrator})}, Engineering Club (\emph{Tech Lead}), School Newspaper (\emph{Photographer / Quality Manager}), A/V Team (\emph{Crew Member / Club Liaison}), \href{https://flounder.news}{School Satirical Newspaper} (\emph{Web Developer}), Robotics Club (\emph{Member})}
+\resumeItem{\textbf{Extracurriculars: }\href{https://maclyonsden.com}{School Website} \emph{(Backend Lead / Vice-President)}, \href{https://mcpt.ca}{Competitive/Computer Programming Club}{ (\emph{System Administrator})}, Engineering Club (\emph{Tech Lead}), School Newspaper (\emph{Photographer}), A/V Team (\emph{Crew Member / Club Liaison})}
+% \href{https://flounder.news}{School Satirical Newspaper} (\emph{Web Developer}), Robotics Club (\emph{Member})}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -248,10 +280,10 @@ Implemented REST API filters, eliminating wasted API calls by \textbf{~30\%} and
 %-----------PROGRAMMING SKILLS-----------
 \section{Skills}
 \small{
-\textbf{Languages}{: Python, Golang, Java, Nim, JavaScript/Typescript, Bash, Processing, HTML/CSS/SCSS} \\
+\textbf{Languages}{: Python, Golang, Java, JavaScript/Typescript, Bash, Nim, Processing, HTML, CSS/SCSS} \\
 \textbf{DevOps Tools}{: Linux, Caddy, Nginx, træfik, Docker, Cloudflare, WireGuard} \\
-\textbf{Developer Tools}{: Git, IntelliJ, Django, FastAPI, Flask, React, Svelte, Gin, P5.js, Github Actions, Postman, Tailscale} \\
-\textbf{Databases}{: MongoDB, PostgreSQL, SQLite, RocksDB, Redis} \\
+\textbf{DevTools/Frameworks}{: Git, IntelliJ, Django, FastAPI, Flask, React, Svelte, Gin, Celery, Github Actions, Postman, Tailscale} \\
+\textbf{Databases}{: MongoDB, PostgreSQL, SQLite, RocksDB, Redis, Valkey} \\
 \textbf{Productivity and Design Tools}{: Miro, Notion, Microsoft Suite, Canva, Photoshop, LaTeX} \\
 }
 
