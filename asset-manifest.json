@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b7a6a8b2.css",
-    "main.js": "/static/js/main.823acbdc.js",
+    "main.js": "/static/js/main.d6e67a8e.js",
     "static/js/927.7f598de0.chunk.js": "/static/js/927.7f598de0.chunk.js",
     "static/media/metropolis.png": "/static/media/metropolis.ccb530b4886355a0ad44.png",
     "static/media/about.png": "/static/media/about.83a2124f48c750be3783.png",
@@ -19,11 +19,11 @@
     "index.html": "/index.html",
     "static/media/pre.svg": "/static/media/pre.cff91d380b4fdd332e18.svg",
     "main.b7a6a8b2.css.map": "/static/css/main.b7a6a8b2.css.map",
-    "main.823acbdc.js.map": "/static/js/main.823acbdc.js.map",
+    "main.d6e67a8e.js.map": "/static/js/main.d6e67a8e.js.map",
     "927.7f598de0.chunk.js.map": "/static/js/927.7f598de0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b7a6a8b2.css",
-    "static/js/main.823acbdc.js"
+    "static/js/main.d6e67a8e.js"
   ]
 }
