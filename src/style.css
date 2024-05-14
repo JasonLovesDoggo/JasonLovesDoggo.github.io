@@ -715,6 +715,12 @@ button:focus {
     justify-content: center;
 }
 
+.resume-text {
+    justify-content: space-evenly;
+    position: relative;
+    width: calc(var(--scale-factor) * 612px);
+}
+
 .resume-left {
     padding-right: 80px !important;
 }

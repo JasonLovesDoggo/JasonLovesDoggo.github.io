@@ -26,7 +26,7 @@ export default function Resume() {
                     <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
                 </Document>
             </Row>
-            <Row style={{ justifyContent: "space-evenly", position: "relative" }}>
+            <Row className="resume-text">
                 <Col style={{ disply: 'flex' }}>
                     <Button
                         variant="primary"
@@ -42,7 +42,7 @@ export default function Resume() {
                     to="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/blob/main/src/Assets/resume.tex"
                     target="_blank">view me</Link></Col>
 
-            </Row>
+         </Row>
 
             <Particle />
         </Container>
