@@ -13,36 +13,35 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const resumeLink = "https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/raw/main/src/Assets/resume.pdf";
 
 export default function Resume() {
-    const [width, setWidth] = useState(1200);
+    const [scale, setScale] = useState(1.7);
 
     useEffect(() => {
-        setWidth(window.innerWidth);
+        setScale(window.innerWidth > 786 ? 1.7 : 0.6);
     }, []);
-
+    console.log(scale)
     return (<div>
-        <Container style={{maxWidth: width + "px"}} fluid className="resume-section">
+        <Container fluid className="resume-section">
             <Row className="resume">
                 <Document file={pdf} className="d-flex justify-content-center">
-                    <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+                    <Page pageNumber={1} scale={scale} />
                 </Document>
             </Row>
-            <Row className="resume-text">
-                <Col style={{ disply: 'flex' }}>
+            <Row className="resume-text-row" style={{ maxWidth: `calc(${scale} * 612px)` }}>
+
+                <Col className="resume-text">By the way, I'm written in LaTeX & open sourced if you want to&nbsp;<Link
+                    style={{ textDecoration: "none", fontWeight: "bolder", color: "4b8bd5" }}
+                    to="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/blob/main/src/Assets/resume.tex"
+                    target="_blank">view me</Link></Col>
+                <Col className="resume-download">
                     <Button
                         variant="primary"
                         href={resumeLink}
                         target="_blank"
-                        className="resume-download"
                     >
                         <AiOutlineDownload />
                         &nbsp;Download CV
                     </Button></Col>
-                <Col style={{ display: "inline", paddingRight: "5vw" }}>By the way, I'm written in LaTeX & open sourced if you want to&nbsp;<Link
-                    style={{ textDecoration: "none", fontWeight: "bolder", color: "4b8bd5" }}
-                    to="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/blob/main/src/Assets/resume.tex"
-                    target="_blank">view me</Link></Col>
-
-         </Row>
+            </Row>
 
             <Particle />
         </Container>

@@ -1,15 +1,11 @@
 html {
-    --section-background-color: linear-gradient(
-            to bottom left,
+    --section-background-color: linear-gradient(to bottom left,
             rgba(16, 17, 17, 0.58),
-            rgba(8, 12, 24, 0.9)
-    );
+            rgba(8, 12, 24, 0.9));
 
-    --image-gradient: linear-gradient(
-            to bottom left,
+    --image-gradient: linear-gradient(to bottom left,
             rgba(16, 17, 17, 0.67),
-            rgba(10, 16, 22, 0.86)
-    );
+            rgba(10, 16, 22, 0.86));
 
     --imp-text-color: #619cff;
 }
@@ -240,10 +236,14 @@ button:focus {
 /* Home section */
 /* --------- */
 .wave {
-    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.1s; /* Change to speed up or slow down */
-    animation-iteration-count: infinite; /* Never stop waving :) */
-    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    animation-name: wave-animation;
+    /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.1s;
+    /* Change to speed up or slow down */
+    animation-iteration-count: infinite;
+    /* Never stop waving :) */
+    transform-origin: 70% 70%;
+    /* Pivot around the bottom-left palm */
     display: inline-block;
 }
 
@@ -251,25 +251,32 @@ button:focus {
     0% {
         transform: rotate(0deg);
     }
+
     10% {
         transform: rotate(14deg);
     }
+
     /* The following five values can be played with to make the waving more or less extreme */
     20% {
         transform: rotate(-8deg);
     }
+
     30% {
         transform: rotate(14deg);
     }
+
     40% {
         transform: rotate(-4deg);
     }
+
     50% {
         transform: rotate(10deg);
     }
+
     60% {
         transform: rotate(0deg);
     }
+
     /* Reset for the last half to pause */
     100% {
         transform: rotate(0deg);
@@ -489,7 +496,7 @@ button:focus {
     .footer-body {
         text-align: center !important;
     }
-.status {
+    .status {
         display: none !important;
     }
 }
@@ -659,6 +666,7 @@ button:focus {
     overflow: hidden;
 
 }
+
 .tech-icons:hover .text {
     max-height: 500px;
     /*transition-delay: 1s;*/
@@ -710,18 +718,26 @@ button:focus {
     padding-bottom: 30px !important;
     background-image: var(--section-background-color) !important;
     color: white !important;
+    text-align: center;
 }
 
 .resume {
     padding-top: 4vh;
-    padding-bottom: 4vh;
+    padding-bottom: 2vh;
     justify-content: center;
 }
 
-.resume-text {
-    justify-content: space-evenly;
+.resume-text-row {
+    display: inline-flex !important;
+    justify-content: space-around !important;
     position: relative;
-    width: calc(var(--scale-factor) * 612px);
+}
+
+.resume-text {
+    place-content: space-around !important;
+    /*Centers text vertically*/
+    display: inline;
+    /* padding-left: 1vw; */
 }
 
 .resume-left {
@@ -733,8 +749,12 @@ button:focus {
 }
 
 .resume-download {
-    margin-right:3vw;
-    max-width: 250px;
+    margin-right: 3vw;
+    width: fit-content;
+    max-width: fit-content !important;
+}
+.react-pdf__Document {
+    min-height: 100vh !important;
 }
 
 @media (max-width: 700px) {
@@ -746,6 +766,18 @@ button:focus {
     .resume-right {
         padding-right: 15px !important;
         padding-left: 15px !important;
+    }
+
+    .resume-text-row {
+        flex-flow: column nowrap;
+        position: relative;
+    }
+
+    .resume-download {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+   
     }
 }
 
@@ -830,6 +862,7 @@ button:focus {
     0% {
         transform: scale(1.5);
     }
+
     100% {
         transform: scale(1);
     }
@@ -893,7 +926,7 @@ button:focus {
     border: 1px solid rgba(26, 85, 158, 0.92);
 }
 
-.filter-categories input[type="radio"]:checked + label {
+.filter-categories input[type="radio"]:checked+label {
     background: rgba(14, 99, 206, 0.65);
     border: 1px solid rgba(32, 105, 196, 0.92);
 }
@@ -977,7 +1010,8 @@ button:focus {
     }
 
     .react-photo-album {
-        padding: 1.5rem 1rem 1rem;}
+        padding: 1.5rem 1rem 1rem;
+    }
 
     .react-photo-album--photo:hover {
         transform: scale(1.25);
@@ -991,7 +1025,7 @@ button:focus {
     }
 
     .photo-description {
-            margin-top: 2rem;
+        margin-top: 2rem;
 
     }
 }
@@ -1007,6 +1041,7 @@ button:focus {
     text-decoration: none;
     background: linear-gradient(to right, #d62976, #962fbf);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
 }
@@ -1014,6 +1049,7 @@ button:focus {
 .modal {
     will-change: transform;
     -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
     background-color: rgba(14, 28, 43, 0.7);
 }
 
@@ -1028,11 +1064,13 @@ button:focus {
 }
 
 .modal-content {
-    background-color: unset !important; /*revert boostrap background */
+    background-color: unset !important;
+    /*revert boostrap background */
 
 }
 
-body.modal-open { /* keeps scroll bar from disappearing when modal is open to prevent page shifting same as the below*/
+body.modal-open {
+    /* keeps scroll bar from disappearing when modal is open to prevent page shifting same as the below*/
     overflow: auto !important;
 }
 
