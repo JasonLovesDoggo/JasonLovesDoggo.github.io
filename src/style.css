@@ -489,6 +489,9 @@ button:focus {
     .footer-body {
         text-align: center !important;
     }
+.status {
+        display: none !important;
+    }
 }
 
 .footer h3 {
