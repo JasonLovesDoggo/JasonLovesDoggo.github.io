@@ -710,8 +710,8 @@ button:focus {
 }
 
 .resume {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
     justify-content: center;
 }
 
@@ -721,6 +721,11 @@ button:focus {
 
 .resume-right {
     padding-left: 80px !important;
+}
+
+.resume-download {
+    margin-right:3vw;
+    max-width: 250px;
 }
 
 @media (max-width: 700px) {
