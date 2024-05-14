@@ -37,7 +37,7 @@ export default function Resume() {
                         <AiOutlineDownload />
                         &nbsp;Download CV
                     </Button></Col>
-                <Col style={{ display: "flex", paddingRight: "5vw" }}>By the way, I'm written in LaTeX & open sourced if you want to&nbsp;<Link
+                <Col style={{ display: "inline", paddingRight: "5vw" }}>By the way, I'm written in LaTeX & open sourced if you want to&nbsp;<Link
                     style={{ textDecoration: "none", fontWeight: "bolder", color: "4b8bd5" }}
                     to="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/blob/main/src/Assets/resume.tex"
                     target="_blank">view me</Link></Col>
