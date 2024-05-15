@@ -723,21 +723,25 @@ button:focus {
 
 .resume {
     padding-top: 4vh;
-    padding-bottom: 2vh;
+    padding-bottom: 3vh;
     justify-content: center;
 }
 
 .resume-text-row {
     display: inline-flex !important;
-    justify-content: space-around !important;
+    justify-content: space-evenly !important;
     position: relative;
+    width: inherit;
+    padding: 0 20vw 0 20vw;
 }
 
 .resume-text {
-    place-content: space-around !important;
-    /*Centers text vertically*/
+    align-self: center !important;  /*Centers text vertically*/
     display: inline;
-    /* padding-left: 1vw; */
+    /* margin-right: 2vw; */
+    float: left !important;
+    max-width: fit-content !important;
+    float: left !important;
 }
 
 .resume-left {
@@ -749,7 +753,7 @@ button:focus {
 }
 
 .resume-download {
-    margin-right: 3vw;
+    /* margin-right: 2vw; */
     width: fit-content;
     max-width: fit-content !important;
 }
