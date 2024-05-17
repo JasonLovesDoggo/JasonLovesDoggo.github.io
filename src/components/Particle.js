@@ -2,19 +2,13 @@ import React, { useState, useEffect, useMemo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-// export default function Particle() { // Used for debugging
-//     return <></>
-// }
 
 export default function Particle() {
     const [init, setInit] = useState(false);
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
-            //await loadAll(engine);
-            //await loadFull(engine);
             await loadSlim(engine);
-            //await loadBasic(engine);
         }).then(() => {
             setInit(true);
         });
