@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from "react";
+import {Container} from "react-bootstrap"
 import photos from "./photos.json";
 import PhotoAlbum from "react-photo-album";
 import BellaInfo from "./bella";
+import Particle from "../Particle";
 
 function PhotoGallery() {
     const [categoryFilter, setCategoryFilter] = useState('all');
@@ -49,7 +51,7 @@ function PhotoGallery() {
 
 
     return (
-        <div className="gallery-container">
+        <Container fluid className="gallery-container">
             <div className="gallery-filter">
                 <div>
                     <h3>My Gallery</h3>
@@ -80,7 +82,8 @@ function PhotoGallery() {
                     </button>
                 </div>
             </div>
-            <PhotoAlbum layout="masonry" photos={filteredPhotos}/></div>
+            <Particle/>
+            <PhotoAlbum layout="masonry" photos={filteredPhotos}/></Container>
 
     );
 }

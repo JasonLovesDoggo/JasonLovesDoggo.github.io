@@ -478,7 +478,6 @@ button:focus {
 /* --------- */
 .footer {
     background-color: rgb(11, 20, 38);
-    bottom: 0 !important;
     padding-top: 10px !important;
     padding-bottom: 8px !important;
 }
