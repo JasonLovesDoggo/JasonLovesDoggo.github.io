@@ -14,7 +14,7 @@ function ViewCount() {
             }, []);
     }, []);
     if (count !== -1) {
-        return <div>Views: <b
+        return <div style={{color: "white"}}>Views: <b
         className="blue"> {count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </b></div>; // regex is for adding commas to the number    }
     }}
 
