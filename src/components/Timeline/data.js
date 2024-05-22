@@ -12,7 +12,7 @@ export default timelineData = {
     },
     2020: {
         6: {
-            ["I join GitHub"]
+            ["I joined GitHub"]
         }
     }
 
