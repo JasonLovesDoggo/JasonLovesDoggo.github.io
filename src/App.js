@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/Resume";
+import ProgrammingTimeline from "./components/Timeline/timeline"
 import {HashRouter as Router, Route, Routes} from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
@@ -37,6 +38,7 @@ function App() {
                     <Route path="/about" element={<About/>}/>
                     <Route path="/resume" element={<Resume/>}/>
                     <Route path="/photos" element={<PhotoGallery/>}/>
+                    <Route path="/timeline" element={<ProgrammingTimeline/>}/>
                     <Route path="*" element={<PageNotFound/>}/>
                 </Routes>
                 <Footer/>

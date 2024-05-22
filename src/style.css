@@ -1136,3 +1136,16 @@ body.modal-open[style] {
 .moon-photo {
     object-fit: fill;
 }
+
+
+/* --------- */
+/* Timeline */
+/* --------- */
+
+
+.timeline-container {
+    min-height: 80vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: 1em;
+}

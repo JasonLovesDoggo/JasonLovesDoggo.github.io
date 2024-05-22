@@ -4,6 +4,12 @@
   "homepage": "https://JasonLovesDoggo.github.io",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/style": "^0.8.0",
+    "@emotion/styled": "^11.11.5",
+    "@mui/lab": "^5.0.0-alpha.170",
+    "@mui/material": "^5.15.18",
+    "@mui/styled-engine": "^5.15.14",
     "@react-pdf/renderer": "^3.4.4",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.4.0",

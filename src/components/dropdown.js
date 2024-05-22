@@ -5,6 +5,7 @@ import {Dropdown} from "react-bootstrap";
 import {CgMenu} from "react-icons/cg";
 import {IoColorPalette, IoGameController,} from "react-icons/io5";
 import {MdCreateNewFolder} from "react-icons/md";
+import { FaTimeline } from "react-icons/fa6";
 import {FaServer} from "react-icons/fa";
 
 function NavDropdown() {
@@ -28,6 +29,11 @@ function NavDropdown() {
                 <Dropdown.Item title="My personal new tab page" className="dropdown-item"
                                href="/StartPage"><MdCreateNewFolder
                     style={{marginBottom: "2px"}}/> StartPage</Dropdown.Item>
+                <Dropdown.Divider/>
+                <Dropdown.Item title="Programming timeline" className="dropdown-item"
+                               href="/#/timeline"><FaTimeline // todo: write propery not using /#/
+                    style={{marginBottom: "2px"}}/> Timeline</Dropdown.Item>
+                
                 <Dropdown.Divider/>
                     <Dropdown.Item title="A Status page for all sites" className="dropdown-item"
                                href="https://status.jasoncameron.dev" target="_blank"><FaServer
