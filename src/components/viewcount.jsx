@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function ViewCount() {
-  const BASE_URL = "https://abacus-zz5vvckvua-uc.a.run.app";
+  const BASE_URL = "https://abacus.jasoncameron.dev";
   const [count, setCount] = useState(() => "Loading...");
   useEffect(() => {
     fetch(BASE_URL + "/hit/jasoncameron/portfolio")
