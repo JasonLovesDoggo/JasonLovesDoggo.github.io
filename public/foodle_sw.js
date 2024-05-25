@@ -10,6 +10,8 @@ const assetsToCache = [
 const assetsToNOTCache = [
   "https://api.github.com/repos/JasonLovesDoggo/JasonLovesDoggo.github.io/releases/latest",
 ];
+const domainsNotToCache = ["https://abacus.jasoncameron.dev"];
+
 self.addEventListener("install", (e) => {
   log("Installing");
   e.waitUntil(
@@ -34,7 +36,7 @@ self.addEventListener("activate", (evt) => {
 
 // fetch event
 self.addEventListener("fetch", (evt) => {
-  if (evt.request.url in assetsToNOTCache) {
+  if (evt.request.url in assetsToNOTCache || domainsNotToCache.some((d) => evt.request.url.includes(d))){
     return fetch(evt.request);
   }
 
