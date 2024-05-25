@@ -14,87 +14,84 @@ export default function Particle() {
         });
     }, []);
 
-    const options = useMemo(
-        () => ({
-            fpsLimit: 144,
-            interactivity: {
-                events: {
-                    onClick: {
-                        enable: true,
-                        mode: "push",
-                    },
-                    onHover: {
-                        enable: true,
-                        mode: "repulse",
-                    },
+    const options = {
+        fpsLimit: 144,
+        interactivity: {
+            events: {
+                onClick: {
+                    enable: true,
+                    mode: "push",
                 },
-                modes: {
-                    push: {
-                        quantity: 2,
-                    },
-                    repulse: {
-                        distance: 100,
-                        duration: 1,
-                    },
+                onHover: {
+                    enable: true,
+                    mode: "repulse",
                 },
             },
-            particles: {
-                color: {
-                    value: "#ffffff",
+            modes: {
+                push: {
+                    quantity: 2,
                 },
-                links: {
-                    color: "#ffffff",
-                    distance: 150,
+                repulse: {
+                    distance: 100,
+                    duration: 1,
+                },
+            },
+        },
+        particles: {
+            color: {
+                value: "#ffffff",
+            },
+            links: {
+                color: "#ffffff",
+                distance: 150,
+                enable: true,
+                opacity: 0.4,
+                width: 1,
+            },
+            move: {
+                direction: "none",
+                enable: true,
+                outModes: {
+                    default: "bounce",
+                },
+                random: false,
+                speed: 4,
+                straight: false,
+            },
+            number: {
+                density: {
                     enable: true,
-                    opacity: 0.4,
-                    width: 1,
+                    valueArea: 900
                 },
-                move: {
-                    direction: "none",
-                    enable: true,
-                    outModes: {
-                        default: "bounce",
-                    },
-                    random: false,
-                    speed: 4,
-                    straight: false,
+                value: 80,
+            },
+            opacity: {
+                value: 0.3,
+                random: true,
+            },
+            shape: {
+                type: ["polygon", "circle"],
+                options: {
+                    sides: 9, // Nonagon >>>
+                    width: 0,
+                    close: true,
+                    fill: false,
+                    opacity: 0.1
                 },
-                number: {
-                    density: {
-                        enable: true,
-                        valueArea: 900
-                    },
-                    value: 80,
-                },
-                opacity: {
-                    value: 0.3,
-                    random: true,
-                },
-                shape: {
-                    type: ["polygon", "circle"],
-                    options: {
-                        sides: 9, // Nonagon >>>
-                        width: 0,
-                        close: true,
-                        fill: false,
-                        opacity: 0.1
-                    },
 
-                },
-                size: {
-                    value: { min: 1, max: 4 },
-                },
             },
-            detectRetina: true,
-        }),
-        [],
-    );
+            size: {
+                value: { min: 1, max: 4 },
+            },
+        },
+        detectRetina: true,
+    };
 
     if (init) {
         return (
             <Particles
                 id="tsparticles"
-                options={options}/>
+                options={options} />
         );
     }
     return <></>
