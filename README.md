@@ -2,7 +2,7 @@
   Portfolio Website - v2.0<br/>
 </h2>
 <div>
-  <img alt="Demo" src="./Images/readme-img1.png" />
+  <img alt="Demo" src="./.github/Images/readme-img1.png" />
 </div>
 <a href="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml"><img src="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/actions/workflows/UpdateSitemap.yml/badge.svg" alt="Update Sitemap"></a>
 
