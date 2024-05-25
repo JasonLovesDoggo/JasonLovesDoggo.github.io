@@ -10,7 +10,7 @@ const assetsToCache = [
 const assetsToNOTCache = [
   "https://api.github.com/repos/JasonLovesDoggo/JasonLovesDoggo.github.io/releases/latest",
 ];
-const domainsNotToCache = ["https://abacus.jasoncameron.dev"];
+const domainsNotToCache = ["https://abacus.jasoncameron.dev", "chrome-extension://"];
 
 self.addEventListener("install", (e) => {
   log("Installing");
