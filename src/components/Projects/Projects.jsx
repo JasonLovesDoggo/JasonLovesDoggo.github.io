@@ -121,7 +121,7 @@ function Projects() {
             imgPath={partneredu}
             isBlog={false}
             title="Hackathons Canada"
-            description="Hackathons Canada is a platform that connects students to hackathons across Canada (and b                                                                                                                                                  eyond). It was built using Django, Caddy, Flower, Postgres, ValKey & Docker. I personally handle the backend, DevOps, feature implementation, and general site management."
+            description="Hackathons Canada is a platform that connects students to hackathons across Canada (and beyond). It was built using Django, Caddy, Flower, Postgres, ValKey & Docker. I personally lead the backend team and personally handle DevOps and site administration." //As of writing this, the site has over 1000 users and 200 hackathons listed
             ghLink="https://github.com/Hackathons-Canada/HackathonsCanada"
             demoLink="https://hackathonscanada.com"
           />
