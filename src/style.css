@@ -477,10 +477,13 @@ button:focus {
 /* --------- */
 /* Footer */
 /* --------- */
+
 .footer {
     background-color: rgb(11, 20, 38);
     padding-top: 10px !important;
     padding-bottom: 8px !important;
+    /*bottom: 0 !important;*/
+    /*position: fixed;*/
 }
 
 .footer-copywright {
@@ -782,11 +785,6 @@ button:focus {
     width: fit-content;
     max-width: fit-content !important;
 }
-
-.react-pdf__Document {
-    min-height: 100vh !important;
-}
-
 @media (max-width: 700px) {
     .resume-left {
         padding-right: 15px !important;

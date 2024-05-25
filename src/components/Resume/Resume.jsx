@@ -34,7 +34,7 @@ export default function Resume() {
     <div>
       <Container fluid className="resume-section">
         <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
+          <Document file={pdf} className="d-flex justify-content-center" onSourceError={(error) => alert('Error while retrieving document source! ' + error.message)}>
             <Page pageNumber={1} scale={scale} />
           </Document>
         </Row>
