@@ -1147,3 +1147,15 @@ body.modal-open[style] {
     padding-bottom: 5%;
     margin: 1em;
 }
+
+.timeline-date {
+    font-size: 1.2em;
+    color: #86afe1;
+
+}
+.timeline-content {
+    color: white;
+    padding: 2em;
+
+    /*border: solid 2px #86afe1;*/
+}
