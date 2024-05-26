@@ -7,6 +7,7 @@ import * as React from "react";
 import {TimelineOppositeContent} from "@mui/lab";
 import {Box, createTheme, Typography} from "@mui/material";
 import {indigo} from '@mui/material/colors';
+import Button from '@mui/material/Button';
 
 
 // export function TimelineCard(time, content, icon) {
@@ -61,7 +62,7 @@ const cyrb53 = (str, seed = 1) => {
 
     return 4294967296 * (2097151 & h2) + (h1 >>> 0);
 };
-export default function TimelineCard(date, content, icon, position) {
+export default function TimelineCard(date, content, icon, position, links) {
     return (
         <TimelineItem key={cyrb53(content)}>
             <TimelineOppositeContent color="primary">
@@ -79,6 +80,8 @@ export default function TimelineCard(date, content, icon, position) {
                     <Typography maxWidth="30vw" sx={{float: position}} variant="body1" color="primary">
                         {content}
                     </Typography>
+                    {links && links.map((data) => (
+                    <Button sx={{background: data.color}} variant="contained" target="_blank" href={data.url}>{data.text}</Button>))}
                 </div>
             </TimelineContent>
         </TimelineItem>

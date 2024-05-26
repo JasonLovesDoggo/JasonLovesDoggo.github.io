@@ -13,7 +13,7 @@ export default function ProgrammingTimeline() {
             <Container className="timeline-container" style={{minHeight: "100vh"}} fluid>
                 <Timeline position="alternate">
                     {timelineData.reverse().map((event, index) => (
-                        TimelineCard(event.date, event.content, event.icon, index % 2 === 0 ? "left" : "right"
+                        TimelineCard(event.date, event.content, event.icon, index % 2 === 0 ? "left" : "right", event.links
                         )
                     ))}
                 </Timeline>
