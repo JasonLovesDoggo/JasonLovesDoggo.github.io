@@ -5,12 +5,12 @@ import {FaChild} from "react-icons/fa6";
 
 const timelineData = [
     {
-        content: "I Open up a random piece of (I belive C#) code because it looks interesting",
+        content: "I Open up a random piece of (I believe C#) code because it looks interesting and I want to understand it",
         date: "Mid 2018",
         icon: <FaChild/>
     },
     {
-        content: 'I start learning what coding is and that it exists; my grandma buys me a "How the world works" book - I\'m hooked',
+        content: 'I start learning that "coding" exists and slowly learn what it is; my grandma buys me a "How the world works" book - I\'m hooked',
         date: "2019",
         icon: <GoBook/>
     },

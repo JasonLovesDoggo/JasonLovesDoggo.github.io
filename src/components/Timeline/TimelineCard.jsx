@@ -61,8 +61,7 @@ const cyrb53 = (str, seed = 1) => {
 
     return 4294967296 * (2097151 & h2) + (h1 >>> 0);
 };
-export default function TimelineCard(date, content, icon) {
-
+export default function TimelineCard(date, content, icon, position) {
     return (
         <TimelineItem key={cyrb53(content)}>
             <TimelineOppositeContent color="primary">
@@ -77,7 +76,7 @@ export default function TimelineCard(date, content, icon) {
             </TimelineSeparator>
             <TimelineContent className="timeline-content">
                 <div>
-                    <Typography variant="body1" color="primary">
+                    <Typography maxWidth="30vw" sx={{float: position}} variant="body1" color="primary">
                         {content}
                     </Typography>
                 </div>
