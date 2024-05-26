@@ -3,6 +3,8 @@ import {Container, Row} from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import {SiDevpost} from "react-icons/si";
+import {SlDocs} from "react-icons/sl";
+
 
 // Images
 import scavenger from "../../Assets/Projects/scavenger.png";
@@ -95,7 +97,7 @@ function Projects() {
                         title="PartnerEdu"
                         description="PartnerEdu is a platform that connects students to opportunities such as COOP placements in order to provide educational experiences for students. Highly scalable using Django, Bootstrap, Postgres, Redis & Docker. National Runner Up @ CNLC 2024."
                         ghLink="https://github.com/JasonLovesDoggo/PartnerEdu"
-                        demoLink="https://fbla.jasoncameron.dev"
+                        // demoLink="https://fbla.jasoncameron.dev"
                     />
 
                     <ProjectCard
@@ -104,6 +106,8 @@ function Projects() {
                         description="mCTF, an online judge for cybersecurity challenge problems and school-wide and provincial contests, hosting over 200 problems, 1500 users & 20000 submissions. Extensively scaled using Docker, Kubernetes, K3s & Django."
                         ghLink="https://github.com/mcpt/ctf"
                         demoLink="https://ctf.mcpt.ca"
+                        demoText="Site"
+
                     />
 
                     <ProjectCard
@@ -112,6 +116,8 @@ function Projects() {
                         description="Abacus at it's core is a simple counter. However, it was designed from the ground up to be scalable, secure and easy to use. It was build using Golang, Gin, Docker, Redis. In fact it's currently powereing the page view counter on this site."
                         ghLink="https://github.com/jasonlovesdoggo/abacus"
                         demoLink="https://abacus.jasoncameron.dev"
+                        demoText="Docs"
+                        demoIcon={<SlDocs/>}
                     />
 
                     <ProjectCard
@@ -120,6 +126,7 @@ function Projects() {
                         description="Hackathons Canada is a platform that connects students to hackathons across Canada (and beyond). It was built using Django, Caddy, Flower, Postgres, ValKey & Docker. I personally lead the backend team and personally handle DevOps and site administration." //As of writing this, the site has over 1000 users and 200 hackathons listed
                         ghLink="https://github.com/Hackathons-Canada/HackathonsCanada"
                         demoLink="https://hackathonscanada.com"
+                        demoText="Site"
                     />
 
 
