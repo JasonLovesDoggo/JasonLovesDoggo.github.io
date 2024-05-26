@@ -36,20 +36,35 @@ import {indigo} from '@mui/material/colors';
 //     );
 // }
 
-export const Theme =  createTheme({
+export const Theme = createTheme({
     palette: {
         primary: {
-            main: indigo[50],
+            main: indigo[100],
         },
         secondary: {
-            main: indigo[300],
+            main: indigo['A100'],
         },
     },
 });
 
+const cyrb53 = (str, seed = 1) => {
+    let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
+    for (let i = 0, ch; i < str.length; i++) {
+        ch = str.charCodeAt(i);
+        h1 = Math.imul(h1 ^ ch, 2654435761);
+        h2 = Math.imul(h2 ^ ch, 1597334677);
+    }
+    h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507);
+    h1 ^= Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+    h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507);
+    h2 ^= Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+
+    return 4294967296 * (2097151 & h2) + (h1 >>> 0);
+};
 export default function TimelineCard(date, content, icon) {
+
     return (
-        <TimelineItem>
+        <TimelineItem key={cyrb53(content)}>
             <TimelineOppositeContent color="primary">
                 <Typography component="h4" color="primary">
                     <Box fontWeight='bold' display='inline'>{date}</Box></Typography>
