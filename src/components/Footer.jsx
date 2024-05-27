@@ -3,9 +3,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import ViewCount from "./viewcount";
+import ColorSquare from "./ColorSelector";
 import Wakatime from "./wakatime";
+import {useLocation} from "react-router-dom";
 
 function Footer() {
+  const page = useLocation().pathname;
   let date = new Date();
   let year = date.getFullYear();
   return (
@@ -13,6 +16,12 @@ function Footer() {
       <Row style={{ placeItems: "center" }}>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
+            {
+
+            }
+            <li className="social-icons">
+              { page === "/timeline" ? <ColorSquare /> : <></> }
+            </li>
             <li className="social-icons">
               <a
                 href="https://github.com/JasonLovesDoggo"
