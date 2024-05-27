@@ -20,14 +20,14 @@ export default function TimelineCard(date, content, icon, position, links, isFir
     const theme = useTheme();
     return (
         <TimelineItem key={hash(content + date)}>
-            <TimelineOppositeContent sx={{margin: 'auto 0'}} style={{float: position}} color="primary" varient="body2">
+            <TimelineOppositeContent sx={{margin: 'auto 0'}} style={{float: position}} color="primary.light" varient="body2">
                 <b>{date}</b>
 
             </TimelineOppositeContent>
             <IconContext.Provider value={{size: "1.5em"}}>
                 <TimelineSeparator>
                     {/* Conditional Connector Before Dot */}
-                    {!(isFirst && !isLast) && <TimelineConnector/>}
+                    {!(isFirst && !isLast) && <TimelineConnector/>}       {/*todo: rewrite using visibility: hidden as this messes with some margins */}
 
                     {/* Center Dot */}
                     <TimelineDot color="primary" variant="filled">
