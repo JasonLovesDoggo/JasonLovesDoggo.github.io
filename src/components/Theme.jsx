@@ -1,27 +1,27 @@
 import React, {useContext, useMemo} from 'react';
 import {ColorContext} from '../App.jsx';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import {colorScheme, harmony} from 'simpler-color'
+import {complement, harmony} from 'simpler-color'
 
 function DynamicThemeProvider({children}) {
     const {color} = useContext(ColorContext);
 
     const theme = useMemo(() => {
                 const scheme = harmony(color.hex)
-                console.table(scheme)
+                Object.keys(scheme).forEach((prop)=> console.log("%c" + prop + " " + scheme[prop], `background: ${scheme[prop]};`));
                 return createTheme({
                     palette: {
                         primary: {
                             main: scheme.primary
                         },
                         secondary: {
-                            main: scheme.secondary,
+                            main: complement(scheme.primary, 1),
                             // ... other variants as needed
                         },
                         accent: {
                             main: scheme.accent
                         },
-                        error: {
+                        error: { 
                             main: scheme.error,
                         },
                         text: {

@@ -42,7 +42,7 @@ export default function TimelineCard(date, content, icon, position, links, isFir
                 <Paper style={{...glass, float: position}} square={false} elevation={3} sx={{padding: '6px 16p'}}
                        className="timeline-content-container">
                     <Typography align="left" maxWidth="35vw"
-                                variant="body1" sx={{color: 'text.light'}}> 
+                                variant="body1"> 
                         {content}
                     </Typography>
                     {links && links.map((data) => (
