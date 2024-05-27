@@ -4,32 +4,26 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import * as React from "react";
+import {useContext} from "react";
 import {TimelineOppositeContent} from "@mui/lab";
-import {createTheme, Paper, Typography} from "@mui/material";
-import {indigo} from '@mui/material/colors';
+import {Box, Paper, Typography, useTheme} from "@mui/material";
 import Button from '@mui/material/Button';
 import hash from './hasher';
 import {IconContext} from "react-icons";
-
-export const Theme = createTheme({
-    palette: {
-        primary: {
-            main: indigo[100],
-        },
-        secondary: {
-            main: indigo['A100'],
-        },
-    },
-});
+import generateGlassmorphismStyle from "../utils/Glass.js";
+import {ColorContext} from "../../App.jsx";
 
 export default function TimelineCard(date, content, icon, position, links, isFirst, isLast) {
+    const {color} = useContext(ColorContext);
+    const glass = generateGlassmorphismStyle({transparency: 0.4, color: color.rgb, blur: 9.2, outline: 0.3});
+    const theme = useTheme();
     return (
-        <TimelineItem key={hash(content)}>
+        <TimelineItem key={hash(content + date)}>
             <TimelineOppositeContent sx={{margin: 'auto 0'}} style={{float: position}} color="primary" varient="body2">
                 <b>{date}</b>
 
             </TimelineOppositeContent>
-            <IconContext.Provider value={{size: "1.5em"}}> {/* Wrap TimelineSeparator */}
+            <IconContext.Provider value={{size: "1.5em"}}>
                 <TimelineSeparator>
                     {/* Conditional Connector Before Dot */}
                     {!(isFirst && !isLast) && <TimelineConnector/>}
@@ -44,12 +38,16 @@ export default function TimelineCard(date, content, icon, position, links, isFir
                 </TimelineSeparator>
             </IconContext.Provider>
             <TimelineContent>
-                <Paper style={{float: position}} square={false} elevation={3} sx={{padding: '6px 16p'}} className="timeline-content-container">
-                    <Typography align="left" className="timeline-content" maxWidth="35vw" variant="body1">
+                <Paper style={{...glass, ...{float: position}}} square={false} elevation={3} sx={{padding: '6px 16p'}}
+                       className="timeline-content-container">
+                    <Typography align="left" maxWidth="35vw"
+                                variant="body1" sx={{color: theme.palette.primary.contrastText }}>
                         {content}
                     </Typography>
                     {links && links.map((data) => (
-                    <Button className="timeline-button" sx={{background: data.color}} variant="contained" target="_blank" href={data.url}>{data.text}</Button>))}
+                        <Button className="timeline-button" sx={{background: data.color}}
+                                variant="contained"
+                                target="_blank" href={data.url}>{data.text}</Button>))}
                 </Paper>
             </TimelineContent>
         </TimelineItem>
