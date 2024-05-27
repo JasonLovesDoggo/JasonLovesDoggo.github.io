@@ -12,6 +12,7 @@ import hash from './hasher';
 import {IconContext} from "react-icons";
 import generateGlassmorphismStyle from "../utils/Glass.js";
 import {ColorContext} from "../../App.jsx";
+import pSBC from "../utils/ColorConv.js";
 
 export default function TimelineCard(date, content, icon, position, links, isFirst, isLast) {
     const {color} = useContext(ColorContext);
@@ -41,7 +42,7 @@ export default function TimelineCard(date, content, icon, position, links, isFir
                 <Paper style={{...glass, ...{float: position}}} square={false} elevation={3} sx={{padding: '6px 16p'}}
                        className="timeline-content-container">
                     <Typography align="left" maxWidth="35vw"
-                                variant="body1" sx={{color: theme.palette.primary.contrastText }}>
+                                variant="body1" sx={{color: pSBC(0.8, theme.palette.primary.contrastText, theme.palette.primary.main )}}>
                         {content}
                     </Typography>
                     {links && links.map((data) => (
