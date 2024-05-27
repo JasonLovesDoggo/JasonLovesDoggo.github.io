@@ -5,16 +5,11 @@ import {SiDiscord} from "react-icons/si";
 import {FaBaby} from "react-icons/fa";
 
 
-const colors = {
-    blurple: "#7289DA"
-};
-
-
 const timelineData = [
     {
         content: "I started working on my first semi-large project, a Discord bot named edoC (a semordnilap of Code)",
         links: [
-            {text: "GitHub", url: 'https://github.com/JasonLovesDoggo/edoC', color: colors.blurple}
+            {text: "GitHub", url: 'https://github.com/JasonLovesDoggo/edoC'}
         ],
         date: "July 2021",
         icon: <SiDiscord/>

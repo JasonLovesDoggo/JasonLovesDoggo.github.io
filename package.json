@@ -26,6 +26,7 @@
     "react-pdf": "^8.0.2",
     "react-photo-album": "^2.3.1",
     "react-router-dom": "^6.23.1",
+    "simpler-color": "^1.0.1",
     "typewriter-effect": "^2.21.0",
     "web-vitals": "^4.0.0",
     "yet-another-react-lightbox": "^3.18.0"
