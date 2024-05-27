@@ -10,8 +10,6 @@ import { AiFillStar, AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BsCameraFill } from "react-icons/bs";
 import Dropdown from "./dropdown";
 
-// import { ImBlog } from "react-icons/im";
-
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
