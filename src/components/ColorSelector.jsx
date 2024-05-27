@@ -117,7 +117,7 @@ function ColorSquare() {
               height={200}
               hideInput={true}
               onChange={handleColorChange}
-            />{" "}
+            />
           </Box>
         </Modal>
       )}
