@@ -21,7 +21,7 @@ export default function TimelineCard(date, content, icon, position, links, isFir
 
     return (
         <TimelineItem key={hash(content + date)}>
-            <TimelineOppositeContent sx={{margin: 'auto 0'}} style={{float: position}} color="text.light" varient="body2">
+            <TimelineOppositeContent sx={{margin: 'auto 0', color: 'primary.light'}} style={{float: position}} varient="body2">
                 <b>{date}</b>
             </TimelineOppositeContent>
             <IconContext.Provider value={{size: "1.5em"}}>
@@ -41,8 +41,8 @@ export default function TimelineCard(date, content, icon, position, links, isFir
             <TimelineContent>
                 <Paper style={{...glass, float: position}} square={false} elevation={3} sx={{padding: '6px 16p'}}
                        className="timeline-content-container">
-                    <Typography align="left" maxWidth="35vw"
-                                variant="body1"> 
+                    <Typography sx={{color: "primary.contrastText"}} align="left" maxWidth="35vw"
+                                variant="body1">
                         {content}
                     </Typography>
                     {links && links.map((data) => (

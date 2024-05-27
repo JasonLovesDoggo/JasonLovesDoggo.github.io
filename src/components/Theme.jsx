@@ -11,17 +11,18 @@ function DynamicThemeProvider({children}) {
                 Object.keys(scheme).forEach((prop)=> console.log("%c" + prop + " " + scheme[prop], `background: ${scheme[prop]};`));
                 return createTheme({
                     palette: {
+                        contrastThreshold: 4.5,
                         primary: {
-                            main: scheme.primary
+                            main: scheme.primary,
                         },
                         secondary: {
-                            main: complement(scheme.primary, 1),
+                            main: complement(scheme.primary, 2),
                             // ... other variants as needed
                         },
                         accent: {
                             main: scheme.accent
                         },
-                        error: { 
+                        error: {
                             main: scheme.error,
                         },
                         text: {
