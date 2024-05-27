@@ -26,8 +26,6 @@ export default function TimelineCard(date, content, icon, position, links) {
             <TimelineOppositeContent sx={{margin: 'auto 0'}} style={{float: position}} color="primary" varient="body2">
                 <b>{date}</b>
             </TimelineOppositeContent>
-
-
             <TimelineSeparator>
                 <TimelineConnector/>
                 <TimelineDot color="primary" variant="filled">
@@ -35,13 +33,6 @@ export default function TimelineCard(date, content, icon, position, links) {
                 </TimelineDot>
                 <TimelineConnector/>
             </TimelineSeparator>
-            {/*<TimelineSeparator>*/}
-            {/*    <TimelineConnector>*/}
-            {/*    <TimelineDot color="primary" variant="filled">*/}
-            {/*        {icon}*/}
-            {/*    </TimelineDot>*/}
-            {/*    </TimelineConnector>*/}
-            {/*</TimelineSeparator>*/}
             <TimelineContent>
                 <Paper style={{float: position}} square={false} elevation={3} sx={{padding: '6px 16p'}} className="timeline-content-container">
                     <Typography align="left" className="timeline-content" maxWidth="35vw" variant="body1">
