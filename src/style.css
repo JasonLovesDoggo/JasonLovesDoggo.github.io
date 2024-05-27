@@ -1153,9 +1153,31 @@ body.modal-open[style] {
     color: #86afe1;
 
 }
-.timeline-content {
-    color: white;
-    padding: 2em;
 
-    /*border: solid 2px #86afe1;*/
+.MuiTimelineItem-root .MuiTypography-body1 {
+    place-content: center; /*Can't get it to work on paper > Typography directly in TimelineCard.jsx */
+}
+.timeline-content {
+    color: #86afe1;
+}
+
+.timeline-content-container {
+    width: max-content;
+    padding: 0.5em;
+
+    /* From https://css.glass */
+    /* From https://css.glass */
+    background: rgba(18, 91, 150, 0.29) !important;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.9px);
+    -webkit-backdrop-filter: blur(9.9px);
+    border: 1px solid rgba(18, 91, 150, 0.37);
+
+
+}
+
+
+.timeline-button {
+    margin: 0.5em !important;
 }
