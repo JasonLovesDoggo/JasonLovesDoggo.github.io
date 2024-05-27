@@ -18,6 +18,7 @@ function Wakatime() {
     <a
       style={{ textDecoration: "none", color: "white" }}
       href="https://wakatime.com/@JasonLovesDoggo"
+      target="_blank"
     >
       Tracked time coding: <b className="blue">{count}</b>
     </a>
