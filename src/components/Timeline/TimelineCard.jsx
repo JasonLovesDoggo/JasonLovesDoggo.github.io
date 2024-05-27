@@ -17,7 +17,7 @@ import pSBC from "../utils/ColorConv.js";
 export default function TimelineCard(date, content, icon, position, links, isFirst, isLast) {
     const {color} = useContext(ColorContext);
     const glass = generateGlassmorphismStyle({transparency: 0.4, color: color.rgb, blur: 9.2, outline: 0.3});
-    const theme = useTheme();
+    const theme = useTheme(); // todoP: remove later on - it's nice for testing though
 
     return (
         <TimelineItem key={hash(content + date)}>
@@ -41,12 +41,12 @@ export default function TimelineCard(date, content, icon, position, links, isFir
             <TimelineContent>
                 <Paper style={{...glass, float: position}} square={false} elevation={3} sx={{padding: '6px 16p'}}
                        className="timeline-content-container">
-                    <Typography sx={{color: "primary.contrastText"}} align="left" maxWidth="35vw"
+                    <Typography sx={{color: pSBC(0.7, theme.palette.primary.contrastText, theme.palette.primary.main)}} align="left" fontWeight="500" maxWidth="35vw"
                                 variant="body1">
                         {content}
                     </Typography>
                     {links && links.map((data) => (
-                        <Button className="timeline-button" sx={{backgroundColor: 'accent.main', margin: '0.5em'}}
+                        <Button className="timeline-button" sx={{backgroundColor: 'secondary', margin: '0.5em'}}
                                 variant="contained"
                                 target="_blank" href={data.url}>{data.text}</Button>))}
                 </Paper>

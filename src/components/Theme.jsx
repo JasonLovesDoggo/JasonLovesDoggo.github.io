@@ -8,7 +8,7 @@ function DynamicThemeProvider({children}) {
 
     const theme = useMemo(() => {
                 const scheme = harmony(color.hex)
-                Object.keys(scheme).forEach((prop)=> console.log("%c" + prop + " " + scheme[prop], `background: ${scheme[prop]};`));
+                Object.keys(scheme).forEach((prop) => console.log("%c" + prop + " " + scheme[prop], `background: ${scheme[prop]};`));
                 return createTheme({
                     palette: {
                         contrastThreshold: 4.5,

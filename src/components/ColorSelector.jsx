@@ -5,62 +5,6 @@ import { Box } from "@mui/material";
 import Modal from "@mui/material/Modal";
 import { ColorContext } from "../App.jsx";
 
-export function getColorObject(hex) {
-  // Remove # if present
-  hex = hex.replace("#", "");
-
-  // Convert hex to RGB
-  const r = parseInt(hex.substring(0, 2), 16);
-  const g = parseInt(hex.substring(2, 4), 16);
-  const b = parseInt(hex.substring(4, 6), 16);
-
-  // Convert RGB to HSV
-  const hsv = rgbToHsv(r, g, b);
-
-  return {
-    hex: "#" + hex,
-    rgb: { r, g, b },
-    hsv,
-  };
-}
-
-function rgbToHsv(r, g, b) {
-  r /= 255;
-  g /= 255;
-  b /= 255;
-  const max = Math.max(r, g, b);
-  const min = Math.min(r, g, b);
-  let h,
-    s,
-    v = max;
-
-  const d = max - min;
-  s = max === 0 ? 0 : d / max;
-
-  if (max === min) {
-    h = 0; // achromatic
-  } else {
-    switch (max) {
-      case r:
-        h = (g - b) / d + (g < b ? 6 : 0);
-        break;
-      case g:
-        h = (b - r) / d + 2;
-        break;
-      case b:
-        h = (r - g) / d + 4;
-        break;
-    }
-    h /= 6;
-  }
-
-  return {
-    h: Math.round(h * 360),
-    s: Math.round(s * 100),
-    v: Math.round(v * 100),
-  };
-}
-
 function ColorSquare() {
   const [open, setOpen] = useState(false); // Control picker visibility
   const { color, setColor } = useContext(ColorContext);
