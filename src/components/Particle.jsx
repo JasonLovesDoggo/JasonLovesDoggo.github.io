@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-export default function Particle() {
+function Particle() {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -90,3 +90,5 @@ export default function Particle() {
   }
   return <></>;
 }
+
+export default React.memo(Particle);
