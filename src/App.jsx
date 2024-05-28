@@ -15,7 +15,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import PhotoGallery from "./components/Photos/photos";
 import PageNotFound from "./components/404s/404";
 import DynamicThemeProvider from "./components/Theme";
-import { useColor } from "react-color-palette";
+import { useColor } from "react-color-palette"; // todo: remove. 
 
 export const ColorContext = createContext(null);
 
