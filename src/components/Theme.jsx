@@ -1,5 +1,5 @@
 import React, {useContext, useMemo} from 'react';
-import {ColorContext} from '../App.jsx';
+import {ColorContext} from '../App';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import {complement, harmony} from 'simpler-color'
 

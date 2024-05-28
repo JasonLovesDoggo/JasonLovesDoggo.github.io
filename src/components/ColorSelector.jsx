@@ -1,9 +1,11 @@
-import { ColorPicker } from "react-color-palette";
+import reactCSS from 'reactcss'
 import "react-color-palette/css";
 import React, { useContext, useState } from "react";
 import { Box } from "@mui/material";
 import Modal from "@mui/material/Modal";
-import { ColorContext } from "../App.jsx";
+import { ColorContext } from "../App";
+import { SliderPicker } from "react-color";
+import { GlassBox } from './utils/Glass';
 
 function ColorSquare() {
   const [open, setOpen] = useState(false); // Control picker visibility
@@ -15,16 +17,17 @@ function ColorSquare() {
   const handleColorChange = (newColor) => {
     setColor(newColor);
   };
+
+
   const modelStyle = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+    width: "100vw",
+    height: "100vh",
     padding: "1em",
     "&:focus": {
       outline: "none",
     },
   };
+  const sliderStyle = reactCSS({height: '200px'}) // todo
   return (
     <div>
       <Box
@@ -41,28 +44,19 @@ function ColorSquare() {
       {open && (
         <Modal
           open={open}
+          sx={modelStyle}
           onClose={toggleOpen}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
           {/*onClick={toggleOpen}>*/}
-          <Box sx={modelStyle}>
-            <ColorPicker
-              style={{
-                width: "50vw",
-                height: "50vh",
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-              }}
+          <GlassBox sx={{width: '50vw', margin: "3vmin", padding: "3vmin",  }}>
+            <SliderPicker
+              style={sliderStyle}
               color={color}
-              hideAlpha={true}
-              height={200}
-              hideInput={true}
               onChange={handleColorChange}
             />
-          </Box>
+          </GlassBox>
         </Modal>
       )}
     </div>
