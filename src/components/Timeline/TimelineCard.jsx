@@ -6,13 +6,13 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import * as React from "react";
 import {useContext} from "react";
 import {TimelineOppositeContent} from "@mui/lab";
-import {Box, Paper, Typography, useTheme} from "@mui/material";
+import {Paper, Typography, useTheme} from "@mui/material";
 import Button from '@mui/material/Button';
 import hash from './hasher';
 import {IconContext} from "react-icons";
-import generateGlassmorphismStyle from "../utils/Glass.js";
-import {ColorContext} from "../../App.jsx";
-import pSBC from "../utils/ColorConv.js";
+import generateGlassmorphismStyle from "../utils/Glass";
+import {ColorContext} from "../../App";
+import pSBC from "../utils/ColorConv";
 
 export default function TimelineCard(date, content, icon, position, links, isFirst, isLast) {
     const {color} = useContext(ColorContext);
