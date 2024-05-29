@@ -1163,5 +1163,10 @@ body.modal-open[style] {
 
 
 .hue-horizontal { /* React-Color Hue*/
-    max-width: 80% !important;
+    width: 100% !important;
+    caret-color: transparent;
+}
+
+.hue-picker {
+    width: 100% !important;
 }

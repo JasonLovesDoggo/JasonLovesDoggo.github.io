@@ -6,8 +6,9 @@ import {GlassBox} from "../utils/Glass";
 import {ColorContext} from "../../App";
 import SliderSwatches from "./SliderSwatches.jsx";
 import tinycolor from "tinycolor2";
-import Hue from "react-color/lib/components/hue/Hue.js";
 
+import Pointer from "./ColorPointer"
+import Hue from "./ColorHue";
 
 function ColorSquare() {
     const [open, setOpen] = useState(false); // Control picker visibility
@@ -18,7 +19,6 @@ function ColorSquare() {
     };
     const handleColorChange = (newColor) => {
         if (!Object.hasOwn(newColor, 'hex')) { // if it's just the HSL object returned from Swatches
-            console.log('Converting to hex');
             newColor = tinycolor(newColor).toHexString();
         } else {
             newColor = newColor.hex;
@@ -39,6 +39,21 @@ function ColorSquare() {
         },
     };
 
+    const styles = reactCSS({
+        'default': {
+            hue: {
+                height: '12px',
+                position: 'relative',
+            },
+            Hue: {
+                radius: '2px',
+            },
+
+        },
+    });
+
+    const hsl = tinycolor(color).toHsl();
+
     return (
         <div>
             <Box
@@ -57,19 +72,26 @@ function ColorSquare() {
                     open={open}
                     sx={modelStyle}
                     onClose={toggleOpen}
-                    aria-labelledby="modal-modal-title"
-                    aria-describedby="modal-modal-description"
+                    aria-labelledby="Color Picker"
+                    aria-describedby="This is a model to display a color picker to customize the entire website's theme"
                 >
                     <GlassBox sx={{width: '50vw', margin: "3vmin", padding: "3vmin",}}>
-                        <div style={{maxWidth: "80%"}}  >
-                        <Hue   // todo FIXME PLEASEEE
-                            color={color}
-                            onChange={handleColorChange}
-                            className="LargePicker"
 
-                        />
+                        <div className='slider-picker'>
+                            <div style={styles.hue}>
+                                <Hue
+                                    style={styles.hue}
+                                    hsl={hsl}
+                                    pointer={Pointer}
+                                    onChange={handleColorChange}
+                                />
                             </div>
-                        <SliderSwatches onClick={handleColorChange} hsl={tinycolor(color).toHsl()}/>
+                            <div style={styles.swatches}>
+                                <SliderSwatches hsl={hsl} onClick={handleColorChange}/>
+                            </div>
+                        </div>
+
+
                     </GlassBox>
                 </Modal>
             )}
