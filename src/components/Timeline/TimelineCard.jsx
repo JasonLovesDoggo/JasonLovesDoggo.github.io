@@ -46,7 +46,7 @@ export default function TimelineCard(date, content, icon, position, links, isFir
                         {content}
                     </Typography>
                     {links && links.map((data) => (
-                        <Button className="timeline-button" sx={{backgroundColor: 'secondary', margin: '0.5em'}}
+                        <Button className="timeline-button" sx={{backgroundColor: 'secondary', margin: '0.5em', transition: "none"}}
                                 variant="contained"
                                 target="_blank" href={data.url}>{data.text}</Button>))}
                 </Paper>
