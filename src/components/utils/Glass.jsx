@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { ColorContext } from "../../App";
 import {Box} from '@mui/material'
-import {hexToRgb} from "./ColorConv";
+import tinycolor from "tinycolor2";
+
 
 export default function generateGlassmorphismStyle({ transparency, color, blur, outline }) {
-    color = hexToRgb(color);
+    color = tinycolor(color).rgb;
     return {
         background: `rgba(${color.r}, ${color.g}, ${color.b}, ${transparency})`,
         boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
