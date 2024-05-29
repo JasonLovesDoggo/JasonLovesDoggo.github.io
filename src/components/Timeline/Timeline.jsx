@@ -9,7 +9,7 @@ function ProgrammingTimeline() {
   return (
     <Container
       className="timeline-container"
-      style={{ minHeight: "100vh", marginTop: '5em' }}
+      style={{ marginTop: '5em' }}
       fluid
     >
       <Timeline position="alternate">
