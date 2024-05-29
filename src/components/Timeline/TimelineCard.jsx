@@ -29,7 +29,8 @@ export default function TimelineCard(date, content, icon, position, links, isFir
             </TimelineOppositeContent>
             <IconContext.Provider value={{size: "1.5em"}}>
                 <TimelineSeparator>
-                    <TimelineConnector sx={{visibility: !(isFirst && !isLast) ? "hidden" : "inherit"}}/>
+                    <TimelineConnector sx={{visibility: (isFirst && !isLast) ? "hidden" : "inherit",
+                        caretColor: "transparent"}}/>
                     {/* Conditional Connector Before Dot */}
                     {/* Center Dot */}
                     <TimelineDot color="primary" variant="filled">
@@ -37,7 +38,7 @@ export default function TimelineCard(date, content, icon, position, links, isFir
                     </TimelineDot>
 
 
-                    <TimelineConnector sx={{visibility: !(isLast && !isFirst) ? "hidden": "inherit"}} />
+                    <TimelineConnector sx={{visibility: (isLast && !isFirst) ? "hidden": "inherit", caretColor: "transparent"}} />
                 </TimelineSeparator>
             </IconContext.Provider>
             <TimelineContent>
