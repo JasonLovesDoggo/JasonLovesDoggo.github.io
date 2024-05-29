@@ -27,7 +27,7 @@ export const SliderSwatches = ({onClick, hsl, nColors, upper, lower}) => {
             {
                 Array.from({length: nColors}, (_, i) => {
                     return lower + (upper - lower) * i / (nColors - 1)
-                }).map((offset, i) => {
+                }).reverse().map((offset, i) => {
                 return (
                     <div style={styles.swatch} key={i}>
                         <SliderSwatch
