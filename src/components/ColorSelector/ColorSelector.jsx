@@ -17,7 +17,8 @@ function ColorSquare() {
         setOpen(!open);
     };
     const handleColorChange = (newColor) => {
-        setColor(newColor);
+        // newColor is tinyColor object
+        setColor(newColor.hex);
     };
 
 
@@ -61,7 +62,7 @@ function ColorSquare() {
                             color={color}
                             onChange={handleColorChange}
                         />
-                        <SliderSwatches onClick={handleColorChange} hsl={tinycolor(color).toHsl()}/>
+                        {/*<SliderSwatches onClick={handleColorChange} hsl={tinycolor(color).toHsl()}/>*/}
                     </GlassBox>
                 </Modal>
             )}
