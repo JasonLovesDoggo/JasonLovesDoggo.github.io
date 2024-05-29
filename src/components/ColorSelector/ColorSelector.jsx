@@ -4,9 +4,9 @@ import {Box} from "@mui/material";
 import Modal from "@mui/material/Modal";
 import {GlassBox} from "../utils/Glass";
 import {ColorContext} from "../../App";
-import {SliderPicker} from "react-color";
 import SliderSwatches from "./SliderSwatches.jsx";
 import tinycolor from "tinycolor2";
+import Hue from "react-color/lib/components/hue/Hue.js";
 
 
 function ColorSquare() {
@@ -38,7 +38,7 @@ function ColorSquare() {
             outline: "none",
         },
     };
-    const sliderStyle = reactCSS({height: '200px'}) // todo
+
     return (
         <div>
             <Box
@@ -61,12 +61,14 @@ function ColorSquare() {
                     aria-describedby="modal-modal-description"
                 >
                     <GlassBox sx={{width: '50vw', margin: "3vmin", padding: "3vmin",}}>
-                        <SliderPicker  // todo FIXME PLEASEEE
-                            style={sliderStyle}
+                        <div style={{maxWidth: "80%"}}  >
+                        <Hue   // todo FIXME PLEASEEE
                             color={color}
                             onChange={handleColorChange}
                             className="LargePicker"
+
                         />
+                            </div>
                         <SliderSwatches onClick={handleColorChange} hsl={tinycolor(color).toHsl()}/>
                     </GlassBox>
                 </Modal>
