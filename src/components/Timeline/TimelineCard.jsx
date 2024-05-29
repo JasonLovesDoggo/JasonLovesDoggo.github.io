@@ -16,7 +16,7 @@ import pSBC from "../utils/ColorConv";
 
 export default function TimelineCard(date, content, icon, position, links, isFirst, isLast) {
     const {color} = useContext(ColorContext);
-    const glass = generateGlassmorphismStyle({transparency: 0.4, color: color.rgb, blur: 9.2, outline: 0.3});
+    const glass = generateGlassmorphismStyle({transparency: 0.4, color: color, blur: 9.2, outline: 0.3});
     const theme = useTheme(); // todoP: remove later on - it's nice for testing though
 
     return (

@@ -21,7 +21,7 @@ export const ColorContext = createContext(null);
 
 function App() {
   const [load, updateLoad] = useState(true);
-  const [color, setColor] = useState("1351A8");
+  const [color, setColor] = useState("#1351A8");
 
   useEffect(() => {
     const timer = setTimeout(() => {
