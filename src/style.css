@@ -1155,3 +1155,13 @@ body.modal-open[style] {
 .timeline-button {
     margin: 0.5em !important;
 }
+
+
+/* --------- */
+/* Color Logic */
+/* --------- */
+
+
+.hue-horizontal { /* React-Color Hue*/
+    max-width: 80% !important;
+}
