@@ -1125,19 +1125,6 @@ body.modal-open[style] {
 }
 
 
-.moon {
-    position: absolute;
-    bottom: 0 !important;
-    margin: 0;
-    background-size: cover;
-
-}
-
-.moon-photo {
-    object-fit: fill;
-}
-
-
 /* --------- */
 /* Timeline */
 /* --------- */
@@ -1167,4 +1154,19 @@ body.modal-open[style] {
 
 .timeline-button {
     margin: 0.5em !important;
+}
+
+
+/* --------- */
+/* Color Logic */
+/* --------- */
+
+
+.hue-horizontal { /* React-Color Hue*/
+    width: 100% !important;
+    caret-color: transparent;
+}
+
+.hue-picker {
+    width: 100% !important;
 }

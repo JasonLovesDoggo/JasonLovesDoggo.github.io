@@ -3,9 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import ViewCount from "./viewcount";
-import ColorSquare from "./ColorSelector";
 import Wakatime from "./wakatime";
 import {useLocation} from "react-router-dom";
+import ColorSquare from "./ColorSelector/ColorSelector";
 
 function Footer() {
   const page = useLocation().pathname;
