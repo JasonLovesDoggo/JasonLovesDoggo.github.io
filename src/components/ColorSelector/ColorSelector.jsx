@@ -87,7 +87,7 @@ function ColorSquare() {
                                 />
                             </div>
                             <div style={styles.swatches}>
-                                <SliderSwatches hsl={hsl} onClick={handleColorChange}/>
+                                <SliderSwatches hsl={hsl} onClick={handleColorChange} nColors={5} upper={0.85} lower={0.25} />
                             </div>
                         </div>
 
