@@ -30,3 +30,6 @@ Server/config.js
 
 .idea/dataSources
 .idea/dataSources.local.xml
+
+# development 
+/dist
