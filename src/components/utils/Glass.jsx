@@ -5,7 +5,7 @@ import tinycolor from "tinycolor2";
 
 
 export default function generateGlassmorphismStyle({ transparency, color, blur, outline }) {
-    color = tinycolor(color).rgb;
+    color = tinycolor(color).toRgb();
     return {
         background: `rgba(${color.r}, ${color.g}, ${color.b}, ${transparency})`,
         boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",

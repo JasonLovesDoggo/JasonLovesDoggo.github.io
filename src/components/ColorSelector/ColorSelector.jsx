@@ -5,6 +5,8 @@ import Modal from "@mui/material/Modal";
 import {GlassBox} from "../utils/Glass";
 import {ColorContext} from "../../App";
 import {SliderPicker} from "react-color";
+import SliderSwatches from "./SliderSwatches.jsx";
+import tinycolor from "tinycolor2";
 
 
 function ColorSquare() {
@@ -59,6 +61,7 @@ function ColorSquare() {
                             color={color}
                             onChange={handleColorChange}
                         />
+                        <SliderSwatches onClick={handleColorChange} hsl={tinycolor(color).toHsl()}/>
                     </GlassBox>
                 </Modal>
             )}
