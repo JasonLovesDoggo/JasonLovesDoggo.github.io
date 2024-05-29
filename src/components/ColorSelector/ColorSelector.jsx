@@ -17,8 +17,12 @@ function ColorSquare() {
         setOpen(!open);
     };
     const handleColorChange = (newColor) => {
+        if (!Object.hasOwn(newColor, 'hex')) { // if it's just the HSL object returned from Swatches
+            console.log('Converting to hex');
+            newColor = tinycolor(newColor)
+        }
         // newColor is tinyColor object
-        setColor(newColor.hex);
+        setColor(newColor.toHexString());
     };
 
 
@@ -55,14 +59,14 @@ function ColorSquare() {
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                 >
-                    {/*onClick={toggleOpen}>*/}
                     <GlassBox sx={{width: '50vw', margin: "3vmin", padding: "3vmin",}}>
                         <SliderPicker  // todo FIXME PLEASEEE
                             style={sliderStyle}
                             color={color}
                             onChange={handleColorChange}
+                            className="LargePicker"
                         />
-                        {/*<SliderSwatches onClick={handleColorChange} hsl={tinycolor(color).toHsl()}/>*/}
+                        <SliderSwatches onClick={handleColorChange} hsl={tinycolor(color).toHsl()}/>
                     </GlassBox>
                 </Modal>
             )}
