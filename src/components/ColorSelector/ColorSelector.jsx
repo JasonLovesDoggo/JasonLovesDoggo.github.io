@@ -19,10 +19,11 @@ function ColorSquare() {
     const handleColorChange = (newColor) => {
         if (!Object.hasOwn(newColor, 'hex')) { // if it's just the HSL object returned from Swatches
             console.log('Converting to hex');
-            newColor = tinycolor(newColor)
+            newColor = tinycolor(newColor).toHexString();
+        } else {
+            newColor = newColor.hex;
         }
-        // newColor is tinyColor object
-        setColor(newColor.toHexString());
+        setColor(newColor);
     };
 
 
