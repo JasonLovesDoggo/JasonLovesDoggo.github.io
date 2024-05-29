@@ -20,9 +20,9 @@ function DynamicThemeProvider({children}) {
                             main: complement(scheme.primary, 2),
                             // ... other variants as needed
                         },
-                        accent: {
-                            main: scheme.accent
-                        },
+                        // accent: {
+                        //     main: scheme.accent
+                        // },
                         error: {
                             main: scheme.error,
                         },

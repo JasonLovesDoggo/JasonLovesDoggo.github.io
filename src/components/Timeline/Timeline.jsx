@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 import timelineData from "./data";
 import TimelineCard from "./TimelineCard";
 
-function ProgrammingTimeline() {
+function ProgrammingTimeline() { // fixme: breaks when screen is smaller than 633px wide
   return (
     <Container
       className="timeline-container"
