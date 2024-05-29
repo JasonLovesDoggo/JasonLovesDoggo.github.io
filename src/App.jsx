@@ -15,13 +15,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import PhotoGallery from "./components/Photos/photos";
 import PageNotFound from "./components/404s/404";
 import DynamicThemeProvider from "./components/Theme";
-import { useColor } from "react-color-palette"; // todo: remove. 
+
 
 export const ColorContext = createContext(null);
 
 function App() {
   const [load, updateLoad] = useState(true);
-  const [color, setColor] = useColor("rgb(19,81,168)");
+  const [color, setColor] = useState("1351A8");
 
   useEffect(() => {
     const timer = setTimeout(() => {

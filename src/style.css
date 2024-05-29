@@ -1125,19 +1125,6 @@ body.modal-open[style] {
 }
 
 
-.moon {
-    position: absolute;
-    bottom: 0 !important;
-    margin: 0;
-    background-size: cover;
-
-}
-
-.moon-photo {
-    object-fit: fill;
-}
-
-
 /* --------- */
 /* Timeline */
 /* --------- */

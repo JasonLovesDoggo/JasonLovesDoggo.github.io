@@ -7,7 +7,7 @@ function DynamicThemeProvider({children}) {
     const {color} = useContext(ColorContext);
 
     const theme = useMemo(() => {
-                const scheme = harmony(color.hex)
+                const scheme = harmony(color)
                 Object.keys(scheme).forEach((prop) => console.log("%c" + prop + " " + scheme[prop], `background: ${scheme[prop]};`));
                 return createTheme({
                     palette: {
@@ -33,7 +33,7 @@ function DynamicThemeProvider({children}) {
                     // Customize typography, spacing, etc. as per your design
                 }); // Return the modified theme
             },
-            [color.hex]
+            [color]
         )
     ;
 
