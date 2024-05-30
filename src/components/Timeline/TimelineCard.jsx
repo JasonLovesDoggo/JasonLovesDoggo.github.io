@@ -24,7 +24,7 @@ export default function TimelineCard(date, content, icon, position, links, isFir
     )
     return (
         <TimelineItem key={contentHash}>
-            <TimelineOppositeContent sx={{margin: 'auto 0', color: 'secondary.main'}} style={{float: position}} varient="body2">
+            <TimelineOppositeContent sx={{margin: 'auto 0', color: 'primary.light'}} style={{float: position}} varient="body2">
                 <b>{date}</b>
             </TimelineOppositeContent>
             <IconContext.Provider value={{size: "1.5em"}}>
