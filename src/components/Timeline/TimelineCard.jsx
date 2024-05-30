@@ -17,10 +17,8 @@ export default function TimelineCard(date, content, icon, position, links, isFir
     const {color} = useContext(ColorContext);
     const glass = generateGlassmorphismStyle({transparency: 0.4, color: color, blur: 9.2, outline: 0.3});
     const theme = useTheme();
-    const contentHash = useCallback(
-        hash(content)
-    )
-    const lighterLight = useMemo(
+    const contentHash = hash(content)
+    const lighterLight = useCallback(
         pSBC(0.2, theme.palette.primary.light),
         [theme.palette.primary.light]
     )
@@ -31,7 +29,8 @@ export default function TimelineCard(date, content, icon, position, links, isFir
             </TimelineOppositeContent>
             <IconContext.Provider value={{size: "1.5em"}}>
                 <TimelineSeparator>
-                    <TimelineConnector sx={{hidden: !(isFirst && !isLast)}}/>
+                    <TimelineConnector sx={{visibility: (isFirst && !isLast) ? "hidden" : "inherit",
+                        caretColor: "transparent"}}/>
                     {/* Conditional Connector Before Dot */}
                     {/* Center Dot */}
                     <TimelineDot color="primary" variant="filled">
@@ -39,7 +38,7 @@ export default function TimelineCard(date, content, icon, position, links, isFir
                     </TimelineDot>
 
 
-                    <TimelineConnector sx={{hidden: !(isLast && !isFirst)}} />
+                    <TimelineConnector sx={{visibility: (isLast && !isFirst) ? "hidden": "inherit", caretColor: "transparent"}} />
                 </TimelineSeparator>
             </IconContext.Provider>
             <TimelineContent>
@@ -51,7 +50,7 @@ export default function TimelineCard(date, content, icon, position, links, isFir
                     </Typography>
                     {links && links.map((data) => (
                         <Button key={contentHash + data.url
-                        } className="timeline-button" sx={{backgroundColor: 'primary.light', color: 'primary.contrastText', margin: '0.5em', ":hover": {backgroundColor: lighterLight}, transition: 'none'}} 
+                        } className="timeline-button" sx={{backgroundColor: 'primary.light', color: 'primary.contrastText', margin: '0.5em', ":hover": {backgroundColor: lighterLight}, transition: 'none'}}
                                 variant="contained"
                                 target="_blank" href={data.url}>{data.text}</Button>))}
                 </Paper>
