@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/ogiroid</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="abacus " uuid="949c0ae0-2651-4783-8ad5-89a68ae4e646">
+      <driver-ref>redis</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>jdbc.RedisDriver</jdbc-driver>
+      <jdbc-url>jdbc:redis://redis.machine.jasoncameron.dev:6379/0</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
