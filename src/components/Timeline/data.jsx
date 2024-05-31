@@ -1,11 +1,17 @@
-import { TbBrandGithub } from "react-icons/tb";
-import { GoBook } from "react-icons/go";
-import { FaChild } from "react-icons/fa6";
-import { SiDiscord } from "react-icons/si"
-import { MdWeb, MdCode } from "react-icons/md";
+import {TbBrandGithub} from "react-icons/tb";
+import {GoBook} from "react-icons/go";
+import {FaChild} from "react-icons/fa6";
+import {SiDiscord} from "react-icons/si";
+import {FaBaby} from "react-icons/fa";
 
+import { BiAbacus } from "react-icons/bi";
 
 const timelineData = [
+    {
+        content: "Abacus reached 1,000,000 total requests",
+        date: "May 31, 2024",
+        icon: <BiAbacus />,
+    },
     {
         content: "I start work on the most recent version of this portfolio site",
         date: "Dec 25, 2022",
