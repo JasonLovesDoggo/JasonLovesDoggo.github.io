@@ -3,7 +3,7 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
-import { useContext, useCallback, useMemo } from "react";
+import { useContext, useCallback } from "react";
 import { TimelineOppositeContent } from "@mui/lab";
 import { Paper, Typography, useTheme } from "@mui/material";
 import Button from "@mui/material/Button";
@@ -51,8 +51,6 @@ export default function TimelineCard(
               caretColor: "transparent",
             }}
           />
-          {/* Conditional Connector Before Dot */}
-          {/* Center Dot */}
           <TimelineDot color="primary" variant="filled">
             {icon}
           </TimelineDot>
@@ -75,13 +73,14 @@ export default function TimelineCard(
           className="timeline-content-container"
         >
           <Typography
-            sx={{ color: "primary.contrastText" }}
+            sx={{ color: "primary.contrastText", marginBottom: "0" }}
             align="left"
             fontWeight="500"
             maxWidth="35vw"
             variant="body1"
+            component="div" // used in case content is JSX
           >
-            {content}
+              {content}
           </Typography>
           {links &&
             links.map((data) => (
