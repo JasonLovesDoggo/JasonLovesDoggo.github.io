@@ -33,12 +33,13 @@ const timelineData = [
         content: "I joined GitHub",
         date: "June 2020",
         icon: <TbBrandGithub/>,
+
     },
     {
         content:
             'I start learning that "coding" exists and slowly learn what it is; my grandma buys me a "How the world works" book - I\'m hooked',
         date: "2019",
-        icon: <GoBook/>,
+        icon: <GoBook/>
     },
     {
         content:

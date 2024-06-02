@@ -5,7 +5,6 @@ import timelineData from "./data";
 import { IconButton } from "@mui/material"
 import TimelineCard from "./TimelineCard";
 import {MdKeyboardDoubleArrowDown, MdKeyboardDoubleArrowUp} from "react-icons/md";
-
 import { memo, useEffect, useState } from "react";
 
 function ProgrammingTimeline() { // fixme: breaks when screen is smaller than 633px wide
@@ -20,7 +19,6 @@ function ProgrammingTimeline() { // fixme: breaks when screen is smaller than 63
 
   useEffect(() => { // cleanup for unmount
     const onScrollListener = event => {
-
       const arrow_button = document.getElementById("downArrow");
       if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight * 0.9)) { // when the user is 90% to the bottom
         setButtonFlipped(true);
