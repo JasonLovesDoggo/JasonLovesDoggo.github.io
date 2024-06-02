@@ -20,7 +20,7 @@ const timelineData = [
     },
     {
         content:
-            "I started working on my first semi-large project, a Discord bot named edoC (a semordnilap of Code), which eventually peaked at just over **40,000** active users and 200+ commands",
+            <Box>I started working on my first semi-large project, a Discord bot named edoC (a semordnilap of Code), which eventually peaked at just over <b>40,000</b> active users and over <b>200</b> commands</Box>,
         links: [{text: "GitHub", url: "https://github.com/JasonLovesDoggo/edoC"}],
         date: "May 21, 2021", icon: <SiDiscord/>, // date is from when the edoC discord bot user was created
     },
