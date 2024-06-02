@@ -5,13 +5,12 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import { useContext, useCallback } from "react";
 import { TimelineOppositeContent } from "@mui/lab";
-import { Paper, Typography, useTheme } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import hash from "./hasher";
 import { IconContext } from "react-icons";
 import generateGlassmorphismStyle from "../utils/Glass";
 import { ColorContext } from "../../App";
-import pSBC from "../utils/ColorConv";
 
 export default function TimelineCard(
   date,
@@ -29,11 +28,7 @@ export default function TimelineCard(
     blur: 9.2,
     outline: 0.3,
   });
-  const theme = useTheme();
   const contentHash = hash(content);
-  const lighterLight = useCallback(pSBC(0.2, theme.palette.primary.light), [
-    theme.palette.primary.light,
-  ]);
   return (
     <TimelineItem key={contentHash}>
       <TimelineOppositeContent
@@ -91,7 +86,7 @@ export default function TimelineCard(
                   backgroundColor: "primary.light",
                   color: "primary.contrastText",
                   margin: "0.5em",
-                  ":hover": { backgroundColor: lighterLight },
+                  ":hover": { backgroundColor: 'primary.lighter' },
                   transition: "none",
                 }}
                 variant="contained"
