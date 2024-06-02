@@ -55,7 +55,7 @@ function ProgrammingTimeline() { // fixme: breaks when screen is smaller than 63
   return (
     <Container
       className="timeline-container"
-      style={{ marginTop: '5em', minHeight: '87vh' }}
+      style={{ marginTop: '5em', minHeight: '88.3vh' }}
       fluid
     >
       <IconButton id="downArrow" sx={downArrowStyle} onClick={handleScrollAction} aria-label="scroll to bottom">
