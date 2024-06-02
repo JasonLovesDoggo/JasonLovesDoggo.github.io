@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import fetchJsonp from "fetch-jsonp";
 
 function Wakatime() {
-  const [count, setCount] = useState(() => 1 + 1);
+  const [count, setCount] = useState(() => "loading...");
   useEffect(() => {
     fetchJsonp(
       "https://wakatime.com/share/@JasonLovesDoggo/f2e375a2-7920-488d-b43b-3f8c7da12ccf.json",

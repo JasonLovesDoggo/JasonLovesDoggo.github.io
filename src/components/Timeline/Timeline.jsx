@@ -4,9 +4,7 @@ import { Container } from "react-bootstrap";
 import timelineData from "./data";
 import { IconButton } from "@mui/material"
 import TimelineCard from "./TimelineCard";
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
-
+import {MdKeyboardDoubleArrowDown, MdKeyboardDoubleArrowUp} from "react-icons/md";
 import { memo, useEffect, useState } from "react";
 
 function ProgrammingTimeline() { // fixme: breaks when screen is smaller than 633px wide
@@ -21,7 +19,6 @@ function ProgrammingTimeline() { // fixme: breaks when screen is smaller than 63
 
   useEffect(() => { // cleanup for unmount
     const onScrollListener = event => {
-  
       const arrow_button = document.getElementById("downArrow");
       if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight * 0.9)) { // when the user is 90% to the bottom
         setButtonFlipped(true);
@@ -44,18 +41,23 @@ function ProgrammingTimeline() { // fixme: breaks when screen is smaller than 63
     backgroundColor: "primary.light",
     borderRadius: "2rem",
     width: "fit-content",
-    bottom: "4%",
-    right: "4%"
+    position: "fixed",
+    bottom: "5.5rem",
+    right: '2rem',
+
+    '&:hover': {
+        backgroundColor: "primary.lighter",
+    }
   }
 
   return (
     <Container
       className="timeline-container"
-      style={{ marginTop: '5em', minHeight: '90vh' }}
+      style={{ marginTop: '5em', minHeight: '88.3vh' }}
       fluid
     >
       <IconButton id="downArrow" sx={downArrowStyle} onClick={handleScrollAction} aria-label="scroll to bottom">
-        {buttonFlipped ? <KeyboardDoubleArrowUpIcon/> :  <KeyboardDoubleArrowDownIcon />}
+        {buttonFlipped ? <MdKeyboardDoubleArrowUp/> :  <MdKeyboardDoubleArrowDown />}
       </IconButton>
       <Timeline position="alternate">
         {timelineData.map((event, index) =>

@@ -11,15 +11,14 @@ function ViewCount() {
       })
       .catch((error) => {
         console.error("Error fetching views:", error);
-        setCount(-1);
-      }, []);
+        setCount("error fetching views");
+      });
   }, []);
-  if (count !== -1) {
+  if (count !== "error fetching views") {
     return (
       <div style={{ color: "white" }}>
         Views:{" "}
         <b className="blue">
-          {" "}
           {count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
         </b>
       </div>

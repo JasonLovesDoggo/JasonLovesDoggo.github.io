@@ -16,7 +16,6 @@ import PhotoGallery from "./components/Photos/photos";
 import PageNotFound from "./components/404s/404";
 import DynamicThemeProvider from "./components/Theme";
 
-
 export const ColorContext = createContext(null);
 
 function App() {

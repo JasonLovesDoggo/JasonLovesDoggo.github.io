@@ -4,7 +4,7 @@ import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import ViewCount from "./viewcount";
 import Wakatime from "./wakatime";
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import ColorSquare from "./ColorSelector/ColorSelector";
 
 function Footer() {
@@ -16,11 +16,9 @@ function Footer() {
       <Row style={{ placeItems: "center" }}>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
-            {
-
-            }
+            {}
             <li className="social-icons">
-              { page === "/timeline" ? <ColorSquare /> : <></> }
+              {page === "/timeline" ? <ColorSquare /> : <></>}
             </li>
             <li className="social-icons">
               <a
