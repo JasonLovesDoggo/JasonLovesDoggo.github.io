@@ -3,7 +3,7 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
-import { useContext, useCallback } from "react";
+import { useContext } from "react";
 import { TimelineOppositeContent } from "@mui/lab";
 import { Paper, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
