@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/resume.pdf";
+import pdf from "../../../public/resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/TextLayer.css";
@@ -13,7 +13,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url,
 ).toString();
 const resumeLink =
-  "https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/raw/main/src/Assets/resume.pdf";
+  "https://jasoncameron.dev/resume.pdf";
 
 function useGetScale() {
   const [scale, setScale] = useState(1.7);
@@ -53,7 +53,7 @@ export default function Resume() {
                 fontWeight: "bolder",
                 color: "4b8bd5",
               }}
-              to="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/blob/main/src/Assets/resume.tex"
+              to="https://github.com/JasonLovesDoggo/JasonLovesDoggo.github.io/blob/main/public/resume.tex"
               target="_blank"
             >
               view me
